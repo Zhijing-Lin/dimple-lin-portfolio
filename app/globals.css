@@ -147,7 +147,7 @@ a {
   overflow: hidden;
   align-self: end;
   min-height: 220px;
-  padding: 1.5rem 7rem 1.5rem 1.5rem;
+  padding: 1.7rem 2.2rem;
   border: 1px solid var(--line);
   border-left: 3px solid var(--accent);
   border-radius: 1.25rem;
@@ -183,13 +183,14 @@ a {
   font-weight: 610;
 }
 
-.intro-flower {
+.intro-floral-border {
   position: absolute;
-  right: -0.4rem;
-  bottom: -1.7rem;
-  width: 7.3rem;
-  height: auto;
-  opacity: 0.86;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  opacity: 0.74;
   pointer-events: none;
 }
 
@@ -918,12 +919,11 @@ a {
 
   .intro-note {
     min-height: 205px;
-    padding-right: 6.2rem;
+    padding: 1.6rem 2rem;
   }
 
-  .intro-flower {
-    right: -0.75rem;
-    width: 6.7rem;
+  .intro-floral-border {
+    opacity: 0.68;
   }
 
   .category-nav {

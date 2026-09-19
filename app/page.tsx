@@ -205,8 +205,8 @@ function PortfolioIntro() {
           </p>
         </div>
         <img
-          className="intro-flower"
-          src="/decor/wildflower-bouquet.png"
+          className="intro-floral-border"
+          src="/decor/how-i-work-floral-border.png"
           alt=""
           aria-hidden="true"
         />
