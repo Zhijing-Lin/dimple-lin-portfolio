@@ -4,6 +4,7 @@ import { SiteHeader } from '@/components/site-header';
 type Project = {
   title: string;
   description: string;
+  highlights: string[];
   tools: string[];
   image: string;
   imageAlt: string;
@@ -31,8 +32,9 @@ const categories: Category[] = [
         title: 'Needs-Driven Help Center for Tutor Performance Support',
         description:
           'Turned recurring live-session challenges into just-in-time tutor support through needs analysis, workflow observation, SME knowledge elicitation, and intervention selection.',
+        highlights: ['just-in-time tutor support', 'needs analysis'],
         tools: ['Notion'],
-        image: '/projects/covers/needs-driven-help-center.png',
+        image: '/projects/covers-hybrid/needs-driven-help-center.png',
         imageAlt: 'Tutor performance support help center interface',
         href: '/projects/help-center',
       },
@@ -40,8 +42,12 @@ const categories: Category[] = [
         title: 'Turning Reviewer Judgment into a Learnable Skill',
         description:
           'Designed a research-informed pre-training experience that helps OER reviewers apply rubrics consistently and produce specific, evidence-based, actionable feedback.',
+        highlights: [
+          'apply rubrics consistently',
+          'evidence-based, actionable feedback',
+        ],
         tools: ['OLI Torus', 'Vyond'],
-        image: '/projects/covers/reviewer-judgment.png',
+        image: '/projects/covers-hybrid/reviewer-judgment.png',
         imageAlt: 'Open educational resource reviewer training experience',
         href: '/projects/reviewer-judgment',
       },
@@ -58,8 +64,9 @@ const categories: Category[] = [
         title: 'AI Architecture Decision-Making Simulation',
         description:
           'A scenario-based simulation that helps aspiring AI product managers diagnose system failures, compare architecture options, and justify decisions using evaluation and cost evidence.',
+        highlights: ['diagnose system failures', 'justify decisions'],
         tools: ['Articulate Storyline', 'Synthesia', 'HTML/CSS'],
-        image: '/projects/covers/ai-architecture.png',
+        image: '/projects/covers-hybrid/ai-architecture.png',
         imageAlt: 'AI architecture decision-making simulation screens',
         href: '/projects/ai-architecture',
       },
@@ -67,8 +74,12 @@ const categories: Category[] = [
         title: 'Learning Survival Through Consequential Play',
         description:
           'A narrative-driven educational game that teaches campsite selection and firemaking through hands-on decisions, fading support, and meaningful gameplay consequences.',
+        highlights: [
+          'hands-on decisions',
+          'meaningful gameplay consequences',
+        ],
         tools: ['Phaser', 'Midjourney', 'HTML/CSS'],
-        image: '/projects/covers/survival-play.png',
+        image: '/projects/covers-hybrid/survival-play.png',
         imageAlt: 'Narrative wilderness survival learning game',
         href: '/projects/survival-play',
       },
@@ -76,8 +87,9 @@ const categories: Category[] = [
         title: 'Building Nutrition Literacy Through Guided Practice',
         description:
           'An interactive Storyline experience that helps young adults move from basic nutrition knowledge to structured, evidence-based food decisions.',
+        highlights: ['structured, evidence-based food decisions'],
         tools: ['Articulate Storyline'],
-        image: '/projects/covers/nutrition-literacy.png',
+        image: '/projects/covers-hybrid/nutrition-literacy.png',
         imageAlt: 'Interactive nutrition literacy course screens',
         href: '/projects/nutrition-literacy',
       },
@@ -85,8 +97,12 @@ const categories: Category[] = [
         title: 'Interactive Coaching Through Feedback',
         description:
           'A branching workplace scenario where new managers practice navigating difficult feedback conversations and experience the consequences of their choices.',
+        highlights: [
+          'difficult feedback conversations',
+          'consequences of their choices',
+        ],
         tools: ['Articulate Storyline'],
-        image: '/projects/covers/interactive-coaching.png',
+        image: '/projects/covers-hybrid/interactive-coaching.png',
         imageAlt: 'Branching manager feedback coaching scenario',
         href: '/projects/interactive-coaching',
       },
@@ -103,8 +119,9 @@ const categories: Category[] = [
         title: 'Adaptive Practice & AI-Powered Feedback for Corporate Training',
         description:
           'An adaptive corporate learning experience that uses performance-based remediation and AI-powered feedback to help managers move from recognizing good feedback to writing it independently.',
+        highlights: ['performance-based remediation', 'AI-powered feedback'],
         tools: ['Adobe Captivate', 'LLM API'],
-        image: '/projects/covers/adaptive-ai-feedback.png',
+        image: '/projects/covers-hybrid/adaptive-ai-feedback.png',
         imageAlt: 'Adaptive corporate training with AI-powered feedback',
         href: '/projects/adaptive-ai-feedback',
       },
@@ -112,6 +129,7 @@ const categories: Category[] = [
         title: 'Designing Just-in-Time AI Support with DOT AI',
         description:
           'Used learner feedback to identify recurring pain points in an existing AI learning course, then designed and embedded targeted DOT AI support at the moments learners need it.',
+        highlights: ['recurring pain points', 'targeted DOT AI support'],
         tools: ['DOT AI', 'OLI Torus'],
         image: '/projects/covers/dot-ai.png',
         imageAlt: 'Just-in-time DOT AI support embedded in a learning task',
@@ -131,8 +149,12 @@ const categories: Category[] = [
         title: 'Turning Learner Data into Course Design Decisions',
         description:
           'An AI-assisted evaluation of the Beyond Backpacks course that transformed learner behavior, performance, and survey data into evidence-based redesign priorities.',
+        highlights: [
+          'learner behavior, performance, and survey data',
+          'evidence-based redesign priorities',
+        ],
         tools: ['Claude Code', 'ChatGPT', 'Google Slides'],
-        image: '/projects/covers/learner-data.png',
+        image: '/projects/covers-hybrid/learner-data.png',
         imageAlt: 'Course evaluation findings and redesign priorities',
         href: '/projects/learner-data',
       },
@@ -140,6 +162,11 @@ const categories: Category[] = [
         title: 'From Tutorial Videos to Continuous Performance Support',
         description:
           'Evaluated an existing tutorial-video system and redesigned how course authors find help through searchable content, AI-assisted support, and a continuous-improvement approach.',
+        highlights: [
+          'searchable content',
+          'AI-assisted support',
+          'continuous-improvement approach',
+        ],
         tools: ['Camtasia', 'HTML/CSS'],
         image: '/projects/covers/continuous-support.png',
         imageAlt:
@@ -192,6 +219,36 @@ function ToolTag({ tool }: { tool: string }) {
   return <span className="tool-tag">{tool}</span>;
 }
 
+function HighlightedDescription({
+  text,
+  highlights,
+}: {
+  text: string;
+  highlights: string[];
+}) {
+  const escapedHighlights = highlights.map((highlight) =>
+    highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+  );
+  const pattern = new RegExp(`(${escapedHighlights.join('|')})`, 'gi');
+  const normalizedHighlights = new Set(
+    highlights.map((highlight) => highlight.toLowerCase()),
+  );
+
+  return (
+    <p>
+      {text.split(pattern).map((part, index) =>
+        normalizedHighlights.has(part.toLowerCase()) ? (
+          <mark className="project-highlight" key={`${part}-${index}`}>
+            {part}
+          </mark>
+        ) : (
+          part
+        ),
+      )}
+    </p>
+  );
+}
+
 function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card" id={project.anchorId}>
@@ -204,7 +261,10 @@ function ProjectCard({ project }: { project: Project }) {
             <h3>{project.title}</h3>
             <ArrowUpRight aria-hidden="true" size={20} strokeWidth={1.7} />
           </div>
-          <p>{project.description}</p>
+          <HighlightedDescription
+            text={project.description}
+            highlights={project.highlights}
+          />
           <div className="tool-list" aria-label="Tools used">
             {project.tools.map((tool) => (
               <ToolTag key={tool} tool={tool} />

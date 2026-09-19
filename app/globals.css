@@ -235,11 +235,11 @@ a {
 
 .category-heading h2 {
   margin: 0;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2rem, 3.2vw, 3rem);
-  font-weight: 500;
-  letter-spacing: -0.045em;
-  line-height: 1.03;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 560;
+  letter-spacing: -0.055em;
+  line-height: 1.04;
 }
 
 .category-heading > p:last-child {
@@ -325,6 +325,20 @@ a {
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.62;
+}
+
+.project-highlight {
+  padding: 0 0.045em;
+  background: linear-gradient(
+    to top,
+    rgb(150 164 216 / 42%) 0,
+    rgb(150 164 216 / 42%) 34%,
+    transparent 34%
+  );
+  color: #4a4642;
+  font-weight: 650;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .tool-list {
