@@ -209,30 +209,20 @@ a {
 .portfolio-content {
   overflow: hidden;
   border-radius: 48px 48px 0 0;
-  background: var(--surface);
+  background: #faf8f4;
 }
 
 .category-section {
   display: grid;
   grid-template-columns: minmax(220px, 0.72fr) minmax(0, 2fr);
   gap: clamp(2.5rem, 5vw, 5.5rem);
-  width: 100%;
-  padding-top: clamp(5rem, 9vw, 8.5rem);
-  padding-right: max(clamp(1.5rem, 4vw, 4rem), calc((100vw - 1280px) / 2 + 4rem));
-  padding-bottom: clamp(5rem, 9vw, 8.5rem);
-  padding-left: max(clamp(1.5rem, 4vw, 4rem), calc((100vw - 1280px) / 2 + 4rem));
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 8.5rem) clamp(1.5rem, 4vw, 4rem);
 }
 
 .category-section + .category-section {
-  border-top: 1px solid #e7e1d8;
-}
-
-.category-white {
-  background: #fff;
-}
-
-.category-warm {
-  background: #f5efe6;
+  border-top: 1px solid #eeece7;
 }
 
 .category-heading {

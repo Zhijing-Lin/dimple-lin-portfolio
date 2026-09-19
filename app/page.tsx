@@ -216,12 +216,9 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-function CategorySection({ category, index }: { category: Category; index: number }) {
+function CategorySection({ category }: { category: Category }) {
   return (
-    <section
-      className={`category-section ${index % 2 === 0 ? 'category-white' : 'category-warm'}`}
-      id={`category-${category.number}`}
-    >
+    <section className="category-section" id={`category-${category.number}`}>
       <div className="category-heading">
         <p className="eyebrow">
           {category.number} — {category.shortLabel}
@@ -244,8 +241,8 @@ export default function Home() {
       <SiteHeader />
       <PortfolioIntro />
       <div className="portfolio-content">
-        {categories.map((category, index) => (
-          <CategorySection key={category.number} category={category} index={index} />
+        {categories.map((category) => (
+          <CategorySection key={category.number} category={category} />
         ))}
         <footer className="site-footer">
           <p>Designing learning that moves from insight to action.</p>
