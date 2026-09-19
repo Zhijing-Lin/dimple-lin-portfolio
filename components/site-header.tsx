@@ -1,22 +1,42 @@
 type SiteHeaderProps = {
-  compact?: boolean;
+  active?: 'home' | 'projects' | 'about' | 'resume';
 };
 
-export function SiteHeader({ compact = false }: SiteHeaderProps) {
-  const root = compact ? '/' : '';
-
+export function SiteHeader({ active }: SiteHeaderProps) {
   return (
     <header className="site-header">
-      <a className="brand" href={`${root}#top`} aria-label="Dimple Lin home">
+      <a className="brand" href="/" aria-label="Dimple Lin home">
         Dimple Lin<span>.</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href={`${root}#home`}>Home</a>
-        <a className="active" href={`${root}#projects`} aria-current="page">
+        <a
+          className={active === 'home' ? 'active' : undefined}
+          href="/"
+          aria-current={active === 'home' ? 'page' : undefined}
+        >
+          Home
+        </a>
+        <a
+          className={active === 'projects' ? 'active' : undefined}
+          href="/projects"
+          aria-current={active === 'projects' ? 'page' : undefined}
+        >
           Projects
         </a>
-        <a href={`${root}#about`}>About</a>
-        <a href={`${root}#resume`}>Resume</a>
+        <a
+          className={active === 'about' ? 'active' : undefined}
+          href="/#about"
+          aria-current={active === 'about' ? 'page' : undefined}
+        >
+          About
+        </a>
+        <a
+          className={active === 'resume' ? 'active' : undefined}
+          href="/#resume"
+          aria-current={active === 'resume' ? 'page' : undefined}
+        >
+          Resume
+        </a>
       </nav>
     </header>
   );

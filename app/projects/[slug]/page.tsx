@@ -168,12 +168,12 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
   return (
     <main className="case-study" id="top">
-      <SiteHeader compact />
+      <SiteHeader active="projects" />
 
       <article>
         <header className="case-study-hero">
           <div className="case-study-hero-copy">
-            <a className="back-link" href="/#projects">
+            <a className="back-link" href="/projects">
               <ArrowLeft size={16} aria-hidden="true" /> All projects
             </a>
             <p className="eyebrow">{project.category}</p>

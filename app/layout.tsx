@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     'https://dimple-lin-projects.michael-tangminhan.chatgpt.site',
   ),
-  title: 'Projects — Dimple Lin',
+  title: 'Dimple Lin — Learning Experience Designer',
   description:
-    'Selected learning strategy, interactive learning, AI-enabled learning, and evaluation projects by Dimple Lin.',
+    'Dimple Lin turns real learning and performance gaps into evidence-driven experiences using research, learning science, AI, and data.',
   openGraph: {
-    title: 'Projects — Dimple Lin',
+    title: 'Dimple Lin — Learning Experience Designer',
     description:
-      'Learning strategy, interactive learning, AI-enabled learning, and evaluation projects.',
+      'Evidence-driven learning experiences, performance support, and AI-enabled tools.',
     url: '/',
     siteName: 'Dimple Lin Portfolio',
     images: [
@@ -30,16 +30,16 @@ export const metadata: Metadata = {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'Projects — Dimple Lin',
+        alt: 'Dimple Lin portfolio',
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Projects — Dimple Lin',
+    title: 'Dimple Lin — Learning Experience Designer',
     description:
-      'Learning strategy, interactive learning, AI-enabled learning, and evaluation projects.',
+      'Evidence-driven learning experiences, performance support, and AI-enabled tools.',
     images: ['/og.png'],
   },
 };
