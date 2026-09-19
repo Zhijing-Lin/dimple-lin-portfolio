@@ -198,7 +198,7 @@ function PortfolioIntro() {
         <div className="intro-note-content">
           <span>How I work</span>
           <p>
-            <strong>Find the gap</strong>
+            <strong>Find the gap.</strong>
             <strong>Design the right intervention.</strong>
             <strong>Test what works.</strong>
             <strong>Improve continuously.</strong>
@@ -206,7 +206,7 @@ function PortfolioIntro() {
         </div>
         <img
           className="intro-floral-border"
-          src="/decor/how-i-work-floral-border-v2.png"
+          src="/decor/how-i-work-floral-border-v3.png"
           alt=""
           aria-hidden="true"
         />
