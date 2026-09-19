@@ -28,7 +28,7 @@ body {
   margin: 0;
   background: var(--page);
   color: var(--ink);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -115,13 +115,18 @@ a {
   padding: clamp(5rem, 9vw, 8rem) clamp(1.5rem, 4vw, 4rem) clamp(4.5rem, 8vw, 7rem);
 }
 
-.eyebrow {
-  margin: 0 0 1rem;
+.eyebrow,
+.home-eyebrow {
+  margin: 0;
   color: var(--accent-dark);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 750;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.155em;
   text-transform: uppercase;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
 }
 
 .portfolio-intro h1 {
@@ -1017,15 +1022,6 @@ a {
   background: #f4f3f0;
 }
 
-.home-eyebrow {
-  margin: 0;
-  color: var(--accent-dark);
-  font-size: 0.72rem;
-  font-weight: 760;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
 .home-hero {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(390px, 1fr);
@@ -1064,7 +1060,7 @@ a {
   max-width: 900px;
   margin: 0;
   color: #57524e;
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter-sans), Arial, Helvetica, sans-serif;
   font-size: clamp(2rem, 2.65vw, 3.25rem);
   font-weight: 400;
   letter-spacing: -0.022em;
@@ -1072,12 +1068,23 @@ a {
 }
 
 .home-highlight {
+  padding: 0 0.035em 0.035em;
+  background-image:
+    linear-gradient(
+      178deg,
+      transparent 0 59%,
+      rgb(150 164 216 / 25%) 59% 86%,
+      transparent 86%
+    ),
+    linear-gradient(
+      181deg,
+      transparent 0 63%,
+      rgb(150 164 216 / 36%) 63% 91%,
+      transparent 91%
+    );
   color: inherit;
-  text-decoration-line: underline;
-  text-decoration-color: #aebbe2;
-  text-decoration-thickness: 0.11em;
-  text-underline-offset: 0.12em;
-  text-decoration-skip-ink: none;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .home-actions {
@@ -1623,10 +1630,10 @@ a {
 
 .featured-title-row h3 {
   margin: 0;
-  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-size: clamp(1.2rem, 1.9vw, 1.55rem);
   font-weight: 650;
-  letter-spacing: -0.04em;
-  line-height: 1.16;
+  letter-spacing: -0.035em;
+  line-height: 1.22;
 }
 
 .featured-title-row svg {
@@ -1644,8 +1651,8 @@ a {
 .featured-copy > p {
   margin: 1rem 0 0;
   color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.62;
 }
 
 .featured-all-link {
@@ -1697,7 +1704,7 @@ a {
   height: 100svh;
   opacity: 0;
   pointer-events: none;
-  animation: dbee-trail-visibility 8s ease both;
+  animation: dbee-trail-visibility 9.6s ease both;
 }
 
 .dbee-flight-path.is-hidden {
@@ -1707,22 +1714,23 @@ a {
 
 .dbee-flight-line {
   fill: none;
-  stroke: #2c2926;
-  stroke-dasharray: 7 11;
+  stroke: #77736f;
+  stroke-dasharray: 6 11;
   stroke-linecap: round;
-  stroke-width: 2.1;
+  stroke-width: 1.65;
+  opacity: 0.44;
   vector-effect: non-scaling-stroke;
 }
 
 .dbee-flight-reveal {
   fill: none;
   stroke: #fff;
-  stroke-dasharray: 2500;
-  stroke-dashoffset: 2500;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
   stroke-linecap: round;
   stroke-width: 22;
   vector-effect: non-scaling-stroke;
-  animation: dbee-trail-draw 7.15s linear 0.35s both;
+  animation: dbee-trail-draw 8s cubic-bezier(0.48, 0.03, 0.2, 1) both;
 }
 
 .dbee-shell {
@@ -1977,15 +1985,35 @@ a {
 
 .dbee-project-list a {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
   gap: 0.75rem;
-  align-items: start;
+  align-items: center;
   padding: 0.82rem 0;
   border-bottom: 1px solid #ebe5db;
   color: #4a4540;
   font-size: 0.77rem;
   font-weight: 630;
   line-height: 1.38;
+}
+
+.dbee-project-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(126 139 183 / 26%);
+  border-radius: 50%;
+  background: rgb(228 232 246 / 66%);
+  color: #6170a5;
+  transition: background-color 170ms ease, color 170ms ease,
+    transform 170ms ease;
+}
+
+.dbee-project-list a:hover .dbee-project-icon,
+.dbee-project-list a:focus-visible .dbee-project-icon {
+  background: rgb(224 211 209 / 72%);
+  color: #8a5f65;
+  transform: rotate(-4deg) scale(1.04);
 }
 
 .dbee-project-list a:hover,
@@ -2123,14 +2151,13 @@ a {
 
 @keyframes dbee-trail-visibility {
   0%,
-  7% {
+  5% {
     opacity: 0;
   }
-  12%,
-  76% {
-    opacity: 0.62;
+  9%,
+  83% {
+    opacity: 0.72;
   }
-  92%,
   100% {
     opacity: 0;
   }

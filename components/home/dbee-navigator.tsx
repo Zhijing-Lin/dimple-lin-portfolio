@@ -1,7 +1,24 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowUpRight, ChevronLeft, RotateCcw, X } from 'lucide-react';
+import {
+  Apple,
+  ArrowUpRight,
+  BarChart3,
+  Bot,
+  ChevronLeft,
+  ClipboardCheck,
+  Compass,
+  LifeBuoy,
+  MessageSquare,
+  Network,
+  RotateCcw,
+  Sparkles,
+  Video,
+  Workflow,
+  X,
+  type LucideIcon,
+} from 'lucide-react';
 import { projectDetailBySlug } from '@/lib/project-details';
 
 type ProjectLink = {
@@ -10,6 +27,7 @@ type ProjectLink = {
   image?: string;
   external?: boolean;
   label?: string;
+  icon: LucideIcon;
 };
 
 type ToolKey =
@@ -41,19 +59,33 @@ function project(slug: string, image?: string): ProjectLink {
     title: item.title,
     href: `/projects/${item.slug}`,
     image: image ?? item.cover,
+    icon: projectIcons[slug],
   };
 }
+
+const projectIcons: Record<string, LucideIcon> = {
+  'help-center': LifeBuoy,
+  'reviewer-judgment': ClipboardCheck,
+  'ai-architecture': Network,
+  'survival-play': Compass,
+  'nutrition-literacy': Apple,
+  'interactive-coaching': MessageSquare,
+  'adaptive-ai-feedback': Sparkles,
+  'learner-data': BarChart3,
+};
 
 const dotAI: ProjectLink = {
   title: 'Designing Just-in-Time AI Support with DOT AI',
   href: '/projects#dot-ai',
   image: '/projects/covers/dot-ai.png',
+  icon: Bot,
 };
 
 const tutorialSupport: ProjectLink = {
   title: 'From Tutorial Videos to Continuous Performance Support',
   href: '/projects#oli-support',
   image: '/projects/covers/continuous-support.png',
+  icon: Video,
 };
 
 const projectAreas = {
@@ -68,6 +100,7 @@ const projectAreas = {
         href: 'https://open4peerreview-maskd-three.vercel.app/',
         image: '/projects/covers-hybrid/oer-review-workflow.png',
         external: true,
+        icon: Workflow,
       },
     ],
   },
@@ -151,17 +184,23 @@ const highlights = [
 function ProjectList({ items }: { items: ProjectLink[] }) {
   return (
     <div className="dbee-project-list">
-      {items.map((item) => (
-        <a
-          href={item.href}
-          key={item.title}
-          target={item.external ? '_blank' : undefined}
-          rel={item.external ? 'noreferrer' : undefined}
-        >
-          <span>{item.title}</span>
-          <ArrowUpRight size={15} aria-hidden="true" />
-        </a>
-      ))}
+      {items.map((item) => {
+        const ProjectIcon = item.icon;
+        return (
+          <a
+            href={item.href}
+            key={item.title}
+            target={item.external ? '_blank' : undefined}
+            rel={item.external ? 'noreferrer' : undefined}
+          >
+            <span className="dbee-project-icon" aria-hidden="true">
+              <ProjectIcon size={16} strokeWidth={1.75} />
+            </span>
+            <span>{item.title}</span>
+            <ArrowUpRight size={15} aria-hidden="true" />
+          </a>
+        );
+      })}
     </div>
   );
 }
@@ -198,6 +237,7 @@ export function DBeeNavigator() {
           <mask id="dbee-flight-mask" maskUnits="userSpaceOnUse">
             <path
               className="dbee-flight-reveal"
+              pathLength="1"
               d="M590 160 C770 75 905 190 812 310 C736 408 602 327 659 224 C720 114 929 305 765 521 C684 628 785 700 831 718 C907 748 901 846 936 910"
             />
           </mask>
