@@ -1,0 +1,61 @@
+import type { Metadata } from 'next';
+import { Geist, Geist_Mono } from 'next/font/google';
+import './globals.css';
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(
+    'https://dimple-lin-projects.pastel-plume-8433.chatgpt.site',
+  ),
+  title: 'Projects — Dimple Lin',
+  description:
+    'Selected learning strategy, interactive learning, AI-enabled learning, and evaluation projects by Dimple Lin.',
+  openGraph: {
+    title: 'Projects — Dimple Lin',
+    description:
+      'Learning strategy, interactive learning, AI-enabled learning, and evaluation projects.',
+    url: '/',
+    siteName: 'Dimple Lin Portfolio',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Projects — Dimple Lin',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Projects — Dimple Lin',
+    description:
+      'Learning strategy, interactive learning, AI-enabled learning, and evaluation projects.',
+    images: ['/og.png'],
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}
