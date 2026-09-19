@@ -10,6 +10,8 @@ type Project = {
   imageAlt: string;
   href: string;
   anchorId?: string;
+  external?: boolean;
+  externalLabel?: string;
 };
 
 type Category = {
@@ -31,8 +33,8 @@ const categories: Category[] = [
       {
         title: 'Needs-Driven Help Center for Tutor Performance Support',
         description:
-          'Turned recurring live-session challenges into just-in-time tutor support through needs analysis, workflow observation, SME knowledge elicitation, and intervention selection.',
-        highlights: ['just-in-time tutor support', 'needs analysis'],
+          'Turned recurring tutor challenges into actionable support through needs analysis and performance-support design.',
+        highlights: ['needs analysis', 'performance-support design'],
         tools: ['Notion'],
         image: '/projects/covers-hybrid/needs-driven-help-center.png',
         imageAlt: 'Tutor performance support help center interface',
@@ -41,15 +43,25 @@ const categories: Category[] = [
       {
         title: 'Turning Reviewer Judgment into a Learnable Skill',
         description:
-          'Designed a research-informed pre-training experience that helps OER reviewers apply rubrics consistently and produce specific, evidence-based, actionable feedback.',
-        highlights: [
-          'apply rubrics consistently',
-          'evidence-based, actionable feedback',
-        ],
+          'Translated reviewer performance gaps into a research-informed training experience through CTA, SME collaboration, and iterative design.',
+        highlights: ['research-informed training experience'],
         tools: ['OLI Torus', 'Vyond'],
         image: '/projects/covers-hybrid/reviewer-judgment.png',
         imageAlt: 'Open educational resource reviewer training experience',
         href: '/projects/reviewer-judgment',
+      },
+      {
+        title: 'Transforming Fragmented OER Review into an End-to-End Workflow',
+        description:
+          'Led a 5-person cross-functional team to transform a fragmented OER review workflow into an end-to-end platform through product strategy and iterative prototyping.',
+        highlights: ['product strategy', 'iterative prototyping'],
+        tools: [],
+        image: '/projects/covers-hybrid/oer-review-workflow.png',
+        imageAlt:
+          'Open4PeerReview end-to-end workflow connecting coordinators, reviewers, authors, and adopters',
+        href: 'https://open4peerreview-maskd-three.vercel.app/',
+        external: true,
+        externalLabel: 'External case study',
       },
     ],
   },
@@ -63,8 +75,8 @@ const categories: Category[] = [
       {
         title: 'AI Architecture Decision-Making Simulation',
         description:
-          'A scenario-based simulation that helps aspiring AI product managers diagnose system failures, compare architecture options, and justify decisions using evaluation and cost evidence.',
-        highlights: ['diagnose system failures', 'justify decisions'],
+          'Designed a scenario-based simulation that helps aspiring AI PMs practice evidence-based architecture decisions and trade-off reasoning.',
+        highlights: ['scenario-based simulation'],
         tools: ['Articulate Storyline', 'Synthesia', 'HTML/CSS'],
         image: '/projects/covers-hybrid/ai-architecture.png',
         imageAlt: 'AI architecture decision-making simulation screens',
@@ -73,12 +85,9 @@ const categories: Category[] = [
       {
         title: 'Learning Survival Through Consequential Play',
         description:
-          'A narrative-driven educational game that teaches campsite selection and firemaking through hands-on decisions, fading support, and meaningful gameplay consequences.',
-        highlights: [
-          'hands-on decisions',
-          'meaningful gameplay consequences',
-        ],
-        tools: ['Phaser', 'Midjourney', 'HTML/CSS'],
+          'Translated CTA findings into gameplay mechanics that build survival judgment through decisions, consequences, and fading support.',
+        highlights: ['gameplay mechanics'],
+        tools: ['HTML/CSS'],
         image: '/projects/covers-hybrid/survival-play.png',
         imageAlt: 'Narrative wilderness survival learning game',
         href: '/projects/survival-play',
@@ -86,8 +95,8 @@ const categories: Category[] = [
       {
         title: 'Building Nutrition Literacy Through Guided Practice',
         description:
-          'An interactive Storyline experience that helps young adults move from basic nutrition knowledge to structured, evidence-based food decisions.',
-        highlights: ['structured, evidence-based food decisions'],
+          'Used CTA and procedural scaffolding to turn nutrition knowledge into structured, evidence-based decision practice.',
+        highlights: ['procedural scaffolding'],
         tools: ['Articulate Storyline'],
         image: '/projects/covers-hybrid/nutrition-literacy.png',
         imageAlt: 'Interactive nutrition literacy course screens',
@@ -96,11 +105,8 @@ const categories: Category[] = [
       {
         title: 'Interactive Coaching Through Feedback',
         description:
-          'A branching workplace scenario where new managers practice navigating difficult feedback conversations and experience the consequences of their choices.',
-        highlights: [
-          'difficult feedback conversations',
-          'consequences of their choices',
-        ],
+          'Turned a complex interpersonal skill into a branching scenario with realistic choices and consequence-based feedback.',
+        highlights: ['branching scenario'],
         tools: ['Articulate Storyline'],
         image: '/projects/covers-hybrid/interactive-coaching.png',
         imageAlt: 'Branching manager feedback coaching scenario',
@@ -118,8 +124,8 @@ const categories: Category[] = [
       {
         title: 'Adaptive Practice & AI-Powered Feedback for Corporate Training',
         description:
-          'An adaptive corporate learning experience that uses performance-based remediation and AI-powered feedback to help managers move from recognizing good feedback to writing it independently.',
-        highlights: ['performance-based remediation', 'AI-powered feedback'],
+          'Combined adaptive remediation with AI-powered feedback to move learners from recognizing good feedback to writing it independently.',
+        highlights: ['adaptive remediation', 'AI-powered feedback'],
         tools: ['Adobe Captivate', 'LLM API'],
         image: '/projects/covers-hybrid/adaptive-ai-feedback.png',
         imageAlt: 'Adaptive corporate training with AI-powered feedback',
@@ -128,8 +134,8 @@ const categories: Category[] = [
       {
         title: 'Designing Just-in-Time AI Support with DOT AI',
         description:
-          'Used learner feedback to identify recurring pain points in an existing AI learning course, then designed and embedded targeted DOT AI support at the moments learners need it.',
-        highlights: ['recurring pain points', 'targeted DOT AI support'],
+          'Translated learner pain points into targeted AI support, designing prompts and activation points around moments of learner need.',
+        highlights: ['targeted AI support', 'moments of learner need'],
         tools: ['DOT AI', 'OLI Torus'],
         image: '/projects/covers/dot-ai.png',
         imageAlt: 'Just-in-time DOT AI support embedded in a learning task',
@@ -148,11 +154,8 @@ const categories: Category[] = [
       {
         title: 'Turning Learner Data into Course Design Decisions',
         description:
-          'An AI-assisted evaluation of the Beyond Backpacks course that transformed learner behavior, performance, and survey data into evidence-based redesign priorities.',
-        highlights: [
-          'learner behavior, performance, and survey data',
-          'evidence-based redesign priorities',
-        ],
+          'Used learning analytics to turn learner behavior, performance, and survey data into evidence-based redesign priorities.',
+        highlights: ['learning analytics', 'evidence-based redesign priorities'],
         tools: ['Claude Code', 'ChatGPT', 'Google Slides'],
         image: '/projects/covers-hybrid/learner-data.png',
         imageAlt: 'Course evaluation findings and redesign priorities',
@@ -161,11 +164,10 @@ const categories: Category[] = [
       {
         title: 'From Tutorial Videos to Continuous Performance Support',
         description:
-          'Evaluated an existing tutorial-video system and redesigned how course authors find help through searchable content, AI-assisted support, and a continuous-improvement approach.',
+          'Evaluated existing tutorials and redesigned them into a more searchable, AI-assisted support system built for continuous improvement.',
         highlights: [
-          'searchable content',
-          'AI-assisted support',
-          'continuous-improvement approach',
+          'searchable, AI-assisted support system',
+          'continuous improvement',
         ],
         tools: ['Camtasia', 'HTML/CSS'],
         image: '/projects/covers/continuous-support.png',
@@ -187,28 +189,51 @@ function PortfolioIntro() {
           Projects<span className="accent-dot">.</span>
         </h1>
         <p className="intro-text">
-          Learning strategy, interactive experiences, AI-enabled learning, and
-          evaluation—designed around real learner and performance needs.
+          I design evidence-driven learning experiences, performance support,
+          and AI-enabled tools around real learner needs and performance gaps.
         </p>
       </div>
 
       <div className="intro-note" aria-label="Portfolio approach">
-        <span>How I work</span>
-        <p>Find the gap. Design the practice. Improve the system.</p>
+        <div className="intro-note-content">
+          <span>How I work</span>
+          <p>
+            <strong>Find the gap</strong>
+            <strong>Design the right intervention.</strong>
+            <strong>Test what works.</strong>
+            <strong>Improve continuously.</strong>
+          </p>
+        </div>
+        <img
+          className="intro-flower"
+          src="/decor/wildflower-bouquet.png"
+          alt=""
+          aria-hidden="true"
+        />
       </div>
 
       <nav className="category-nav" aria-label="Project categories">
+        <img
+          className="category-nav-flower"
+          src="/decor/wildflower-bouquet.png"
+          alt=""
+          aria-hidden="true"
+        />
         <a href="#category-01">
-          <span>01</span> Strategy &amp; Performance
+          <span>01</span>
+          <strong>Strategy &amp; Performance</strong>
         </a>
         <a href="#category-02">
-          <span>02</span> Interactive Learning
+          <span>02</span>
+          <strong>Interactive Learning</strong>
         </a>
         <a href="#category-03">
-          <span>03</span> AI &amp; Learning Technology
+          <span>03</span>
+          <strong>AI &amp; Learning Technology</strong>
         </a>
         <a href="#category-04">
-          <span>04</span> Evaluation &amp; Improvement
+          <span>04</span>
+          <strong>Evaluation &amp; Improvement</strong>
         </a>
       </nav>
     </section>
@@ -252,7 +277,12 @@ function HighlightedDescription({
 function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card" id={project.anchorId}>
-      <a className="project-card-link" href={project.href}>
+      <a
+        className="project-card-link"
+        href={project.href}
+        target={project.external ? '_blank' : undefined}
+        rel={project.external ? 'noreferrer' : undefined}
+      >
         <div className="project-image-wrap">
           <img src={project.image} alt={project.imageAlt} />
         </div>
@@ -265,11 +295,18 @@ function ProjectCard({ project }: { project: Project }) {
             text={project.description}
             highlights={project.highlights}
           />
-          <div className="tool-list" aria-label="Tools used">
-            {project.tools.map((tool) => (
-              <ToolTag key={tool} tool={tool} />
-            ))}
-          </div>
+          {project.externalLabel ? (
+            <span className="external-case-link">
+              {project.externalLabel}
+              <ArrowUpRight aria-hidden="true" size={15} strokeWidth={1.8} />
+            </span>
+          ) : (
+            <div className="tool-list" aria-label="Tools used">
+              {project.tools.map((tool) => (
+                <ToolTag key={tool} tool={tool} />
+              ))}
+            </div>
+          )}
         </div>
       </a>
     </article>
