@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    'https://dimple-lin-projects.pastel-plume-8433.chatgpt.site',
+    'https://dimple-lin-projects.michael-tangminhan.chatgpt.site',
   ),
   title: 'Projects — Dimple Lin',
   description:
