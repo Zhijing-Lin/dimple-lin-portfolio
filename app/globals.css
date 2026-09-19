@@ -1051,25 +1051,17 @@ a {
 }
 
 .home-hero h1 {
-  max-width: 790px;
+  max-width: 720px;
   margin: 0;
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  font-size: clamp(2.65rem, 4.6vw, 5rem);
-  font-weight: 610;
-  letter-spacing: -0.06em;
-  line-height: 1.03;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.35rem, 4vw, 4.25rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.06;
 }
 
 .home-highlight {
-  padding: 0 0.025em;
-  background: linear-gradient(
-    to top,
-    rgb(135 152 207 / 44%) 0,
-    rgb(135 152 207 / 44%) 27%,
-    transparent 27%
-  );
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+  color: inherit;
 }
 
 .home-actions {
@@ -1094,8 +1086,8 @@ a {
 }
 
 .home-button-primary {
-  border-color: var(--ink);
-  background: var(--ink);
+  border-color: #697f6b;
+  background: #697f6b;
   color: #fffdfa;
 }
 
@@ -1110,7 +1102,8 @@ a {
 
 .home-button-primary:hover,
 .home-button-primary:focus-visible {
-  background: #34302d;
+  border-color: #576c59;
+  background: #576c59;
 }
 
 .home-button-secondary:hover,
@@ -1123,10 +1116,9 @@ a {
   position: relative;
   min-height: 620px;
   padding: 1.4rem 1.35rem 1rem;
-  border: 1px solid #e3d9c7;
-  border-radius: 2.2rem;
-  background: #fffaf0;
-  box-shadow: 0 18px 48px rgb(69 57 39 / 6%);
+  border: 0;
+  background: transparent;
+  isolation: isolate;
 }
 
 .skill-garden::before,
@@ -1138,21 +1130,28 @@ a {
 }
 
 .skill-garden::before {
-  top: 1.4rem;
-  right: 8%;
-  width: 24%;
-  height: 17%;
-  background: #e8ebf7;
-  opacity: 0.64;
+  z-index: -1;
+  top: 7%;
+  right: 1%;
+  width: 92%;
+  height: 82%;
+  border-radius: 44% 56% 48% 52% / 50% 42% 58% 50%;
+  background:
+    radial-gradient(circle at 78% 20%, rgb(220 225 240 / 65%), transparent 28%),
+    radial-gradient(circle at 22% 28%, rgb(238 222 205 / 56%), transparent 31%),
+    radial-gradient(circle at 52% 76%, rgb(230 235 221 / 68%), transparent 40%);
+  filter: blur(9px);
 }
 
 .skill-garden::after {
-  right: 5%;
-  bottom: 4%;
-  width: 34%;
-  height: 18%;
-  background: #e4eee0;
-  opacity: 0.72;
+  z-index: -1;
+  right: 11%;
+  bottom: 7%;
+  width: 68%;
+  height: 24%;
+  border-radius: 50%;
+  background: rgb(240 220 168 / 38%);
+  filter: blur(18px);
 }
 
 .skill-garden > .home-eyebrow {
@@ -1173,10 +1172,10 @@ a {
   right: 3%;
   bottom: 3.5%;
   left: 3%;
-  height: 27%;
-  border-radius: 50% 50% 2rem 2rem;
-  background: #f0dca8;
-  opacity: 0.72;
+  height: 24%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgb(229 214 176 / 58%), transparent 72%);
+  filter: blur(7px);
 }
 
 .skill-plant {
@@ -1234,7 +1233,7 @@ a {
   display: block;
   width: clamp(112px, 11vw, 158px);
   aspect-ratio: 1;
-  background-image: url('/home/skill-flowers.png');
+  background-image: url('/home/skill-flowers-muted.png');
   background-position: var(--sprite-x) var(--sprite-y);
   background-repeat: no-repeat;
   background-size: 300% 200%;
@@ -1281,7 +1280,7 @@ a {
 .skill-info-card {
   position: absolute;
   z-index: 12;
-  top: calc(100% - 0.9rem);
+  top: calc(100% + 0.6rem);
   left: 50%;
   width: min(235px, 82vw);
   padding: 1rem 1rem 0.95rem;
@@ -1293,9 +1292,11 @@ a {
   transform: translateX(-50%);
 }
 
-.skill-plant:nth-child(n + 5) .skill-info-card {
+.skill-plant-4 .skill-info-card,
+.skill-plant-5 .skill-info-card,
+.skill-plant-6 .skill-info-card {
   top: auto;
-  bottom: calc(100% - 0.6rem);
+  bottom: calc(100% + 0.55rem);
 }
 
 .skill-info-card > button {
@@ -1616,35 +1617,43 @@ a {
 .dbee-button {
   display: grid;
   place-items: center;
-  width: 78px;
-  height: 78px;
+  width: 88px;
+  height: 88px;
   padding: 0;
-  border: 1px solid #d6c7a5;
-  border-radius: 50%;
-  background: #fff6da;
-  box-shadow: 0 10px 28px rgb(58 48 35 / 15%);
+  border: 0;
+  background: transparent;
+  box-shadow: none;
   cursor: pointer;
   transition: box-shadow 190ms ease, transform 190ms ease;
 }
 
 .dbee-button img {
-  width: 67px;
-  height: 67px;
+  width: 86px;
+  height: 86px;
   object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgb(58 48 35 / 17%))
+    drop-shadow(0 0 4px rgb(245 210 104 / 28%));
   animation: dbee-bob 3.2s ease-in-out 8s infinite;
+  transition: filter 190ms ease, transform 190ms ease;
 }
 
 .dbee-button:hover,
 .dbee-button:focus-visible,
 .dbee-shell.is-open .dbee-button {
-  box-shadow: 0 0 0 7px rgb(245 210 104 / 25%),
-    0 12px 30px rgb(58 48 35 / 18%);
+  box-shadow: none;
   transform: scale(1.055);
 }
 
+.dbee-button:hover img,
+.dbee-button:focus-visible img,
+.dbee-shell.is-open .dbee-button img {
+  filter: drop-shadow(0 4px 7px rgb(58 48 35 / 18%))
+    drop-shadow(0 0 5px rgb(245 210 104 / 62%))
+    drop-shadow(0 0 11px rgb(245 210 104 / 34%));
+}
+
 .dbee-button:focus-visible {
-  outline: 2px solid var(--accent-dark);
-  outline-offset: 5px;
+  outline: 0;
 }
 
 .dbee-hover-bubble {
@@ -1970,7 +1979,7 @@ a {
   }
 
   .home-hero h1 {
-    font-size: clamp(2.45rem, 11.5vw, 4rem);
+    font-size: clamp(2.25rem, 10vw, 3.65rem);
   }
 
   .skill-garden {
@@ -2016,19 +2025,12 @@ a {
   }
 
   .skill-info-card,
-  .skill-plant:nth-child(n + 5) .skill-info-card {
-    top: calc(100% - 1rem);
-    bottom: auto;
-  }
-
-  .skill-plant:nth-child(even) .skill-info-card {
-    right: 0;
-    left: auto;
-    transform: none;
-  }
-
-  .skill-plant:nth-child(odd) .skill-info-card {
-    left: 0;
+  .skill-plant-4 .skill-info-card,
+  .skill-plant-5 .skill-info-card,
+  .skill-plant-6 .skill-info-card {
+    position: relative;
+    inset: auto;
+    margin: 0.65rem auto 0;
     transform: none;
   }
 
@@ -2096,13 +2098,13 @@ a {
   }
 
   .dbee-button {
-    width: 68px;
-    height: 68px;
+    width: 76px;
+    height: 76px;
   }
 
   .dbee-button img {
-    width: 59px;
-    height: 59px;
+    width: 74px;
+    height: 74px;
   }
 
   .dbee-panel {
