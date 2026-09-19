@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 import { notFound } from 'next/navigation';
+import {
+  ProjectProgressNav,
+  type ProjectProgressItem,
+} from '@/components/project-progress-nav';
 import { SiteHeader } from '@/components/site-header';
 import {
   legacyProjectBySlug,
@@ -113,14 +117,13 @@ function ProjectMedia({ media }: { media: LegacyMedia | null }) {
 function LegacySectionView({
   section,
   index,
+  id,
 }: {
   section: LegacySection;
   index: number;
+  id: string;
 }) {
   if (section.type === 'hero') return null;
-
-  const title = sectionTitle(section, index);
-  const id = sectionId(title, index);
 
   if (section.type === 'heading') {
     return (
@@ -243,11 +246,62 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   if (!project || !legacyProject) notFound();
 
   const sections = legacyProject.sections.filter(
-    (section) => section.type !== 'hero',
+    (section) => section.type !== 'hero' && section.type !== 'process',
+  );
+  const processSection = legacyProject.sections.find(
+    (section) => section.type === 'process',
   );
   const hero = legacyProject.sections.find(
     (section) => section.type === 'hero',
   );
+  const renderedSections = sections.map((section, index) => {
+    const title = sectionTitle(section, index);
+    return {
+      section,
+      index: index + 1,
+      title,
+      id: sectionId(title, section.sourceIndex ?? index),
+    };
+  });
+  const fallbackExcludedTitles = new Set([
+    'Tools',
+    'Team',
+    'Timeline',
+    'My Role',
+    'Course Audience',
+    'Project details',
+    'Project gallery',
+  ]);
+  const progressItems: ProjectProgressItem[] =
+    processSection?.type === 'process' && processSection.items.length
+      ? processSection.items
+          .map((item) => {
+            const target =
+              renderedSections.find(
+                ({ section }) => section.sourceIndex === item.sectionIndex,
+              ) ||
+              renderedSections.find(
+                ({ section }) =>
+                  section.sourceIndex !== null &&
+                  section.sourceIndex >= item.sectionIndex,
+              ) ||
+              renderedSections.at(-1);
+            return target
+              ? { label: item.name, targetId: target.id }
+              : undefined;
+          })
+          .filter((item): item is ProjectProgressItem => Boolean(item))
+      : renderedSections
+          .filter(
+            ({ section, title }) =>
+              !fallbackExcludedTitles.has(title) &&
+              !title.startsWith('Section ') &&
+              (section.type === 'heading' ||
+                section.type === 'text' ||
+                section.type === 'split' ||
+                section.type === 'columns'),
+          )
+          .map(({ title, id }) => ({ label: title, targetId: id }));
   const currentIndex = projectDetails.findIndex((item) => item.slug === slug);
   const nextProject =
     projectDetails[(currentIndex + 1) % projectDetails.length];
@@ -259,9 +313,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       <article>
         <header className="case-study-hero">
           <div className="case-study-hero-copy">
-            <Link className="back-link" href="/projects">
+            <a className="back-link" href="/projects">
               <ArrowLeft size={16} aria-hidden="true" /> All projects
-            </Link>
+            </a>
             <p className="eyebrow">{project.category}</p>
             {hero?.type === 'hero' ? (
               <RichText html={hero.titleHtml} className="case-study-title" />
@@ -289,31 +343,16 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           </figure>
         </header>
 
-        <div className="case-study-body">
-          <aside className="case-study-index" aria-label="Case study contents">
-            <p>Case study</p>
-            <nav>
-              {sections.map((section, index) => {
-                const title = sectionTitle(section, index);
-                return (
-                  <a
-                    key={`${title}-${index}`}
-                    href={`#${sectionId(title, index + 1)}`}
-                  >
-                    <span>{String(index + 1).padStart(2, '0')}</span>
-                    {title}
-                  </a>
-                );
-              })}
-            </nav>
-          </aside>
+        <ProjectProgressNav items={progressItems} />
 
+        <div className="case-study-body">
           <div className="case-study-content">
-            {sections.map((section, index) => (
+            {renderedSections.map(({ section, index, id }) => (
               <LegacySectionView
                 section={section}
-                index={index + 1}
-                key={`${section.type}-${index}`}
+                index={index}
+                id={id}
+                key={`${section.type}-${id}`}
               />
             ))}
           </div>
