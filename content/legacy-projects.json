@@ -1,0 +1,1392 @@
+[
+  {
+    "slug": "help-center",
+    "shortId": "b04fa22b",
+    "originalUrl": "https://dimplelin.work/b04fa22b",
+    "sections": [
+      {
+        "sourceIndex": 0,
+        "type": "hero",
+        "titleHtml": "<h2>Needs-Driven Help Center for Tutor Performance Support</h2>",
+        "subtitleHtml": "<p>Using needs analysis, cross-functional collaboration, SME knowledge elicitation, and AI-assisted content development to turn recurring live-session challenges into actionable support.</p>"
+      },
+      {
+        "sourceIndex": 1,
+        "type": "text",
+        "html": "<h4>Project Overview</h4><p>My client, <strong>PLUS Tutoring</strong>, provides live tutoring programs that connect students with tutors for real-time academic support. During live sessions, tutors frequently encounter <strong>technical, operational, and student-related challenges</strong> and often rely on supervisors for recurring questions, creating repeated support requests and inconsistent access to guidance.</p><p>I designed a <strong>needs-driven Help Center and just-in-time performance support resource</strong> organized around the tasks and problems tutors encounter across the tutoring workflow. Some resources support <strong>pre-session preparation</strong>, while others provide <strong>actionable guidance during live sessions</strong> so tutors can resolve common issues more independently.</p>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 3,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h4>Tools</h4><ul><li><p>Figma</p></li><li><p>Notion</p></li><li><p>Google AI Studio</p></li><li><p>Slack</p></li><li><p>ChatGPT</p></li><li><p>Granola (AI Meeting Note-taker)</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h4>My Role</h4><p>I served as the Instructional Designer for this project. My work included:</p><ul><li><p>Needs &amp; Performance Analysis</p></li><li><p>Information Architecture</p></li><li><p>Performance Support Design</p></li><li><p>SME Collaboration</p></li><li><p>Cross-Functional Collaboration</p></li><li><p>AI-Assisted Content Development</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>Team</h3><ul><li><p>Supervisors &amp; Lead Tutors — SMEs</p></li><li><p>Project Manager</p></li><li><p>Product Designer / Product Team</p></li><li><p>Research / technical partner supporting Slack question analysis</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>Timeline</h3><ul><li><p>Desgin + Development: Jan 2026 - Aug 2026</p></li><li><p>Evaluation: Sep 2026 - Now</p></li></ul>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "type": "process",
+        "items": [
+          {
+            "name": "Reframing the Problem",
+            "sectionIndex": 5
+          },
+          {
+            "name": "Need Analysis",
+            "sectionIndex": 7
+          },
+          {
+            "name": "Intervention Selection",
+            "sectionIndex": 8
+          },
+          {
+            "name": "Desgin & Develop",
+            "sectionIndex": 9
+          },
+          {
+            "name": "Evaluation",
+            "sectionIndex": 13
+          }
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "type": "split",
+        "html": "<h4>Reframing the Problem</h4><p><strong>From a Top-Down Help Center to a Needs-Driven Support System</strong></p><p>Based on my manager’s initial brief, I designed the first Help Center information architecture around the core tools tutors used, including PLUS, Zoom, and Slack, and built an interactive prototype in Google AI Studio. I shared it with PLUS supervisors and a product designer, then completed two rounds of iteration based on their feedback.</p><p>While the structure became clearer and easier to navigate, I realized I was still designing from the content outward, organizing what we thought tutors might need <strong>rather than fully understanding the problems </strong>they were actually encountering.</p><p>After discussing this concern with my manager, I proposed shifting the project from a top-down content-design approach toward a <strong>bottom-up needs analysis</strong>.</p>",
+        "media": {
+          "type": "image",
+          "url": null,
+          "unavailable": true,
+          "caption": "<p class=\"p2\">Help Center Information Architecture Prototypes</p>",
+          "alt": null,
+          "width": "1500",
+          "height": "1125"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 7,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h4>Needs Analysis: Identifying Where Tutors Actually Get Stuck</h4><p>To better understand tutors’ support needs, I used multiple sources to identify recurring problems and understand them in context.</p><p><strong>1. Supervisor and Lead Tutor Interviews</strong><br>I spoke with the people closest to tutor operations, supervisors and lead tutors, focusing on recurring breakdowns in live tutoring sessions.</p><p><strong>2. Slack Analysis</strong><br>To validate the interview findings against tutors’ real support behavior, I partnered with the Research Programmer to analyze the most frequently asked tutor questions in Slack, PLUS’s primary internal communication channel.</p><p><strong>3. Experiencing the Workflow Firsthand</strong><br>I participated in a live PLUS tutoring session as a tutor to experience the workflow firsthand. During the session, I documented moments where I felt confused, uncertain about the next step, or unable to quickly find the information I needed.</p><p></p>",
+            "media": {
+              "type": "image",
+              "url": null,
+              "unavailable": true,
+              "caption": null,
+              "alt": null,
+              "width": null,
+              "height": null
+            }
+          }
+        ]
+      },
+      {
+        "sourceIndex": 8,
+        "type": "split",
+        "html": "<h4>Intervention Selection</h4><p><strong>From Tutor Problems to the Right Intervention</strong></p><p>After collecting recurring tutor issues, I organized them in Figma to make patterns across the problem space visible, grouping issues by both operational topic and underlying issue type. I then met with the PLUS Product Lead to review the problem space and determine the most appropriate response for each issue: <strong>Help Center content, a product feature, or a combination of both.</strong></p><ul><li><p>Immediate guidance needed + procedure exists → Help Center</p></li><li><p>Workflow is constrained by the platform → Product feature</p></li><li><p>Urgent current problem + longer-term platform opportunity → Help Center now + Product later</p></li></ul>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9f02d0fd08272eb04fa22b/section-media/clipboard-image-5fb1e1fd-952b-4d9c-86bb-0a92bab19428.webp",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Tutor Problem Space Mapping in Figma</p>",
+          "alt": null,
+          "width": "17815",
+          "height": "5020"
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 9,
+        "type": "text",
+        "html": "<h4>Performance Support Design &amp; Develop</h4><p>Matching the Support Format to the Type of Problem</p><p>After identifying which issues belonged in the Help Center, I designed <strong>two types of performance support</strong> based on the nature of the problem: predictable procedures and context-sensitive decisions.</p>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 10,
+        "type": "split",
+        "html": "<p><strong>A. Procedural Job Aids</strong></p><p>For predictable workflows in the <strong>PLUS application, Zoom, and Slack</strong>, tutors mainly needed to know how to complete a specific task correctly.</p><p>I designed these resources to be: <strong>Short → Visual → Step-by-Step → Action First</strong></p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9f02d0fd08272eb04fa22b/section-media/Screenshot_2026-09-07_at_8.34.45_PM-1938f069-5dea-4b8c-a6c9-7dc4d84cb702.webp",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Procedural Job Aid Example: Join &amp; Participate in Sessions</p>",
+          "alt": null,
+          "width": "1106",
+          "height": "1266"
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 11,
+        "type": "split",
+        "html": "<p><strong>B. Operational Decision Guides</strong></p><p>Operational challenges, such as a tutor joining late, insufficient tutor coverage, or a language mismatch, required more <strong>context-sensitive judgment</strong>. In many cases, the correct response existed as <strong>tacit knowledge among experienced supervisors</strong> rather than as a clearly documented procedure.</p><p>I used weekly supervisor meetings as <strong>SME knowledge-elicitation sessions</strong>, bringing one or two priority problems to each meeting and asking follow-up questions to uncover the underlying decision rules, exceptions, and escalation points.</p><p>I then translated this expert knowledge into structured decision guides that helped tutors understand:</p><ul><li><p><strong>What to do</strong></p></li><li><p><strong>What to say</strong> through example language or messages</p></li><li><p><strong>Practical tips</strong> for handling the situation</p></li><li><p><strong>When to escalate</strong> the issue</p></li></ul>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/6a9f02d0fd08272eb04fa22b/xnyeTIQQf6iVzMI3.webp",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Operational Decision Guide Example: When the Classroom Teacher Is Unavailable</p>",
+          "alt": null,
+          "width": "1111",
+          "height": "1402"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 12,
+        "type": "split",
+        "html": "<p><strong>Human-in-the-Loop AI Workflow</strong></p><p>I used a <strong>human-in-the-loop AI workflow</strong> to develop individual Help Center articles. During weekly supervisor meetings, I used an <strong>AI note taker</strong> to capture the discussion, including procedures, decision points, and edge cases. After each meeting, I provided ChatGPT with the article topic, meeting transcript or notes, examples of previously completed articles, and the desired structure and tone to generate a first draft.</p><p>I then<strong> reviewed, rewrote, and re-prompted </strong>the draft to improve its accuracy, clarity, and consistency. Once the article was refined, I shared it with supervisors asynchronously for feedback and iterated again based on their comments before finalizing the content.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9f02d0fd08272eb04fa22b/section-media/Screenshot_2026-09-07_at_9.07.47_PM-0cf1777d-19db-447d-950c-79bbe25df28f.webp",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">AI-Assisted Workflow Diagram</p>",
+          "alt": null,
+          "width": "2608",
+          "height": "700"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 13,
+        "type": "text",
+        "html": "<h3>Evaluation</h3><p></p>",
+        "cta": null
+      }
+    ]
+  },
+  {
+    "slug": "reviewer-judgment",
+    "shortId": "6c8b7574",
+    "originalUrl": "https://dimplelin.work/6c8b7574",
+    "sections": [
+      {
+        "sourceIndex": 0,
+        "type": "hero",
+        "titleHtml": "<h2><strong>Turning Reviewer Judgment into a Learnable Skill</strong></h2>",
+        "subtitleHtml": "<p>A research-informed pre-training course preparing OER reviewers to apply rubrics consistently and provide actionable feedback.</p>"
+      },
+      {
+        "sourceIndex": 2,
+        "type": "text",
+        "html": "<h4>Project Overview</h4><p>Our capstone team partnered with <strong>Maricopa County Community Colleges</strong> and <strong>Carnegie Mellon University’s Open Learning Initiative (OLI)</strong> to develop the <strong>Open 4 Peer Review Hub</strong>, a platform that helps reviewers evaluate Open Educational Resources (OER) using <strong>six single-point rubrics</strong>.</p><p>As part of the platform experience, I led the design of a <strong>reviewer pre-training course</strong> to prepare reviewers to apply the rubrics consistently and provide <strong>specific, evidence-based, actionable feedback</strong> before conducting live reviews.</p><p>Following the initial capstone engagement, <strong>the client extended our collaboration into the fall semester</strong> for continued product refinement and evaluation.</p>",
+        "cta": {
+          "title": "Try the course",
+          "url": "https://proton.oli.cmu.edu/sections/open_4_peer_review_reviewer_es/preview?sidebar_expanded=true"
+        }
+      },
+      {
+        "sourceIndex": 4,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h4><strong>Team</strong></h4><p>5-person cross-functional capstone team; pre-training track developed by me with support from 1 researcher<br></p><h3></h3>",
+            "media": null
+          },
+          {
+            "html": "<h4><strong>My Role</strong></h4><p>Project Manager &amp; Lead Learning Experience Designer</p><ul><li><p>Led needs analysis, CTA, and course design.</p></li><li><p>Collaborated with SMEs and stakeholders.</p></li><li><p>Developed the course in OLI and created Vyond videos.</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h4><strong>Tools</strong></h4><ul><li><p>OLI Torus (Course Authoring)</p></li><li><p>Vyond</p></li><li><p>Google Doc</p></li><li><p>Excel</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h4><strong>Timeline</strong></h4><ul><li><p>Design + Development: May 2026 - Aug 2026</p></li><li><p>Evaluation: Sep 2026 - Now</p></li></ul><p></p>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h4>Project Challenge</h4><p>During user testing of the peer-review platform, I analyzed the review comments participants submitted and found that <strong>providing shared rubrics and a structured workflow was not enough to ensure consistent review quality</strong>. Reviewers still interpreted rubric criteria differently, drifted outside the assigned scope, and struggled to turn observations into <strong>specific, actionable feedback</strong>.</p><p>Based on these findings, I proposed to the client that we develop a <strong>pre-training course </strong>to prepare reviewers before they began conducting live OER reviews.</p><p><strong>What does a review-ready reviewer need to know and be able to do?</strong></p><p>I focused on three questions:</p><ul><li><p>What knowledge and skills distinguish an effective reviewer from a novice reviewer?</p></li><li><p>Which performance gaps could realistically be addressed through pre-training?</p></li><li><p>How could those gaps be translated into practice that prepares reviewers for live review?</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h4>Analysis &amp; Actions</h4><p>I used multiple sources of evidence to define the target performance and diagnose reviewer learning needs.</p><ul><li><p><strong>Reviewed existing materials</strong>, including the six single-point rubrics, reviewer guidance, and client-provided resources, to understand the intended review process and standards.</p></li><li><p><strong>Collaborated with SMEs and stakeholders</strong> to clarify reviewer expectations, rubric interpretation, review scope, and the desired quality of reviewer feedback.</p></li><li><p><strong>Conducted a literature review</strong> on peer review and effective feedback to identify research-supported characteristics of specific, constructive, and actionable feedback.</p></li><li><p><strong>Conducted cognitive task analysis</strong> through think-aloud sessions with experienced and novice reviewers to identify differences in how they interpreted criteria, selected evidence, made judgments, and formed feedback.</p></li><li><p><strong>Separated trainable gaps from expertise-dependent gaps</strong>, so the course focused only on knowledge and skills that instruction could realistically improve.</p></li></ul><p></p>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "type": "text",
+        "html": "<h4>My Design Process</h4><p>I used the <strong>ADDIE model as an iterative framework</strong>, moving between analysis, design, development, implementation, and evaluation as research findings, stakeholder feedback, and user testing informed the course.</p>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 7,
+        "type": "process",
+        "items": [
+          {
+            "name": "Need Analysis",
+            "sectionIndex": 9
+          },
+          {
+            "name": "Project Management",
+            "sectionIndex": 13
+          },
+          {
+            "name": "Learning Design & Develop",
+            "sectionIndex": 14
+          },
+          {
+            "name": "Implementation & Evaluation",
+            "sectionIndex": 16
+          }
+        ]
+      },
+      {
+        "sourceIndex": 8,
+        "type": "split",
+        "html": "<h4>Analysis — What Reviewers Need to Know</h4><p>I first focused on the <strong>foundational knowledge</strong> reviewers needed before beginning a live review by:</p><ul><li><p><strong>Reviewing existing materials</strong>, including the six single-point rubrics, reviewer guidance, and client-provided resources, to understand the intended review process and standards.</p></li><li><p><strong>Interviewing and collaborating with SMEs and stakeholders</strong> to clarify reviewer expectations, rubric interpretation, review scope, and expectations for high-quality feedback.</p></li></ul><p>This analysis helped define the foundational content for course <strong>Units 1–3</strong>, including project context, reviewer role, rubric structure, rating categories, scope, and review workflow.</p><p></p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9caded401e60456c8b7574/section-media/Screenshot_2026-09-05_at_9.55.13_PM-62f56754-6676-4056-aec0-6dbdf23507c8.webp",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Core Reviewer Knowledge Identified Through Analysis</p>",
+          "alt": null,
+          "width": "2562",
+          "height": "1100"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 9,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h4>Analysis — What Reviewers Need to Do</h4><p>After defining the foundational knowledge, I focused on the <strong>performance skills</strong> reviewers needed to produce high-quality feedback by:</p><ul><li><p><strong>Conducting a literature review</strong> on peer review and effective feedback to identify research-supported characteristics of specific, constructive, and actionable feedback.</p></li><li><p><strong>Conducting a cognitive task analysis</strong> through think-aloud sessions with <strong>three experienced reviewers and two novice reviewer</strong> to compare how they selected evidence, interpreted its significance, formed recommendations, and refined feedback.</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h4>Analysis — From Performance Gaps to Training Priorities</h4><p>After comparing novice and experienced reviewers, I evaluated each gap to determine whether it could realistically be addressed through pre-training.</p><p>I focused the course on <strong>trainable knowledge and skills</strong>—such as rubric interpretation, scope control, review workflow, and actionable feedback—while recognizing that deeper disciplinary expertise or technical constraints required support beyond training.</p><p>I then translated each trainable gap directly into a learning need and instructional response.</p><blockquote><p></p></blockquote>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 10,
+        "type": "split",
+        "html": "<h1>Add a short text to your image.</h1>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9caded401e60456c8b7574/section-media/Screenshot_2026-09-05_at_9.49.15_PM-7b52e0c6-6cb8-444b-863d-0ac10d69629a.webp",
+          "unavailable": false,
+          "caption": "<p class=\"p1\"><em>Expert vs. Novice Reviewer: Key Gaps and Training Implications</em></p>",
+          "alt": null,
+          "width": "2206",
+          "height": "1258"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 11,
+        "type": "split",
+        "html": "<h4>Project Management</h4><p>Throughout the project, I used a recurring alignment cycle to keep the course grounded in SME expertise, team input, and client priorities while maintaining progress toward delivery.</p><p>1. Align on Objectives and Course Architecture<br>I worked with SMEs to translate the needs analysis into learning objectives and an initial course structure, defining what reviewers needed to know and do before live review.</p><p>2. Review and Validate Design Decisions<br>I led weekly team design reviews to refine the content and activities, and used biweekly stakeholder meetings to validate major decisions and secure approval before development.</p><p>3. Iterate Based on User Testing<br>After the first OLI version was tested, learners found Units 1–3 too text-heavy. I proposed replacing long-form instruction with <strong>short, scenario-based Vyond videos</strong>, then coordinated the revised scripting, production, and timeline to improve engagement without delaying delivery.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/6a9caded401e60456c8b7574/0Rs1oMVucNnY1EdS.webp",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Workflow Diagram</p>",
+          "alt": null,
+          "width": "1313",
+          "height": "1188"
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 12,
+        "type": "text",
+        "html": "<h4>Learning Design &amp; Development</h4><p>I translated the learning objectives and identified performance gaps into an interactive, practice-centered learning experience grounded in learning-science principles. (加一下用vyond)</p>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 13,
+        "type": "split",
+        "html": "<h4>Scenario-Based Multimedia + Flexible Access</h4><p>I used short scenario-based videos（<a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://youtu.be/5PwHJvIdcrw?si=QuWwnvRV_CuAcEJh\"><span>view example</span></a>） to contextualize abstract reviewer concepts and make knowledge-heavy content more engaging and easier to process.</p><p>Multiple access options, including captions and supporting text, allow learners to engage with the content in ways that fit their needs and learning environment.</p>",
+        "media": {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/z9PJgRWuOaI?autoplay=0&mute=0&loop=0",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Scenario-Based Multimedia + Flexible Access in Practice</p>",
+          "alt": null,
+          "width": null,
+          "height": null
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 14,
+        "type": "split",
+        "html": "<h4>Metacognitive Reflection</h4><p>I embedded reflection prompts and self-checks throughout the course to help reviewers monitor their own reasoning, recognize misconceptions, and become more aware of how personal assumptions can influence review decisions.</p>",
+        "media": {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/EB0Mt_PCBpI?autoplay=0&mute=0&loop=0",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Metacognitive Reflection in Practice</p>",
+          "alt": null,
+          "width": null,
+          "height": null
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 15,
+        "type": "split",
+        "html": "<h4>Immediate, Tailored Feedback + Guided Discovery</h4><p>I used immediate, explanatory feedback to help learners understand why some reviewer decisions were stronger than others and correct misconceptions as they practiced. Learners then used guided discovery to compare examples and identify patterns before the CEWA framework was formally introduced.</p>",
+        "media": {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/vl9BJbscpRk?autoplay=0&mute=0&loop=0",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Immediate, Tailored Feedback + Guided Discovery in Practice</p>",
+          "alt": null,
+          "width": null,
+          "height": null
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 16,
+        "type": "text",
+        "html": "<h3>Implementation &amp; Evaluation</h3><p></p>",
+        "cta": null
+      }
+    ]
+  },
+  {
+    "slug": "ai-architecture",
+    "shortId": "8a18dbf3",
+    "originalUrl": "https://dimplelin.work/8a18dbf3",
+    "sections": [
+      {
+        "sourceIndex": 0,
+        "type": "hero",
+        "titleHtml": "<h2>AI Architecture Decision-Making Simulation</h2>",
+        "subtitleHtml": "<p><span>A multi-modal learning experience combining video and simulation to help AI product managers evaluate AI systems.</span></p>"
+      },
+      {
+        "sourceIndex": 1,
+        "type": "text",
+        "html": "<h3>Project Overview</h3><p>I used an <strong>AI-augmented research approach</strong> to investigate how aspiring AI product managers learn to make AI architecture decisions.</p><p>I combined AI-assisted web research and synthetic users to explore recurring questions, misconceptions, and decision-making challenges around AI system design. Rather than treating AI-generated findings as evidence on their own, I used them to form initial hypotheses and then <strong>validated those patterns through interviews with CMU students studying product management</strong>.</p><p>Across these sources, a consistent need emerged: learners were familiar with concepts such as RAG, fine-tuning, and agentic workflows, but lacked a structured way to translate that knowledge into real product decisions.</p>",
+        "cta": {
+          "title": "Try out the course",
+          "url": "https://zhijing-lin.github.io/making-ai-architecture-decisions/"
+        }
+      },
+      {
+        "sourceIndex": 2,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3><span>Problem</span></h3><p>The core gap was not conceptual knowledge, but <strong>applied decision-making</strong>.</p><p>When an AI system underperformed, aspiring AI PMs struggled to systematically diagnose the root cause, interpret evaluation results, compare possible architecture changes, and justify a recommendation while balancing performance, cost, and business constraints.</p><p>Without a repeatable decision process, these choices could rely too heavily on intuition or isolated metrics rather than evidence.</p>",
+            "media": null
+          },
+          {
+            "html": "<h3><span>Solution</span></h3><p>To address this gap, we designed a <strong>scenario-based learning experience</strong> centered on the <strong>EVAL framework</strong> to give learners structured practice making AI architecture decisions.</p><p>Learners work through a realistic AI product scenario in which they evaluate system performance, identify failure modes, compare architecture options, analyze trade-offs, and make a defensible recommendation based on evidence.<br></p>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Tools</h3><ul><li><p>Articulate Storyline, Synthesia, HTML/CSS</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>My Role</h3><p>Instructional Designer &amp; Storyline Developer</p><ul><li><p>Led need finding using AI-assisted research and CMU student interviews.</p></li><li><p>Translated dense SME content into a learner-centered structure.</p></li><li><p>Designed and developed scenario-based interactions in Storyline.</p></li><li><p>Collaborated with the SME and multimedia designer to align content and learning activities.</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>Team</h3><ul><li><p>1 Instructional Designer &amp; Storyline Developer</p></li><li><p>1 Multimedia Designer</p></li><li><p>1 Subject Matter Expert</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>Timeline</h3><ul><li><p>Jan 2026 - May 2026 (Discovery &amp; Research: 1 month; Design &amp; Testing: 3 months)</p></li></ul>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "type": "heading",
+        "html": "<h3>My Design Process</h3>"
+      },
+      {
+        "sourceIndex": 5,
+        "type": "process",
+        "items": [
+          {
+            "name": "Action Mapping",
+            "sectionIndex": 6
+          },
+          {
+            "name": "Storyboard & Prototype",
+            "sectionIndex": 10
+          },
+          {
+            "name": "User Testing & Iteration",
+            "sectionIndex": 13
+          },
+          {
+            "name": "Final Development",
+            "sectionIndex": 14
+          }
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "type": "text",
+        "html": "<h3>Action Mapping</h3><p>I started with <strong>Action Mapping</strong> to translate the research findings into observable workplace behaviors.</p><p>The performance goal was for learners to <strong>make a defensible AI architecture recommendation</strong> for an EdTech product by using evaluation results and cost analysis to diagnose failures, compare options, and balance performance, cost, and business constraints.</p><p>From this goal, I identified four key actions:</p><ul><li><p><strong>Define success</strong> by establishing evaluation criteria and representative test cases</p></li><li><p><strong>Diagnose failure modes</strong> using evaluation results</p></li><li><p><strong>Compare architecture options</strong> using performance and AITCO-based cost data</p></li><li><p><strong>Recommend and justify a solution</strong> based on performance, cost, and product trade-offs</p></li></ul>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 7,
+        "type": "text",
+        "html": "<h3>Identifying Learner Barriers</h3><p>Our research surfaced three key barriers that made AI architecture decision-making difficult for novice product managers:</p><ul><li><p><strong>Defining what “good” looks like</strong><br>Learners often lacked clear evaluation criteria for judging AI system performance, making it easy to rely on subjective impressions instead of measurable evidence.</p></li><li><p><strong>Diagnosing why a system is failing</strong><br>When performance was poor, learners could identify that something was wrong but struggled to determine the underlying failure mode before jumping to a technical solution.</p></li><li><p><strong>Choosing and justifying the right intervention</strong><br>Learners found it difficult to compare options such as RAG, fine-tuning, and agentic workflows while weighing performance improvements against cost, complexity, and product constraints.</p></li></ul>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 8,
+        "type": "text",
+        "html": "<h3>Practice Activity Design</h3><p>Using these key actions and learner barriers, I designed <strong>four scenario-based tasks</strong> focused on applied decision-making rather than concept recall:</p><ul><li><p><strong>Define success:</strong> Learners build a rubric for evaluating AI tutor responses, turning an abstract quality like “good tutoring” into measurable criteria.</p></li><li><p><strong>Diagnose failure modes:</strong> Learners analyze AI tutor outputs and identify issues such as answer leaking, logic errors, or instruction-following problems.</p></li><li><p><strong>Compare architecture options:</strong> Learners review evaluation and cost data to decide whether a higher-performing architecture is worth the additional cost.</p></li><li><p><strong>Justify the recommendation:</strong> Learners explain their final decision using evidence from performance metrics, failure analysis, and cost trade-offs.</p></li></ul>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 10,
+        "type": "text",
+        "html": "<h3>Storyboarding, Prototyping, and Learner Testing</h3><p>I first created a storyboard and flow chart to map the full scenario-based learning experience, including the storyline, decision points, feedback moments, and how learners would apply the EVAL framework.</p><p>Following the <strong>Successive Approximation Model (SAM)</strong>, I then built an early prototype in Articulate Storyline so we could test the experience before investing in full development.</p><p>We conducted <strong>three rounds of think-aloud testing </strong>with CMU students studying product management, our target learner group. Participants worked through the prototype while explaining their reasoning, confusion points, and decision-making process. After each round, we iterated on the experience based on where learners struggled, what concepts required additional scaffolding, and which interactions or feedback needed clarification.</p><p></p>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 11,
+        "type": "gallery",
+        "layout": "Slider",
+        "items": [
+          {
+            "type": "image",
+            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/eDwB5gnr9Q3gBc9e.png",
+            "unavailable": false,
+            "caption": "<p>Storyboard</p>",
+            "alt": null,
+            "width": "1866",
+            "height": "1322"
+          },
+          {
+            "type": "image",
+            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/qW9zObDRU9NGUSVa.png",
+            "unavailable": false,
+            "caption": "<p>Flow Chart</p>",
+            "alt": null,
+            "width": "1436",
+            "height": "1176"
+          },
+          {
+            "type": "image",
+            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/BI1EabMrg02TaDt2.png",
+            "unavailable": false,
+            "caption": "<p>Storyline Prototype</p>",
+            "alt": null,
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 13,
+        "type": "split",
+        "html": "<h3>Iteration: Adding a Pre-training Video Before Practice</h3><p>During think-aloud testing, CMU product management students could often understand individual steps of the EVAL framework, but struggled to see how those steps connected into a complete decision-making process.</p><p>To address this gap, we added a <strong>pre-training video</strong> before the simulation. Created in Synthesia by our multimedia designer, the video introduces the architecture options and provides a high-level mental model of the EVAL process before learners begin making decisions.</p><p>This reduced the amount of new information learners had to process during the simulation and allowed them to focus more on <strong>applying the framework rather than figuring out its structure</strong>.</p>",
+        "media": {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/FzIzI231usk?autoplay=0&mute=0&loop=0",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Pre-training Video</p>",
+          "alt": null,
+          "width": null,
+          "height": null
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 14,
+        "type": "heading",
+        "html": "<h3>Learning Science Principles</h3>"
+      },
+      {
+        "sourceIndex": 15,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h4>Anchored Learning</h4><p>Using these key actions and learner barriers, I designed <strong>four scenario-based tasks</strong> focused on applied decision-making rather than concept recall:</p>",
+            "media": {
+              "type": "image",
+              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/kI3tRwNapKrfn8Oe.png",
+              "unavailable": false,
+              "caption": null,
+              "alt": null,
+              "width": "1266",
+              "height": "813"
+            }
+          },
+          {
+            "html": "<h4>Just-in-Time Support</h4><p>Key terms, formulas, and decision guidance are available during practice so learners can access support <strong>at the moment of need</strong> rather than memorize information upfront.</p>",
+            "media": {
+              "type": "image",
+              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/vXPycVECYuKgVDIP.png",
+              "unavailable": false,
+              "caption": null,
+              "alt": null,
+              "width": "1266",
+              "height": "813"
+            }
+          },
+          {
+            "html": "<h4>Immediate Feedback</h4><p>Each decision is followed by explanatory feedback that helps learners understand <strong>why a choice works or does not work</strong> and correct misconceptions before moving forward.</p><p></p>",
+            "media": {
+              "type": "image",
+              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/jagokt7CfCWRE1YA.png",
+              "unavailable": false,
+              "caption": null,
+              "alt": null,
+              "width": "1266",
+              "height": "813"
+            }
+          }
+        ]
+      },
+      {
+        "sourceIndex": 17,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Evaluation</h3><p>To evaluate the effectiveness of the learning experience, we conducted a <strong>learner survey and pre/post assessment</strong> focused on confidence, decision quality, and application of the EVAL framework.</p>",
+            "media": null
+          },
+          {
+            "html": "<p>SURVEY</p><p>The survey was designed to measure learners’ self-reported confidence in making AI architecture decisions before and after the module.</p><p>Example survey items included:</p><ul><li><p>I feel confident distinguishing between RAG, Fine-Tuning, and Agentic Workflows.</p></li><li><p>I feel confident using evaluation data to diagnose AI system failures.</p></li><li><p>I feel confident making architecture decisions based on quality, cost, and business constraints.</p></li></ul><p>For a small pilot, the target outcome is to see an increase in learner confidence from approximately <strong>2.5/5 before the module to 4.0/5 after the module</strong>.</p>",
+            "media": null
+          },
+          {
+            "html": "<p>Learning</p><p>We also designed a pre/post assessment to evaluate whether learners could apply the EVAL framework in a realistic product scenario.</p><p>Before the module, learners make an architecture decision based on their current reasoning. After completing the video and simulation, they complete a similar scenario and justify their decision using failure diagnosis, architecture comparison, and AITCO-based cost analysis.</p><p>The target learning outcome is a measurable improvement in decision quality, from approximately <strong>60% on the pre-assessment to 80% on the post-assessment</strong></p>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 18,
+        "type": "text",
+        "html": "<h3>Takeaways</h3><p>Through this project, I strengthened my skills in:</p><ul><li><p>scenario-based learning design</p></li><li><p>performance-based assessment design</p></li><li><p>learner testing and rapid iteration</p></li><li><p>translating technical AI concepts into applied decision-making practice</p></li></ul>",
+        "cta": null
+      }
+    ]
+  },
+  {
+    "slug": "survival-play",
+    "shortId": "2dbba5ae",
+    "originalUrl": "https://dimplelin.work/2dbba5ae",
+    "sections": [
+      {
+        "sourceIndex": 0,
+        "type": "hero",
+        "titleHtml": "<h2>Learning Survival Through Consequential Play</h2>",
+        "subtitleHtml": "<p></p>"
+      },
+      {
+        "sourceIndex": 1,
+        "type": "text",
+        "html": "<h3>Project Overview</h3><p>Developed as a team project for CMU’s Design Educational Games course, <em>The Last Outbreak</em> grew from our team's shared interest in outdoor activities and our desire to learn more about wilderness camping.</p><p>As we explored existing survival resources, we found that most relied on <strong>reading or watching instructions</strong>, which mainly delivered information but offered limited opportunities to actively practice survival decision-making. We saw an opportunity to create an <strong>interactive, low-risk learning environment</strong> where novice learners could practice decisions, experience the consequences of their choices, and build confidence before applying these skills outdoors.</p><p>The result was a <strong>narrative-driven survival game</strong> focused on campsite selection and firemaking, with <strong>AI-generated visual assets</strong> used to create a consistent and immersive game world.</p>",
+        "cta": {
+          "title": "Try out the course",
+          "url": "https://the-last-outbreak-h20q6cz5j-open13.vercel.app/"
+        }
+      },
+      {
+        "sourceIndex": 2,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Tools</h3><ul><li><p>Phaser</p></li><li><p>Midjourney</p></li><li><p>Google Survey</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>Team</h3><ul><li><p>2 Instructional Designer &amp; AI Visual Designer </p></li><li><p>2 Game Developer</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>My Role</h3><p>Instructional Designer &amp; Visual Designer</p><ul><li><p>Led research and CTA, translating findings into learning objectives and gameplay.</p></li><li><p>Co-designed learning experience, interactions and visual direction.</p></li><li><p>Supported AI visual production, playtesting, and iteration.</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>Timeline</h3><ul><li><p>Jan 2026 - May 2026</p></li></ul>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "type": "text",
+        "html": "<h3>My Design Process</h3><p></p>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 4,
+        "type": "process",
+        "items": [
+          {
+            "name": "Research & Define",
+            "sectionIndex": 5
+          },
+          {
+            "name": "Design Gameplay",
+            "sectionIndex": 8
+          },
+          {
+            "name": "Prototype, Playtest & Iterate",
+            "sectionIndex": 14
+          },
+          {
+            "name": "Outcome & Reflect",
+            "sectionIndex": 18
+          }
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "type": "split",
+        "html": "<h3>Research &amp; Learning Goal Elicitation</h3><p>I <strong>proposed and led the research approach</strong> to identify the survival skills novice learners needed and understand where their reasoning broke down.</p><p>We began by <strong>reviewing literature and expert resources</strong> on outdoor education and survival skills, then conducted <strong>expert interviews</strong> to identify key competencies for novice campers. Based on these findings, I led the design of <strong>cognitive task analysis (CTA)</strong> activities and think-aloud sessions with learners who had little or no outdoor-survival experience to compare novice reasoning with expert practice.</p><p>The analysis revealed clear gaps in how learners prioritized cues, weighed trade-offs, sequenced actions, and diagnosed failure.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/game_novice_gap-4d7ae4f6-96c1-46de-95cc-b346638aef83.webp",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Novice Reasoning Gaps Identified Through CTA</p>",
+          "alt": null,
+          "width": "1376",
+          "height": "768"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 6,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<p>Novice vs. Expert Reasoning in Campsite Selection</p>",
+            "media": {
+              "type": "image",
+              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/clipboard-image-11f3d29b-884c-4894-870d-7b155cb7ba25.webp",
+              "unavailable": false,
+              "caption": null,
+              "alt": null,
+              "width": "11776",
+              "height": "1664"
+            }
+          },
+          {
+            "html": "<p>Novice vs. Expert Reasoning in Firemaking</p>",
+            "media": {
+              "type": "image",
+              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/clipboard-image-295e707c-bb41-418f-98cf-a681ae28a710.webp",
+              "unavailable": false,
+              "caption": null,
+              "alt": null,
+              "width": "15186",
+              "height": "2464"
+            }
+          }
+        ]
+      },
+      {
+        "sourceIndex": 7,
+        "type": "split",
+        "html": "<h3>From Research to Learning &amp; Experience Goals</h3><p>I translated the gaps identified through CTA into two aligned sets of goals: <strong>learning goals</strong> defined the survival reasoning and procedures players needed to develop, while <strong>experience goals</strong> defined how that learning should feel during play.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/game-learning_experience-2d717c8a-1f0d-4ad6-94ca-e4922877c04f.webp",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Learning &amp; Experience Goals</p>",
+          "alt": null,
+          "width": "1376",
+          "height": "768"
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 8,
+        "type": "text",
+        "html": "<h3>Learning Mechanisms</h3><p>We translated our learning goals into gameplay by embedding learning directly into the player’s actions, decisions, and consequences, including</p><ul><li><p>Learning by Doing</p></li><li><p>Scaffolding → Fading</p></li><li><p>Contrasting Cases + Variability</p></li><li><p>Consequence-Based Feedback</p></li></ul>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 9,
+        "type": "split",
+        "html": "<h4>Learning by Doing</h4><p>Players learn survival skills by directly performing tasks such as inspecting campsites, sorting materials, building fires, and keeping them alive, so knowledge is practiced in context rather than memorized as isolated rules.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_7.54.00_PM-98df6b0b-390b-4487-9efb-514716ffd47d.webp",
+          "unavailable": false,
+          "caption": "<p>Example 1: Clear the camp before making a fire</p>",
+          "alt": null,
+          "width": "1510",
+          "height": "912"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 10,
+        "type": "split",
+        "html": "<h4>Scaffolding → Fading</h4><p>Early gameplay provides support through NPC guidance and environmental cues. As players progress, this support is gradually reduced, requiring them to prioritize information and make more independent decisions.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_7.50.14_PM-b4b28536-1763-43dd-b7ad-4f8849fe5a00.webp",
+          "unavailable": false,
+          "caption": "<p>Example 2: Chatting with villagers as a form of scaffolding</p>",
+          "alt": null,
+          "width": "2670",
+          "height": "1442"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 11,
+        "type": "split",
+        "html": "<h4>Contrasting Cases + Variability</h4><p>Players compare campsite options under changing conditions, such as rain and wind. This helps<strong> </strong>them learn to weigh trade-offs and adapt their reasoning instead of relying on one fixed rule.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_7.51.08_PM-8c178757-37bc-4be4-90ea-a754a95ad452.webp",
+          "unavailable": false,
+          "caption": "<p>Example 3: Contasting cases between two campsites</p>",
+          "alt": null,
+          "width": "2574",
+          "height": "1422"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 12,
+        "type": "split",
+        "html": "<h4>Consequence-Based Feedback</h4><p>Mistakes lead to gameplay consequences rather than simple “correct” or “incorrect” messages. A poor campsite choice can reduce stamina, affect materials, and make later firemaking more difficult.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_8.04.39_PM-3c724d8a-68d0-41d6-9653-84f23f69ccb6.webp",
+          "unavailable": false,
+          "caption": "<p>Example 4: Poor Campsite Selection Reduces Stamina</p>",
+          "alt": null,
+          "width": "1268",
+          "height": "238"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 13,
+        "type": "split",
+        "html": "<h3>Game Loop</h3><p>The game is structured around a connected survival loop in which each decision affects what happens next. At the <strong>macro level</strong>, players have five days to collect two herbs and return to save the village. At the <strong>daily level</strong>, each survival day follows a repeated sequence: <strong>Campsite Selection → Material Collection → Fire Building → Herb Search</strong>. Supporting systems such as stamina, weather progression, buffer days, and cross-minigame consequences add pressure and make earlier choices matter later in the journey.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/game_loop-aac58069-9888-45ad-ad3f-42c76a5f0e33.webp",
+          "unavailable": false,
+          "caption": null,
+          "alt": null,
+          "width": "1376",
+          "height": "768"
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 14,
+        "type": "text",
+        "html": "<h3>Prototype, Playtest &amp; Iterate</h3><p>We developed <em>The Last Outbreak</em> through <strong>three rounds of prototyping and playtesting</strong>, using each round to test a different layer of the experience and refine the next version.</p>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 15,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<p><strong>Prototype 1 — Low-Fidelity Story Prototype</strong></p><p>We first used <strong>Google Forms</strong> to test the narrative flow, branching logic, and whether players understood Aiden’s mission and the story stakes before investing in development.</p>",
+            "media": {
+              "type": "image",
+              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_8.28.33_PM-acbe32f3-0ed8-4dd0-a5de-80edeecc15b8.webp",
+              "unavailable": false,
+              "caption": null,
+              "alt": null,
+              "width": "1478",
+              "height": "1426"
+            }
+          },
+          {
+            "html": "<p><strong>Prototype 2 — Interactive Digital Prototype</strong></p><p>We then moved into a digital prototype. As the design evolved, we realized the experience relied too heavily on dialogue and multiple-choice interactions, so we introduced more <strong>hands-on activities </strong>such as material sorting and fire-building. The second playtest showed that firemaking was more memorable, while campsite selection still felt passive and text-heavy.</p>",
+            "media": {
+              "type": "image",
+              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_8.33.53_PM-37685b97-7f87-4285-89df-1da2c16bb304.webp",
+              "unavailable": false,
+              "caption": null,
+              "alt": null,
+              "width": "2428",
+              "height": "1358"
+            }
+          },
+          {
+            "html": "<p><strong>Prototype 3 — Revised Gameplay Prototype</strong></p><p>Based on those findings, we strengthened <strong>player agency</strong> and <strong>consequences </strong>by adding systems such as stamina, weather-based decisions, reduced scaffolding, and stronger connections between survival tasks and herb collection. The third playtest focused on whether players felt genuine agency, and whether the activities felt like gameplay rather than instruction.</p>",
+            "media": {
+              "type": "image",
+              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_8.36.29_PM-64352885-43b0-4264-9c9a-318f90c190d8.webp",
+              "unavailable": false,
+              "caption": null,
+              "alt": null,
+              "width": "2520",
+              "height": "1386"
+            }
+          }
+        ]
+      },
+      {
+        "sourceIndex": 16,
+        "type": "split",
+        "html": "<h3>What Playtesting Changed</h3><p></p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_8.47.18_PM-f88aaaf1-fe54-4dc3-9fc9-bbb4a6e580dd.webp",
+          "unavailable": false,
+          "caption": null,
+          "alt": null,
+          "width": "2542",
+          "height": "1282"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 18,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Outcome</h3><ul><li><p><strong>85%</strong> of players correctly identified the safer campsite when weather conditions changed.</p></li><li><p><strong>80%</strong> were able to recall the correct firemaking sequence after completing the interactive game.</p></li><li><p><strong>75%</strong> reported feeling immersed in the survival mission and motivated by the goal of collecting herbs to save the village.</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>Reflection</h3><ul><li><p><strong>Meaningful interaction matters more than interaction alone.</strong> Players learn more when actions require judgment, not just clicking.</p></li><li><p><strong>Consequences can become feedback.</strong> Gameplay outcomes helped connect decisions with their impact more naturally than simple right-or-wrong messages.</p></li><li><p><strong>Fading support builds independence.</strong> Gradually reducing guidance encouraged players to rely more on their own judgment.</p></li><li><p><strong>Learning and narrative should reinforce each other.</strong> Survival skills became more meaningful once they directly supported the mission to collect herbs and save the village.</p></li></ul>",
+            "media": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "nutrition-literacy",
+    "shortId": "ae5df7e7",
+    "originalUrl": "https://dimplelin.work/ae5df7e7",
+    "sections": [
+      {
+        "sourceIndex": 0,
+        "type": "hero",
+        "titleHtml": "<h2>Building Nutrition Literacy Through Guided Practice</h2>",
+        "subtitleHtml": "<p>A Storyline e-learning module that uses objective-aligned instruction, interactive practice, feedback, and reflection to help young adults practice making informed food decisions</p>"
+      },
+      {
+        "sourceIndex": 1,
+        "type": "text",
+        "html": "<h3>Project Overview</h3><p>I noticed that many college students around me wanted to <strong>eat healthier but were unsure where to start or how to translate nutrition information into everyday food choices</strong>.</p><p>To understand whether this was a broader need, our team conducted a survey with CMU students. The responses confirmed a recurring gap: students were interested in improving their eating habits, but often lacked the practical nutrition knowledge and decision-making skills needed to evaluate food options confidently.</p><p>This need became the starting point for the project: designing a learning experience that helps college students move from <strong>wanting to eat healthier to making informed, evidence-based nutrition decisions</strong>.</p>",
+        "cta": {
+          "title": "Try out the course",
+          "url": "https://zhijing-lin.github.io/nutrition/"
+        }
+      },
+      {
+        "sourceIndex": 2,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Problem</h3><p>Learners often recognized basic terms such as calories, protein, and carbohydrates, but struggled to <strong>apply that knowledge when reading food labels, comparing options, and evaluating balanced choices</strong>.</p><h3></h3><h3></h3>",
+            "media": null
+          },
+          {
+            "html": "<h3>Solution</h3><p>We designed a <strong>practice-based Storyline learning experience</strong> that progresses from foundational nutrition concepts to realistic decision-making tasks.</p><p>Learners interpret nutrition information, compare food choices, and ultimately evaluate diet plans for a realistic persona using evidence to justify their decisions.</p>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Team</h3><p>3-person Learning Design Team</p><ul><li><p>Learning Experience Designer &amp; E-Learning Developer — Me</p></li><li><p>Learning Designers / Researchers — 2 teammates</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>My Role</h3><p>Learning Experience Designer &amp; E-Learning Developer</p><ul><li><p>Led Storyline development and interaction design</p></li><li><p>Translated CTA findings into practice, feedback, and scaffolding</p></li><li><p>Contributed to research, assessment design, and evaluation</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>Methods</h3><p>Backward Design · Cognitive Task Analysis · Procedural Scaffolding · A/B Testing</p>",
+            "media": null
+          },
+          {
+            "html": "<h3>Timeline</h3><p>September - December 2025</p>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "type": "heading",
+        "html": "<h3>My Design Process</h3>"
+      },
+      {
+        "sourceIndex": 5,
+        "type": "process",
+        "items": [
+          {
+            "name": "Design Approach & Alignment",
+            "sectionIndex": 6
+          },
+          {
+            "name": "Cognitive Task Analysis",
+            "sectionIndex": 10
+          },
+          {
+            "name": "Design & Development",
+            "sectionIndex": 13
+          },
+          {
+            "name": "Evaluation",
+            "sectionIndex": 18
+          }
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "type": "split",
+        "html": "<h3>Design Approach</h3><p>I used a research-based e-learning design approach combining <strong>backward design, cognitive task analysis, instructional principles, and learner testing</strong>.</p><p>We first identified the learning need and target performance, then designed aligned assessment tasks. Next, we used CTA to compare how experts and learners approached a key nutrition decision-making task, revealing reasoning gaps that informed the design.</p><p>I translated these findings into the <strong>Storyline course structure, practice activities, feedback, reflection prompts, and scaffolding</strong>.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f0e2ad37a77450ae5df7e7/alsGe4Kd3PFwQQa9.png",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Design Approach Flowchat</p>",
+          "alt": null,
+          "width": "2622",
+          "height": "608"
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 8,
+        "type": "split",
+        "html": "<h3>Design Alignment</h3><p>Using <strong>backward design</strong>, we first identified three target skills:</p><ul><li><p>Recognize and differentiate key nutrients</p></li><li><p>Interpret Nutrition Facts labels</p></li><li><p>Apply nutrition knowledge to realistic food decisions</p></li></ul><p>We then designed aligned assessments and practice activities before developing instruction.</p><p>Each lesson followed a consistent sequence:</p><p><strong>Concept → Practice → Feedback → Reflection</strong></p><p>Foundational knowledge was assessed through matching, multiple-choice, and true/false activities, while applied reasoning was assessed through <strong>label-reading and persona-based diet-plan decisions</strong>.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f0e2ad37a77450ae5df7e7/zgMCRQAq22XsjvgJ.png",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Design Alignment Figure</p>",
+          "alt": null,
+          "width": "2138",
+          "height": "1060"
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 10,
+        "type": "split",
+        "html": "<h3>Cognitive Task Analysis</h3><p>To understand the reasoning behind successful nutrition decisions, we conducted <strong>cognitive task analysis</strong> around a key performance task:</p><blockquote><p>Evaluate a persona’s needs, compare diet plans, and justify the best option.</p></blockquote><p>We first mapped an ideal reasoning process, then conducted <strong>think-aloud sessions with novice, intermediate, and expert participants</strong>.</p><p>The analysis revealed a clear difference:</p><ul><li><p><strong>Novices</strong> often focused on isolated numbers or surface-level cues.</p></li><li><p><strong>Experts</strong> integrated calorie needs, nutrient priorities, health conditions, food quality, and trade-offs.</p></li></ul><p>This revealed the key learning gap: learners did not only need more nutrition information—they needed a <strong>structured way to connect information to decisions</strong>.</p><p>These findings directly informed the course’s <strong>practice, feedback, reflection, and scaffolding</strong>.</p>",
+        "media": {
+          "type": "image",
+          "url": null,
+          "unavailable": true,
+          "caption": null,
+          "alt": null,
+          "width": "1500",
+          "height": "1125"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 11,
+        "type": "gallery",
+        "layout": "Slider",
+        "items": [
+          {
+            "type": "image",
+            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f0e2ad37a77450ae5df7e7/UgD6wGNitOdqsJXr.png",
+            "unavailable": false,
+            "caption": "<p><span>Theoretical CTA Model</span></p>",
+            "alt": null,
+            "width": "1816",
+            "height": "2202"
+          },
+          {
+            "type": "image",
+            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f0e2ad37a77450ae5df7e7/lqHBy50cpyPKW8K9.png",
+            "unavailable": false,
+            "caption": "<p>Empirical CTA: Identifying Expert–Novice Gaps</p>",
+            "alt": null,
+            "width": "1926",
+            "height": "2075"
+          },
+          {
+            "type": "image",
+            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f0e2ad37a77450ae5df7e7/f35bHl5mqZNgG6Gb.png",
+            "unavailable": false,
+            "caption": "<p>CTA Findings</p>",
+            "alt": null,
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 13,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Instructional Strategy &amp; Storyline Development</h3><p>I translated the learning goals and CTA findings into an interactive Storyline module that helps learners move from foundational nutrition knowledge to applied decision-making.</p><p>The instructional design was guided by:</p><ul><li><p><strong>Procedural scaffolding</strong> to support step-by-step reasoning</p></li><li><p><strong>Metacognitive Reflection </strong>to help learners pause, summarize, and check their understanding during the module.</p></li><li><p><strong>Immediate feedback</strong> to correct misconceptions during practice</p></li><li><p><strong>Personalization</strong> to make the learning experience feel relevant and conversational</p></li><li><p><strong>Multimedia, modality, embodiment, contiguity, and coherence principles</strong> to reduce cognitive load and connect visual explanations with narration, character guidance, and focused screen layouts.</p></li><li><p><strong>Universal Design for Learning and accessibility practices</strong> to support different learner needs, preferences, and ways of accessing content</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<p><strong>Storyline Development</strong></p><p>I independently developed the module in Storyline using:</p><ul><li><p><strong>Custom interactions</strong> with layers, states, drag-and-drop, and feedback</p></li><li><p><strong>Text-entry reflection and completion logic</strong></p></li><li><p><strong>Learner-controlled navigation and progress support</strong></p></li><li><p><strong>Accessibility features</strong>, including captions, transcripts, alt text, and replay controls</p></li></ul><p>I also created a consistent visual style using simple food and health visuals, soft colors, and clean layouts to keep the experience practical and approachable.</p>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 14,
+        "type": "split",
+        "html": "<h3>Metacognitive Reflection &amp; Self-Explanation</h3><p>I embedded reflection prompts throughout the module to encourage learners to explain key concepts in their own words.</p><p>After submitting a response, learners could compare their thinking with an <strong>example response</strong>, helping them identify gaps and refine their reasoning.</p><p>This moved reflection beyond passive completion and encouraged learners to actively monitor what they understood.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f0e2ad37a77450ae5df7e7/PTjQkukDtnqm4Yy1.png",
+          "unavailable": false,
+          "caption": null,
+          "alt": null,
+          "width": "2022",
+          "height": "1124"
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 15,
+        "type": "split",
+        "html": "<h3>Procedural Scaffolding &amp; Segmenting</h3><p>CTA showed that novices often reached a reasonable answer but struggled to explain <strong>why</strong> the evidence supported their decision.</p><p>To address this, I used <strong>procedural scaffolding</strong> to break a complex diet-plan decision into five manageable steps:</p><ol><li><p><strong>Calorie Fit</strong></p></li><li><p><strong>Protein Fit</strong></p></li><li><p><strong>Health Concern</strong></p></li><li><p><strong>Food Quality</strong></p></li><li><p><strong>Final Synthesis</strong></p></li></ol><p>Each step provided a focused prompt, relevant reference data, and a sentence starter.</p><p>Instead of asking:</p><blockquote><p>“Which plan is best? Explain.”</p></blockquote><p>learners were guided through a structured reasoning process that helped them connect nutrition data to the persona’s specific goals.</p><p>This scaffold was intentionally designed to make <strong>expert reasoning visible and teachable</strong>.</p>",
+        "media": {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/dEb4ijbhJU8?autoplay=0&mute=0&loop=0",
+          "unavailable": false,
+          "caption": null,
+          "alt": null,
+          "width": null,
+          "height": null
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 16,
+        "type": "split",
+        "html": "<h3>Multimedia, Modality, Embodiment, Contiguity &amp; Coherence</h3><p>I applied the <strong>Multimedia Principle</strong> by pairing concise explanations with visuals, examples, tables, and scenario-based screens to make abstract nutrition concepts more concrete.</p><p>I used <strong>modality and embodiment</strong> through narration and a character guide, reducing on-screen text and making the experience feel more guided and conversational.</p><p>I applied <strong>contiguity and coherence</strong> by placing related text and visuals together and keeping each screen focused on one key idea to reduce cognitive load.</p>",
+        "media": {
+          "type": "video",
+          "url": "https://www.youtube.com/embed/qGgc5Dz4-RQ?autoplay=0&mute=0&loop=0",
+          "unavailable": false,
+          "caption": null,
+          "alt": null,
+          "width": null,
+          "height": null
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 17,
+        "type": "text",
+        "html": "<h3>Universal Design for Learning &amp; Accessibility</h3><p>I applied <strong>Universal Design for Learning principles</strong> by providing <strong>multiple ways to access, process, and review content</strong>, including:</p><ul><li><p>Visual and written explanations</p></li><li><p>Narration</p></li><li><p>Closed captions for audio and video</p></li><li><p>Transcripts through the Notes panel</p></li><li><p>Alt text for visual elements</p></li><li><p>Replay controls</p></li><li><p>Progress indicators</p></li><li><p>Learner-controlled navigation</p></li></ul><p>These features support <strong>assistive technology use, different content preferences, and greater learner control over pacing and review</strong>.</p>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 18,
+        "type": "text",
+        "html": "<h2>Evaluation</h2><p>We evaluated the lesson with a pre-test and post-test completed by 20 target learners. The assessment included multiple-choice questions and one open-ended meal plan justification task.</p><p>Learners’ average performance increased by approximately <strong>95%</strong> after the lesson. Their post-test responses showed stronger evidence-based reasoning, with more attention to calories, protein, calcium, food quality, and the persona’s specific needs.</p>",
+        "cta": null
+      }
+    ]
+  },
+  {
+    "slug": "interactive-coaching",
+    "shortId": "da6053e0",
+    "originalUrl": "https://dimplelin.work/da6053e0",
+    "sections": [
+      {
+        "sourceIndex": 0,
+        "type": "hero",
+        "titleHtml": "<h1><span>Interactive Coaching Through Feedback</span></h1>",
+        "subtitleHtml": "<p><span>An interactive Storyline branching scenario that helps new managers practice giving clear, respectful, and actionable feedback during a performance conversation.</span></p>"
+      },
+      {
+        "sourceIndex": 1,
+        "type": "text",
+        "html": "<h1></h1>",
+        "cta": {
+          "title": "Try out the course",
+          "url": "https://zhijing-lin.github.io/coach-through-feedback/"
+        }
+      },
+      {
+        "sourceIndex": 2,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Problem</h3><p>New managers often struggle to balance <strong>honesty, clarity, empathy, and actionability</strong> during performance conversations. Poor responses can reduce trust, create defensiveness, or leave employees unsure of what to do next.</p><p>This module provides a <strong>low-risk environment</strong> to practice those decisions before applying them in the workplace.</p>",
+            "media": null
+          },
+          {
+            "html": "<h3>Solution</h3><p>I built a <strong>Storyline branching scenario</strong> that simulates a realistic manager–employee feedback conversation.</p><p>Learners make decisions at key moments, receive <strong>immediate, consequence-based feedback</strong>, and see how their responses affect <strong>trust, clarity, and the direction of the conversation</strong>.</p><p>Rather than presenting feedback as a list of best practices, the module turns it into <strong>applied decision-making practice</strong>.</p>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "type": "split",
+        "html": "<h3>Design Approach</h3><p>I identified the <strong>key decisions managers make during a feedback conversation</strong> and translated them into a realistic branching scenario.</p><p>Each decision point reflects a common managerial challenge, such as:</p><ul><li><p>Being too vague</p></li><li><p>Avoiding difficult feedback</p></li><li><p>Responding defensively</p></li><li><p>Failing to provide actionable next steps</p></li></ul><p>Learners practice choosing responses and seeing the consequences of each approach.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f3f56ffcb32372da6053e0/ohNPZt4gTqJJhdOb.png",
+          "unavailable": false,
+          "caption": null,
+          "alt": null,
+          "width": "1376",
+          "height": "768"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 4,
+        "type": "split",
+        "html": "<h3>Branching Scenario Flow Map</h3><p>Before developing the module in Storyline, I mapped the <strong>employee dialogue, manager choices, feedback, recovery paths, and final outcomes</strong> to ensure each branch reflected a meaningful workplace behavior.</p><p>Learners move through the scenario by choosing how to respond during a feedback conversation. <strong>Effective choices</strong> move the conversation toward greater trust and clarity, while <strong>ineffective choices</strong> trigger consequence-based feedback explaining why the response may create confusion, defensiveness, or reduce trust. Some branches also allow learners to <strong>recover from mistakes</strong>, reflecting how real feedback conversations can be repaired.</p><p><strong>Flow Map Legend</strong></p><ul><li><p><strong>Black rectangle</strong> — Employee dialogue</p></li><li><p><strong>Orange diamond</strong> — Manager decision</p></li><li><p><strong>Green rectangle</strong> — Effective response / feedback</p></li><li><p><strong>Pink rectangle</strong> — Ineffective response / feedback</p></li><li><p><strong>Red circle</strong> — Final outcome</p></li></ul>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f3f56ffcb32372da6053e0/UuZxsuMd8Ms3Lw18.png",
+          "unavailable": false,
+          "caption": "<p class=\"p2\">Branching Scenerio Flow Map</p>",
+          "alt": null,
+          "width": "2302",
+          "height": "1736"
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 15,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Next Steps &amp; Reflection</h3><p>In the next iteration, I would test the scenario with target learners to identify <strong>where they hesitate, which mistakes occur most often, and where additional scaffolding is needed</strong>.</p><p>This project strengthened my ability to <strong>translate a complex interpersonal skill into structured, scenario-based decision practice</strong> and connect each learner choice to a realistic workplace consequence.</p>",
+            "media": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "adaptive-ai-feedback",
+    "shortId": "7a2dba18",
+    "originalUrl": "https://dimplelin.work/7a2dba18",
+    "sections": [
+      {
+        "sourceIndex": 0,
+        "type": "hero",
+        "titleHtml": "<h2>Adaptive Practice and AI-Powered Feedback for Corporate Training</h2>",
+        "subtitleHtml": "<p>An adaptive, AI-powered corporate training module that helps managers recognize, revise, and write effective performance feedback through scenario-based assessment, remediation, and targeted open-response feedback.</p>"
+      },
+      {
+        "sourceIndex": 1,
+        "type": "text",
+        "html": "<p></p>",
+        "cta": {
+          "title": "Try out the course",
+          "url": "https://zhijing-lin.github.io/write-effective-performance-feedback/"
+        }
+      },
+      {
+        "sourceIndex": 2,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Course Audience</h3><p>New managers, team leads, and professionals who need to write clear, actionable, and development-oriented performance feedback.</p>",
+            "media": null
+          },
+          {
+            "html": "<h3>My Role</h3><ul><li><p>Instructional Designer</p></li><li><p>E-Learning Developer</p></li><li><p>AI Feedback &amp; API Integration Designer</p></li></ul>",
+            "media": null
+          },
+          {
+            "html": "<h3>Tool Used</h3><p>Adobe Captivate<br>API Integration<br>LLM-Based Feedback Evaluation<br>Google Docs</p>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Problem</h3><p>Managers are often expected to provide written performance feedback with limited training on how to make it <strong>specific, actionable, and development-oriented</strong>.</p><p>Traditional training frequently relies on multiple-choice questions or generic examples, giving learners few opportunities to <strong>practice writing feedback in their own words and receive targeted guidance</strong>.</p><p>The key learning gap was therefore:</p><p><strong>How can learners move from recognizing good feedback to independently writing it?</strong></p>",
+            "media": null
+          },
+          {
+            "html": "<h3>Solution</h3><p>I designed an <strong>adaptive Captivate learning experience</strong> that progresses from analysis to independent writing.</p><p>Learners:</p><ul><li><p>Analyze realistic workplace feedback</p></li><li><p>Complete a scenario-based assessment</p></li><li><p>Enter <strong>targeted remediation</strong> when additional support is needed</p></li><li><p>Practice revising feedback in their own words</p></li><li><p>Receive <strong>AI-powered, criterion-based feedback</strong></p></li></ul><p>This structure provides additional support when learners struggle while still moving stronger learners directly into application.</p>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "type": "text",
+        "html": "<h3>Adaptive Practice &amp; Remediation</h3><p>This project combines <strong>adaptive practice and AI-supported feedback</strong> to help learners move from recognizing effective feedback to writing it independently.</p><p>Learners first analyze realistic workplace examples and identify common issues, such as vague language, missing impact, unclear next steps, and judgment-based tone. They then complete a scenario-based assessment. I used <strong>Captivate variables and advanced actions</strong> to track performance and trigger a <strong>remediation pathway</strong> when additional support is needed. After remediation, learners retry the assessment before completing an open-ended writing task with <strong>API-powered targeted feedback</strong>.</p><p>The module includes:</p><ul><li><p>Scenario-based feedback analysis</p></li><li><p>Mastery tracking</p></li><li><p>Performance-triggered remediation</p></li><li><p>Assessment retry</p></li><li><p>Open-ended writing practice</p></li><li><p>AI-powered targeted feedback</p></li></ul>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 5,
+        "type": "text",
+        "html": "<h3>AI-Powered Targeted Feedback</h3><p>The images below illustrate the flow of the AI-powered feedback system embedded in the course. Learners submit an open-ended response and immediately receive targeted guidance based on the quality of their writing. The AI feedback evaluates whether the response includes <strong>specific observable behavior</strong>, <strong>clear impact</strong>, <strong>actionable next steps</strong>, and <strong>professional tone</strong>. It also shows what the learner did well, what criteria are missing, and how they can improve their next response.</p>",
+        "cta": null
+      },
+      {
+        "sourceIndex": 6,
+        "type": "gallery",
+        "layout": "Slider",
+        "items": [
+          {
+            "type": "image",
+            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f7873a103f294d7a2dba18/df5x8kakJzJKjYGe.png",
+            "unavailable": false,
+            "caption": "<p>The learner submits a strong revision that includes specific observable behaviors, explains the impact on team alignment, and provides a clear next step. The AI feedback confirms that the response meets the learning objective and reinforces why each part of the feedback is effective.</p><h3></h3>",
+            "alt": null,
+            "width": "2534",
+            "height": "1230"
+          },
+          {
+            "type": "image",
+            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f7873a103f294d7a2dba18/E9KEqrdpnNQ4do3O.png",
+            "unavailable": false,
+            "caption": "<p>The learner provides some specific behaviors, but the response is still incomplete. The AI feedback identifies what is working, such as professional language and observable examples, while pointing out what is missing: impact and actionable next steps.</p>",
+            "alt": null,
+            "width": "2568",
+            "height": "1238"
+          },
+          {
+            "type": "image",
+            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f7873a103f294d7a2dba18/BsB6zLvTthoKQFVx.png",
+            "unavailable": false,
+            "caption": "<p>The learner submits a minimal response that does not address the feedback criteria. Instead of only marking it incorrect, the system explains why the response is ineffective and prompts the learner to revise with a specific behavior, impact statement, and next step.</p>",
+            "alt": null,
+            "width": "2492",
+            "height": "1226"
+          }
+        ]
+      },
+      {
+        "sourceIndex": 7,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>Next Steps &amp; Reflection</h3>",
+            "media": null
+          },
+          {
+            "html": "<p>In a future iteration, I would test the module with target managers to evaluate <strong>whether remediation improves subsequent performance and whether AI feedback leads to stronger revised responses</strong>.</p><p>This project helped me explore how <strong>adaptive logic and AI-generated feedback can extend traditional e-learning beyond recognition-based assessment into personalized skill practice</strong>.</p>",
+            "media": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "learner-data",
+    "shortId": "f8bd92a0",
+    "originalUrl": "https://dimplelin.work/f8bd92a0",
+    "sections": [
+      {
+        "sourceIndex": 0,
+        "type": "hero",
+        "titleHtml": "<h2>Turning Learner Data into Course Design Decisions</h2>",
+        "subtitleHtml": "<p>An AI-assisted course evaluation that transforms learner data into evidence-based design decisions.</p>"
+      },
+      {
+        "sourceIndex": 1,
+        "type": "text",
+        "html": "<h3>Overview</h3><p>Our clients were <strong>Carnegie Mellon University’s Open Learning Initiative (OLI)</strong> and the <strong>American College Health Association (ACHA)</strong>. I worked as an Instructional Designer to evaluate the existing <em>Beyond Backpacks</em> travel health course and inform its next redesign cycle. My main contribution was analyzing learner behavior, performance, and survey data across multiple sources, identifying where learners disengaged or struggled, and translating those findings into an evidence-based evaluation report with actionable recommendations for future course design and implementation.</p>",
+        "cta": {
+          "title": "Read the report",
+          "url": "https://drive.google.com/file/d/1710SmeKFhPsYwO_NchHRWfI3Nr8ybXbe/view?usp=sharing"
+        }
+      },
+      {
+        "sourceIndex": 2,
+        "type": "columns",
+        "columns": [
+          {
+            "html": "<h3>My Role</h3><p>I was the Instructional Designer and lead evaluator for this project.</p><p>My main contributions included <strong>defining evaluation metrics</strong>, <strong>analyzing learner behavior and performance data</strong>, <strong>validating AI-assisted analyses</strong>, identifying <strong>learning and engagement gaps</strong>, translating findings into <strong>instructional recommendations</strong>, and communicating results through a <a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://drive.google.com/file/d/1710SmeKFhPsYwO_NchHRWfI3Nr8ybXbe/view?usp=sharing\"><strong>stakeholder-facing evaluation report</strong></a><strong> and </strong><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://drive.google.com/file/d/11bHtGO0WmJZDfikUR1ZfPzOmzQIc6qQv/view?usp=sharing\"><strong>client presentation</strong></a>.</p><p></p>",
+            "media": null
+          },
+          {
+            "html": "<h3>Tools</h3><ul><li><p>ChatGPT</p></li><li><p>Claude Code</p></li><li><p>Google Doc</p></li><li><p>Google Slides</p></li></ul>",
+            "media": null
+          }
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "type": "split",
+        "html": "<h3>From Raw Data to an Evaluation Framework</h3><p>I started with <strong>four data sources</strong> that captured different parts of the learner experience. I then organized the analysis into <strong>four evaluation questions</strong> focused on course reach, engagement, learning performance, and adoption to inform future course redesign.</p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9c5652594e0f31f8bd92a0/section-media/1-8e72a8db-60e5-4342-a10b-ba7644a5b30a.webp",
+          "unavailable": false,
+          "caption": null,
+          "alt": null,
+          "width": "2726",
+          "height": "920"
+        },
+        "flipped": false
+      },
+      {
+        "sourceIndex": 5,
+        "type": "split",
+        "html": "<h3>From Evidence to Design Decisions</h3><p>I analyzed each evaluation layer from multiple angles to identify meaningful patterns, then used a consistent <strong>evidence-to-design process</strong> to turn those patterns into actionable course recommendations. </p>",
+        "media": {
+          "type": "image",
+          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9c5652594e0f31f8bd92a0/section-media/Screenshot_2026-09-05_at_3.52.43_PM-b8e2448f-85f8-4d1f-b795-66edac78f190.webp",
+          "unavailable": false,
+          "caption": null,
+          "alt": null,
+          "width": "776",
+          "height": "576"
+        },
+        "flipped": true
+      },
+      {
+        "sourceIndex": 8,
+        "type": "text",
+        "html": "<h3>Reflection: Human-in-the-Loop AI</h3><p>I used <strong>ChatGPT and Claude Code</strong> throughout the evaluation to speed up data analysis, generate tables and charts, explore patterns, and draft initial findings. My AI-assisted workflow followed four steps:</p><ol><li><p><strong>AI Accelerates: </strong>AI helped me quickly explore different cuts of the data, surface possible patterns, and produce first-pass analyses and interpretations.</p></li><li><p><strong>Human Validates: </strong>I checked how each result was produced against the raw data, including field definitions, data sources, units of analysis, denominators, exclusions, event sequences, and calculations.</p></li><li><p><strong>Human Challenges: </strong>I questioned whether each finding was truly supported by the data, whether there were alternative explanations, whether the wording went beyond the evidence, and whether the recommendation was actually connected to the finding.</p></li><li><p><strong>Human Redirects: </strong>When the analysis became too broad, repetitive, or disconnected from the evaluation question, I refined the prompt, narrowed the analytical lens, and redirected the work toward the stakeholder decision the report needed to support.</p></li></ol><p><strong>Key Takeaway</strong></p><p>AI can significantly improve efficiency, but it still requires an active <strong>human-in-the-loop</strong> process to validate evidence, challenge conclusions, and decide what is strong enough to inform redesign.</p>",
+        "cta": null
+      }
+    ]
+  }
+]
