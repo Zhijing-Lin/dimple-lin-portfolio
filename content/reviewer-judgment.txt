@@ -1,0 +1,170 @@
+Home
+
+About
+
+Resume
+
+Contact me
+Turning Reviewer Judgment into a Learnable Skill
+A research-informed pre-training course preparing OER reviewers to apply rubrics consistently and provide actionable feedback.
+
+Project Overview
+Our capstone team partnered with Maricopa County Community Colleges and Carnegie Mellon University’s Open Learning Initiative (OLI) to develop the Open 4 Peer Review Hub, a platform that helps reviewers evaluate Open Educational Resources (OER) using six single-point rubrics.
+
+As part of the platform experience, I led the design of a reviewer pre-training course to prepare reviewers to apply the rubrics consistently and provide specific, evidence-based, actionable feedback before conducting live reviews.
+
+Following the initial capstone engagement, the client extended our collaboration into the fall semester for continued product refinement and evaluation.
+
+Try the course
+Team
+5-person cross-functional capstone team; pre-training track developed by me with support from 1 researcher
+
+My Role
+Project Manager & Lead Learning Experience Designer
+
+Led needs analysis, CTA, and course design.
+
+Collaborated with SMEs and stakeholders.
+
+Developed the course in OLI and created Vyond videos.
+
+Tools
+OLI Torus (Course Authoring)
+
+Vyond
+
+Google Doc
+
+Excel
+
+Timeline
+Design + Development: May 2026 - Aug 2026
+
+Evaluation: Sep 2026 - Now
+
+Project Challenge
+During user testing of the peer-review platform, I analyzed the review comments participants submitted and found that providing shared rubrics and a structured workflow was not enough to ensure consistent review quality. Reviewers still interpreted rubric criteria differently, drifted outside the assigned scope, and struggled to turn observations into specific, actionable feedback.
+
+Based on these findings, I proposed to the client that we develop a pre-training course to prepare reviewers before they began conducting live OER reviews.
+
+What does a review-ready reviewer need to know and be able to do?
+
+I focused on three questions:
+
+What knowledge and skills distinguish an effective reviewer from a novice reviewer?
+
+Which performance gaps could realistically be addressed through pre-training?
+
+How could those gaps be translated into practice that prepares reviewers for live review?
+
+Analysis & Actions
+I used multiple sources of evidence to define the target performance and diagnose reviewer learning needs.
+
+Reviewed existing materials, including the six single-point rubrics, reviewer guidance, and client-provided resources, to understand the intended review process and standards.
+
+Collaborated with SMEs and stakeholders to clarify reviewer expectations, rubric interpretation, review scope, and the desired quality of reviewer feedback.
+
+Conducted a literature review on peer review and effective feedback to identify research-supported characteristics of specific, constructive, and actionable feedback.
+
+Conducted cognitive task analysis through think-aloud sessions with experienced and novice reviewers to identify differences in how they interpreted criteria, selected evidence, made judgments, and formed feedback.
+
+Separated trainable gaps from expertise-dependent gaps, so the course focused only on knowledge and skills that instruction could realistically improve.
+
+My Design Process
+I used the ADDIE model as an iterative framework, moving between analysis, design, development, implementation, and evaluation as research findings, stakeholder feedback, and user testing informed the course.
+
+1
+Need Analysis
+2
+Project Management
+3
+Learning Design & Develop
+4
+Implementation & Evaluation
+Analysis — What Reviewers Need to Know
+I first focused on the foundational knowledge reviewers needed before beginning a live review by:
+
+Reviewing existing materials, including the six single-point rubrics, reviewer guidance, and client-provided resources, to understand the intended review process and standards.
+
+Interviewing and collaborating with SMEs and stakeholders to clarify reviewer expectations, rubric interpretation, review scope, and expectations for high-quality feedback.
+
+This analysis helped define the foundational content for course Units 1–3, including project context, reviewer role, rubric structure, rating categories, scope, and review workflow.
+
+
+Core Reviewer Knowledge Identified Through Analysis
+
+Analysis — What Reviewers Need to Do
+After defining the foundational knowledge, I focused on the performance skills reviewers needed to produce high-quality feedback by:
+
+Conducting a literature review on peer review and effective feedback to identify research-supported characteristics of specific, constructive, and actionable feedback.
+
+Conducting a cognitive task analysis through think-aloud sessions with three experienced reviewers and two novice reviewer to compare how they selected evidence, interpreted its significance, formed recommendations, and refined feedback.
+
+Analysis — From Performance Gaps to Training Priorities
+After comparing novice and experienced reviewers, I evaluated each gap to determine whether it could realistically be addressed through pre-training.
+
+I focused the course on trainable knowledge and skills—such as rubric interpretation, scope control, review workflow, and actionable feedback—while recognizing that deeper disciplinary expertise or technical constraints required support beyond training.
+
+I then translated each trainable gap directly into a learning need and instructional response.
+
+
+Expert vs. Novice Reviewer: Key Gaps and Training Implications
+
+
+Workflow Diagram
+
+Project Management
+Throughout the project, I used a recurring alignment cycle to keep the course grounded in SME expertise, team input, and client priorities while maintaining progress toward delivery.
+
+1. Align on Objectives and Course Architecture
+I worked with SMEs to translate the needs analysis into learning objectives and an initial course structure, defining what reviewers needed to know and do before live review.
+
+2. Review and Validate Design Decisions
+I led weekly team design reviews to refine the content and activities, and used biweekly stakeholder meetings to validate major decisions and secure approval before development.
+
+3. Iterate Based on User Testing
+After the first OLI version was tested, learners found Units 1–3 too text-heavy. I proposed replacing long-form instruction with short, scenario-based Vyond videos, then coordinated the revised scripting, production, and timeline to improve engagement without delaying delivery.
+
+Learning Design & Development
+I translated the learning objectives and identified performance gaps into an interactive, practice-centered learning experience grounded in learning-science principles. (加一下用vyond)
+
+
+Scenario-Based Multimedia + Flexible Access in Practice
+
+Scenario-Based Multimedia + Flexible Access
+I used short scenario-based videos（view example） to contextualize abstract reviewer concepts and make knowledge-heavy content more engaging and easier to process.
+
+Multiple access options, including captions and supporting text, allow learners to engage with the content in ways that fit their needs and learning environment.
+
+Metacognitive Reflection
+I embedded reflection prompts and self-checks throughout the course to help reviewers monitor their own reasoning, recognize misconceptions, and become more aware of how personal assumptions can influence review decisions.
+
+
+Metacognitive Reflection in Practice
+
+
+Immediate, Tailored Feedback + Guided Discovery in Practice
+
+Immediate, Tailored Feedback + Guided Discovery
+I used immediate, explanatory feedback to help learners understand why some reviewer decisions were stronger than others and correct misconceptions as they practiced. Learners then used guided discovery to compare examples and identify patterns before the CEWA framework was formally introduced.
+
+Implementation & Evaluation
+Read more of my case studies
+
+Needs-Driven Help Center for Tutor Performance Support
+Using needs analysis, cross-functional collaboration, SME knowledge elicitation, and AI-assisted content development to turn recurring live-session challenges into actionable support.
+
+
+Learning Survival Through Consequential Play
+A narrative-driven educational game that helps novice campers build campsite-selection and firemaking skills.
+
+
+AI Architecture Decision-Making Simulation
+A multi-modal learning experience combining video and simulation to help AI product managers evaluate AI systems.
+
+Get in touch
+zhijing3@andrew.cmu.edu
+Home
+About
+Resume
+Made with

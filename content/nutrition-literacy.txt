@@ -1,0 +1,228 @@
+Home
+
+About
+
+Resume
+
+Contact me
+Building Nutrition Literacy Through Guided Practice
+A Storyline e-learning module that uses objective-aligned instruction, interactive practice, feedback, and reflection to help young adults practice making informed food decisions
+
+Image gallery item
+Project Overview
+I noticed that many college students around me wanted to eat healthier but were unsure where to start or how to translate nutrition information into everyday food choices.
+
+To understand whether this was a broader need, our team conducted a survey with CMU students. The responses confirmed a recurring gap: students were interested in improving their eating habits, but often lacked the practical nutrition knowledge and decision-making skills needed to evaluate food options confidently.
+
+This need became the starting point for the project: designing a learning experience that helps college students move from wanting to eat healthier to making informed, evidence-based nutrition decisions.
+
+Try out the course
+Problem
+Learners often recognized basic terms such as calories, protein, and carbohydrates, but struggled to apply that knowledge when reading food labels, comparing options, and evaluating balanced choices.
+
+Solution
+We designed a practice-based Storyline learning experience that progresses from foundational nutrition concepts to realistic decision-making tasks.
+
+Learners interpret nutrition information, compare food choices, and ultimately evaluate diet plans for a realistic persona using evidence to justify their decisions.
+
+Team
+3-person Learning Design Team
+
+Learning Experience Designer & E-Learning Developer — Me
+
+Learning Designers / Researchers — 2 teammates
+
+My Role
+Learning Experience Designer & E-Learning Developer
+
+Led Storyline development and interaction design
+
+Translated CTA findings into practice, feedback, and scaffolding
+
+Contributed to research, assessment design, and evaluation
+
+Methods
+Backward Design · Cognitive Task Analysis · Procedural Scaffolding · A/B Testing
+
+Timeline
+September - December 2025
+
+My Design Process
+1
+Design Approach & Alignment
+2
+Cognitive Task Analysis
+3
+Design & Development
+4
+Evaluation
+
+Design Approach Flowchat
+
+Design Approach
+I used a research-based e-learning design approach combining backward design, cognitive task analysis, instructional principles, and learner testing.
+
+We first identified the learning need and target performance, then designed aligned assessment tasks. Next, we used CTA to compare how experts and learners approached a key nutrition decision-making task, revealing reasoning gaps that informed the design.
+
+I translated these findings into the Storyline course structure, practice activities, feedback, reflection prompts, and scaffolding.
+
+Design Alignment
+Using backward design, we first identified three target skills:
+
+Recognize and differentiate key nutrients
+
+Interpret Nutrition Facts labels
+
+Apply nutrition knowledge to realistic food decisions
+
+We then designed aligned assessments and practice activities before developing instruction.
+
+Each lesson followed a consistent sequence:
+
+Concept → Practice → Feedback → Reflection
+
+Foundational knowledge was assessed through matching, multiple-choice, and true/false activities, while applied reasoning was assessed through label-reading and persona-based diet-plan decisions.
+
+
+Design Alignment Figure
+
+Cognitive Task Analysis
+To understand the reasoning behind successful nutrition decisions, we conducted cognitive task analysis around a key performance task:
+
+Evaluate a persona’s needs, compare diet plans, and justify the best option.
+
+We first mapped an ideal reasoning process, then conducted think-aloud sessions with novice, intermediate, and expert participants.
+
+The analysis revealed a clear difference:
+
+Novices often focused on isolated numbers or surface-level cues.
+
+Experts integrated calorie needs, nutrient priorities, health conditions, food quality, and trade-offs.
+
+This revealed the key learning gap: learners did not only need more nutrition information—they needed a structured way to connect information to decisions.
+
+These findings directly informed the course’s practice, feedback, reflection, and scaffolding.
+
+Screen design displayed in a mockup
+Screen design displayed in a mockup
+Screen design displayed in a mockup
+
+
+Instructional Strategy & Storyline Development
+I translated the learning goals and CTA findings into an interactive Storyline module that helps learners move from foundational nutrition knowledge to applied decision-making.
+
+The instructional design was guided by:
+
+Procedural scaffolding to support step-by-step reasoning
+
+Metacognitive Reflection to help learners pause, summarize, and check their understanding during the module.
+
+Immediate feedback to correct misconceptions during practice
+
+Personalization to make the learning experience feel relevant and conversational
+
+Multimedia, modality, embodiment, contiguity, and coherence principles to reduce cognitive load and connect visual explanations with narration, character guidance, and focused screen layouts.
+
+Universal Design for Learning and accessibility practices to support different learner needs, preferences, and ways of accessing content
+
+Storyline Development
+
+I independently developed the module in Storyline using:
+
+Custom interactions with layers, states, drag-and-drop, and feedback
+
+Text-entry reflection and completion logic
+
+Learner-controlled navigation and progress support
+
+Accessibility features, including captions, transcripts, alt text, and replay controls
+
+I also created a consistent visual style using simple food and health visuals, soft colors, and clean layouts to keep the experience practical and approachable.
+
+
+Metacognitive Reflection & Self-Explanation
+I embedded reflection prompts throughout the module to encourage learners to explain key concepts in their own words.
+
+After submitting a response, learners could compare their thinking with an example response, helping them identify gaps and refine their reasoning.
+
+This moved reflection beyond passive completion and encouraged learners to actively monitor what they understood.
+
+
+Procedural Scaffolding & Segmenting
+CTA showed that novices often reached a reasonable answer but struggled to explain why the evidence supported their decision.
+
+To address this, I used procedural scaffolding to break a complex diet-plan decision into five manageable steps:
+
+Calorie Fit
+
+Protein Fit
+
+Health Concern
+
+Food Quality
+
+Final Synthesis
+
+Each step provided a focused prompt, relevant reference data, and a sentence starter.
+
+Instead of asking:
+
+“Which plan is best? Explain.”
+
+learners were guided through a structured reasoning process that helped them connect nutrition data to the persona’s specific goals.
+
+This scaffold was intentionally designed to make expert reasoning visible and teachable.
+
+Multimedia, Modality, Embodiment, Contiguity & Coherence
+I applied the Multimedia Principle by pairing concise explanations with visuals, examples, tables, and scenario-based screens to make abstract nutrition concepts more concrete.
+
+I used modality and embodiment through narration and a character guide, reducing on-screen text and making the experience feel more guided and conversational.
+
+I applied contiguity and coherence by placing related text and visuals together and keeping each screen focused on one key idea to reduce cognitive load.
+
+
+Universal Design for Learning & Accessibility
+I applied Universal Design for Learning principles by providing multiple ways to access, process, and review content, including:
+
+Visual and written explanations
+
+Narration
+
+Closed captions for audio and video
+
+Transcripts through the Notes panel
+
+Alt text for visual elements
+
+Replay controls
+
+Progress indicators
+
+Learner-controlled navigation
+
+These features support assistive technology use, different content preferences, and greater learner control over pacing and review.
+
+Evaluation
+We evaluated the lesson with a pre-test and post-test completed by 20 target learners. The assessment included multiple-choice questions and one open-ended meal plan justification task.
+
+Learners’ average performance increased by approximately 95% after the lesson. Their post-test responses showed stronger evidence-based reasoning, with more attention to calories, protein, calcium, food quality, and the persona’s specific needs.
+
+Read more of my case studies
+
+Interactive Coaching Through Feedback
+An interactive Storyline branching scenario that helps new managers practice giving clear, respectful, and actionable feedback during a performance conversation.
+
+
+Adaptive Practice and AI-Powered Feedback for Corporate Training
+An adaptive, AI-powered corporate training module that helps managers recognize, revise, and write effective performance feedback through scenario-based assessment, remediation, and targeted open-response feedback.
+
+
+Turning Reviewer Judgment into a Learnable Skill
+A research-informed pre-training course preparing OER reviewers to apply rubrics consistently and provide actionable feedback.
+
+Get in touch
+zhijing3@andrew.cmu.edu
+Home
+About
+Resume
+Made with

@@ -1,0 +1,70 @@
+Home
+
+About
+
+Resume
+
+Contact me
+Turning Learner Data into Course Design Decisions
+An AI-assisted course evaluation that transforms learner data into evidence-based design decisions.
+
+Overview
+Our clients were Carnegie Mellon University’s Open Learning Initiative (OLI) and the American College Health Association (ACHA). I worked as an Instructional Designer to evaluate the existing Beyond Backpacks travel health course and inform its next redesign cycle. My main contribution was analyzing learner behavior, performance, and survey data across multiple sources, identifying where learners disengaged or struggled, and translating those findings into an evidence-based evaluation report with actionable recommendations for future course design and implementation.
+
+Read the report
+My Role
+I was the Instructional Designer and lead evaluator for this project.
+
+My main contributions included defining evaluation metrics, analyzing learner behavior and performance data, validating AI-assisted analyses, identifying learning and engagement gaps, translating findings into instructional recommendations, and communicating results through a stakeholder-facing evaluation report and client presentation.
+
+Tools
+ChatGPT
+
+Claude Code
+
+Google Doc
+
+Google Slides
+
+
+From Raw Data to an Evaluation Framework
+I started with four data sources that captured different parts of the learner experience. I then organized the analysis into four evaluation questions focused on course reach, engagement, learning performance, and adoption to inform future course redesign.
+
+From Evidence to Design Decisions
+I analyzed each evaluation layer from multiple angles to identify meaningful patterns, then used a consistent evidence-to-design process to turn those patterns into actionable course recommendations.
+
+
+Reflection: Human-in-the-Loop AI
+I used ChatGPT and Claude Code throughout the evaluation to speed up data analysis, generate tables and charts, explore patterns, and draft initial findings. My AI-assisted workflow followed four steps:
+
+AI Accelerates: AI helped me quickly explore different cuts of the data, surface possible patterns, and produce first-pass analyses and interpretations.
+
+Human Validates: I checked how each result was produced against the raw data, including field definitions, data sources, units of analysis, denominators, exclusions, event sequences, and calculations.
+
+Human Challenges: I questioned whether each finding was truly supported by the data, whether there were alternative explanations, whether the wording went beyond the evidence, and whether the recommendation was actually connected to the finding.
+
+Human Redirects: When the analysis became too broad, repetitive, or disconnected from the evaluation question, I refined the prompt, narrowed the analytical lens, and redirected the work toward the stakeholder decision the report needed to support.
+
+Key Takeaway
+
+AI can significantly improve efficiency, but it still requires an active human-in-the-loop process to validate evidence, challenge conclusions, and decide what is strong enough to inform redesign.
+
+Read more of my case studies
+
+Building Nutrition Literacy Through Guided Practice
+A Storyline e-learning module that uses objective-aligned instruction, interactive practice, feedback, and reflection to help young adults practice making informed food decisions
+
+
+Interactive Coaching Through Feedback
+An interactive Storyline branching scenario that helps new managers practice giving clear, respectful, and actionable feedback during a performance conversation.
+
+
+Adaptive Practice and AI-Powered Feedback for Corporate Training
+An adaptive, AI-powered corporate training module that helps managers recognize, revise, and write effective performance feedback through scenario-based assessment, remediation, and targeted open-response feedback.
+
+Get in touch
+zhijing3@andrew.cmu.edu
+Home
+About
+Resume
+Made with

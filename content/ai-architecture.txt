@@ -1,0 +1,193 @@
+Home
+
+About
+
+Resume
+
+Contact me
+AI Architecture Decision-Making Simulation
+A multi-modal learning experience combining video and simulation to help AI product managers evaluate AI systems.
+
+Image gallery item
+Project Overview
+I used an AI-augmented research approach to investigate how aspiring AI product managers learn to make AI architecture decisions.
+
+I combined AI-assisted web research and synthetic users to explore recurring questions, misconceptions, and decision-making challenges around AI system design. Rather than treating AI-generated findings as evidence on their own, I used them to form initial hypotheses and then validated those patterns through interviews with CMU students studying product management.
+
+Across these sources, a consistent need emerged: learners were familiar with concepts such as RAG, fine-tuning, and agentic workflows, but lacked a structured way to translate that knowledge into real product decisions.
+
+Try out the course
+Problem
+The core gap was not conceptual knowledge, but applied decision-making.
+
+When an AI system underperformed, aspiring AI PMs struggled to systematically diagnose the root cause, interpret evaluation results, compare possible architecture changes, and justify a recommendation while balancing performance, cost, and business constraints.
+
+Without a repeatable decision process, these choices could rely too heavily on intuition or isolated metrics rather than evidence.
+
+Solution
+To address this gap, we designed a scenario-based learning experience centered on the EVAL framework to give learners structured practice making AI architecture decisions.
+
+Learners work through a realistic AI product scenario in which they evaluate system performance, identify failure modes, compare architecture options, analyze trade-offs, and make a defensible recommendation based on evidence.
+
+Tools
+Articulate Storyline, Synthesia, HTML/CSS
+
+My Role
+Instructional Designer & Storyline Developer
+
+Led need finding using AI-assisted research and CMU student interviews.
+
+Translated dense SME content into a learner-centered structure.
+
+Designed and developed scenario-based interactions in Storyline.
+
+Collaborated with the SME and multimedia designer to align content and learning activities.
+
+Team
+1 Instructional Designer & Storyline Developer
+
+1 Multimedia Designer
+
+1 Subject Matter Expert
+
+Timeline
+Jan 2026 - May 2026 (Discovery & Research: 1 month; Design & Testing: 3 months)
+
+My Design Process
+1
+Action Mapping
+2
+Storyboard & Prototype
+3
+User Testing & Iteration
+4
+Final Development
+Action Mapping
+I started with Action Mapping to translate the research findings into observable workplace behaviors.
+
+The performance goal was for learners to make a defensible AI architecture recommendation for an EdTech product by using evaluation results and cost analysis to diagnose failures, compare options, and balance performance, cost, and business constraints.
+
+From this goal, I identified four key actions:
+
+Define success by establishing evaluation criteria and representative test cases
+
+Diagnose failure modes using evaluation results
+
+Compare architecture options using performance and AITCO-based cost data
+
+Recommend and justify a solution based on performance, cost, and product trade-offs
+
+Identifying Learner Barriers
+Our research surfaced three key barriers that made AI architecture decision-making difficult for novice product managers:
+
+Defining what “good” looks like
+Learners often lacked clear evaluation criteria for judging AI system performance, making it easy to rely on subjective impressions instead of measurable evidence.
+
+Diagnosing why a system is failing
+When performance was poor, learners could identify that something was wrong but struggled to determine the underlying failure mode before jumping to a technical solution.
+
+Choosing and justifying the right intervention
+Learners found it difficult to compare options such as RAG, fine-tuning, and agentic workflows while weighing performance improvements against cost, complexity, and product constraints.
+
+Practice Activity Design
+Using these key actions and learner barriers, I designed four scenario-based tasks focused on applied decision-making rather than concept recall:
+
+Define success: Learners build a rubric for evaluating AI tutor responses, turning an abstract quality like “good tutoring” into measurable criteria.
+
+Diagnose failure modes: Learners analyze AI tutor outputs and identify issues such as answer leaking, logic errors, or instruction-following problems.
+
+Compare architecture options: Learners review evaluation and cost data to decide whether a higher-performing architecture is worth the additional cost.
+
+Justify the recommendation: Learners explain their final decision using evidence from performance metrics, failure analysis, and cost trade-offs.
+
+Storyboarding, Prototyping, and Learner Testing
+I first created a storyboard and flow chart to map the full scenario-based learning experience, including the storyline, decision points, feedback moments, and how learners would apply the EVAL framework.
+
+Following the Successive Approximation Model (SAM), I then built an early prototype in Articulate Storyline so we could test the experience before investing in full development.
+
+We conducted three rounds of think-aloud testing with CMU students studying product management, our target learner group. Participants worked through the prototype while explaining their reasoning, confusion points, and decision-making process. After each round, we iterated on the experience based on where learners struggled, what concepts required additional scaffolding, and which interactions or feedback needed clarification.
+
+Screen design displayed in a mockup
+Screen design displayed in a mockup
+Screen design displayed in a mockup
+
+
+
+Pre-training Video
+
+Iteration: Adding a Pre-training Video Before Practice
+During think-aloud testing, CMU product management students could often understand individual steps of the EVAL framework, but struggled to see how those steps connected into a complete decision-making process.
+
+To address this gap, we added a pre-training video before the simulation. Created in Synthesia by our multimedia designer, the video introduces the architecture options and provides a high-level mental model of the EVAL process before learners begin making decisions.
+
+This reduced the amount of new information learners had to process during the simulation and allowed them to focus more on applying the framework rather than figuring out its structure.
+
+Learning Science Principles
+Image alt tag
+Anchored Learning
+Using these key actions and learner barriers, I designed four scenario-based tasks focused on applied decision-making rather than concept recall:
+
+Image alt tag
+Just-in-Time Support
+Key terms, formulas, and decision guidance are available during practice so learners can access support at the moment of need rather than memorize information upfront.
+
+Image alt tag
+Immediate Feedback
+Each decision is followed by explanatory feedback that helps learners understand why a choice works or does not work and correct misconceptions before moving forward.
+
+Evaluation
+To evaluate the effectiveness of the learning experience, we conducted a learner survey and pre/post assessment focused on confidence, decision quality, and application of the EVAL framework.
+
+SURVEY
+
+The survey was designed to measure learners’ self-reported confidence in making AI architecture decisions before and after the module.
+
+Example survey items included:
+
+I feel confident distinguishing between RAG, Fine-Tuning, and Agentic Workflows.
+
+I feel confident using evaluation data to diagnose AI system failures.
+
+I feel confident making architecture decisions based on quality, cost, and business constraints.
+
+For a small pilot, the target outcome is to see an increase in learner confidence from approximately 2.5/5 before the module to 4.0/5 after the module.
+
+Learning
+
+We also designed a pre/post assessment to evaluate whether learners could apply the EVAL framework in a realistic product scenario.
+
+Before the module, learners make an architecture decision based on their current reasoning. After completing the video and simulation, they complete a similar scenario and justify their decision using failure diagnosis, architecture comparison, and AITCO-based cost analysis.
+
+The target learning outcome is a measurable improvement in decision quality, from approximately 60% on the pre-assessment to 80% on the post-assessment
+
+Takeaways
+Through this project, I strengthened my skills in:
+
+scenario-based learning design
+
+performance-based assessment design
+
+learner testing and rapid iteration
+
+translating technical AI concepts into applied decision-making practice
+
+Read more of my case studies
+
+
+Turning Learner Data into Course Redesign Priorities
+An AI-assisted course evaluation that transforms learner data into evidence-based design decisions.
+
+
+Building Nutrition Literacy Through Guided Practice
+A Storyline e-learning module that uses objective-aligned instruction, interactive practice, feedback, and reflection to help young adults practice making informed food decisions
+
+
+Interactive Coaching Through Feedback
+An interactive Storyline branching scenario that helps new managers practice giving clear, respectful, and actionable feedback during a performance conversation.
+
+Get in touch
+zhijing3@andrew.cmu.edu
+Home
+About
+Resume
+Made with

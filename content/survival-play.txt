@@ -1,0 +1,167 @@
+Home
+
+About
+
+Resume
+
+Contact me
+Learning Survival Through Consequential Play
+Image gallery item
+Project Overview
+Developed as a team project for CMU’s Design Educational Games course, The Last Outbreak grew from our team's shared interest in outdoor activities and our desire to learn more about wilderness camping.
+
+As we explored existing survival resources, we found that most relied on reading or watching instructions, which mainly delivered information but offered limited opportunities to actively practice survival decision-making. We saw an opportunity to create an interactive, low-risk learning environment where novice learners could practice decisions, experience the consequences of their choices, and build confidence before applying these skills outdoors.
+
+The result was a narrative-driven survival game focused on campsite selection and firemaking, with AI-generated visual assets used to create a consistent and immersive game world.
+
+Try out the course
+Tools
+Phaser
+
+Midjourney
+
+Google Survey
+
+Team
+2 Instructional Designer & AI Visual Designer
+
+2 Game Developer
+
+My Role
+Instructional Designer & Visual Designer
+
+Led research and CTA, translating findings into learning objectives and gameplay.
+
+Co-designed learning experience, interactions and visual direction.
+
+Supported AI visual production, playtesting, and iteration.
+
+Timeline
+Jan 2026 - May 2026
+
+My Design Process
+1
+Research & Define
+2
+Design Gameplay
+3
+Prototype, Playtest & Iterate
+4
+Outcome & Reflect
+Research & Learning Goal Elicitation
+I proposed and led the research approach to identify the survival skills novice learners needed and understand where their reasoning broke down.
+
+We began by reviewing literature and expert resources on outdoor education and survival skills, then conducted expert interviews to identify key competencies for novice campers. Based on these findings, I led the design of cognitive task analysis (CTA) activities and think-aloud sessions with learners who had little or no outdoor-survival experience to compare novice reasoning with expert practice.
+
+The analysis revealed clear gaps in how learners prioritized cues, weighed trade-offs, sequenced actions, and diagnosed failure.
+
+
+Novice Reasoning Gaps Identified Through CTA
+
+Image alt tag
+Novice vs. Expert Reasoning in Campsite Selection
+
+Image alt tag
+Novice vs. Expert Reasoning in Firemaking
+
+
+Learning & Experience Goals
+
+From Research to Learning & Experience Goals
+I translated the gaps identified through CTA into two aligned sets of goals: learning goals defined the survival reasoning and procedures players needed to develop, while experience goals defined how that learning should feel during play.
+
+Learning Mechanisms
+We translated our learning goals into gameplay by embedding learning directly into the player’s actions, decisions, and consequences, including
+
+Learning by Doing
+
+Scaffolding → Fading
+
+Contrasting Cases + Variability
+
+Consequence-Based Feedback
+
+Learning by Doing
+Players learn survival skills by directly performing tasks such as inspecting campsites, sorting materials, building fires, and keeping them alive, so knowledge is practiced in context rather than memorized as isolated rules.
+
+
+Example 1: Clear the camp before making a fire
+
+Scaffolding → Fading
+Early gameplay provides support through NPC guidance and environmental cues. As players progress, this support is gradually reduced, requiring them to prioritize information and make more independent decisions.
+
+
+Example 2: Chatting with villagers as a form of scaffolding
+
+Contrasting Cases + Variability
+Players compare campsite options under changing conditions, such as rain and wind. This helps them learn to weigh trade-offs and adapt their reasoning instead of relying on one fixed rule.
+
+
+Example 3: Contasting cases between two campsites
+
+Consequence-Based Feedback
+Mistakes lead to gameplay consequences rather than simple “correct” or “incorrect” messages. A poor campsite choice can reduce stamina, affect materials, and make later firemaking more difficult.
+
+
+Example 4: Poor Campsite Selection Reduces Stamina
+
+
+Game Loop
+The game is structured around a connected survival loop in which each decision affects what happens next. At the macro level, players have five days to collect two herbs and return to save the village. At the daily level, each survival day follows a repeated sequence: Campsite Selection → Material Collection → Fire Building → Herb Search. Supporting systems such as stamina, weather progression, buffer days, and cross-minigame consequences add pressure and make earlier choices matter later in the journey.
+
+Prototype, Playtest & Iterate
+We developed The Last Outbreak through three rounds of prototyping and playtesting, using each round to test a different layer of the experience and refine the next version.
+
+Image gallery item
+Prototype 1 — Low-Fidelity Story Prototype
+
+We first used Google Forms to test the narrative flow, branching logic, and whether players understood Aiden’s mission and the story stakes before investing in development.
+
+Image gallery item
+Prototype 2 — Interactive Digital Prototype
+
+We then moved into a digital prototype. As the design evolved, we realized the experience relied too heavily on dialogue and multiple-choice interactions, so we introduced more hands-on activities such as material sorting and fire-building. The second playtest showed that firemaking was more memorable, while campsite selection still felt passive and text-heavy.
+
+Image gallery item
+Prototype 3 — Revised Gameplay Prototype
+
+Based on those findings, we strengthened player agency and consequences by adding systems such as stamina, weather-based decisions, reduced scaffolding, and stronger connections between survival tasks and herb collection. The third playtest focused on whether players felt genuine agency, and whether the activities felt like gameplay rather than instruction.
+
+What Playtesting Changed
+
+Outcome
+85% of players correctly identified the safer campsite when weather conditions changed.
+
+80% were able to recall the correct firemaking sequence after completing the interactive game.
+
+75% reported feeling immersed in the survival mission and motivated by the goal of collecting herbs to save the village.
+
+Reflection
+Meaningful interaction matters more than interaction alone. Players learn more when actions require judgment, not just clicking.
+
+Consequences can become feedback. Gameplay outcomes helped connect decisions with their impact more naturally than simple right-or-wrong messages.
+
+Fading support builds independence. Gradually reducing guidance encouraged players to rely more on their own judgment.
+
+Learning and narrative should reinforce each other. Survival skills became more meaningful once they directly supported the mission to collect herbs and save the village.
+
+Read more of my case studies
+
+AI Architecture Decision-Making Simulation
+A multi-modal learning experience combining video and simulation to help AI product managers evaluate AI systems.
+
+
+
+Turning Learner Data into Course Redesign Priorities
+An AI-assisted course evaluation that transforms learner data into evidence-based design decisions.
+
+
+Building Nutrition Literacy Through Guided Practice
+A Storyline e-learning module that uses objective-aligned instruction, interactive practice, feedback, and reflection to help young adults practice making informed food decisions
+
+Get in touch
+zhijing3@andrew.cmu.edu
+Home
+About
+Resume
+Made with

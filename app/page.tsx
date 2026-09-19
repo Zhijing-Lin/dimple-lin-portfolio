@@ -1,4 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
+import { SiteHeader } from '@/components/site-header';
 
 type Project = {
   title: string;
@@ -33,7 +34,7 @@ const categories: Category[] = [
         tools: ['Notion'],
         image: '/projects/covers/needs-driven-help-center.png',
         imageAlt: 'Tutor performance support help center interface',
-        href: 'https://dimplelin.work/b04fa22b',
+        href: '/projects/help-center',
       },
       {
         title: 'Turning Reviewer Judgment into a Learnable Skill',
@@ -42,7 +43,7 @@ const categories: Category[] = [
         tools: ['OLI Torus', 'Vyond'],
         image: '/projects/covers/reviewer-judgment.png',
         imageAlt: 'Open educational resource reviewer training experience',
-        href: 'https://dimplelin.work/6c8b7574',
+        href: '/projects/reviewer-judgment',
       },
     ],
   },
@@ -60,7 +61,7 @@ const categories: Category[] = [
         tools: ['Articulate Storyline', 'Synthesia', 'HTML/CSS'],
         image: '/projects/covers/ai-architecture.png',
         imageAlt: 'AI architecture decision-making simulation screens',
-        href: 'https://dimplelin.work/8a18dbf3',
+        href: '/projects/ai-architecture',
       },
       {
         title: 'Learning Survival Through Consequential Play',
@@ -69,7 +70,7 @@ const categories: Category[] = [
         tools: ['Phaser', 'Midjourney', 'HTML/CSS'],
         image: '/projects/covers/survival-play.png',
         imageAlt: 'Narrative wilderness survival learning game',
-        href: 'https://dimplelin.work/2dbba5ae',
+        href: '/projects/survival-play',
       },
       {
         title: 'Building Nutrition Literacy Through Guided Practice',
@@ -78,7 +79,7 @@ const categories: Category[] = [
         tools: ['Articulate Storyline'],
         image: '/projects/covers/nutrition-literacy.png',
         imageAlt: 'Interactive nutrition literacy course screens',
-        href: 'https://dimplelin.work/ae5df7e7',
+        href: '/projects/nutrition-literacy',
       },
       {
         title: 'Interactive Coaching Through Feedback',
@@ -87,7 +88,7 @@ const categories: Category[] = [
         tools: ['Articulate Storyline'],
         image: '/projects/covers/interactive-coaching.png',
         imageAlt: 'Branching manager feedback coaching scenario',
-        href: 'https://dimplelin.work/da6053e0',
+        href: '/projects/interactive-coaching',
       },
     ],
   },
@@ -105,7 +106,7 @@ const categories: Category[] = [
         tools: ['Adobe Captivate', 'LLM API'],
         image: '/projects/covers/adaptive-ai-feedback.png',
         imageAlt: 'Adaptive corporate training with AI-powered feedback',
-        href: 'https://dimplelin.work/7a2dba18',
+        href: '/projects/adaptive-ai-feedback',
       },
       {
         title: 'Designing Just-in-Time AI Support with DOT AI',
@@ -133,7 +134,7 @@ const categories: Category[] = [
         tools: ['Claude Code', 'ChatGPT', 'Google Slides'],
         image: '/projects/covers/learner-data.png',
         imageAlt: 'Course evaluation findings and redesign priorities',
-        href: 'https://dimplelin.work/f8bd92a0',
+        href: '/projects/learner-data',
       },
       {
         title: 'From Tutorial Videos to Continuous Performance Support',
@@ -149,24 +150,6 @@ const categories: Category[] = [
     ],
   },
 ];
-
-function SiteHeader() {
-  return (
-    <header className="site-header">
-      <a className="brand" href="#top" aria-label="Dimple Lin home">
-        Dimple Lin<span>.</span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="#home">Home</a>
-        <a className="active" href="#projects" aria-current="page">
-          Projects
-        </a>
-        <a href="#about">About</a>
-        <a href="#resume">Resume</a>
-      </nav>
-    </header>
-  );
-}
 
 function PortfolioIntro() {
   return (
@@ -233,9 +216,12 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-function CategorySection({ category }: { category: Category }) {
+function CategorySection({ category, index }: { category: Category; index: number }) {
   return (
-    <section className="category-section" id={`category-${category.number}`}>
+    <section
+      className={`category-section ${index % 2 === 0 ? 'category-white' : 'category-warm'}`}
+      id={`category-${category.number}`}
+    >
       <div className="category-heading">
         <p className="eyebrow">
           {category.number} — {category.shortLabel}
@@ -258,8 +244,8 @@ export default function Home() {
       <SiteHeader />
       <PortfolioIntro />
       <div className="portfolio-content">
-        {categories.map((category) => (
-          <CategorySection key={category.number} category={category} />
+        {categories.map((category, index) => (
+          <CategorySection key={category.number} category={category} index={index} />
         ))}
         <footer className="site-footer">
           <p>Designing learning that moves from insight to action.</p>

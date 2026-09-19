@@ -1,0 +1,83 @@
+Home
+
+About
+
+Resume
+
+Contact me
+Interactive Coaching Through Feedback
+An interactive Storyline branching scenario that helps new managers practice giving clear, respectful, and actionable feedback during a performance conversation.
+
+Try out the course
+Problem
+New managers often struggle to balance honesty, clarity, empathy, and actionability during performance conversations. Poor responses can reduce trust, create defensiveness, or leave employees unsure of what to do next.
+
+This module provides a low-risk environment to practice those decisions before applying them in the workplace.
+
+Solution
+I built a Storyline branching scenario that simulates a realistic manager–employee feedback conversation.
+
+Learners make decisions at key moments, receive immediate, consequence-based feedback, and see how their responses affect trust, clarity, and the direction of the conversation.
+
+Rather than presenting feedback as a list of best practices, the module turns it into applied decision-making practice.
+
+
+Design Approach
+I identified the key decisions managers make during a feedback conversation and translated them into a realistic branching scenario.
+
+Each decision point reflects a common managerial challenge, such as:
+
+Being too vague
+
+Avoiding difficult feedback
+
+Responding defensively
+
+Failing to provide actionable next steps
+
+Learners practice choosing responses and seeing the consequences of each approach.
+
+Branching Scenario Flow Map
+Before developing the module in Storyline, I mapped the employee dialogue, manager choices, feedback, recovery paths, and final outcomes to ensure each branch reflected a meaningful workplace behavior.
+
+Learners move through the scenario by choosing how to respond during a feedback conversation. Effective choices move the conversation toward greater trust and clarity, while ineffective choices trigger consequence-based feedback explaining why the response may create confusion, defensiveness, or reduce trust. Some branches also allow learners to recover from mistakes, reflecting how real feedback conversations can be repaired.
+
+Flow Map Legend
+
+Black rectangle — Employee dialogue
+
+Orange diamond — Manager decision
+
+Green rectangle — Effective response / feedback
+
+Pink rectangle — Ineffective response / feedback
+
+Red circle — Final outcome
+
+
+Branching Scenerio Flow Map
+
+Next Steps & Reflection
+In the next iteration, I would test the scenario with target learners to identify where they hesitate, which mistakes occur most often, and where additional scaffolding is needed.
+
+This project strengthened my ability to translate a complex interpersonal skill into structured, scenario-based decision practice and connect each learner choice to a realistic workplace consequence.
+
+Read more of my case studies
+
+Adaptive Practice and AI-Powered Feedback for Corporate Training
+An adaptive, AI-powered corporate training module that helps managers recognize, revise, and write effective performance feedback through scenario-based assessment, remediation, and targeted open-response feedback.
+
+
+Turning Reviewer Judgment into a Learnable Skill
+A research-informed pre-training course preparing OER reviewers to apply rubrics consistently and provide actionable feedback.
+
+
+Needs-Driven Help Center for Tutor Performance Support
+Using needs analysis, cross-functional collaboration, SME knowledge elicitation, and AI-assisted content development to turn recurring live-session challenges into actionable support.
+
+Get in touch
+zhijing3@andrew.cmu.edu
+Home
+About
+Resume
+Made with

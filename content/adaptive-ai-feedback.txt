@@ -1,0 +1,104 @@
+Home
+
+About
+
+Resume
+
+Contact me
+Adaptive Practice and AI-Powered Feedback for Corporate Training
+An adaptive, AI-powered corporate training module that helps managers recognize, revise, and write effective performance feedback through scenario-based assessment, remediation, and targeted open-response feedback.
+
+Try out the course
+Course Audience
+New managers, team leads, and professionals who need to write clear, actionable, and development-oriented performance feedback.
+
+My Role
+Instructional Designer
+
+E-Learning Developer
+
+AI Feedback & API Integration Designer
+
+Tool Used
+Adobe Captivate
+API Integration
+LLM-Based Feedback Evaluation
+Google Docs
+
+Problem
+Managers are often expected to provide written performance feedback with limited training on how to make it specific, actionable, and development-oriented.
+
+Traditional training frequently relies on multiple-choice questions or generic examples, giving learners few opportunities to practice writing feedback in their own words and receive targeted guidance.
+
+The key learning gap was therefore:
+
+How can learners move from recognizing good feedback to independently writing it?
+
+Solution
+I designed an adaptive Captivate learning experience that progresses from analysis to independent writing.
+
+Learners:
+
+Analyze realistic workplace feedback
+
+Complete a scenario-based assessment
+
+Enter targeted remediation when additional support is needed
+
+Practice revising feedback in their own words
+
+Receive AI-powered, criterion-based feedback
+
+This structure provides additional support when learners struggle while still moving stronger learners directly into application.
+
+Adaptive Practice & Remediation
+This project combines adaptive practice and AI-supported feedback to help learners move from recognizing effective feedback to writing it independently.
+
+Learners first analyze realistic workplace examples and identify common issues, such as vague language, missing impact, unclear next steps, and judgment-based tone. They then complete a scenario-based assessment. I used Captivate variables and advanced actions to track performance and trigger a remediation pathway when additional support is needed. After remediation, learners retry the assessment before completing an open-ended writing task with API-powered targeted feedback.
+
+The module includes:
+
+Scenario-based feedback analysis
+
+Mastery tracking
+
+Performance-triggered remediation
+
+Assessment retry
+
+Open-ended writing practice
+
+AI-powered targeted feedback
+
+AI-Powered Targeted Feedback
+The images below illustrate the flow of the AI-powered feedback system embedded in the course. Learners submit an open-ended response and immediately receive targeted guidance based on the quality of their writing. The AI feedback evaluates whether the response includes specific observable behavior, clear impact, actionable next steps, and professional tone. It also shows what the learner did well, what criteria are missing, and how they can improve their next response.
+
+Screen design displayed in a mockup
+Screen design displayed in a mockup
+Screen design displayed in a mockup
+
+
+Next Steps & Reflection
+In a future iteration, I would test the module with target managers to evaluate whether remediation improves subsequent performance and whether AI feedback leads to stronger revised responses.
+
+This project helped me explore how adaptive logic and AI-generated feedback can extend traditional e-learning beyond recognition-based assessment into personalized skill practice.
+
+Read more of my case studies
+
+Turning Reviewer Judgment into a Learnable Skill
+A research-informed pre-training course preparing OER reviewers to apply rubrics consistently and provide actionable feedback.
+
+
+Needs-Driven Help Center for Tutor Performance Support
+Using needs analysis, cross-functional collaboration, SME knowledge elicitation, and AI-assisted content development to turn recurring live-session challenges into actionable support.
+
+
+Learning Survival Through Consequential Play
+A narrative-driven educational game that helps novice campers build campsite-selection and firemaking skills.
+
+Get in touch
+zhijing3@andrew.cmu.edu
+Home
+About
+Resume
+Made with

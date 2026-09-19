@@ -1,0 +1,169 @@
+Home
+
+About
+
+Resume
+
+Contact me
+Needs-Driven Help Center for Tutor Performance Support
+Using needs analysis, cross-functional collaboration, SME knowledge elicitation, and AI-assisted content development to turn recurring live-session challenges into actionable support.
+
+Project Overview
+My client, PLUS Tutoring, provides live tutoring programs that connect students with tutors for real-time academic support. During live sessions, tutors frequently encounter technical, operational, and student-related challenges and often rely on supervisors for recurring questions, creating repeated support requests and inconsistent access to guidance.
+
+I designed a needs-driven Help Center and just-in-time performance support resource organized around the tasks and problems tutors encounter across the tutoring workflow. Some resources support pre-session preparation, while others provide actionable guidance during live sessions so tutors can resolve common issues more independently.
+
+Tools
+Figma
+
+Notion
+
+Google AI Studio
+
+Slack
+
+ChatGPT
+
+Granola (AI Meeting Note-taker)
+
+My Role
+I served as the Instructional Designer for this project. My work included:
+
+Needs & Performance Analysis
+
+Information Architecture
+
+Performance Support Design
+
+SME Collaboration
+
+Cross-Functional Collaboration
+
+AI-Assisted Content Development
+
+Team
+Supervisors & Lead Tutors — SMEs
+
+Project Manager
+
+Product Designer / Product Team
+
+Research / technical partner supporting Slack question analysis
+
+Timeline
+Desgin + Development: Jan 2026 - Aug 2026
+
+Evaluation: Sep 2026 - Now
+
+1
+Reframing the Problem
+2
+Need Analysis
+3
+Intervention Selection
+4
+Desgin & Develop
+5
+Evaluation
+Reframing the Problem
+From a Top-Down Help Center to a Needs-Driven Support System
+
+Based on my manager’s initial brief, I designed the first Help Center information architecture around the core tools tutors used, including PLUS, Zoom, and Slack, and built an interactive prototype in Google AI Studio. I shared it with PLUS supervisors and a product designer, then completed two rounds of iteration based on their feedback.
+
+While the structure became clearer and easier to navigate, I realized I was still designing from the content outward, organizing what we thought tutors might need rather than fully understanding the problems they were actually encountering.
+
+After discussing this concern with my manager, I proposed shifting the project from a top-down content-design approach toward a bottom-up needs analysis.
+
+
+
+Help Center Information Architecture Prototypes
+
+Needs Analysis: Identifying Where Tutors Actually Get Stuck
+To better understand tutors’ support needs, I used multiple sources to identify recurring problems and understand them in context.
+
+1. Supervisor and Lead Tutor Interviews
+I spoke with the people closest to tutor operations, supervisors and lead tutors, focusing on recurring breakdowns in live tutoring sessions.
+
+2. Slack Analysis
+To validate the interview findings against tutors’ real support behavior, I partnered with the Research Programmer to analyze the most frequently asked tutor questions in Slack, PLUS’s primary internal communication channel.
+
+3. Experiencing the Workflow Firsthand
+I participated in a live PLUS tutoring session as a tutor to experience the workflow firsthand. During the session, I documented moments where I felt confused, uncertain about the next step, or unable to quickly find the information I needed.
+
+
+Tutor Problem Space Mapping in Figma
+
+Intervention Selection
+From Tutor Problems to the Right Intervention
+
+After collecting recurring tutor issues, I organized them in Figma to make patterns across the problem space visible, grouping issues by both operational topic and underlying issue type. I then met with the PLUS Product Lead to review the problem space and determine the most appropriate response for each issue: Help Center content, a product feature, or a combination of both.
+
+Immediate guidance needed + procedure exists → Help Center
+
+Workflow is constrained by the platform → Product feature
+
+Urgent current problem + longer-term platform opportunity → Help Center now + Product later
+
+Performance Support Design & Develop
+Matching the Support Format to the Type of Problem
+
+After identifying which issues belonged in the Help Center, I designed two types of performance support based on the nature of the problem: predictable procedures and context-sensitive decisions.
+
+
+Procedural Job Aid Example: Join & Participate in Sessions
+
+A. Procedural Job Aids
+
+For predictable workflows in the PLUS application, Zoom, and Slack, tutors mainly needed to know how to complete a specific task correctly.
+
+I designed these resources to be: Short → Visual → Step-by-Step → Action First
+
+B. Operational Decision Guides
+
+Operational challenges, such as a tutor joining late, insufficient tutor coverage, or a language mismatch, required more context-sensitive judgment. In many cases, the correct response existed as tacit knowledge among experienced supervisors rather than as a clearly documented procedure.
+
+I used weekly supervisor meetings as SME knowledge-elicitation sessions, bringing one or two priority problems to each meeting and asking follow-up questions to uncover the underlying decision rules, exceptions, and escalation points.
+
+I then translated this expert knowledge into structured decision guides that helped tutors understand:
+
+What to do
+
+What to say through example language or messages
+
+Practical tips for handling the situation
+
+When to escalate the issue
+
+
+Operational Decision Guide Example: When the Classroom Teacher Is Unavailable
+
+Human-in-the-Loop AI Workflow
+
+I used a human-in-the-loop AI workflow to develop individual Help Center articles. During weekly supervisor meetings, I used an AI note taker to capture the discussion, including procedures, decision points, and edge cases. After each meeting, I provided ChatGPT with the article topic, meeting transcript or notes, examples of previously completed articles, and the desired structure and tone to generate a first draft.
+
+I then reviewed, rewrote, and re-prompted the draft to improve its accuracy, clarity, and consistency. Once the article was refined, I shared it with supervisors asynchronously for feedback and iterated again based on their comments before finalizing the content.
+
+
+AI-Assisted Workflow Diagram
+
+Evaluation
+Read more of my case studies
+
+Learning Survival Through Consequential Play
+A narrative-driven educational game that helps novice campers build campsite-selection and firemaking skills.
+
+
+AI Architecture Decision-Making Simulation
+A multi-modal learning experience combining video and simulation to help AI product managers evaluate AI systems.
+
+
+
+Turning Learner Data into Course Redesign Priorities
+An AI-assisted course evaluation that transforms learner data into evidence-based design decisions.
+
+Get in touch
+zhijing3@andrew.cmu.edu
+Home
+About
+Resume
+Made with
