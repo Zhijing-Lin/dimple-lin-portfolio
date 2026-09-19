@@ -181,6 +181,31 @@ const highlights = [
   },
 ];
 
+const starTrail = [
+  ['59%', '16%', '0.55s', '0.66rem', '✦'],
+  ['64%', '12%', '0.9s', '0.46rem', '✧'],
+  ['69%', '10%', '1.2s', '0.72rem', '✦'],
+  ['75%', '12%', '1.5s', '0.48rem', '✦'],
+  ['81%', '17%', '1.82s', '0.64rem', '✧'],
+  ['83%', '23%', '2.12s', '0.48rem', '✦'],
+  ['79%', '29%', '2.46s', '0.7rem', '✦'],
+  ['73%', '31%', '2.78s', '0.45rem', '✧'],
+  ['67%', '29%', '3.12s', '0.62rem', '✦'],
+  ['64%', '24%', '3.42s', '0.44rem', '✦'],
+  ['68%', '20%', '3.72s', '0.66rem', '✧'],
+  ['75%', '25%', '4.02s', '0.48rem', '✦'],
+  ['80%', '34%', '4.34s', '0.7rem', '✦'],
+  ['77%', '43%', '4.68s', '0.46rem', '✧'],
+  ['77%', '53%', '5.02s', '0.62rem', '✦'],
+  ['81%', '62%', '5.36s', '0.48rem', '✦'],
+  ['83%', '70%', '5.72s', '0.68rem', '✧'],
+  ['80%', '76%', '6.06s', '0.44rem', '✦'],
+  ['85%', '75%', '6.38s', '0.64rem', '✦'],
+  ['89%', '79%', '6.72s', '0.48rem', '✧'],
+  ['91%', '85%', '7.08s', '0.7rem', '✦'],
+  ['93%', '90%', '7.4s', '0.46rem', '✦'],
+] as const;
+
 function ProjectList({ items }: { items: ProjectLink[] }) {
   return (
     <div className="dbee-project-list">
@@ -226,28 +251,26 @@ export function DBeeNavigator() {
 
   return (
     <>
-      <svg
-        className={`dbee-flight-path${open ? ' is-hidden' : ''}`}
-        viewBox="0 0 1000 1000"
-        preserveAspectRatio="none"
+      <div
+        className={`dbee-star-trail${open ? ' is-hidden' : ''}`}
         aria-hidden="true"
-        focusable="false"
       >
-        <defs>
-          <mask id="dbee-flight-mask" maskUnits="userSpaceOnUse">
-            <path
-              className="dbee-flight-reveal"
-              pathLength="1"
-              d="M590 160 C770 75 905 190 812 310 C736 408 602 327 659 224 C720 114 929 305 765 521 C684 628 785 700 831 718 C907 748 901 846 936 910"
-            />
-          </mask>
-        </defs>
-        <path
-          className="dbee-flight-line"
-          d="M590 160 C770 75 905 190 812 310 C736 408 602 327 659 224 C720 114 929 305 765 521 C684 628 785 700 831 718 C907 748 901 846 936 910"
-          mask="url(#dbee-flight-mask)"
-        />
-      </svg>
+        {starTrail.map(([left, top, delay, size, glyph], index) => (
+          <span
+            className="dbee-trail-star"
+            key={`${left}-${top}`}
+            style={{
+              left,
+              top,
+              fontSize: size,
+              animationDelay: delay,
+              animationDuration: `${2.15 + (index % 4) * 0.18}s`,
+            }}
+          >
+            {glyph}
+          </span>
+        ))}
+      </div>
 
       <div className={`dbee-shell${open ? ' is-open' : ''}`}>
         {open ? (
