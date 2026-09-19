@@ -116,7 +116,7 @@ export function SkillGarden() {
           );
         })}
       </div>
-      <p className="garden-hint">Hover to glow · Click to learn more</p>
+      <p className="garden-hint">Click to learn more</p>
     </section>
   );
 }

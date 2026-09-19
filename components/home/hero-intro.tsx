@@ -5,7 +5,9 @@ export function HeroIntro() {
   return (
     <section className="home-hero" id="home">
       <div className="home-hero-copy" id="about">
-        <p className="home-kicker">Hi, I’m Dimple.</p>
+        <p className="home-kicker">
+          Hi, I’m <span className="dimple-name">Dimple.</span>
+        </p>
         <h1>
           I turn real{' '}
           <span className="home-highlight">learning and performance gaps</span>{' '}

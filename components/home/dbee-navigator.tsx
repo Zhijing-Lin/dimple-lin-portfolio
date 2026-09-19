@@ -186,9 +186,42 @@ export function DBeeNavigator() {
   };
 
   return (
-    <div className={`dbee-shell${open ? ' is-open' : ''}`}>
-      {open ? (
-        <dialog
+    <>
+      <svg
+        className={`dbee-flight-path${open ? ' is-hidden' : ''}`}
+        viewBox="0 0 1000 1000"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <defs>
+          <mask id="dbee-flight-mask" maskUnits="userSpaceOnUse">
+            <path
+              className="dbee-flight-reveal"
+              d="M590 160 C770 75 905 190 812 310 C736 408 602 327 659 224 C720 114 929 305 765 521 C684 628 785 700 831 718 C907 748 901 846 936 910"
+            />
+          </mask>
+        </defs>
+        <path
+          className="dbee-flight-line"
+          d="M590 160 C770 75 905 190 812 310 C736 408 602 327 659 224 C720 114 929 305 765 521 C684 628 785 700 831 718 C907 748 901 846 936 910"
+          mask="url(#dbee-flight-mask)"
+        />
+      </svg>
+
+      <div className={`dbee-shell${open ? ' is-open' : ''}`}>
+        {open ? (
+          <button
+            className="dbee-backdrop"
+            type="button"
+            aria-label="Close D-Bee portfolio navigator"
+            onClick={() => setOpen(false)}
+          />
+        ) : null}
+
+        <div className="dbee-content">
+          {open ? (
+            <dialog
           open
           className="dbee-panel"
           id="dbee-navigator"
@@ -196,8 +229,8 @@ export function DBeeNavigator() {
         >
           <header className="dbee-panel-header">
             <div>
-              <span>D-Bee navigator</span>
-              <strong>Hi! I’m D-Bee 🐝</strong>
+              <span>D-Bee / Portfolio guide</span>
+              <strong>Hi, I’m D-Bee.</strong>
             </div>
             <button
               type="button"
@@ -332,26 +365,24 @@ export function DBeeNavigator() {
               View All Projects <ArrowUpRight size={14} aria-hidden="true" />
             </a>
           </footer>
-        </dialog>
-      ) : null}
+            </dialog>
+          ) : null}
 
-      <span className="dbee-hover-bubble" aria-hidden="true">
-        Need help exploring?
-      </span>
-      <button
-        className="dbee-button"
-        type="button"
-        aria-label="Open D-Bee portfolio navigator"
-        aria-expanded={open}
-        aria-controls="dbee-navigator"
-        onClick={() => setOpen((value) => !value)}
-      >
-        <img
-          src="/home/dbee.png"
-          alt=""
-          aria-hidden="true"
-        />
-      </button>
-    </div>
+          <span className="dbee-hover-bubble" aria-hidden="true">
+            Need help exploring?
+          </span>
+          <button
+            className="dbee-button"
+            type="button"
+            aria-label="Open D-Bee portfolio navigator"
+            aria-expanded={open}
+            aria-controls="dbee-navigator"
+            onClick={() => setOpen((value) => !value)}
+          >
+            <img src="/home/dbee.png" alt="" aria-hidden="true" />
+          </button>
+        </div>
+      </div>
+    </>
   );
 }

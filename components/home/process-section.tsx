@@ -1,3 +1,8 @@
+'use client';
+
+import { useState } from 'react';
+import { Plus } from 'lucide-react';
+
 const steps = [
   {
     number: '01',
@@ -26,23 +31,44 @@ const steps = [
 ];
 
 export function ProcessSection() {
+  const [activeStep, setActiveStep] = useState<number | null>(null);
+
   return (
     <section className="home-section process-section" id="approach">
-      <header className="home-section-heading">
+      <header className="home-section-heading process-heading">
         <p className="home-eyebrow">How I approach learning problems</p>
         <h2>From real gaps to the right intervention—and back to evidence.</h2>
       </header>
       <div className="process-grid">
-        {steps.map((step) => (
-          <article className="process-step" key={step.number}>
-            <div className="process-step-topline">
-              <span>{step.number}</span>
-              <p>{step.phase}</p>
-            </div>
-            <h3>{step.title}</h3>
-            <p>{step.body}</p>
-          </article>
-        ))}
+        {steps.map((step, index) => {
+          const isActive = activeStep === index;
+          return (
+            <article
+              className={`process-step${isActive ? ' is-active' : ''}`}
+              key={step.number}
+            >
+              <button
+                className="process-step-toggle"
+                type="button"
+                aria-expanded={isActive}
+                onClick={() => setActiveStep(isActive ? null : index)}
+              >
+                <span className="process-step-topline">
+                  <span>{step.number}</span>
+                  <span>{step.phase}</span>
+                </span>
+                <span className="process-step-title">{step.title}</span>
+                <span className="process-step-prompt">
+                  {isActive ? 'Close details' : 'Click for details'}
+                  <Plus size={17} aria-hidden="true" />
+                </span>
+                <span className="process-step-detail" aria-hidden={!isActive}>
+                  {step.body}
+                </span>
+              </button>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
