@@ -206,7 +206,7 @@ function PortfolioIntro() {
         </div>
         <img
           className="intro-floral-border"
-          src="/decor/how-i-work-floral-border.png"
+          src="/decor/how-i-work-floral-border-v2.png"
           alt=""
           aria-hidden="true"
         />
