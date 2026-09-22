@@ -38,7 +38,7 @@ const categories: Category[] = [
       'Finding the real performance problem first, then designing the right support—not defaulting to training.',
     projects: [
       {
-        title: 'Needs-Driven Help Center for Tutor Performance Support',
+        title: 'Just-in-Time Performance Support for PLUS Tutors',
         description:
           'Turned recurring tutor challenges into actionable support through needs analysis and performance-support design.',
         highlights: ['needs analysis', 'performance-support design'],
@@ -85,7 +85,7 @@ const categories: Category[] = [
           'Designed a scenario-based simulation that helps aspiring AI PMs practice evidence-based architecture decisions and trade-off reasoning.',
         highlights: ['scenario-based simulation'],
         tools: ['Articulate Storyline', 'Synthesia', 'HTML/CSS'],
-        image: '/projects/covers-refined/ai-architecture.webp',
+        image: '/projects/covers-refined/ai-architecture-dual-screen.webp',
         imageAlt: 'AI architecture decision-making simulation screens',
         href: '/projects/ai-architecture',
       },

@@ -21,7 +21,7 @@ const featured = [
     label: 'AI + Simulation',
     description:
       'Helping aspiring AI PMs move from knowing architecture concepts to making evidence-based decisions.',
-    image: '/projects/covers-refined/ai-architecture.webp',
+    image: '/projects/covers-refined/ai-architecture-dual-screen.webp',
   },
   {
     slug: 'learner-data',

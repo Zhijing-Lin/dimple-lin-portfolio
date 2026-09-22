@@ -23,7 +23,7 @@ export type ProjectDetail = {
 export const projectDetails: ProjectDetail[] = [
   {
     slug: 'help-center',
-    title: 'Needs-Driven Help Center for Tutor Performance Support',
+    title: 'Just-in-Time Performance Support for PLUS Tutors',
     summary:
       'Using needs analysis, cross-functional collaboration, SME knowledge elicitation, and AI-assisted content development to turn recurring live-session challenges into actionable support.',
     category: 'Learning Strategy & Performance Enablement',
@@ -54,7 +54,7 @@ export const projectDetails: ProjectDetail[] = [
       'A multi-modal learning experience combining video and simulation to help AI product managers evaluate AI systems.',
     category: 'Interactive Learning & Simulation',
     tools: ['Articulate Storyline', 'Synthesia', 'HTML/CSS'],
-    cover: '/projects/covers-refined/ai-architecture.webp',
+    cover: '/projects/covers-refined/ai-architecture-dual-screen.webp',
     productImage: '/projects/ai-architecture.png',
     productImageAlt: 'AI architecture decision-making learning experience',
     originalUrl: 'https://dimplelin.work/8a18dbf3',
