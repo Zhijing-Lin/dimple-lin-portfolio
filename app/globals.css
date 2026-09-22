@@ -2764,17 +2764,18 @@ a {
 }
 
 .project-progress-nav .is-visited a > span {
-  border-color: #aeb9df;
-  background: #eceefa;
-  color: #53649d;
+  border-color: #6577b5;
+  background: #6577b5;
+  color: #fff;
 }
 
 .project-progress-nav .is-visited a strong {
-  color: #6472a4;
+  color: #48588f;
+  font-weight: 750;
 }
 
 .project-progress-nav .is-visited::after {
-  background: #c6cdea;
+  background: #6577b5;
 }
 
 .project-progress-nav a:hover > span,

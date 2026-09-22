@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { ArrowLeft, ArrowRight, ExternalLink, LayoutGrid } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import {
@@ -400,21 +399,21 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
         <footer className="next-project">
           <div className="next-project-actions">
-            <Link
+            <a
               className="next-project-button next-project-button-primary"
               href={`/projects/${nextProject.slug}`}
-              aria-label={`Next case study: ${nextProject.title}`}
+              aria-label={`Next project: ${nextProject.title}`}
             >
-              <span>Next Case Study</span>
+              <span>Next Project</span>
               <ArrowRight size={17} aria-hidden="true" />
-            </Link>
-            <Link
+            </a>
+            <a
               className="next-project-button next-project-button-secondary"
               href="/projects"
             >
               <LayoutGrid size={16} aria-hidden="true" />
               <span>All Projects</span>
-            </Link>
+            </a>
           </div>
           <img src={nextProject.cover} alt="" />
         </footer>
