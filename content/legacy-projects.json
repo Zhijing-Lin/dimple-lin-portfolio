@@ -70,12 +70,12 @@
         "html": "<h4>Reframing the Problem</h4><p><strong>From a Top-Down Help Center to a Needs-Driven Support System</strong></p><p>Based on my manager’s initial brief, I designed the first Help Center information architecture around the core tools tutors used, including PLUS, Zoom, and Slack, and built an interactive prototype in Google AI Studio. I shared it with PLUS supervisors and a product designer, then completed two rounds of iteration based on their feedback.</p><p>While the structure became clearer and easier to navigate, I realized I was still designing from the content outward, organizing what we thought tutors might need <strong>rather than fully understanding the problems </strong>they were actually encountering.</p><p>After discussing this concern with my manager, I proposed shifting the project from a top-down content-design approach toward a <strong>bottom-up needs analysis</strong>.</p>",
         "media": {
           "type": "image",
-          "url": null,
-          "unavailable": true,
+          "url": "/projects/help-center-information-architecture-v2.png",
+          "unavailable": false,
           "caption": "<p class=\"p2\">Help Center Information Architecture Prototypes</p>",
-          "alt": null,
-          "width": "1500",
-          "height": "1125"
+          "alt": "Two PLUS Tutor Help Center information architecture prototypes shown on a laptop and tablet",
+          "width": "1536",
+          "height": "1024"
         },
         "flipped": true
       },
@@ -85,15 +85,7 @@
         "columns": [
           {
             "html": "<h4>Needs Analysis: Identifying Where Tutors Actually Get Stuck</h4><p>To better understand tutors’ support needs, I used multiple sources to identify recurring problems and understand them in context.</p><p><strong>1. Supervisor and Lead Tutor Interviews</strong><br>I spoke with the people closest to tutor operations, supervisors and lead tutors, focusing on recurring breakdowns in live tutoring sessions.</p><p><strong>2. Slack Analysis</strong><br>To validate the interview findings against tutors’ real support behavior, I partnered with the Research Programmer to analyze the most frequently asked tutor questions in Slack, PLUS’s primary internal communication channel.</p><p><strong>3. Experiencing the Workflow Firsthand</strong><br>I participated in a live PLUS tutoring session as a tutor to experience the workflow firsthand. During the session, I documented moments where I felt confused, uncertain about the next step, or unable to quickly find the information I needed.</p><p></p>",
-            "media": {
-              "type": "image",
-              "url": null,
-              "unavailable": true,
-              "caption": null,
-              "alt": null,
-              "width": null,
-              "height": null
-            }
+            "media": null
           }
         ]
       },
@@ -103,12 +95,12 @@
         "html": "<h4>Intervention Selection</h4><p><strong>From Tutor Problems to the Right Intervention</strong></p><p>After collecting recurring tutor issues, I organized them in Figma to make patterns across the problem space visible, grouping issues by both operational topic and underlying issue type. I then met with the PLUS Product Lead to review the problem space and determine the most appropriate response for each issue: <strong>Help Center content, a product feature, or a combination of both.</strong></p><ul><li><p>Immediate guidance needed + procedure exists → Help Center</p></li><li><p>Workflow is constrained by the platform → Product feature</p></li><li><p>Urgent current problem + longer-term platform opportunity → Help Center now + Product later</p></li></ul>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9f02d0fd08272eb04fa22b/section-media/clipboard-image-5fb1e1fd-952b-4d9c-86bb-0a92bab19428.webp",
+          "url": "/projects/tutor-problem-space-mapping.png",
           "unavailable": false,
           "caption": "<p class=\"p2\">Tutor Problem Space Mapping in Figma</p>",
-          "alt": null,
-          "width": "17815",
-          "height": "5020"
+          "alt": "Tutor workflow problem space and solution ideas mapped in Figma",
+          "width": "18167",
+          "height": "5372"
         },
         "flipped": false
       },

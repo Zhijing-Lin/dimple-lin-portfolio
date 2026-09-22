@@ -5,6 +5,7 @@ import {
   ProjectProgressNav,
   type ProjectProgressItem,
 } from '@/components/project-progress-nav';
+import { ProjectImageLightbox } from '@/components/project-image-lightbox';
 import { SiteHeader } from '@/components/site-header';
 import {
   legacyProjectBySlug,
@@ -110,6 +111,19 @@ function ProjectMedia({ media }: { media: LegacyMedia | null }) {
   }
 
   const caption = media.caption ? plainText(media.caption) : '';
+
+  if (
+    media.type === 'image' &&
+    media.url === '/projects/tutor-problem-space-mapping.png'
+  ) {
+    return (
+      <ProjectImageLightbox
+        src={media.url}
+        alt={media.alt || caption || ''}
+        caption={caption}
+      />
+    );
+  }
 
   return (
     <figure className={`legacy-media legacy-media-${media.type}`}>
