@@ -3290,6 +3290,23 @@ a {
   transform: translateY(0);
 }
 
+.case-study[data-project-slug='help-center'] .project-image-trigger-badge {
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  justify-content: center;
+  border-color: rgb(255 255 255 / 62%);
+  background: rgb(255 255 255 / 78%);
+  box-shadow: 0 5px 16px rgb(46 42 38 / 10%);
+  color: #59678f;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.case-study[data-project-slug='help-center'] .project-image-trigger-label {
+  display: none;
+}
+
 .project-image-trigger:focus-visible {
   outline: 3px solid rgb(101 119 181 / 35%);
   outline-offset: 4px;

@@ -116,7 +116,7 @@
         "html": "<p><strong>A. Procedural Job Aids</strong></p><p>For predictable workflows in the <strong>PLUS application, Zoom, and Slack</strong>, tutors mainly needed to know how to complete a specific task correctly.</p><p>I designed these resources to be: <strong>Short → Visual → Step-by-Step → Action First</strong></p>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9f02d0fd08272eb04fa22b/section-media/Screenshot_2026-09-07_at_8.34.45_PM-1938f069-5dea-4b8c-a6c9-7dc4d84cb702.webp",
+          "url": "/projects/help-center-procedural-job-aid.png",
           "unavailable": false,
           "caption": "<p class=\"p2\">Procedural Job Aid Example: Join &amp; Participate in Sessions</p>",
           "alt": null,
@@ -131,7 +131,7 @@
         "html": "<p><strong>B. Operational Decision Guides</strong></p><p>Operational challenges, such as a tutor joining late, insufficient tutor coverage, or a language mismatch, required more <strong>context-sensitive judgment</strong>. In many cases, the correct response existed as <strong>tacit knowledge among experienced supervisors</strong> rather than as a clearly documented procedure.</p><p>I used weekly supervisor meetings as <strong>SME knowledge-elicitation sessions</strong>, bringing one or two priority problems to each meeting and asking follow-up questions to uncover the underlying decision rules, exceptions, and escalation points.</p><p>I then translated this expert knowledge into structured decision guides that helped tutors understand:</p><ul><li><p><strong>What to do</strong></p></li><li><p><strong>What to say</strong> through example language or messages</p></li><li><p><strong>Practical tips</strong> for handling the situation</p></li><li><p><strong>When to escalate</strong> the issue</p></li></ul>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/6a9f02d0fd08272eb04fa22b/xnyeTIQQf6iVzMI3.webp",
+          "url": "/projects/help-center-operational-decision-guide.png",
           "unavailable": false,
           "caption": "<p class=\"p2\">Operational Decision Guide Example: When the Classroom Teacher Is Unavailable</p>",
           "alt": null,

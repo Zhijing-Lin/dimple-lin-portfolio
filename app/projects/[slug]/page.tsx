@@ -97,6 +97,12 @@ function RichText({
   );
 }
 
+const zoomableProjectImages = new Set([
+  '/projects/help-center-procedural-job-aid.png',
+  '/projects/help-center-operational-decision-guide.png',
+  '/projects/tutor-problem-space-mapping.png',
+]);
+
 function ProjectMedia({ media }: { media: LegacyMedia | null }) {
   if (!media || media.unavailable || !media.url) {
     return (
@@ -112,10 +118,7 @@ function ProjectMedia({ media }: { media: LegacyMedia | null }) {
 
   const caption = media.caption ? plainText(media.caption) : '';
 
-  if (
-    media.type === 'image' &&
-    media.url === '/projects/tutor-problem-space-mapping.png'
-  ) {
+  if (media.type === 'image' && zoomableProjectImages.has(media.url)) {
     return (
       <ProjectImageLightbox
         src={media.url}

@@ -26,7 +26,7 @@ export function ProjectImageLightbox({
           <img src={src} alt={alt} loading="lazy" />
           <span className="project-image-trigger-badge" aria-hidden="true">
             <Maximize2 size={16} />
-            View larger
+            <span className="project-image-trigger-label">View larger</span>
           </span>
         </button>
       </div>
