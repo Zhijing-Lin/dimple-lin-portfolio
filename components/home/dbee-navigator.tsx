@@ -58,7 +58,7 @@ function project(slug: string, image?: string): ProjectLink {
   return {
     title: item.title,
     href: `/projects/${item.slug}`,
-    image: image ?? item.productImage,
+    image: image ?? item.cover,
     icon: projectIcons[slug],
   };
 }
@@ -77,14 +77,14 @@ const projectIcons: Record<string, LucideIcon> = {
 const dotAI: ProjectLink = {
   title: 'Designing Just-in-Time AI Support with DOT AI',
   href: '/projects#dot-ai',
-  image: '/projects/covers/dot-ai.png',
+  image: '/projects/covers-refined/dot-ai.webp',
   icon: Bot,
 };
 
 const tutorialSupport: ProjectLink = {
   title: 'From Tutorial Videos to Continuous Performance Support',
   href: '/projects#oli-support',
-  image: '/projects/covers/continuous-support.png',
+  image: '/projects/covers-refined/continuous-support.webp',
   icon: Video,
 };
 

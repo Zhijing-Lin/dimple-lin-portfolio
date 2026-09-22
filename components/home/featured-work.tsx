@@ -1,5 +1,4 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import { ProjectCoverVisual } from '@/components/project-cover-visual';
 import { projectDetailBySlug } from '@/lib/project-details';
 
 const featured = [
@@ -8,24 +7,28 @@ const featured = [
     label: 'Performance Support',
     description:
       'Turning recurring tutor challenges into needs-driven, just-in-time support.',
+    image: '/projects/covers-refined/needs-driven-help-center.webp',
   },
   {
     slug: 'reviewer-judgment',
     label: 'Learning Experience Design',
     description:
       'Making expert review judgment visible, teachable, and practiceable.',
+    image: '/projects/covers-refined/reviewer-judgment.webp',
   },
   {
     slug: 'ai-architecture',
     label: 'AI + Simulation',
     description:
       'Helping aspiring AI PMs move from knowing architecture concepts to making evidence-based decisions.',
+    image: '/projects/covers-refined/ai-architecture.webp',
   },
   {
     slug: 'learner-data',
     label: 'Evaluation + Analytics',
     description:
       'Turning learner behavior and performance data into evidence-based redesign priorities.',
+    image: '/projects/covers-refined/learner-data.webp',
   },
 ].map((item) => ({ ...item, project: projectDetailBySlug[item.slug] }));
 
@@ -43,14 +46,13 @@ export function FeaturedWork() {
       </header>
 
       <div className="featured-grid">
-        {featured.map(({ project, label, description }) => (
+        {featured.map(({ project, label, description, image }) => (
           <article className="featured-card" key={project.slug}>
             <a href={`/projects/${project.slug}`}>
               <div className="featured-image-wrap">
-                <ProjectCoverVisual
-                  artifact={project.productImage}
-                  artifactAlt={project.productImageAlt}
-                  illustration={project.cover}
+                <img
+                  src={image}
+                  alt={project.productImageAlt}
                 />
               </div>
               <div className="featured-copy">

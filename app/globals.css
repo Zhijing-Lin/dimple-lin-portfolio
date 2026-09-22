@@ -369,63 +369,10 @@ a {
   background: #f0ede7;
 }
 
-.project-cover-visual {
-  position: relative;
+.project-image-wrap img {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  background: #f6f2ea;
-}
-
-.project-cover-backdrop {
-  position: absolute;
-  inset: -4%;
-  width: 108%;
-  height: 108%;
   object-fit: cover;
-  filter: saturate(0.62) brightness(1.04);
-  opacity: 0.24;
-  transform: scale(1.025);
-}
-
-.project-cover-artifact {
-  position: absolute;
-  inset: 5.5% 5%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid rgb(94 84 73 / 15%);
-  border-radius: 0.85rem;
-  background: #fff;
-  box-shadow: 0 12px 28px rgb(58 49 41 / 13%);
-  transition: transform 260ms cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.project-cover-artifact img,
-.project-cover-original {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.project-cover-artifact img {
-  object-fit: contain;
-  object-position: center;
-}
-
-.project-cover-visual.is-artifact-only .project-cover-artifact {
-  inset: 0;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.project-cover-visual.is-artifact-only .project-cover-artifact img,
-.project-cover-original {
-  object-fit: cover;
-}
-
-.project-cover-original {
   transition: transform 260ms cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -528,10 +475,8 @@ a {
   transform: translate(2px, -2px);
 }
 
-.project-card-link:hover .project-cover-artifact,
-.project-card-link:focus-visible .project-cover-artifact,
-.project-card-link:hover .project-cover-original,
-.project-card-link:focus-visible .project-cover-original {
+.project-card-link:hover .project-image-wrap img,
+.project-card-link:focus-visible .project-image-wrap img {
   transform: scale(1.018);
 }
 
@@ -654,8 +599,10 @@ a {
   transform: rotate(1.25deg);
 }
 
-.case-study-cover .project-cover-visual {
-  aspect-ratio: 1.5 / 1;
+.case-study-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .product-proof {
@@ -1731,10 +1678,15 @@ a {
   background: #f3efe8;
 }
 
-.featured-card > a:hover .project-cover-artifact,
-.featured-card > a:focus-visible .project-cover-artifact,
-.featured-card > a:hover .project-cover-original,
-.featured-card > a:focus-visible .project-cover-original {
+.featured-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.featured-card > a:hover .featured-image-wrap img,
+.featured-card > a:focus-visible .featured-image-wrap img {
   transform: scale(1.018);
 }
 
