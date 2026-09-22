@@ -1245,10 +1245,18 @@ a {
   filter: blur(18px);
 }
 
-.skill-garden > .home-eyebrow {
+.garden-heading-row {
   position: relative;
-  z-index: 3;
-  margin: 0.25rem 0 0 0.4rem;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.25rem 0.4rem 0;
+}
+
+.garden-heading-row .home-eyebrow {
+  margin: 0;
 }
 
 .garden-stage {
@@ -1433,13 +1441,26 @@ a {
 }
 
 .garden-hint {
-  position: relative;
-  z-index: 2;
-  margin: 1.25rem 0 0.15rem;
-  color: #8b8278;
-  font-size: 0.68rem;
-  letter-spacing: 0.035em;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.46rem 0.7rem;
+  border: 1px solid #ded5c8;
+  border-radius: 999px;
+  background: rgb(255 253 248 / 90%);
+  color: #6f6962;
+  font-size: 0.67rem;
+  font-weight: 650;
+  letter-spacing: 0.025em;
+  box-shadow: 0 5px 14px rgb(54 45 36 / 5%);
+  white-space: nowrap;
+}
+
+.garden-hint span {
+  color: var(--accent-dark);
+  font-size: 0.82rem;
+  line-height: 1;
 }
 
 .home-section {
@@ -1879,6 +1900,18 @@ a {
     transform 190ms ease;
 }
 
+.dbee-bee-visual {
+  display: grid;
+  place-items: center;
+  animation: dbee-heading 8s steps(1, end) both;
+  transform-origin: center;
+}
+
+.dbee-shell.is-open .dbee-bee-visual {
+  animation: none;
+  transform: none;
+}
+
 .dbee-button:hover,
 .dbee-button:focus-visible,
 .dbee-shell.is-open .dbee-button {
@@ -1901,27 +1934,30 @@ a {
 .dbee-hover-bubble {
   position: absolute;
   right: 88px;
-  bottom: 23px;
+  bottom: 26px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
   width: max-content;
-  padding: 0.55rem 0.75rem;
+  padding: 0.52rem 0.68rem;
   border: 1px solid #ddd3c3;
   border-radius: 999px;
   background: #fffdf7;
-  color: #5e5852;
+  color: #5c5650;
   font-size: 0.72rem;
-  font-weight: 650;
+  font-weight: 700;
   opacity: 0;
   pointer-events: none;
-  transform: translateX(8px);
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
+  box-shadow: 0 7px 18px rgb(70 58 44 / 10%);
+  animation: dbee-bubble-bob 3.2s ease-in-out 8s infinite forwards;
 }
 
-.dbee-shell:not(.is-open):hover .dbee-hover-bubble,
-.dbee-shell:not(.is-open):focus-within .dbee-hover-bubble {
-  opacity: 1;
-  transform: translateX(0);
+.dbee-hover-bubble svg {
+  color: var(--accent-dark);
+}
+
+.dbee-shell.is-open .dbee-hover-bubble {
+  display: none;
 }
 
 .dbee-panel {
@@ -2229,6 +2265,46 @@ a {
   }
 }
 
+@keyframes dbee-heading {
+  0%,
+  26.9% {
+    transform: scaleX(1);
+  }
+
+  27%,
+  47.9% {
+    transform: scaleX(-1);
+  }
+
+  48%,
+  67.9% {
+    transform: scaleX(1);
+  }
+
+  68%,
+  83.9% {
+    transform: scaleX(-1);
+  }
+
+  84%,
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes dbee-bubble-bob {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+}
+
 @keyframes dbee-star-pass {
   0% {
     opacity: 0;
@@ -2410,14 +2486,20 @@ a {
 
   .dbee-hover-bubble {
     right: 78px;
-    bottom: 18px;
+    bottom: 21px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .dbee-star-trail,
   .dbee-shell,
+  .dbee-bee-visual,
   .dbee-button img {
+    animation: none;
+  }
+
+  .dbee-hover-bubble {
+    opacity: 1;
     animation: none;
   }
 

@@ -60,9 +60,14 @@ export function SkillGarden() {
 
   return (
     <section className="skill-garden" aria-labelledby="skill-garden-title">
-      <p className="home-eyebrow" id="skill-garden-title">
-        How I work
-      </p>
+      <div className="garden-heading-row">
+        <p className="home-eyebrow" id="skill-garden-title">
+          How I work
+        </p>
+        <p className="garden-hint">
+          Click to learn more <span aria-hidden="true">↘</span>
+        </p>
+      </div>
       <div className="garden-stage">
         <div className="garden-ground" aria-hidden="true" />
         {skills.map((skill, index) => {
@@ -116,7 +121,6 @@ export function SkillGarden() {
           );
         })}
       </div>
-      <p className="garden-hint">Click to learn more</p>
     </section>
   );
 }
