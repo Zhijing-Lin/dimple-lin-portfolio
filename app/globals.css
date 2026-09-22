@@ -14,7 +14,6 @@
   --accent-dark: #5e70ad;
   --accent-soft: #e7eafb;
   --accent-warm: #c6a34d;
-  --accent-warm-soft: #f4ead4;
   --radius: 1.25rem;
 }
 
@@ -62,7 +61,10 @@ a {
   letter-spacing: -0.04em;
 }
 
-.brand span,
+.brand span {
+  color: #c98489;
+}
+
 .accent-dot {
   color: var(--accent);
 }
@@ -137,7 +139,7 @@ a {
   max-width: 900px;
   margin: 0;
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  font-size: clamp(3.9rem, 8vw, 6.8rem);
+  font-size: clamp(3.5rem, 6.5vw, 5.6rem);
   font-style: normal;
   font-weight: 680;
   letter-spacing: -0.06em;
@@ -944,7 +946,7 @@ a {
   }
 
   .portfolio-intro h1 {
-    font-size: clamp(3.8rem, 20vw, 5.8rem);
+    font-size: clamp(3.4rem, 16vw, 5rem);
   }
 
   .intro-note {
@@ -1072,7 +1074,7 @@ a {
 }
 
 .dimple-name {
-  color: var(--accent-dark);
+  color: #c98489;
 }
 
 .home-hero h1 {
@@ -1143,8 +1145,8 @@ a {
 }
 
 .home-credential-icon-work {
-  background: var(--accent-warm-soft);
-  color: #8b7127;
+  background: #f4e7e8;
+  color: #b66f76;
 }
 
 .home-credentials + .home-actions {
@@ -1497,19 +1499,19 @@ a {
 }
 
 .process-step:nth-child(1) {
-  background: #f2eee7;
+  background: #eadbd8;
 }
 
 .process-step:nth-child(2) {
-  background: #eceefa;
+  background: #dce7da;
 }
 
 .process-step:nth-child(3) {
-  background: #f6f3ec;
+  background: #e1e5f1;
 }
 
 .process-step:nth-child(4) {
-  background: #f2e6c9;
+  background: #eddfbd;
 }
 
 .process-step:hover,
@@ -2997,7 +2999,7 @@ a {
 
 @media (max-width: 560px) {
   .portfolio-intro h1 {
-    font-size: clamp(3.2rem, 18vw, 5.1rem);
+    font-size: clamp(3rem, 16vw, 4.5rem);
   }
 
   .legacy-section-heading {
