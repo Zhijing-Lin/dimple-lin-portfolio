@@ -13,7 +13,6 @@ export function ProjectProgressNav({
   items: ProjectProgressItem[];
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [visited, setVisited] = useState<Set<number>>(() => new Set([0]));
 
   useEffect(() => {
     let frame = 0;
@@ -33,14 +32,6 @@ export function ProjectProgressNav({
       setActiveIndex((current) =>
         current === nextIndex ? current : nextIndex,
       );
-      setVisited((current) => {
-        const next = new Set(current);
-        for (let index = 0; index <= nextIndex; index += 1) {
-          next.add(index);
-        }
-        if (next.size === current.size) return current;
-        return next;
-      });
     };
 
     const scheduleUpdate = () => {
@@ -66,7 +57,7 @@ export function ProjectProgressNav({
             const state =
               index === activeIndex
                 ? 'is-current'
-                : visited.has(index)
+                : index < activeIndex
                   ? 'is-visited'
                   : 'is-upcoming';
 
@@ -75,20 +66,7 @@ export function ProjectProgressNav({
                 <a
                   href={`#${item.targetId}`}
                   aria-current={index === activeIndex ? 'step' : undefined}
-                  onClick={() => {
-                    setActiveIndex(index);
-                    setVisited((current) => {
-                      const next = new Set(current);
-                      for (
-                        let itemIndex = 0;
-                        itemIndex <= index;
-                        itemIndex += 1
-                      ) {
-                        next.add(itemIndex);
-                      }
-                      return next;
-                    });
-                  }}
+                  onClick={() => setActiveIndex(index)}
                 >
                   <span>{index + 1}</span>
                   <strong>{item.label}</strong>
