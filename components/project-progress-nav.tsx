@@ -52,7 +52,11 @@ export function ProjectProgressNav({
   return (
     <div className="project-progress-shell">
       <nav className="project-progress-nav" aria-label="Project sections">
-        <ol>
+        <ol
+          style={{
+            gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))`,
+          }}
+        >
           {items.map((item, index) => {
             const state =
               index === activeIndex
