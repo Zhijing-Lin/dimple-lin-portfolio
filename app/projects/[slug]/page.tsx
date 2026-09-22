@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ExternalLink, LayoutGrid } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import {
   ProjectProgressNav,
@@ -68,6 +68,18 @@ function sectionId(title: string, index: number) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
   return `${value || 'section'}-${index + 1}`;
+}
+
+function metadataToneClass(heading: string) {
+  if (heading === 'Team' || heading === 'Course Audience') {
+    return 'metadata-card-warm';
+  }
+  if (heading === 'My Role') return 'metadata-card-blue';
+  if (heading === 'Tools' || heading === 'Tool Used' || heading === 'Methods') {
+    return 'metadata-card-green';
+  }
+  if (heading === 'Timeline') return 'metadata-card-rose';
+  return 'metadata-card-neutral';
 }
 
 function RichText({
@@ -161,12 +173,21 @@ function LegacySectionView({
         className={`legacy-section legacy-columns legacy-columns-${Math.min(section.columns.length, 4)}${isMetadata ? ' is-metadata' : ''}`}
         id={id}
       >
-        {section.columns.map((column, columnIndex) => (
-          <article className="legacy-column" key={`${index}-${columnIndex}`}>
-            {column.media ? <ProjectMedia media={column.media} /> : null}
-            <RichText html={column.html} />
-          </article>
-        ))}
+        {section.columns.map((column, columnIndex) => {
+          const metadataClass = isMetadata
+            ? ` ${metadataToneClass(firstHeading(column.html))}`
+            : '';
+
+          return (
+            <article
+              className={`legacy-column${metadataClass}`}
+              key={`${index}-${columnIndex}`}
+            >
+              {column.media ? <ProjectMedia media={column.media} /> : null}
+              <RichText html={column.html} />
+            </article>
+          );
+        })}
       </section>
     );
   }
@@ -378,11 +399,23 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         </div>
 
         <footer className="next-project">
-          <p>Next case study</p>
-          <Link href={`/projects/${nextProject.slug}`}>
-            <span>{nextProject.title}</span>
-            <ArrowRight aria-hidden="true" />
-          </Link>
+          <div className="next-project-actions">
+            <Link
+              className="next-project-button next-project-button-primary"
+              href={`/projects/${nextProject.slug}`}
+              aria-label={`Next case study: ${nextProject.title}`}
+            >
+              <span>Next Case Study</span>
+              <ArrowRight size={17} aria-hidden="true" />
+            </Link>
+            <Link
+              className="next-project-button next-project-button-secondary"
+              href="/projects"
+            >
+              <LayoutGrid size={16} aria-hidden="true" />
+              <span>All Projects</span>
+            </Link>
+          </div>
           <img src={nextProject.cover} alt="" />
         </footer>
       </article>

@@ -34,9 +34,11 @@ export function ProjectProgressNav({
         current === nextIndex ? current : nextIndex,
       );
       setVisited((current) => {
-        if (current.has(nextIndex)) return current;
         const next = new Set(current);
-        next.add(nextIndex);
+        for (let index = 0; index <= nextIndex; index += 1) {
+          next.add(index);
+        }
+        if (next.size === current.size) return current;
         return next;
       });
     };
@@ -75,7 +77,17 @@ export function ProjectProgressNav({
                   aria-current={index === activeIndex ? 'step' : undefined}
                   onClick={() => {
                     setActiveIndex(index);
-                    setVisited((current) => new Set(current).add(index));
+                    setVisited((current) => {
+                      const next = new Set(current);
+                      for (
+                        let itemIndex = 0;
+                        itemIndex <= index;
+                        itemIndex += 1
+                      ) {
+                        next.add(itemIndex);
+                      }
+                      return next;
+                    });
                   }}
                 >
                   <span>{index + 1}</span>
