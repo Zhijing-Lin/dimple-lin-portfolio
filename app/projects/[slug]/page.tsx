@@ -149,14 +149,48 @@ function ProjectMedia({ media }: { media: LegacyMedia | null }) {
   );
 }
 
+const humanLoopWorkflowSteps = [
+  'Tutor issue',
+  'Supervisor SME meeting',
+  'AI notes',
+  'GPT draft',
+  'My review',
+  'Supervisor validation',
+  'Published article',
+];
+
+function HumanLoopWorkflow() {
+  return (
+    <figure className="legacy-media human-loop-workflow">
+      <div className="human-loop-workflow-frame">
+        <div className="human-loop-workflow-intro">
+          <span>Article workflow</span>
+          <p>From tutor need to validated guidance</p>
+        </div>
+        <ol>
+          {humanLoopWorkflowSteps.map((step, stepIndex) => (
+            <li key={step}>
+              <span>{String(stepIndex + 1).padStart(2, '0')}</span>
+              <strong>{step}</strong>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <figcaption>AI-assisted workflow with human review built in</figcaption>
+    </figure>
+  );
+}
+
 function LegacySectionView({
   section,
   index,
   id,
+  projectSlug,
 }: {
   section: LegacySection;
   index: number;
   id: string;
+  projectSlug: string;
 }) {
   if (section.type === 'hero') return null;
 
@@ -223,6 +257,9 @@ function LegacySectionView({
   }
 
   if (section.type === 'split') {
+    const usesHumanLoopWorkflow =
+      projectSlug === 'help-center' && sourceIndex === 12;
+
     return (
       <section
         className={`legacy-section legacy-split${section.flipped ? ' is-flipped' : ''}`}
@@ -232,7 +269,11 @@ function LegacySectionView({
         <div className="legacy-split-copy">
           <RichText html={section.html} />
         </div>
-        <ProjectMedia media={section.media} />
+        {usesHumanLoopWorkflow ? (
+          <HumanLoopWorkflow />
+        ) : (
+          <ProjectMedia media={section.media} />
+        )}
       </section>
     );
   }
@@ -431,6 +472,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 section={section}
                 index={index}
                 id={id}
+                projectSlug={project.slug}
                 key={`${section.type}-${id}`}
               />
             ))}

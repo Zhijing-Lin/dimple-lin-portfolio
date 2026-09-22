@@ -3124,6 +3124,112 @@ a {
   text-align: center;
 }
 
+.human-loop-workflow-frame {
+  padding: 1.15rem;
+  border: 1px solid #ded8cf;
+  border-radius: 0.65rem;
+  background: #fbfaf6;
+}
+
+.human-loop-workflow-intro {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.human-loop-workflow-intro span {
+  color: var(--accent-dark);
+  font-size: 0.68rem;
+  font-weight: 760;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.human-loop-workflow-intro p {
+  margin: 0.3rem 0 0;
+  color: #5f5954;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.human-loop-workflow ol {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.human-loop-workflow li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.8rem minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: center;
+  min-height: 3.2rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #dcd6cc;
+  border-radius: 0.6rem;
+  background: #eaf1e7;
+}
+
+.human-loop-workflow li:nth-child(2),
+.human-loop-workflow li:nth-child(6) {
+  background: #f7efd9;
+}
+
+.human-loop-workflow li:nth-child(3),
+.human-loop-workflow li:nth-child(4) {
+  background: #e9ecf8;
+}
+
+.human-loop-workflow li:nth-child(5) {
+  background: #f5e7e8;
+}
+
+.human-loop-workflow li:last-child {
+  border-color: #6577b5;
+  background: #6577b5;
+  color: #fff;
+}
+
+.human-loop-workflow li:not(:last-child)::after {
+  position: absolute;
+  z-index: 1;
+  bottom: -0.72rem;
+  left: 50%;
+  padding: 0 0.22rem;
+  background: #fbfaf6;
+  color: #7f8980;
+  content: '↓';
+  font-size: 0.85rem;
+  line-height: 1;
+  transform: translateX(-50%);
+}
+
+.human-loop-workflow li > span {
+  display: grid;
+  width: 1.8rem;
+  height: 1.8rem;
+  place-items: center;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 72%);
+  color: #53659d;
+  font-size: 0.65rem;
+  font-weight: 760;
+}
+
+.human-loop-workflow li:last-child > span {
+  background: rgb(255 255 255 / 18%);
+  color: #fff;
+}
+
+.human-loop-workflow li strong {
+  font-size: 0.9rem;
+  font-weight: 690;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
 .case-study[data-project-slug='help-center'] .legacy-media-frame {
   overflow: hidden;
   border-radius: 0.6rem;
