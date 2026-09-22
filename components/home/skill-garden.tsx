@@ -64,9 +64,7 @@ export function SkillGarden() {
         <p className="home-eyebrow" id="skill-garden-title">
           How I work
         </p>
-        <p className="garden-hint">
-          Click to learn more <span aria-hidden="true">↘</span>
-        </p>
+        <p className="garden-hint">(Click each flower to learn more)</p>
       </div>
       <div className="garden-stage">
         <div className="garden-ground" aria-hidden="true" />

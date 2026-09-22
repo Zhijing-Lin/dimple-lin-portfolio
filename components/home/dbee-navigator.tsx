@@ -462,8 +462,8 @@ export function DBeeNavigator() {
           ) : null}
 
           <span className="dbee-hover-bubble" aria-hidden="true">
-            <MessageSquare size={14} strokeWidth={2.2} />
             <span>Ask D-Bee</span>
+            <span className="dbee-bubble-arrow">→</span>
           </span>
           <button
             className="dbee-button"
