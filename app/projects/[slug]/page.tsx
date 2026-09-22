@@ -12,7 +12,11 @@ import {
   type LegacyMedia,
   type LegacySection,
 } from '@/lib/legacy-projects';
-import { projectDetailBySlug, projectDetails } from '@/lib/project-details';
+import {
+  metaHeadings,
+  projectDetailBySlug,
+  projectDetails,
+} from '@/lib/project-details';
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -155,9 +159,16 @@ function LegacySectionView({
   }
 
   if (section.type === 'columns') {
+    const columnHeadings = section.columns
+      .map((column) => firstHeading(column.html))
+      .filter(Boolean);
+    const isMetadata =
+      columnHeadings.length > 1 &&
+      columnHeadings.every((heading) => metaHeadings.has(heading));
+
     return (
       <section
-        className={`legacy-section legacy-columns legacy-columns-${Math.min(section.columns.length, 4)}`}
+        className={`legacy-section legacy-columns legacy-columns-${Math.min(section.columns.length, 4)}${isMetadata ? ' is-metadata' : ''}`}
         id={id}
       >
         {section.columns.map((column, columnIndex) => (
