@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ArrowUpRight, ChevronLeft, RotateCcw, X } from 'lucide-react';
 import { projectDetailBySlug } from '@/lib/project-details';
@@ -164,19 +163,26 @@ const starTrail = [
 function ProjectCards({
   items,
   eyebrow,
+  onNavigate,
 }: {
   items: ProjectLink[];
   eyebrow: string;
+  onNavigate: (href: string) => void;
 }) {
   return (
     <div className="dbee-project-grid">
       {items.map((item) => (
-        <Link
+        <a
           className="dbee-project-card"
           href={item.href}
           key={item.title}
           target={item.external ? '_blank' : undefined}
           rel={item.external ? 'noreferrer' : undefined}
+          onClick={(event) => {
+            if (item.external) return;
+            event.preventDefault();
+            onNavigate(item.href);
+          }}
         >
           {item.image ? (
             <Image src={item.image} alt="" width={640} height={372} />
@@ -186,7 +192,7 @@ function ProjectCards({
             <strong>{item.title}</strong>
             <ArrowUpRight size={16} aria-hidden="true" />
           </span>
-        </Link>
+        </a>
       ))}
     </div>
   );
@@ -214,6 +220,11 @@ function DBeeNavigatorView({ isHome }: { isHome: boolean }) {
     if (screen.kind === 'area') setScreen({ kind: 'areas' });
     else if (screen.kind === 'tool') setScreen({ kind: 'tools' });
     else setScreen({ kind: 'root' });
+  };
+
+  const navigateFromGuide = (href: string) => {
+    setOpen(false);
+    window.location.assign(href);
   };
 
   return (
@@ -329,14 +340,19 @@ function DBeeNavigatorView({ isHome }: { isHome: boolean }) {
                     <ProjectCards
                       items={projectAreas[screen.key].projects}
                       eyebrow={projectAreas[screen.key].label}
+                      onNavigate={navigateFromGuide}
                     />
-                    <Link
+                    <a
                       className="dbee-category-link"
                       href={projectAreas[screen.key].anchor}
+                      onClick={(event) => {
+                        event.preventDefault();
+                        navigateFromGuide(projectAreas[screen.key].anchor);
+                      }}
                     >
                       View all {projectAreas[screen.key].label} projects
                       <ArrowUpRight size={14} aria-hidden="true" />
-                    </Link>
+                    </a>
                   </>
                 ) : null}
 
@@ -378,6 +394,7 @@ function DBeeNavigatorView({ isHome }: { isHome: boolean }) {
                     <ProjectCards
                       items={toolGroups[screen.key].projects}
                       eyebrow={toolGroups[screen.key].label}
+                      onNavigate={navigateFromGuide}
                     />
                   </>
                 ) : null}
@@ -397,10 +414,16 @@ function DBeeNavigatorView({ isHome }: { isHome: boolean }) {
                     <RotateCcw size={14} aria-hidden="true" /> Start Over
                   </button>
                 ) : null}
-                <Link href="/projects">
+                <a
+                  href="/projects"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    navigateFromGuide('/projects');
+                  }}
+                >
                   View All Projects{' '}
                   <ArrowUpRight size={14} aria-hidden="true" />
-                </Link>
+                </a>
               </footer>
             </dialog>
           ) : null}
