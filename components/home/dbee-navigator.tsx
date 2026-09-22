@@ -1,24 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import {
-  Apple,
-  ArrowUpRight,
-  BarChart3,
-  Bot,
-  ChevronLeft,
-  ClipboardCheck,
-  Compass,
-  LifeBuoy,
-  MessageSquare,
-  Network,
-  RotateCcw,
-  Sparkles,
-  Video,
-  Workflow,
-  X,
-  type LucideIcon,
-} from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { ArrowUpRight, ChevronLeft, RotateCcw, X } from 'lucide-react';
 import { projectDetailBySlug } from '@/lib/project-details';
 
 type ProjectLink = {
@@ -27,7 +13,6 @@ type ProjectLink = {
   image?: string;
   external?: boolean;
   label?: string;
-  icon: LucideIcon;
 };
 
 type ToolKey =
@@ -37,6 +22,7 @@ type ToolKey =
   | 'dot'
   | 'camtasia'
   | 'notion'
+  | 'vyond'
   | 'analysis';
 
 type ToolGroup = {
@@ -50,8 +36,7 @@ type Screen =
   | { kind: 'areas' }
   | { kind: 'area'; key: keyof typeof projectAreas }
   | { kind: 'tools' }
-  | { kind: 'tool'; key: ToolKey }
-  | { kind: 'highlights' };
+  | { kind: 'tool'; key: ToolKey };
 
 function project(slug: string, image?: string): ProjectLink {
   const item = projectDetailBySlug[slug];
@@ -59,33 +44,19 @@ function project(slug: string, image?: string): ProjectLink {
     title: item.title,
     href: `/projects/${item.slug}`,
     image: image ?? item.cover,
-    icon: projectIcons[slug],
   };
 }
-
-const projectIcons: Record<string, LucideIcon> = {
-  'help-center': LifeBuoy,
-  'reviewer-judgment': ClipboardCheck,
-  'ai-architecture': Network,
-  'survival-play': Compass,
-  'nutrition-literacy': Apple,
-  'interactive-coaching': MessageSquare,
-  'adaptive-ai-feedback': Sparkles,
-  'learner-data': BarChart3,
-};
 
 const dotAI: ProjectLink = {
   title: 'Designing Just-in-Time AI Support with DOT AI',
   href: '/projects#dot-ai',
   image: '/projects/covers-refined/dot-ai.webp',
-  icon: Bot,
 };
 
 const tutorialSupport: ProjectLink = {
   title: 'From Tutorial Videos to Continuous Performance Support',
   href: '/projects#oli-support',
   image: '/projects/covers-refined/continuous-support.webp',
-  icon: Video,
 };
 
 const projectAreas = {
@@ -100,7 +71,6 @@ const projectAreas = {
         href: 'https://open4peerreview-maskd-three.vercel.app/',
         image: '/projects/covers-hybrid/oer-review-workflow.png',
         external: true,
-        icon: Workflow,
       },
     ],
   },
@@ -155,31 +125,16 @@ const toolGroups: Record<ToolKey, ToolGroup> = {
     label: 'Notion',
     projects: [project('help-center')],
   },
+  vyond: {
+    label: 'Vyond',
+    projects: [project('reviewer-judgment')],
+  },
   analysis: {
     label: 'AI Analysis Tools',
     secondary: 'ChatGPT · Claude Code',
     projects: [project('learner-data')],
   },
 };
-
-const highlights = [
-  {
-    ...project('help-center'),
-    label: 'Performance Support',
-  },
-  {
-    ...project('reviewer-judgment'),
-    label: 'Learning Experience Design',
-  },
-  {
-    ...project('ai-architecture'),
-    label: 'AI + Simulation',
-  },
-  {
-    ...project('learner-data'),
-    label: 'Evaluation + Analytics',
-  },
-];
 
 const starTrail = [
   ['59%', '16%', '0.55s', '0.66rem', '✦'],
@@ -206,31 +161,43 @@ const starTrail = [
   ['93%', '90%', '7.4s', '0.46rem', '✦'],
 ] as const;
 
-function ProjectList({ items }: { items: ProjectLink[] }) {
+function ProjectCards({
+  items,
+  eyebrow,
+}: {
+  items: ProjectLink[];
+  eyebrow: string;
+}) {
   return (
-    <div className="dbee-project-list">
-      {items.map((item) => {
-        const ProjectIcon = item.icon;
-        return (
-          <a
-            href={item.href}
-            key={item.title}
-            target={item.external ? '_blank' : undefined}
-            rel={item.external ? 'noreferrer' : undefined}
-          >
-            <span className="dbee-project-icon" aria-hidden="true">
-              <ProjectIcon size={16} strokeWidth={1.75} />
-            </span>
-            <span>{item.title}</span>
-            <ArrowUpRight size={15} aria-hidden="true" />
-          </a>
-        );
-      })}
+    <div className="dbee-project-grid">
+      {items.map((item) => (
+        <Link
+          className="dbee-project-card"
+          href={item.href}
+          key={item.title}
+          target={item.external ? '_blank' : undefined}
+          rel={item.external ? 'noreferrer' : undefined}
+        >
+          {item.image ? (
+            <Image src={item.image} alt="" width={640} height={372} />
+          ) : null}
+          <span className="dbee-project-card-copy">
+            <small>{item.label ?? eyebrow}</small>
+            <strong>{item.title}</strong>
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </span>
+        </Link>
+      ))}
     </div>
   );
 }
 
 export function DBeeNavigator() {
+  const pathname = usePathname();
+  return <DBeeNavigatorView key={pathname} isHome={pathname === '/'} />;
+}
+
+function DBeeNavigatorView({ isHome }: { isHome: boolean }) {
   const [open, setOpen] = useState(false);
   const [screen, setScreen] = useState<Screen>({ kind: 'root' });
 
@@ -251,28 +218,32 @@ export function DBeeNavigator() {
 
   return (
     <>
-      <div
-        className={`dbee-star-trail${open ? ' is-hidden' : ''}`}
-        aria-hidden="true"
-      >
-        {starTrail.map(([left, top, delay, size, glyph], index) => (
-          <span
-            className="dbee-trail-star"
-            key={`${left}-${top}`}
-            style={{
-              left,
-              top,
-              fontSize: size,
-              animationDelay: delay,
-              animationDuration: `${2.15 + (index % 4) * 0.18}s`,
-            }}
-          >
-            {glyph}
-          </span>
-        ))}
-      </div>
+      {isHome ? (
+        <div
+          className={`dbee-star-trail${open ? ' is-hidden' : ''}`}
+          aria-hidden="true"
+        >
+          {starTrail.map(([left, top, delay, size, glyph], index) => (
+            <span
+              className="dbee-trail-star"
+              key={`${left}-${top}`}
+              style={{
+                left,
+                top,
+                fontSize: size,
+                animationDelay: delay,
+                animationDuration: `${2.15 + (index % 4) * 0.18}s`,
+              }}
+            >
+              {glyph}
+            </span>
+          ))}
+        </div>
+      ) : null}
 
-      <div className={`dbee-shell${open ? ' is-open' : ''}`}>
+      <div
+        className={`dbee-shell ${isHome ? 'is-home' : 'is-static'}${open ? ' is-open' : ''}`}
+      >
         {open ? (
           <button
             className="dbee-backdrop"
@@ -324,12 +295,6 @@ export function DBeeNavigator() {
                       >
                         Browse by Tool
                       </button>
-                      <button
-                        type="button"
-                        onClick={() => setScreen({ kind: 'highlights' })}
-                      >
-                        Show Me the Highlights
-                      </button>
                     </div>
                   </>
                 ) : null}
@@ -361,14 +326,17 @@ export function DBeeNavigator() {
                     <p className="dbee-result-title">
                       {projectAreas[screen.key].label}
                     </p>
-                    <ProjectList items={projectAreas[screen.key].projects} />
-                    <a
+                    <ProjectCards
+                      items={projectAreas[screen.key].projects}
+                      eyebrow={projectAreas[screen.key].label}
+                    />
+                    <Link
                       className="dbee-category-link"
                       href={projectAreas[screen.key].anchor}
                     >
                       View all {projectAreas[screen.key].label} projects
                       <ArrowUpRight size={14} aria-hidden="true" />
-                    </a>
+                    </Link>
                   </>
                 ) : null}
 
@@ -407,25 +375,10 @@ export function DBeeNavigator() {
                         {toolGroups[screen.key].secondary}
                       </span>
                     ) : null}
-                    <ProjectList items={toolGroups[screen.key].projects} />
-                  </>
-                ) : null}
-
-                {screen.kind === 'highlights' ? (
-                  <>
-                    <p className="dbee-result-title">
-                      A few highlights to start with
-                    </p>
-                    <div className="dbee-highlight-grid">
-                      {highlights.map((item) => (
-                        <a href={item.href} key={item.title}>
-                          <img src={item.image ?? ''} alt="" />
-                          <span>{item.label}</span>
-                          <strong>{item.title}</strong>
-                          <ArrowUpRight size={15} aria-hidden="true" />
-                        </a>
-                      ))}
-                    </div>
+                    <ProjectCards
+                      items={toolGroups[screen.key].projects}
+                      eyebrow={toolGroups[screen.key].label}
+                    />
                   </>
                 ) : null}
               </div>
@@ -444,10 +397,10 @@ export function DBeeNavigator() {
                     <RotateCcw size={14} aria-hidden="true" /> Start Over
                   </button>
                 ) : null}
-                <a href="/projects">
+                <Link href="/projects">
                   View All Projects{' '}
                   <ArrowUpRight size={14} aria-hidden="true" />
-                </a>
+                </Link>
               </footer>
             </dialog>
           ) : null}
@@ -465,7 +418,7 @@ export function DBeeNavigator() {
             onClick={() => setOpen((value) => !value)}
           >
             <span className="dbee-bee-visual" aria-hidden="true">
-              <img src="/home/dbee.png" alt="" />
+              <Image src="/home/dbee.png" alt="" width={86} height={86} />
             </span>
           </button>
         </div>

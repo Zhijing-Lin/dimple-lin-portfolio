@@ -1,5 +1,4 @@
 import { SiteHeader } from '@/components/site-header';
-import { DBeeNavigator } from '@/components/home/dbee-navigator';
 import { FeaturedWork } from '@/components/home/featured-work';
 import { HeroIntro } from '@/components/home/hero-intro';
 import { ProcessSection } from '@/components/home/process-section';
@@ -15,7 +14,6 @@ export default function HomePage() {
         <p>Designing learning that moves from insight to action.</p>
         <a href="/projects">Explore the work ↗</a>
       </footer>
-      <DBeeNavigator />
     </main>
   );
 }
