@@ -1,5 +1,21 @@
 import type { Metadata } from 'next';
-import { ArrowLeft, ArrowRight, ExternalLink, LayoutGrid } from 'lucide-react';
+import {
+  ArrowLeft,
+  ArrowRight,
+  BadgeCheck,
+  BookOpen,
+  ExternalLink,
+  Handshake,
+  LayoutGrid,
+  ListChecks,
+  MessagesSquare,
+  RefreshCw,
+  RotateCcw,
+  ScanSearch,
+  Target,
+  UsersRound,
+  Waypoints,
+} from 'lucide-react';
 import { notFound } from 'next/navigation';
 import {
   ProjectProgressNav,
@@ -100,6 +116,7 @@ function RichText({
 const zoomableProjectImages = new Set([
   '/projects/help-center-procedural-job-aid.png',
   '/projects/help-center-operational-decision-guide.png',
+  '/projects/reviewer-performance-gaps.png',
   '/projects/tutor-problem-space-mapping.png',
 ]);
 
@@ -184,6 +201,139 @@ function HumanLoopWorkflow() {
   );
 }
 
+const reviewerKnowledgeItems = [
+  {
+    title: 'Project Context & Purpose',
+    description:
+      'Understand Open 4 Peer Review and why structured peer review matters for OER quality.',
+    icon: BookOpen,
+  },
+  {
+    title: 'Reviewer Role & Mindset',
+    description:
+      'Support improvement through evidence—not grading or judging the author.',
+    icon: Handshake,
+  },
+  {
+    title: 'Single-Point Rubrics',
+    description:
+      'Understand how single-point rubrics differ from traditional grading rubrics.',
+    icon: Target,
+  },
+  {
+    title: 'Rating Categories',
+    description:
+      'Interpret Does Not Meet, Exemplifies, and Exceeds consistently.',
+    icon: ListChecks,
+  },
+  {
+    title: 'Rubric Structure',
+    description:
+      'Recognize each rubric section, framing language, glossary, and criteria.',
+    icon: Waypoints,
+  },
+  {
+    title: 'Rubric Scope',
+    description:
+      'Distinguish what belongs within the assigned rubric from what falls outside it.',
+    icon: ScanSearch,
+  },
+  {
+    title: 'Review Workflow',
+    description:
+      'Read the rubric, review the OER, gather evidence, and draft feedback.',
+    icon: RefreshCw,
+  },
+];
+
+function ReviewerKnowledgeMap() {
+  return (
+    <figure className="legacy-media reviewer-knowledge-map">
+      <div className="reviewer-knowledge-map-frame">
+        <p className="reviewer-visual-eyebrow">Foundational knowledge</p>
+        <ul>
+          {reviewerKnowledgeItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <li key={item.title}>
+                <span className="reviewer-knowledge-icon" aria-hidden="true">
+                  <Icon size={20} strokeWidth={1.8} />
+                </span>
+                <div>
+                  <strong>{item.title}</strong>
+                  <p>{item.description}</p>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <figcaption>
+        Core Reviewer Knowledge Identified Through Analysis
+      </figcaption>
+    </figure>
+  );
+}
+
+const reviewerWorkflowSteps = [
+  {
+    title: 'Align on objectives and course architecture',
+    description:
+      'Translate the needs analysis into learning objectives and an initial course structure.',
+    icon: Target,
+  },
+  {
+    title: 'Weekly team design reviews',
+    description:
+      'Refine scope, sequence, learning activities, and production decisions.',
+    icon: UsersRound,
+  },
+  {
+    title: 'Biweekly stakeholder reviews',
+    description:
+      'Validate major decisions and secure approval before development.',
+    icon: MessagesSquare,
+  },
+  {
+    title: 'User testing-informed iteration',
+    description:
+      'Update the learning experience based on learner feedback and observed needs.',
+    icon: RotateCcw,
+  },
+];
+
+function ReviewerProjectWorkflow() {
+  return (
+    <figure className="legacy-media reviewer-project-workflow">
+      <div className="reviewer-project-workflow-frame">
+        <p className="reviewer-visual-eyebrow">Recurring alignment cycle</p>
+        <ol>
+          {reviewerWorkflowSteps.map((step, stepIndex) => {
+            const Icon = step.icon;
+            return (
+              <li key={step.title}>
+                <span className="reviewer-workflow-marker" aria-hidden="true">
+                  <Icon size={19} strokeWidth={1.9} />
+                </span>
+                <div>
+                  <span>{String(stepIndex + 1).padStart(2, '0')}</span>
+                  <strong>{step.title}</strong>
+                  <p>{step.description}</p>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+        <div className="reviewer-workflow-outcome">
+          <BadgeCheck size={18} aria-hidden="true" />
+          <span>Validated, learner-informed course design</span>
+        </div>
+      </div>
+      <figcaption>Project alignment and iteration workflow</figcaption>
+    </figure>
+  );
+}
+
 function LegacySectionView({
   section,
   index,
@@ -262,6 +412,24 @@ function LegacySectionView({
   if (section.type === 'split') {
     const usesHumanLoopWorkflow =
       projectSlug === 'help-center' && sourceIndex === 12;
+    const usesReviewerKnowledgeMap =
+      projectSlug === 'reviewer-judgment' && sourceIndex === 8;
+    const usesReviewerWorkflow =
+      projectSlug === 'reviewer-judgment' && sourceIndex === 11;
+    const usesReviewerGapTable =
+      projectSlug === 'reviewer-judgment' && sourceIndex === 10;
+
+    if (usesReviewerGapTable) {
+      return (
+        <section
+          className="legacy-section legacy-gallery reviewer-gap-table"
+          data-source-index={sourceIndex}
+          id={id}
+        >
+          <ProjectMedia media={section.media} />
+        </section>
+      );
+    }
 
     return (
       <section
@@ -274,6 +442,10 @@ function LegacySectionView({
         </div>
         {usesHumanLoopWorkflow ? (
           <HumanLoopWorkflow />
+        ) : usesReviewerKnowledgeMap ? (
+          <ReviewerKnowledgeMap />
+        ) : usesReviewerWorkflow ? (
+          <ReviewerProjectWorkflow />
         ) : (
           <ProjectMedia media={section.media} />
         )}
@@ -410,6 +582,32 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   const currentIndex = projectDetails.findIndex((item) => item.slug === slug);
   const nextProject =
     projectDetails[(currentIndex + 1) % projectDetails.length];
+  const delaysProgressNav = project.slug === 'reviewer-judgment';
+  const introductionSections = delaysProgressNav
+    ? renderedSections.filter(
+        ({ section }) =>
+          section.sourceIndex !== null && section.sourceIndex <= 6,
+      )
+    : [];
+  const mainSections = delaysProgressNav
+    ? renderedSections.filter(
+        ({ section }) =>
+          section.sourceIndex === null || section.sourceIndex > 6,
+      )
+    : renderedSections;
+  const renderSection = ({
+    section,
+    index,
+    id,
+  }: (typeof renderedSections)[number]) => (
+    <LegacySectionView
+      section={section}
+      index={index}
+      id={id}
+      projectSlug={project.slug}
+      key={`${section.type}-${id}`}
+    />
+  );
 
   return (
     <main className="case-study" data-project-slug={project.slug} id="top">
@@ -466,21 +664,30 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           </div>
         </header>
 
-        <ProjectProgressNav items={progressItems} />
-
-        <div className="case-study-body">
-          <div className="case-study-content">
-            {renderedSections.map(({ section, index, id }) => (
-              <LegacySectionView
-                section={section}
-                index={index}
-                id={id}
-                projectSlug={project.slug}
-                key={`${section.type}-${id}`}
-              />
-            ))}
-          </div>
-        </div>
+        {delaysProgressNav ? (
+          <>
+            <div className="case-study-body case-study-body-before-progress">
+              <div className="case-study-content">
+                {introductionSections.map(renderSection)}
+              </div>
+            </div>
+            <ProjectProgressNav items={progressItems} />
+            <div className="case-study-body case-study-body-after-progress">
+              <div className="case-study-content">
+                {mainSections.map(renderSection)}
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <ProjectProgressNav items={progressItems} />
+            <div className="case-study-body">
+              <div className="case-study-content">
+                {mainSections.map(renderSection)}
+              </div>
+            </div>
+          </>
+        )}
 
         <footer className="next-project">
           <div className="next-project-actions">

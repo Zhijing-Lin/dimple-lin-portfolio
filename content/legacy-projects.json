@@ -231,15 +231,15 @@
         "items": [
           {
             "name": "Need Analysis",
-            "sectionIndex": 9
+            "sectionIndex": 8
           },
           {
             "name": "Project Management",
-            "sectionIndex": 13
+            "sectionIndex": 11
           },
           {
             "name": "Learning Design & Develop",
-            "sectionIndex": 14
+            "sectionIndex": 12
           },
           {
             "name": "Implementation & Evaluation",
@@ -267,7 +267,7 @@
         "type": "columns",
         "columns": [
           {
-            "html": "<h4>Analysis — What Reviewers Need to Do</h4><p>After defining the foundational knowledge, I focused on the <strong>performance skills</strong> reviewers needed to produce high-quality feedback by:</p><ul><li><p><strong>Conducting a literature review</strong> on peer review and effective feedback to identify research-supported characteristics of specific, constructive, and actionable feedback.</p></li><li><p><strong>Conducting a cognitive task analysis</strong> through think-aloud sessions with <strong>three experienced reviewers and two novice reviewer</strong> to compare how they selected evidence, interpreted its significance, formed recommendations, and refined feedback.</p></li></ul>",
+            "html": "<h4>Analysis — What Reviewers Need to Do</h4><p>After defining the foundational knowledge, I focused on the <strong>performance skills</strong> reviewers needed to produce high-quality feedback by:</p><ul><li><p><strong>Conducting a literature review</strong> on peer review and effective feedback to identify research-supported characteristics of specific, constructive, and actionable feedback.</p></li><li><p><strong>Conducting a cognitive task analysis</strong> through think-aloud sessions with <strong>three experienced reviewers and two novice reviewers</strong> to compare how they selected evidence, interpreted its significance, formed recommendations, and refined feedback.</p></li></ul>",
             "media": null
           },
           {
@@ -279,10 +279,10 @@
       {
         "sourceIndex": 10,
         "type": "split",
-        "html": "<h1>Add a short text to your image.</h1>",
+        "html": "<h4>Expert vs. Novice Reviewer: Key Gaps and Training Implications</h4>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9caded401e60456c8b7574/section-media/Screenshot_2026-09-05_at_9.49.15_PM-7b52e0c6-6cb8-444b-863d-0ac10d69629a.webp",
+          "url": "/projects/reviewer-performance-gaps.png",
           "unavailable": false,
           "caption": "<p class=\"p1\"><em>Expert vs. Novice Reviewer: Key Gaps and Training Implications</em></p>",
           "alt": null,
@@ -309,7 +309,7 @@
       {
         "sourceIndex": 12,
         "type": "text",
-        "html": "<h4>Learning Design &amp; Development</h4><p>I translated the learning objectives and identified performance gaps into an interactive, practice-centered learning experience grounded in learning-science principles. (加一下用vyond)</p>",
+        "html": "<h4>Learning Design &amp; Development</h4><p>I translated the learning objectives and identified performance gaps into an interactive, practice-centered learning experience grounded in learning-science principles. I used Vyond to create short, scenario-based videos that made knowledge-heavy content more concrete and engaging.</p>",
         "cta": null
       },
       {
@@ -360,7 +360,7 @@
       {
         "sourceIndex": 16,
         "type": "text",
-        "html": "<h3>Implementation &amp; Evaluation</h3><p></p>",
+        "html": "<h3>Implementation &amp; Evaluation</h3><p>Implementation is currently in progress as the revised pre-training course moves into continued use with reviewers.</p><p>Evaluation is also underway. I’m gathering learner feedback and performance evidence to guide the next iteration—stay tuned for findings.</p>",
         "cta": null
       }
     ]
