@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import type { Metadata } from 'next';
+import { ProjectCoverVisual } from '@/components/project-cover-visual';
 import { SiteHeader } from '@/components/site-header';
 
 export const metadata: Metadata = {
@@ -14,11 +15,13 @@ type Project = {
   highlights: string[];
   tools: string[];
   image: string;
+  illustration?: string;
   imageAlt: string;
   href: string;
   anchorId?: string;
   external?: boolean;
   externalLabel?: string;
+  preserveOriginalCover?: boolean;
 };
 
 type Category = {
@@ -43,7 +46,8 @@ const categories: Category[] = [
           'Turned recurring tutor challenges into actionable support through needs analysis and performance-support design.',
         highlights: ['needs analysis', 'performance-support design'],
         tools: ['Notion'],
-        image: '/projects/covers-hybrid/needs-driven-help-center.png',
+        image: '/projects/help-center.png',
+        illustration: '/projects/covers/needs-driven-help-center.png',
         imageAlt: 'Tutor performance support help center interface',
         href: '/projects/help-center',
       },
@@ -53,7 +57,8 @@ const categories: Category[] = [
           'Translated reviewer performance gaps into a research-informed training experience through CTA, SME collaboration, and iterative design.',
         highlights: ['research-informed training experience'],
         tools: ['OLI Torus', 'Vyond'],
-        image: '/projects/covers-hybrid/reviewer-judgment.png',
+        image: '/projects/reviewer-training.png',
+        illustration: '/projects/covers/reviewer-judgment.png',
         imageAlt: 'Open educational resource reviewer training experience',
         href: '/projects/reviewer-judgment',
       },
@@ -69,6 +74,7 @@ const categories: Category[] = [
         href: 'https://open4peerreview-maskd-three.vercel.app/',
         external: true,
         externalLabel: 'External case study',
+        preserveOriginalCover: true,
       },
     ],
   },
@@ -85,7 +91,8 @@ const categories: Category[] = [
           'Designed a scenario-based simulation that helps aspiring AI PMs practice evidence-based architecture decisions and trade-off reasoning.',
         highlights: ['scenario-based simulation'],
         tools: ['Articulate Storyline', 'Synthesia', 'HTML/CSS'],
-        image: '/projects/covers-hybrid/ai-architecture.png',
+        image: '/projects/ai-architecture.png',
+        illustration: '/projects/covers/ai-architecture.png',
         imageAlt: 'AI architecture decision-making simulation screens',
         href: '/projects/ai-architecture',
       },
@@ -95,7 +102,8 @@ const categories: Category[] = [
           'Translated CTA findings into gameplay mechanics that build survival judgment through decisions, consequences, and fading support.',
         highlights: ['gameplay mechanics'],
         tools: ['HTML/CSS'],
-        image: '/projects/covers-hybrid/survival-play.png',
+        image: '/projects/survival-game.png',
+        illustration: '/projects/covers/survival-play.png',
         imageAlt: 'Narrative wilderness survival learning game',
         href: '/projects/survival-play',
       },
@@ -105,7 +113,8 @@ const categories: Category[] = [
           'Used CTA and procedural scaffolding to turn nutrition knowledge into structured, evidence-based decision practice.',
         highlights: ['procedural scaffolding'],
         tools: ['Articulate Storyline'],
-        image: '/projects/covers-hybrid/nutrition-literacy.png',
+        image: '/projects/nutrition-literacy.png',
+        illustration: '/projects/covers/nutrition-literacy.png',
         imageAlt: 'Interactive nutrition literacy course screens',
         href: '/projects/nutrition-literacy',
       },
@@ -115,7 +124,8 @@ const categories: Category[] = [
           'Turned a complex interpersonal skill into a branching scenario with realistic choices and consequence-based feedback.',
         highlights: ['branching scenario'],
         tools: ['Articulate Storyline'],
-        image: '/projects/covers-hybrid/interactive-coaching.png',
+        image: '/projects/interactive-coaching.png',
+        illustration: '/projects/covers/interactive-coaching.png',
         imageAlt: 'Branching manager feedback coaching scenario',
         href: '/projects/interactive-coaching',
       },
@@ -134,7 +144,8 @@ const categories: Category[] = [
           'Combined adaptive remediation with AI-powered feedback to move learners from recognizing good feedback to writing it independently.',
         highlights: ['adaptive remediation', 'AI-powered feedback'],
         tools: ['Adobe Captivate', 'LLM API'],
-        image: '/projects/covers-hybrid/adaptive-ai-feedback.png',
+        image: '/projects/adaptive-feedback.png',
+        illustration: '/projects/covers/adaptive-ai-feedback.png',
         imageAlt: 'Adaptive corporate training with AI-powered feedback',
         href: '/projects/adaptive-ai-feedback',
       },
@@ -164,7 +175,8 @@ const categories: Category[] = [
           'Used learning analytics to turn learner behavior, performance, and survey data into evidence-based redesign priorities.',
         highlights: ['learning analytics', 'evidence-based redesign priorities'],
         tools: ['Claude Code', 'ChatGPT', 'Google Slides'],
-        image: '/projects/covers-hybrid/learner-data.png',
+        image: '/projects/course-evaluation.png',
+        illustration: '/projects/covers/learner-data.png',
         imageAlt: 'Course evaluation findings and redesign priorities',
         href: '/projects/learner-data',
       },
@@ -291,7 +303,12 @@ function ProjectCard({ project }: { project: Project }) {
         rel={project.external ? 'noreferrer' : undefined}
       >
         <div className="project-image-wrap">
-          <img src={project.image} alt={project.imageAlt} />
+          <ProjectCoverVisual
+            artifact={project.image}
+            artifactAlt={project.imageAlt}
+            illustration={project.illustration}
+            preserveOriginal={project.preserveOriginalCover}
+          />
         </div>
         <div className="project-card-copy">
           <div className="project-title-row">

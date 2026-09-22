@@ -58,7 +58,7 @@ function project(slug: string, image?: string): ProjectLink {
   return {
     title: item.title,
     href: `/projects/${item.slug}`,
-    image: image ?? item.cover,
+    image: image ?? item.productImage,
     icon: projectIcons[slug],
   };
 }
@@ -164,28 +164,19 @@ const toolGroups: Record<ToolKey, ToolGroup> = {
 
 const highlights = [
   {
-    ...project(
-      'help-center',
-      '/projects/covers-hybrid/needs-driven-help-center.png',
-    ),
+    ...project('help-center'),
     label: 'Performance Support',
   },
   {
-    ...project(
-      'reviewer-judgment',
-      '/projects/covers-hybrid/reviewer-judgment.png',
-    ),
+    ...project('reviewer-judgment'),
     label: 'Learning Experience Design',
   },
   {
-    ...project(
-      'ai-architecture',
-      '/projects/covers-hybrid/ai-architecture.png',
-    ),
+    ...project('ai-architecture'),
     label: 'AI + Simulation',
   },
   {
-    ...project('learner-data', '/projects/covers-hybrid/learner-data.png'),
+    ...project('learner-data'),
     label: 'Evaluation + Analytics',
   },
 ];

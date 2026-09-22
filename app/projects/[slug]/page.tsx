@@ -6,6 +6,7 @@ import {
   ProjectProgressNav,
   type ProjectProgressItem,
 } from '@/components/project-progress-nav';
+import { ProjectCoverVisual } from '@/components/project-cover-visual';
 import { SiteHeader } from '@/components/site-header';
 import {
   legacyProjectBySlug,
@@ -350,7 +351,12 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </div>
           </div>
           <figure className="case-study-cover">
-            <img src={project.cover} alt="" />
+            <ProjectCoverVisual
+              artifact={project.productImage}
+              artifactAlt={project.productImageAlt}
+              illustration={project.cover}
+              eager
+            />
           </figure>
         </header>
 
@@ -375,7 +381,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             <span>{nextProject.title}</span>
             <ArrowRight aria-hidden="true" />
           </Link>
-          <img src={nextProject.cover} alt="" />
+          <img src={nextProject.productImage} alt="" />
         </footer>
       </article>
     </main>
