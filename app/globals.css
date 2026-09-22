@@ -3069,15 +3069,6 @@ a {
 
 .case-study[data-project-slug='help-center']
   .case-study-content
-  > .legacy-section[data-source-index='9'] {
-  width: 100%;
-  max-width: 960px;
-  margin-inline: auto;
-  text-align: center;
-}
-
-.case-study[data-project-slug='help-center']
-  .case-study-content
   > .legacy-section[data-source-index='9'],
 .case-study[data-project-slug='help-center']
   .case-study-content
@@ -3313,13 +3304,14 @@ a {
 }
 
 .project-image-lightbox {
-  width: min(95vw, 1740px);
-  max-width: none;
-  max-height: 92vh;
+  width: fit-content;
+  max-width: 95vw;
+  max-height: 94vh;
+  margin: auto;
   padding: 0;
   overflow: visible;
   border: 0;
-  border-radius: 1.5rem;
+  border-radius: 0;
   background: transparent;
 }
 
@@ -3330,30 +3322,26 @@ a {
 
 .project-image-lightbox-content {
   position: relative;
-  display: grid;
-  place-items: center;
-  max-height: 92vh;
-  padding: clamp(0.65rem, 1.4vw, 1.2rem);
-  border: 1px solid rgb(255 255 255 / 42%);
-  border-radius: 1.5rem;
-  background: #f8f6f2;
-  box-shadow: 0 28px 90px rgb(0 0 0 / 32%);
+  width: fit-content;
+  max-width: 95vw;
+  max-height: 94vh;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .project-image-lightbox-content img {
   display: block;
-  width: 100%;
-  max-height: calc(92vh - 4.8rem);
+  width: auto;
+  max-width: 95vw;
+  max-height: 92vh;
   object-fit: contain;
-  border-radius: 0.95rem;
+  border-radius: 0.35rem;
+  box-shadow: 0 28px 90px rgb(0 0 0 / 30%);
 }
 
 .project-image-lightbox-content p {
-  margin: 0.7rem 0 0;
-  color: #716b65;
-  font-size: 0.76rem;
-  letter-spacing: 0.025em;
-  text-align: center;
+  display: none;
 }
 
 .project-image-lightbox-close {
