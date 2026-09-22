@@ -3067,6 +3067,27 @@ a {
   padding-bottom: clamp(2.5rem, 4vw, 3.75rem);
 }
 
+.case-study[data-project-slug='help-center']
+  .case-study-content
+  > .legacy-section[data-source-index='9'] {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.case-study[data-project-slug='help-center']
+  .case-study-content
+  > .legacy-section[data-source-index='9'],
+.case-study[data-project-slug='help-center']
+  .case-study-content
+  > .legacy-section[data-source-index='10'],
+.case-study[data-project-slug='help-center']
+  .case-study-content
+  > .legacy-section[data-source-index='11'] {
+  border-bottom: 0;
+}
+
 .legacy-media {
   min-width: 0;
   margin: 0;

@@ -160,9 +160,15 @@ function LegacySectionView({
 }) {
   if (section.type === 'hero') return null;
 
+  const sourceIndex = section.sourceIndex ?? index;
+
   if (section.type === 'heading') {
     return (
-      <section className="legacy-section legacy-section-heading" id={id}>
+      <section
+        className="legacy-section legacy-section-heading"
+        data-source-index={sourceIndex}
+        id={id}
+      >
         <p className="legacy-section-kicker">
           {String(index).padStart(2, '0')}
         </p>
@@ -173,7 +179,11 @@ function LegacySectionView({
 
   if (section.type === 'text') {
     return (
-      <section className="legacy-section legacy-section-text" id={id}>
+      <section
+        className="legacy-section legacy-section-text"
+        data-source-index={sourceIndex}
+        id={id}
+      >
         <RichText html={section.html} />
       </section>
     );
@@ -190,6 +200,7 @@ function LegacySectionView({
     return (
       <section
         className={`legacy-section legacy-columns legacy-columns-${Math.min(section.columns.length, 4)}${isMetadata ? ' is-metadata' : ''}`}
+        data-source-index={sourceIndex}
         id={id}
       >
         {section.columns.map((column, columnIndex) => {
@@ -215,6 +226,7 @@ function LegacySectionView({
     return (
       <section
         className={`legacy-section legacy-split${section.flipped ? ' is-flipped' : ''}`}
+        data-source-index={sourceIndex}
         id={id}
       >
         <div className="legacy-split-copy">
@@ -227,7 +239,11 @@ function LegacySectionView({
 
   if (section.type === 'process') {
     return (
-      <section className="legacy-section legacy-process" id={id}>
+      <section
+        className="legacy-section legacy-process"
+        data-source-index={sourceIndex}
+        id={id}
+      >
         <p className="legacy-section-kicker">Project path</p>
         <ol>
           {section.items.map((item, itemIndex) => (
@@ -242,7 +258,11 @@ function LegacySectionView({
   }
 
   return (
-    <section className="legacy-section legacy-gallery" id={id}>
+    <section
+      className="legacy-section legacy-gallery"
+      data-source-index={sourceIndex}
+      id={id}
+    >
       {section.items.map((item, itemIndex) => (
         <ProjectMedia media={item} key={`${item.url}-${itemIndex}`} />
       ))}
