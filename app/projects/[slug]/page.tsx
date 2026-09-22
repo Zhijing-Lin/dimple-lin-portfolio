@@ -127,17 +127,23 @@ function ProjectMedia({ media }: { media: LegacyMedia | null }) {
 
   return (
     <figure className={`legacy-media legacy-media-${media.type}`}>
-      {media.type === 'video' ? (
-        <iframe
-          src={media.url}
-          title={caption || 'Project video'}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          loading="lazy"
-        />
-      ) : (
-        <img src={media.url} alt={media.alt || caption || ''} loading="lazy" />
-      )}
+      <div className="legacy-media-frame">
+        {media.type === 'video' ? (
+          <iframe
+            src={media.url}
+            title={caption || 'Project video'}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            loading="lazy"
+          />
+        ) : (
+          <img
+            src={media.url}
+            alt={media.alt || caption || ''}
+            loading="lazy"
+          />
+        )}
+      </div>
       {caption ? <figcaption>{caption}</figcaption> : null}
     </figure>
   );
@@ -342,7 +348,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     projectDetails[(currentIndex + 1) % projectDetails.length];
 
   return (
-    <main className="case-study" id="top">
+    <main className="case-study" data-project-slug={project.slug} id="top">
       <SiteHeader active="projects" />
 
       <article>

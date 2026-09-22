@@ -3045,6 +3045,10 @@ a {
   margin: 0;
 }
 
+.legacy-media-frame {
+  min-width: 0;
+}
+
 .legacy-media img,
 .legacy-media iframe {
   display: block;
@@ -3070,6 +3074,55 @@ a {
   font-size: 0.72rem;
   letter-spacing: 0.035em;
   text-align: center;
+}
+
+.case-study[data-project-slug='help-center'] .legacy-media-frame {
+  position: relative;
+  padding-top: 28px;
+  overflow: hidden;
+  border: 1px solid #8798cf;
+  border-radius: 0.45rem;
+  background: #fff;
+}
+
+.case-study[data-project-slug='help-center'] .legacy-media-frame::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 28px;
+  border-bottom: 1px solid #8798cf;
+  background: #f0f1fa;
+  content: '';
+}
+
+.case-study[data-project-slug='help-center'] .legacy-media-frame::after {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 12px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c98489;
+  box-shadow:
+    12px 0 0 #c6a34d,
+    24px 0 0 #8798cf;
+  content: '';
+}
+
+.case-study[data-project-slug='help-center'] .legacy-media-frame img,
+.case-study[data-project-slug='help-center'] .legacy-media-frame iframe {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.case-study[data-project-slug='help-center']
+  .legacy-media-frame
+  .project-image-trigger {
+  border-radius: 0;
 }
 
 .project-image-trigger {

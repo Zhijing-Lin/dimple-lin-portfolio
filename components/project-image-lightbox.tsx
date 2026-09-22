@@ -16,18 +16,20 @@ export function ProjectImageLightbox({
 
   return (
     <figure className="legacy-media legacy-media-image is-zoomable">
-      <button
-        className="project-image-trigger"
-        type="button"
-        aria-label={`Enlarge ${caption}`}
-        onClick={() => dialogRef.current?.showModal()}
-      >
-        <img src={src} alt={alt} loading="lazy" />
-        <span className="project-image-trigger-badge" aria-hidden="true">
-          <Maximize2 size={16} />
-          View larger
-        </span>
-      </button>
+      <div className="legacy-media-frame">
+        <button
+          className="project-image-trigger"
+          type="button"
+          aria-label={`Enlarge ${caption}`}
+          onClick={() => dialogRef.current?.showModal()}
+        >
+          <img src={src} alt={alt} loading="lazy" />
+          <span className="project-image-trigger-badge" aria-hidden="true">
+            <Maximize2 size={16} />
+            View larger
+          </span>
+        </button>
+      </div>
       {caption ? <figcaption>{caption}</figcaption> : null}
 
       <dialog
