@@ -144,16 +144,6 @@ function LegacySectionView({
     return (
       <section className="legacy-section legacy-section-text" id={id}>
         <RichText html={section.html} />
-        {section.cta ? (
-          <a
-            className="legacy-cta"
-            href={section.cta.url}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {section.cta.title} <ExternalLink size={17} aria-hidden="true" />
-          </a>
-        ) : null}
       </section>
     );
   }
@@ -349,9 +339,27 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               ))}
             </div>
           </div>
-          <figure className="case-study-cover">
-            <img src={project.cover} alt="" />
-          </figure>
+          <div className="case-study-visual">
+            <figure className="case-study-cover">
+              <img src={project.cover} alt="" />
+            </figure>
+            <div className="case-study-launches" aria-label="Project links">
+              {project.launchLinks.map((launchLink) => (
+                <a
+                  className="case-study-launch"
+                  href={launchLink.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={launchLink.url}
+                >
+                  <span>{launchLink.label}</span>
+                  <span className="case-study-launch-icon" aria-hidden="true">
+                    <ExternalLink size={16} />
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
         </header>
 
         <ProjectProgressNav items={progressItems} />

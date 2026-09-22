@@ -14,6 +14,9 @@
   --accent-dark: #5e70ad;
   --accent-soft: #e7eafb;
   --accent-warm: #c6a34d;
+  --brand-pink: #c98489;
+  --brand-pink-dark: #ad6e73;
+  --brand-pink-soft: #f5e5e6;
   --radius: 1.25rem;
 }
 
@@ -62,7 +65,7 @@ a {
 }
 
 .brand span {
-  color: #c98489;
+  color: var(--brand-pink);
 }
 
 .accent-dot {
@@ -605,6 +608,64 @@ a {
   height: auto;
 }
 
+.case-study-visual {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.case-study-launches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0 0.2rem;
+}
+
+.case-study-launch {
+  display: inline-flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.72rem 0.72rem 0.72rem 1.25rem;
+  border: 1px solid var(--brand-pink);
+  border-radius: 999px;
+  background: var(--brand-pink);
+  box-shadow: 0 12px 28px rgb(150 91 97 / 18%);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 720;
+  letter-spacing: 0.01em;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.case-study-launch-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 20%);
+}
+
+.case-study-launch:hover,
+.case-study-launch:focus-visible {
+  border-color: var(--brand-pink-dark);
+  background: var(--brand-pink-dark);
+  box-shadow: 0 16px 34px rgb(150 91 97 / 24%);
+  transform: translateY(-2px);
+}
+
+.case-study-launch:focus-visible {
+  outline: 3px solid var(--brand-pink-soft);
+  outline-offset: 3px;
+}
+
 .product-proof {
   padding: clamp(4rem, 8vw, 7.5rem) clamp(1.5rem, 5vw, 5rem);
   background: #fff;
@@ -888,8 +949,11 @@ a {
   }
 
   .case-study-cover {
-    max-width: 620px;
     transform: none;
+  }
+
+  .case-study-visual {
+    max-width: 620px;
   }
 
   .case-study-body {
@@ -1009,6 +1073,15 @@ a {
 
   .back-link {
     margin-bottom: 2.4rem;
+  }
+
+  .case-study-launches {
+    display: grid;
+    padding: 0;
+  }
+
+  .case-study-launch {
+    width: 100%;
   }
 
   .case-study-index nav {
@@ -2780,28 +2853,6 @@ a {
 .legacy-section-text {
   max-width: 900px;
   padding: 0;
-}
-
-.legacy-cta {
-  display: inline-flex;
-  gap: 0.55rem;
-  align-items: center;
-  margin-top: 0.65rem;
-  padding: 0.9rem 1.15rem;
-  border-radius: 999px;
-  background: var(--accent-dark);
-  color: #fff;
-  font-size: 0.85rem;
-  font-weight: 720;
-  transition:
-    transform 180ms ease,
-    background 180ms ease;
-}
-
-.legacy-cta:hover,
-.legacy-cta:focus-visible {
-  background: #485789;
-  transform: translateY(-2px);
 }
 
 .legacy-columns {

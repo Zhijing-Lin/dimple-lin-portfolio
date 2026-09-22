@@ -18,6 +18,10 @@ export type ProjectDetail = {
   productImageAlt: string;
   originalUrl: string;
   sourceText: string;
+  launchLinks: Array<{
+    label: string;
+    url: string;
+  }>;
 };
 
 export const projectDetails: ProjectDetail[] = [
@@ -33,6 +37,12 @@ export const projectDetails: ProjectDetail[] = [
     productImageAlt: 'Tutor Help Center organized around tutoring workflows',
     originalUrl: 'https://dimplelin.work/b04fa22b',
     sourceText: helpCenterText,
+    launchLinks: [
+      {
+        label: 'Open the Help Center',
+        url: 'https://plus-tutors.notion.site/Tutor-Help-Center-379b7cca498280c98841de3b9a3c016c?pvs=74',
+      },
+    ],
   },
   {
     slug: 'reviewer-judgment',
@@ -43,9 +53,16 @@ export const projectDetails: ProjectDetail[] = [
     tools: ['OLI Torus', 'Vyond'],
     cover: '/projects/covers-refined/reviewer-judgment.webp',
     productImage: '/projects/reviewer-training.png',
-    productImageAlt: 'Open 4 Peer Review reviewer essentials course in OLI Torus',
+    productImageAlt:
+      'Open 4 Peer Review reviewer essentials course in OLI Torus',
     originalUrl: 'https://dimplelin.work/6c8b7574',
     sourceText: reviewerText,
+    launchLinks: [
+      {
+        label: 'Try the Pre-Training Course',
+        url: 'https://proton.oli.cmu.edu/sections/open_4_peer_review_reviewer_es/preview/learn?sidebar_expanded=true',
+      },
+    ],
   },
   {
     slug: 'ai-architecture',
@@ -59,6 +76,16 @@ export const projectDetails: ProjectDetail[] = [
     productImageAlt: 'AI architecture decision-making learning experience',
     originalUrl: 'https://dimplelin.work/8a18dbf3',
     sourceText: architectureText,
+    launchLinks: [
+      {
+        label: 'View the Full Course',
+        url: 'https://zhijing-lin.github.io/making-ai-architecture-decisions/',
+      },
+      {
+        label: 'Try the Storyline Simulation',
+        url: 'https://zhijing-lin.github.io/AI-PM-Final/',
+      },
+    ],
   },
   {
     slug: 'survival-play',
@@ -72,6 +99,12 @@ export const projectDetails: ProjectDetail[] = [
     productImageAlt: 'The Last Outbreak educational survival game',
     originalUrl: 'https://dimplelin.work/2dbba5ae',
     sourceText: survivalText,
+    launchLinks: [
+      {
+        label: 'Play the Learning Game',
+        url: 'https://the-last-outbreak-h20q6cz5j-open13.vercel.app/',
+      },
+    ],
   },
   {
     slug: 'nutrition-literacy',
@@ -85,6 +118,12 @@ export const projectDetails: ProjectDetail[] = [
     productImageAlt: 'Making Informed Nutrition Decisions interactive course',
     originalUrl: 'https://dimplelin.work/ae5df7e7',
     sourceText: nutritionText,
+    launchLinks: [
+      {
+        label: 'Try the Nutrition Course',
+        url: 'https://zhijing-lin.github.io/nutrition/',
+      },
+    ],
   },
   {
     slug: 'interactive-coaching',
@@ -98,6 +137,12 @@ export const projectDetails: ProjectDetail[] = [
     productImageAlt: 'Coaching Through Feedback branching scenario',
     originalUrl: 'https://dimplelin.work/da6053e0',
     sourceText: coachingText,
+    launchLinks: [
+      {
+        label: 'Try the Coaching Scenario',
+        url: 'https://zhijing-lin.github.io/coach-through-feedback/',
+      },
+    ],
   },
   {
     slug: 'adaptive-ai-feedback',
@@ -111,6 +156,12 @@ export const projectDetails: ProjectDetail[] = [
     productImageAlt: 'Writing Effective Performance Feedback course',
     originalUrl: 'https://dimplelin.work/7a2dba18',
     sourceText: adaptiveText,
+    launchLinks: [
+      {
+        label: 'Try the Adaptive Course',
+        url: 'https://zhijing-lin.github.io/write-effective-performance-feedback/',
+      },
+    ],
   },
   {
     slug: 'learner-data',
@@ -124,6 +175,12 @@ export const projectDetails: ProjectDetail[] = [
     productImageAlt: 'Beyond Backpacks course evaluation finding and chart',
     originalUrl: 'https://dimplelin.work/f8bd92a0',
     sourceText: learnerDataText,
+    launchLinks: [
+      {
+        label: 'View the Evaluation Report',
+        url: 'https://drive.google.com/file/d/1710SmeKFhPsYwO_NchHRWfI3Nr8ybXbe/view',
+      },
+    ],
   },
 ];
 
