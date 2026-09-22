@@ -50,7 +50,7 @@ const categories: Category[] = [
       {
         title: 'Turning Reviewer Judgment into a Learnable Skill',
         description:
-          'Translated reviewer performance gaps into a research-informed training experience through CTA, SME collaboration, and iterative design.',
+          'Translated reviewer performance gaps into a research-informed training experience through cognitive task analysis, SME collaboration, and iterative design.',
         highlights: ['research-informed training experience'],
         tools: ['OLI Torus', 'Vyond'],
         image: '/projects/covers-refined/reviewer-judgment.webp',
@@ -60,7 +60,7 @@ const categories: Category[] = [
       {
         title: 'Transforming Fragmented OER Review into an End-to-End Workflow',
         description:
-          'Led a 5-person cross-functional team to transform a fragmented OER review workflow into an end-to-end platform through product strategy and iterative prototyping.',
+          'Led a 5-person cross-functional team to transform a fragmented Open Educational Resources (OER) review workflow into an end-to-end platform through product strategy and iterative prototyping.',
         highlights: ['product strategy', 'iterative prototyping'],
         tools: [],
         image: '/projects/covers-hybrid/oer-review-workflow.png',
@@ -92,7 +92,7 @@ const categories: Category[] = [
       {
         title: 'Learning Survival Through Consequential Play',
         description:
-          'Translated CTA findings into gameplay mechanics that build survival judgment through decisions, consequences, and fading support.',
+          'Translated cognitive task analysis findings into gameplay mechanics that build survival judgment through decisions, consequences, and fading support.',
         highlights: ['gameplay mechanics'],
         tools: ['HTML/CSS'],
         image: '/projects/covers-refined/survival-play.webp',
@@ -102,7 +102,7 @@ const categories: Category[] = [
       {
         title: 'Building Nutrition Literacy Through Guided Practice',
         description:
-          'Used CTA and procedural scaffolding to turn nutrition knowledge into structured, evidence-based decision practice.',
+          'Used cognitive task analysis and procedural scaffolding to turn nutrition knowledge into structured, evidence-based decision practice.',
         highlights: ['procedural scaffolding'],
         tools: ['Articulate Storyline'],
         image: '/projects/covers-refined/nutrition-literacy.webp',

@@ -200,7 +200,7 @@
             "media": null
           },
           {
-            "html": "<h4><strong>My Role</strong></h4><p>Project Manager &amp; Lead Learning Experience Designer</p><ul><li><p>Led needs analysis, CTA, and course design.</p></li><li><p>Collaborated with SMEs and stakeholders.</p></li><li><p>Developed the course in OLI and created Vyond videos.</p></li></ul>",
+            "html": "<h4><strong>My Role</strong></h4><p>Project Manager &amp; Lead Learning Experience Designer</p><ul><li><p>Led needs analysis, cognitive task analysis (CTA), and course design.</p></li><li><p>Collaborated with SMEs and stakeholders.</p></li><li><p>Developed the course in OLI and created Vyond videos.</p></li></ul>",
             "media": null
           },
           {
@@ -635,7 +635,7 @@
             "media": null
           },
           {
-            "html": "<h3>My Role</h3><p>Instructional Designer &amp; Visual Designer</p><ul><li><p>Led research and CTA, translating findings into learning objectives and gameplay.</p></li><li><p>Co-designed learning experience, interactions and visual direction.</p></li><li><p>Supported AI visual production, playtesting, and iteration.</p></li></ul>",
+            "html": "<h3>My Role</h3><p>Instructional Designer &amp; Visual Designer</p><ul><li><p>Led research and cognitive task analysis (CTA), translating findings into learning objectives and gameplay.</p></li><li><p>Co-designed learning experience, interactions and visual direction.</p></li><li><p>Supported AI visual production, playtesting, and iteration.</p></li></ul>",
             "media": null
           },
           {
@@ -935,7 +935,7 @@
             "media": null
           },
           {
-            "html": "<h3>My Role</h3><p>Learning Experience Designer &amp; E-Learning Developer</p><ul><li><p>Led Storyline development and interaction design</p></li><li><p>Translated CTA findings into practice, feedback, and scaffolding</p></li><li><p>Contributed to research, assessment design, and evaluation</p></li></ul>",
+            "html": "<h3>My Role</h3><p>Learning Experience Designer &amp; E-Learning Developer</p><ul><li><p>Led Storyline development and interaction design</p></li><li><p>Translated cognitive task analysis (CTA) findings into practice, feedback, and scaffolding</p></li><li><p>Contributed to research, assessment design, and evaluation</p></li></ul>",
             "media": null
           },
           {
@@ -978,7 +978,7 @@
       {
         "sourceIndex": 6,
         "type": "split",
-        "html": "<h3>Design Approach</h3><p>I used a research-based e-learning design approach combining <strong>backward design, cognitive task analysis, instructional principles, and learner testing</strong>.</p><p>We first identified the learning need and target performance, then designed aligned assessment tasks. Next, we used CTA to compare how experts and learners approached a key nutrition decision-making task, revealing reasoning gaps that informed the design.</p><p>I translated these findings into the <strong>Storyline course structure, practice activities, feedback, reflection prompts, and scaffolding</strong>.</p>",
+        "html": "<h3>Design Approach</h3><p>I used a research-based e-learning design approach combining <strong>backward design, cognitive task analysis, instructional principles, and learner testing</strong>.</p><p>We first identified the learning need and target performance, then designed aligned assessment tasks. Next, we used cognitive task analysis (CTA) to compare how experts and learners approached a key nutrition decision-making task, revealing reasoning gaps that informed the design.</p><p>I translated these findings into the <strong>Storyline course structure, practice activities, feedback, reflection prompts, and scaffolding</strong>.</p>",
         "media": {
           "type": "image",
           "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f0e2ad37a77450ae5df7e7/alsGe4Kd3PFwQQa9.png",
