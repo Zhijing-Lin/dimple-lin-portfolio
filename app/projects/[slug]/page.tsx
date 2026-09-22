@@ -115,7 +115,7 @@ function RichText({
 
 const zoomableProjectImages = new Set([
   '/projects/ai-architecture-anchored-learning.png',
-  '/projects/ai-architecture-flow-diagram.png',
+  '/projects/ai-architecture-flow-diagram.jpg',
   '/projects/ai-architecture-immediate-feedback.png',
   '/projects/ai-architecture-just-in-time.png',
   '/projects/ai-architecture-prototype.png',

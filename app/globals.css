@@ -3087,6 +3087,66 @@ a {
   border-bottom: 0;
 }
 
+.case-study[data-project-slug='ai-architecture']
+  .case-study-content
+  > .legacy-section[data-source-index='4'],
+.case-study[data-project-slug='ai-architecture']
+  .case-study-content
+  > .legacy-section[data-source-index='10'],
+.case-study[data-project-slug='ai-architecture']
+  .case-study-content
+  > .legacy-section[data-source-index='14'] {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.case-study[data-project-slug='ai-architecture']
+  .legacy-section[data-source-index='4'] {
+  padding-top: 0;
+  text-align: center;
+}
+
+.case-study[data-project-slug='ai-architecture']
+  .legacy-section[data-source-index='4']
+  .legacy-rich-text
+  h3 {
+  max-width: none;
+}
+
+.case-study[data-project-slug='ai-architecture']
+  .legacy-section[data-source-index='4']
+  .legacy-section-kicker,
+.case-study[data-project-slug='ai-architecture']
+  .legacy-section[data-source-index='14']
+  .legacy-section-kicker {
+  display: none;
+}
+
+.case-study[data-project-slug='ai-architecture']
+  .case-study-body-before-progress {
+  padding-bottom: clamp(1.4rem, 2.5vw, 2.2rem);
+}
+
+.case-study[data-project-slug='ai-architecture']
+  .legacy-section[data-source-index='11'] {
+  margin-top: clamp(-5.25rem, -5vw, -3rem);
+}
+
+.case-study[data-project-slug='ai-architecture']
+  .legacy-section[data-source-index='14'] {
+  padding-top: 0;
+}
+
+.case-study[data-project-slug='ai-architecture']
+  .legacy-section[data-source-index='15']
+  .legacy-rich-text
+  h4 {
+  font-size: 1.0625rem;
+  font-weight: 720;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
 .legacy-media {
   min-width: 0;
   margin: 0;
