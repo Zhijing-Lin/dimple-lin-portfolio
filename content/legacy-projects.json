@@ -479,30 +479,30 @@
         "items": [
           {
             "type": "image",
-            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/eDwB5gnr9Q3gBc9e.png",
+            "url": "/projects/ai-architecture-storyboard.png",
             "unavailable": false,
             "caption": "<p>Storyboard</p>",
-            "alt": null,
-            "width": "1866",
-            "height": "1322"
+            "alt": "Storyboard frames for the AI architecture decision-making simulation",
+            "width": "1562",
+            "height": "1166"
           },
           {
             "type": "image",
-            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/qW9zObDRU9NGUSVa.png",
+            "url": "/projects/ai-architecture-flow-diagram.png",
             "unavailable": false,
             "caption": "<p>Flow Chart</p>",
-            "alt": null,
-            "width": "1436",
-            "height": "1176"
+            "alt": "Iterative flow diagram for the AI product manager learning experience",
+            "width": "22329",
+            "height": "32768"
           },
           {
             "type": "image",
-            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/BI1EabMrg02TaDt2.png",
+            "url": "/projects/ai-architecture-prototype.png",
             "unavailable": false,
             "caption": "<p>Storyline Prototype</p>",
-            "alt": null,
-            "width": null,
-            "height": null
+            "alt": "Articulate Storyline prototype screens for the AI architecture simulation",
+            "width": "1680",
+            "height": "1033"
           }
         ]
       },
@@ -534,10 +534,10 @@
             "html": "<h4>Anchored Learning</h4><p>Using these key actions and learner barriers, I designed <strong>four scenario-based tasks</strong> focused on applied decision-making rather than concept recall:</p>",
             "media": {
               "type": "image",
-              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/kI3tRwNapKrfn8Oe.png",
+              "url": "/projects/ai-architecture-anchored-learning.png",
               "unavailable": false,
               "caption": null,
-              "alt": null,
+              "alt": "Scenario introduction grounding the learner in an AI product manager role",
               "width": "1266",
               "height": "813"
             }
@@ -546,10 +546,10 @@
             "html": "<h4>Just-in-Time Support</h4><p>Key terms, formulas, and decision guidance are available during practice so learners can access support <strong>at the moment of need</strong> rather than memorize information upfront.</p>",
             "media": {
               "type": "image",
-              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/vXPycVECYuKgVDIP.png",
+              "url": "/projects/ai-architecture-just-in-time.png",
               "unavailable": false,
               "caption": null,
-              "alt": null,
+              "alt": "Just-in-time AITCO formula support available during practice",
               "width": "1266",
               "height": "813"
             }
@@ -558,10 +558,10 @@
             "html": "<h4>Immediate Feedback</h4><p>Each decision is followed by explanatory feedback that helps learners understand <strong>why a choice works or does not work</strong> and correct misconceptions before moving forward.</p><p></p>",
             "media": {
               "type": "image",
-              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69e420cff81832258a18dbf3/jagokt7CfCWRE1YA.png",
+              "url": "/projects/ai-architecture-immediate-feedback.png",
               "unavailable": false,
               "caption": null,
-              "alt": null,
+              "alt": "Immediate explanatory feedback after an AI architecture decision",
               "width": "1266",
               "height": "813"
             }

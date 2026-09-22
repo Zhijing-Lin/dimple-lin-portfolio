@@ -114,6 +114,12 @@ function RichText({
 }
 
 const zoomableProjectImages = new Set([
+  '/projects/ai-architecture-anchored-learning.png',
+  '/projects/ai-architecture-flow-diagram.png',
+  '/projects/ai-architecture-immediate-feedback.png',
+  '/projects/ai-architecture-just-in-time.png',
+  '/projects/ai-architecture-prototype.png',
+  '/projects/ai-architecture-storyboard.png',
   '/projects/help-center-procedural-job-aid.png',
   '/projects/help-center-operational-decision-guide.png',
   '/projects/reviewer-performance-gaps.png',
@@ -582,17 +588,25 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   const currentIndex = projectDetails.findIndex((item) => item.slug === slug);
   const nextProject =
     projectDetails[(currentIndex + 1) % projectDetails.length];
-  const delaysProgressNav = project.slug === 'reviewer-judgment';
+  const progressNavAfterSourceIndex =
+    project.slug === 'reviewer-judgment'
+      ? 6
+      : project.slug === 'ai-architecture'
+        ? 4
+        : null;
+  const delaysProgressNav = progressNavAfterSourceIndex !== null;
   const introductionSections = delaysProgressNav
     ? renderedSections.filter(
         ({ section }) =>
-          section.sourceIndex !== null && section.sourceIndex <= 6,
+          section.sourceIndex !== null &&
+          section.sourceIndex <= (progressNavAfterSourceIndex ?? -1),
       )
     : [];
   const mainSections = delaysProgressNav
     ? renderedSections.filter(
         ({ section }) =>
-          section.sourceIndex === null || section.sourceIndex > 6,
+          section.sourceIndex === null ||
+          section.sourceIndex > (progressNavAfterSourceIndex ?? -1),
       )
     : renderedSections;
   const renderSection = ({

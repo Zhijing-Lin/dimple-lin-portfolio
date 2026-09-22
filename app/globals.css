@@ -3433,6 +3433,19 @@ a {
   border-radius: 0.6rem;
 }
 
+.case-study[data-project-slug='ai-architecture'] .legacy-media-frame {
+  overflow: hidden;
+  border-radius: 0.65rem;
+}
+
+.case-study[data-project-slug='ai-architecture'] .legacy-media-frame img,
+.case-study[data-project-slug='ai-architecture']
+  .legacy-media-frame
+  .project-image-trigger {
+  border-radius: 0.65rem;
+  box-shadow: none;
+}
+
 .project-image-trigger {
   position: relative;
   display: block;
@@ -3476,6 +3489,7 @@ a {
   transform: translateY(0);
 }
 
+.case-study[data-project-slug='ai-architecture'] .project-image-trigger-badge,
 .case-study[data-project-slug='help-center'] .project-image-trigger-badge,
 .case-study[data-project-slug='reviewer-judgment']
   .project-image-trigger-badge {
@@ -3491,6 +3505,7 @@ a {
   transform: translateY(0);
 }
 
+.case-study[data-project-slug='ai-architecture'] .project-image-trigger-label,
 .case-study[data-project-slug='help-center'] .project-image-trigger-label,
 .case-study[data-project-slug='reviewer-judgment']
   .project-image-trigger-label {
