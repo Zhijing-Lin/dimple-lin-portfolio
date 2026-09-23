@@ -3754,6 +3754,14 @@ a {
   background: #fbfaf6;
 }
 
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='16']
+  .legacy-split-copy {
+  justify-self: center;
+  width: fit-content;
+  max-width: 100%;
+}
+
 .survival-change-row {
   padding: 1rem;
   border-bottom: 1px solid #e3ddd4;
