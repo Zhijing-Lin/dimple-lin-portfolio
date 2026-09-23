@@ -10,7 +10,7 @@ export default function HomePage() {
       <HeroIntro />
       <ProcessSection />
       <FeaturedWork />
-      <footer className="home-footer" id="resume">
+      <footer className="home-footer">
         <p>Designing learning that moves from insight to action.</p>
         <a href="/projects">Explore the work ↗</a>
       </footer>

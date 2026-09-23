@@ -4,7 +4,7 @@ import { SkillGarden } from './skill-garden';
 export function HeroIntro() {
   return (
     <section className="home-hero" id="home">
-      <div className="home-hero-copy" id="about">
+      <div className="home-hero-copy">
         <p className="home-kicker">
           Hi, I’m <span className="dimple-name">Dimple.</span>
         </p>
@@ -38,7 +38,7 @@ export function HeroIntro() {
           <a className="home-button home-button-primary" href="/projects">
             View Projects <ArrowRight size={17} aria-hidden="true" />
           </a>
-          <a className="home-button home-button-secondary" href="/#about">
+          <a className="home-button home-button-secondary" href="/about">
             About Me
           </a>
         </div>

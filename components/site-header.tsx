@@ -1,5 +1,5 @@
 type SiteHeaderProps = {
-  active?: 'home' | 'projects' | 'about' | 'resume';
+  active?: 'home' | 'projects' | 'about';
 };
 
 export function SiteHeader({ active }: SiteHeaderProps) {
@@ -25,17 +25,13 @@ export function SiteHeader({ active }: SiteHeaderProps) {
         </a>
         <a
           className={active === 'about' ? 'active' : undefined}
-          href="/#about"
+          href="/about"
           aria-current={active === 'about' ? 'page' : undefined}
         >
           About
         </a>
-        <a
-          className={active === 'resume' ? 'active' : undefined}
-          href="/#resume"
-          aria-current={active === 'resume' ? 'page' : undefined}
-        >
-          Resume
+        <a href="/about#contact">
+          Contact
         </a>
       </nav>
     </header>
