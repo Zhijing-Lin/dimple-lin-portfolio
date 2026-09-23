@@ -380,6 +380,10 @@ a {
   transition: transform 260ms cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+.project-image-wrap img.continuous-support-cover {
+  transform: scale(1.15);
+}
+
 .project-card-copy {
   display: flex;
   flex: 1;
@@ -482,6 +486,13 @@ a {
 .project-card-link:hover .project-image-wrap img,
 .project-card-link:focus-visible .project-image-wrap img {
   transform: scale(1.018);
+}
+
+.project-card-link:hover .project-image-wrap img.continuous-support-cover,
+.project-card-link:focus-visible
+  .project-image-wrap
+  img.continuous-support-cover {
+  transform: scale(1.168);
 }
 
 .project-card-link:hover .project-card-copy,

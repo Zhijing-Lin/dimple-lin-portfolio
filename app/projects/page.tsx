@@ -292,7 +292,15 @@ function ProjectCard({ project }: { project: Project }) {
         rel={project.external ? 'noreferrer' : undefined}
       >
         <div className="project-image-wrap">
-          <img src={project.image} alt={project.imageAlt} />
+          <img
+            src={project.image}
+            alt={project.imageAlt}
+            className={
+              project.anchorId === 'oli-support'
+                ? 'continuous-support-cover'
+                : undefined
+            }
+          />
         </div>
         <div className="project-card-copy">
           <div className="project-title-row">

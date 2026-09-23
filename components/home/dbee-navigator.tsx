@@ -55,7 +55,7 @@ const dotAI: ProjectLink = {
 const tutorialSupport: ProjectLink = {
   title: 'From Tutorial Videos to Continuous Performance Support',
   href: '/projects#oli-support',
-  image: '/projects/covers-refined/continuous-support.webp',
+  image: '/projects/covers-refined/continuous-support-search-redesign.webp',
 };
 
 const projectAreas = {
