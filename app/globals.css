@@ -4767,6 +4767,52 @@ a {
   font-size: 1.0625rem;
 }
 
+.case-study[data-project-slug='learner-data'] .learner-resource-link {
+  display: inline;
+  margin: 0 -0.08em;
+  padding: 0.03em 0.12em 0.08em;
+  border-radius: 0.22em;
+  color: #4f6199;
+  font-weight: 720;
+  text-decoration-line: underline;
+  text-decoration-color: #6d82bf;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.case-study[data-project-slug='learner-data'] .learner-resource-link strong {
+  color: inherit;
+}
+
+.case-study[data-project-slug='learner-data'] .learner-resource-link::after {
+  display: inline-block;
+  margin-left: 0.22em;
+  color: #6577b5;
+  font-size: 0.78em;
+  font-weight: 760;
+  line-height: 1;
+  content: '↗';
+  transform: translateY(-0.08em);
+}
+
+.case-study[data-project-slug='learner-data'] .learner-resource-link:hover,
+.case-study[data-project-slug='learner-data']
+  .learner-resource-link:focus-visible {
+  background: #e7eafb;
+  color: #3f518c;
+  text-decoration-color: #3f518c;
+}
+
+.case-study[data-project-slug='learner-data']
+  .learner-resource-link:focus-visible {
+  outline: 2px solid rgb(101 119 181 / 32%);
+  outline-offset: 2px;
+}
+
 .case-study[data-project-slug='learner-data'] .legacy-rich-text h4 {
   margin-top: 2rem;
   font-size: 1.0625rem;
