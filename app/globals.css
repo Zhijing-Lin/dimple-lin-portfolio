@@ -5227,6 +5227,40 @@ a {
 }
 
 .case-study[data-project-slug='nutrition-literacy']
+  .legacy-columns.is-metadata {
+  gap: 0.875rem;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-columns.is-metadata
+  .legacy-column {
+  border: 1px solid #ded6ca;
+  border-radius: 1.25rem;
+  box-shadow: none;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-columns.is-metadata
+  .legacy-rich-text
+  p,
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-columns.is-metadata
+  .legacy-rich-text
+  li {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-columns.is-metadata
+  .legacy-rich-text
+  strong {
+  font-size: inherit;
+  font-weight: 720;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
   .legacy-section[data-source-index='6'],
 .case-study[data-project-slug='nutrition-literacy']
   .legacy-section[data-source-index='8'] {
@@ -5268,6 +5302,7 @@ a {
 .case-study[data-project-slug='nutrition-literacy']
   .legacy-section[data-source-index='13'] {
   gap: clamp(2.5rem, 4vw, 4.5rem);
+  margin-top: clamp(1.75rem, 3vw, 2.75rem);
   border-bottom: 0;
 }
 
@@ -5483,6 +5518,27 @@ a {
   line-height: 1.35;
 }
 
+.nutrition-design-flow
+  > .project-visual-trigger
+  .nutrition-visual-frame
+  ol {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.nutrition-design-flow
+  > .project-visual-trigger
+  .nutrition-visual-frame
+  li {
+  min-height: 116px;
+}
+
+.nutrition-design-flow
+  > .project-visual-trigger
+  .nutrition-visual-frame
+  li:nth-child(4)::after {
+  display: none;
+}
+
 .nutrition-feedback-loop {
   display: flex;
   gap: 0.55rem;
@@ -5648,6 +5704,67 @@ a {
   width: 124px;
 }
 
+.nutrition-alignment-map
+  > .project-visual-trigger
+  .nutrition-alignment-canvas {
+  min-height: 290px;
+  gap: 0.7rem;
+}
+
+.nutrition-alignment-map
+  > .project-visual-trigger
+  .nutrition-alignment-canvas
+  article {
+  padding: 0.82rem 0.9rem;
+}
+
+.nutrition-alignment-map
+  > .project-visual-trigger
+  .nutrition-alignment-canvas
+  article
+  p {
+  display: none;
+}
+
+.nutrition-alignment-map
+  > .project-visual-trigger
+  .nutrition-alignment-canvas
+  article
+  strong {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.nutrition-alignment-map
+  > .project-visual-trigger
+  .nutrition-learning-hub {
+  gap: 0.4rem;
+  padding: 0.55rem 0.72rem;
+  font-size: 0.76rem;
+}
+
+.nutrition-alignment-map
+  > .project-visual-trigger
+  .nutrition-instruction-card {
+  width: min(74%, 620px);
+}
+
+.nutrition-alignment-map
+  > .project-visual-trigger
+  .nutrition-alignment-canvas
+  > small {
+  width: 102px;
+  font-size: 0.62rem;
+}
+
+.nutrition-alignment-map
+  > .project-visual-trigger
+  .nutrition-alignment-canvas
+  .is-goals-label {
+  width: auto;
+}
+
 .nutrition-cta-findings .nutrition-visual-frame > h3 {
   margin: 0 0 1rem;
   color: #2f3f35;
@@ -5806,6 +5923,13 @@ a {
 
 @media (max-width: 800px) {
   .nutrition-design-flow ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nutrition-design-flow
+    > .project-visual-trigger
+    .nutrition-visual-frame
+    ol {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
