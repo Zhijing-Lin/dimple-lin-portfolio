@@ -177,7 +177,8 @@ const categories: Category[] = [
           'continuous improvement',
         ],
         tools: ['Camtasia', 'HTML/CSS'],
-        image: '/projects/covers-refined/continuous-support.webp',
+        image:
+          '/projects/covers-refined/continuous-support-search-redesign.webp',
         imageAlt:
           'Tutorial videos redesigned as continuous performance support',
         href: '#oli-support',
