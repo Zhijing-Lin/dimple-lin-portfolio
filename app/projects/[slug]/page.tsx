@@ -142,6 +142,7 @@ const zoomableProjectImages = new Set([
   '/projects/help-center-procedural-job-aid.png',
   '/projects/help-center-operational-decision-guide.png',
   '/projects/reviewer-performance-gaps.png',
+  '/projects/course-evaluation.png',
   '/projects/survival-consequence-feedback.jpg',
   '/projects/survival-contrasting-cases.jpg',
   '/projects/survival-game-loop.png',
@@ -1061,6 +1062,210 @@ function TutorialVisual({ sourceIndex }: { sourceIndex: number }) {
   }
 }
 
+const learnerDataSources = [
+  {
+    title: 'Page-view data',
+    detail: 'Course access, page reach, and unit progression',
+    tone: 'blue',
+  },
+  {
+    title: 'Performance records',
+    detail: 'Activity attempts and participation metrics',
+    tone: 'teal',
+  },
+  {
+    title: 'DataShop data',
+    detail: 'Correctness, retries, feedback, and learning-objective tags',
+    tone: 'green',
+  },
+  {
+    title: 'Survey responses',
+    detail: 'Satisfaction, confidence, and adoption signals',
+    tone: 'gold',
+  },
+];
+
+const learnerEvaluationLayers = [
+  {
+    layer: 'Layer A',
+    title: 'Course Reach',
+    detail: 'Who accessed the course and where progression dropped',
+    tone: 'blue',
+  },
+  {
+    layer: 'Layer B',
+    title: 'Learner Engagement',
+    detail: 'How deeply learners moved and how they used activities',
+    tone: 'green',
+  },
+  {
+    layer: 'Layer C',
+    title: 'Learning Performance',
+    detail: 'Where learners performed strongly and where gaps remained',
+    tone: 'gold',
+  },
+  {
+    layer: 'Layer D',
+    title: 'Experience & Adoption',
+    detail: 'What learners valued and what supported adoption readiness',
+    tone: 'navy',
+  },
+];
+
+function LearnerEvaluationFramework() {
+  return (
+    <figure className="legacy-media learner-data-visual learner-framework-map">
+      <div className="learner-data-visual-frame">
+        <section>
+          <p className="learner-data-step">Step 1</p>
+          <h3>Data Collection</h3>
+          <div className="learner-framework-grid">
+            {learnerDataSources.map((source) => (
+              <article className={`is-${source.tone}`} key={source.title}>
+                <Database size={20} strokeWidth={1.7} aria-hidden="true" />
+                <div>
+                  <strong>{source.title}</strong>
+                  <p>{source.detail}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+        <div className="learner-framework-bridge" aria-hidden="true">
+          <ArrowRight size={28} strokeWidth={1.5} />
+        </div>
+        <section>
+          <p className="learner-data-step">Step 2</p>
+          <h3>Analytical Layers</h3>
+          <div className="learner-framework-grid">
+            {learnerEvaluationLayers.map((layer) => (
+              <article className={`is-${layer.tone}`} key={layer.layer}>
+                <span>{layer.layer}</span>
+                <div>
+                  <strong>{layer.title}</strong>
+                  <p>{layer.detail}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </div>
+      <figcaption>From Learner Data to an Evaluation Framework</figcaption>
+    </figure>
+  );
+}
+
+const learnerEvidenceSteps = [
+  {
+    title: 'Observe',
+    detail: 'Look for unusual patterns or differences.',
+    icon: Search,
+    tone: 'blue',
+  },
+  {
+    title: 'Hypothesize',
+    detail: 'Develop a plausible explanation for why the pattern may occur.',
+    icon: Lightbulb,
+    tone: 'purple',
+  },
+  {
+    title: 'Validate',
+    detail:
+      'Use another dataset, course context, or relevant research to test the explanation.',
+    icon: BadgeCheck,
+    tone: 'teal',
+  },
+  {
+    title: 'Recommend',
+    detail:
+      'Translate the supported interpretation into a feasible course-design or implementation change.',
+    icon: Target,
+    tone: 'green',
+  },
+];
+
+function LearnerEvidenceProcess() {
+  return (
+    <figure className="legacy-media learner-data-visual learner-evidence-process">
+      <div className="learner-data-visual-frame">
+        <p className="learner-data-visual-eyebrow">
+          Evidence-to-design process
+        </p>
+        <ol>
+          {learnerEvidenceSteps.map((step, stepIndex) => {
+            const Icon = step.icon;
+            return (
+              <li className={`is-${step.tone}`} key={step.title}>
+                <span>{stepIndex + 1}</span>
+                <Icon size={20} strokeWidth={1.8} aria-hidden="true" />
+                <strong>{step.title}</strong>
+                <p>{step.detail}</p>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+      <figcaption>Evidence-to-Design Process</figcaption>
+    </figure>
+  );
+}
+
+const learnerHumanLoopSteps = [
+  {
+    title: 'AI Accelerates',
+    detail:
+      'Explore data cuts, surface patterns, and draft first-pass analyses.',
+    icon: Sparkles,
+  },
+  {
+    title: 'Human Validates',
+    detail:
+      'Check definitions, sources, denominators, exclusions, and calculations.',
+    icon: CheckCircle2,
+  },
+  {
+    title: 'Human Challenges',
+    detail:
+      'Test the evidence, wording, alternatives, and recommendation logic.',
+    icon: ScanSearch,
+  },
+  {
+    title: 'Human Redirects',
+    detail: 'Narrow the lens and reconnect analysis to stakeholder decisions.',
+    icon: RefreshCw,
+  },
+];
+
+function LearnerHumanLoopWorkflow() {
+  return (
+    <figure className="legacy-media learner-data-visual learner-human-loop">
+      <div className="learner-data-visual-frame">
+        <p className="learner-data-visual-eyebrow">Human-in-the-loop AI</p>
+        <ol>
+          {learnerHumanLoopSteps.map((step, stepIndex) => {
+            const Icon = step.icon;
+            return (
+              <li key={step.title}>
+                <div>
+                  <span>{String(stepIndex + 1).padStart(2, '0')}</span>
+                  <Icon size={20} strokeWidth={1.8} aria-hidden="true" />
+                </div>
+                <strong>{step.title}</strong>
+                <p>{step.detail}</p>
+              </li>
+            );
+          })}
+        </ol>
+        <p className="learner-human-loop-note">
+          AI improves efficiency. Human judgment decides what is strong enough
+          to inform redesign.
+        </p>
+      </div>
+      <figcaption>AI-Assisted Analysis with Human Judgment</figcaption>
+    </figure>
+  );
+}
+
 function LegacySectionView({
   section,
   index,
@@ -1154,6 +1359,12 @@ function LegacySectionView({
     const usesTutorialVisual =
       projectSlug === 'tutorial-search-redesign' &&
       [5, 7, 8, 10, 11, 12, 13, 14, 15, 17, 18, 19].includes(sourceIndex);
+    const usesLearnerEvaluationFramework =
+      projectSlug === 'learner-data' && sourceIndex === 5;
+    const usesLearnerEvidenceProcess =
+      projectSlug === 'learner-data' && sourceIndex === 6;
+    const usesLearnerHumanLoopWorkflow =
+      projectSlug === 'learner-data' && sourceIndex === 9;
 
     if (usesReviewerGapTable) {
       return (
@@ -1190,6 +1401,12 @@ function LegacySectionView({
           <SurvivalPlaytestingChanges />
         ) : usesTutorialVisual ? (
           <TutorialVisual sourceIndex={sourceIndex} />
+        ) : usesLearnerEvaluationFramework ? (
+          <LearnerEvaluationFramework />
+        ) : usesLearnerEvidenceProcess ? (
+          <LearnerEvidenceProcess />
+        ) : usesLearnerHumanLoopWorkflow ? (
+          <LearnerHumanLoopWorkflow />
         ) : (
           <ProjectMedia media={section.media} />
         )}
@@ -1335,7 +1552,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           ? 3
           : project.slug === 'tutorial-search-redesign'
             ? 3
-            : null;
+            : project.slug === 'learner-data'
+              ? 3
+              : null;
   const delaysProgressNav = progressNavAfterSourceIndex !== null;
   const introductionSections = delaysProgressNav
     ? renderedSections.filter(

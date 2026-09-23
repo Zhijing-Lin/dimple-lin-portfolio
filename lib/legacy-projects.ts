@@ -48,6 +48,104 @@ export type LegacyProject = {
   sections: LegacySection[];
 };
 
+const learnerDataProject: LegacyProject = {
+  slug: 'learner-data',
+  shortId: 'f8bd92a0',
+  originalUrl: 'https://dimplelin.work/p/f8bd92a0',
+  sections: [
+    {
+      sourceIndex: 0,
+      type: 'hero',
+      titleHtml: '<h2>Turning Learner Data into Course Design Decisions</h2>',
+      subtitleHtml:
+        '<p>An AI-assisted course evaluation that transforms learner data into evidence-based design decisions.</p>',
+    },
+    {
+      sourceIndex: 1,
+      type: 'text',
+      html: `<h3>Overview</h3><p>Our clients were <strong>Carnegie Mellon University’s Open Learning Initiative (OLI)</strong> and the <strong>American College Health Association (ACHA)</strong>. I worked as an <strong>Instructional Designer and lead evaluator</strong> to evaluate the existing <em>Beyond Backpacks</em> travel health course and inform its next redesign cycle.</p><p>The course already had multiple sources of learner data, but the team needed a clearer understanding of <strong>where learners disengaged, where learning gaps remained, and which improvements should be prioritized</strong>. I analyzed learner behavior, performance, and perception data and translated the findings into a stakeholder-facing evaluation report with actionable recommendations for future course design and implementation.</p>`,
+      cta: {
+        title: 'Read the report',
+        url: 'https://drive.google.com/file/d/1710SmeKFhPsYwO_NchHRWfI3Nr8ybXbe/view?usp=sharing',
+      },
+    },
+    {
+      sourceIndex: 2,
+      type: 'columns',
+      columns: [
+        {
+          html: `<h3>My Role</h3><p>I was the <strong>Instructional Designer and lead evaluator</strong> for this project.</p><p>My main contributions included <strong>defining evaluation metrics</strong>, <strong>analyzing learner engagement and performance data</strong>, <strong>validating AI-assisted analyses</strong>, identifying <strong>learning and engagement gaps</strong>, translating findings into <strong>instructional recommendations</strong>, and communicating results through a <a target="_blank" rel="noopener noreferrer nofollow" href="https://drive.google.com/file/d/1710SmeKFhPsYwO_NchHRWfI3Nr8ybXbe/view?usp=sharing"><strong>stakeholder-facing evaluation report</strong></a> and <a target="_blank" rel="noopener noreferrer nofollow" href="https://drive.google.com/file/d/11bHtGO0WmJZDfikUR1ZfPzOmzQIc6qQv/view?usp=sharing"><strong>client presentation</strong></a>.</p>`,
+          media: null,
+        },
+        {
+          html: '<h3>Tools</h3><ul><li><p>ChatGPT</p></li><li><p>Claude Code</p></li><li><p>Google Doc</p></li><li><p>Google Slides</p></li></ul>',
+          media: null,
+        },
+      ],
+    },
+    {
+      sourceIndex: 3,
+      type: 'text',
+      html: '<h3>My Evaluation Process</h3><p></p>',
+      cta: null,
+    },
+    {
+      sourceIndex: 4,
+      type: 'process',
+      items: [
+        { name: 'Build the Framework', sectionIndex: 5 },
+        { name: 'Analyze Evidence', sectionIndex: 6 },
+        { name: 'Translate Findings', sectionIndex: 7 },
+        { name: 'Reflect & Improve', sectionIndex: 9 },
+      ],
+    },
+    {
+      sourceIndex: 5,
+      type: 'split',
+      html: `<h3>From Learner Data to an Evaluation Framework</h3><p>I worked across <strong>four sources of learner data</strong>—page views, performance records, DataShop data, and survey responses—to build a more complete picture of the learner experience. I synthesized evidence across these datasets and organized the evaluation around four dimensions: <strong>Course Reach, Learner Engagement, Learning Performance, and Experience &amp; Adoption</strong>.</p>`,
+      media: null,
+      flipped: false,
+    },
+    {
+      sourceIndex: 6,
+      type: 'split',
+      html: `<h3>From Evidence to Design Decisions</h3><p>I analyzed each evaluation layer from multiple angles to identify meaningful patterns, then used a consistent <strong>evidence-to-design process</strong> to determine what those patterns actually meant for the course.</p>`,
+      media: null,
+      flipped: true,
+    },
+    {
+      sourceIndex: 7,
+      type: 'text',
+      html: `<h3>Outcome</h3><p>The evaluation went beyond identifying problems. I translated learner data into <strong>29 specific, practical redesign recommendations</strong> across <strong>course engagement, learning support, implementation, and future evaluation</strong>, giving the client a concrete roadmap for improving the next version of the course.</p><h4>Exceeded Client Expectations</h4><p>The client praised the <strong>clarity and rigor of the analysis</strong> and was especially impressed by how specific and actionable the recommendations were. They had expected an evaluation of the existing course, but the final report also provided a practical roadmap for redesign.</p><blockquote class="learner-client-quote"><p>“Wow, this is amazing. I expected an evaluation, but I didn’t expect the recommendations to be this specific and practical. This gives us a really clear direction for what to improve next.”</p><cite>— Client, American College Health Association (ACHA)</cite></blockquote><h4>Informed the Next Redesign Cycle</h4><p>The recommendations were <strong>accepted by the client and are being used to guide the next iteration of the course</strong>, turning the evaluation report into a practical roadmap for continued redesign.</p>`,
+      cta: null,
+    },
+    {
+      sourceIndex: 8,
+      type: 'gallery',
+      layout: 'single',
+      items: [
+        {
+          type: 'image',
+          url: '/projects/course-evaluation.png',
+          unavailable: false,
+          caption:
+            'Evaluation Report: From Evidence to Actionable Recommendations',
+          alt: 'Evaluation report page with a chart, evidence, interpretation, and course-design recommendations',
+          width: '960',
+          height: '1280',
+        },
+      ],
+    },
+    {
+      sourceIndex: 9,
+      type: 'split',
+      html: `<h3>Reflection: Human-in-the-Loop AI</h3><p>I used <strong>ChatGPT and Claude Code</strong> throughout the evaluation to speed up data analysis, generate tables and charts, explore patterns, and draft initial findings. My AI-assisted workflow followed four steps:</p><ol><li><p><strong>AI Accelerates:</strong> AI helped me quickly explore different cuts of the data, surface possible patterns, and produce first-pass analyses and interpretations.</p></li><li><p><strong>Human Validates:</strong> I checked how each result was produced against the raw data, including field definitions, data sources, units of analysis, denominators, exclusions, event sequences, and calculations.</p></li><li><p><strong>Human Challenges:</strong> I questioned whether each finding was truly supported by the data, whether there were alternative explanations, whether the wording went beyond the evidence, and whether the recommendation was actually connected to the finding.</p></li><li><p><strong>Human Redirects:</strong> When the analysis became too broad, repetitive, or disconnected from the evaluation question, I refined the prompt, narrowed the analytical lens, and redirected the work toward the stakeholder decision the report needed to support.</p></li></ol><h4>Key Takeaway</h4><p>AI can significantly improve efficiency, but it still requires an active <strong>human-in-the-loop</strong> process to validate evidence, challenge conclusions, and decide what is strong enough to inform redesign.</p>`,
+      media: null,
+      flipped: false,
+    },
+  ],
+};
+
 const tutorialSearchProject: LegacyProject = {
   slug: 'tutorial-search-redesign',
   shortId: 'launchpad-search',
@@ -208,6 +306,7 @@ const tutorialSearchProject: LegacyProject = {
 
 export const legacyProjects = [
   ...(legacyProjectsJson as LegacyProject[]),
+  learnerDataProject,
   tutorialSearchProject,
 ];
 
