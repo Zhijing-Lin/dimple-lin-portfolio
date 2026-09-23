@@ -3129,22 +3129,32 @@ a {
 
 .case-study[data-project-slug='ai-architecture']
   .legacy-section[data-source-index='11'] {
-  margin-top: clamp(-5.25rem, -5vw, -3rem);
+  margin-top: -1rem;
 }
 
 .case-study[data-project-slug='ai-architecture']
   .legacy-section[data-source-index='14'] {
   padding-top: 0;
+  text-align: center;
+}
+
+.case-study[data-project-slug='ai-architecture']
+  .legacy-section[data-source-index='14']
+  .legacy-rich-text
+  h3 {
+  max-width: none;
 }
 
 .case-study[data-project-slug='ai-architecture']
   .legacy-section[data-source-index='15']
   .legacy-rich-text
   h4 {
+  margin-top: 1.5rem;
   font-size: 1.0625rem;
   font-weight: 720;
   letter-spacing: -0.01em;
   line-height: 1.4;
+  text-align: center;
 }
 
 .legacy-media {
