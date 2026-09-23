@@ -995,12 +995,12 @@
           "width": "2138",
           "height": "1060"
         },
-        "flipped": false
+        "flipped": true
       },
       {
         "sourceIndex": 10,
         "type": "split",
-        "html": "<h3>Cognitive Task Analysis</h3><p>To understand the reasoning behind successful nutrition decisions, we conducted <strong>cognitive task analysis</strong> around a key performance task:</p><blockquote><p>Evaluate a persona’s needs, compare diet plans, and justify the best option.</p></blockquote><p>We first mapped an ideal reasoning process, then conducted <strong>think-aloud sessions with novice, intermediate, and expert participants</strong>.</p><p>The analysis revealed a clear difference:</p><ul><li><p><strong>Novices</strong> often focused on isolated numbers or surface-level cues.</p></li><li><p><strong>Experts</strong> integrated calorie needs, nutrient priorities, health conditions, food quality, and trade-offs.</p></li></ul><p>This revealed the key learning gap: learners did not only need more nutrition information—they needed a <strong>structured way to connect information to decisions</strong>.</p><p>These findings directly informed the course’s <strong>practice, feedback, reflection, and scaffolding</strong>.</p>",
+        "html": "<h3>Cognitive Task Analysis</h3><p>To understand the reasoning behind successful nutrition decisions, we conducted <strong>cognitive task analysis</strong> around a key performance task:</p><p>Evaluate a persona’s needs, compare diet plans, and justify the best option.</p><p>We first mapped an ideal reasoning process, then conducted <strong>think-aloud sessions with novice, intermediate, and expert participants</strong>.</p><p>The analysis revealed a clear difference:</p><ul><li><p><strong>Novices</strong> often focused on isolated numbers or surface-level cues.</p></li><li><p><strong>Experts</strong> integrated calorie needs, nutrient priorities, health conditions, food quality, and trade-offs.</p></li></ul><p>This revealed the key learning gap: learners did not only need more nutrition information—they needed a <strong>structured way to connect information to decisions</strong>.</p><p>These findings directly informed the course’s <strong>practice, feedback, reflection, and scaffolding</strong>.</p>",
         "media": {
           "type": "image",
           "url": null,
@@ -1078,7 +1078,7 @@
       {
         "sourceIndex": 15,
         "type": "split",
-        "html": "<h3>Procedural Scaffolding &amp; Segmenting</h3><p>CTA showed that novices often reached a reasonable answer but struggled to explain <strong>why</strong> the evidence supported their decision.</p><p>To address this, I used <strong>procedural scaffolding</strong> to break a complex diet-plan decision into five manageable steps:</p><ol><li><p><strong>Calorie Fit</strong></p></li><li><p><strong>Protein Fit</strong></p></li><li><p><strong>Health Concern</strong></p></li><li><p><strong>Food Quality</strong></p></li><li><p><strong>Final Synthesis</strong></p></li></ol><p>Each step provided a focused prompt, relevant reference data, and a sentence starter.</p><p>Instead of asking:</p><blockquote><p>“Which plan is best? Explain.”</p></blockquote><p>learners were guided through a structured reasoning process that helped them connect nutrition data to the persona’s specific goals.</p><p>This scaffold was intentionally designed to make <strong>expert reasoning visible and teachable</strong>.</p>",
+        "html": "<h3>Procedural Scaffolding &amp; Segmenting</h3><p>CTA showed that novices often reached a reasonable answer but struggled to explain <strong>why</strong> the evidence supported their decision.</p><p>To address this, I used <strong>procedural scaffolding</strong> to break a complex diet-plan decision into five manageable steps:</p><ol><li><p><strong>Calorie Fit</strong></p></li><li><p><strong>Protein Fit</strong></p></li><li><p><strong>Health Concern</strong></p></li><li><p><strong>Food Quality</strong></p></li><li><p><strong>Final Synthesis</strong></p></li></ol><p>Each step provided a focused prompt, relevant reference data, and a sentence starter.</p><p>Instead of asking:</p><p>“Which plan is best? Explain.”</p><p>learners were guided through a structured reasoning process that helped them connect nutrition data to the persona’s specific goals.</p><p>This scaffold was intentionally designed to make <strong>expert reasoning visible and teachable</strong>.</p>",
         "media": {
           "type": "video",
           "url": "https://www.youtube.com/embed/dEb4ijbhJU8?autoplay=0&mute=0&loop=0",

@@ -41,7 +41,15 @@ import {
   type ProjectProgressItem,
 } from '@/components/project-progress-nav';
 import { ProjectImageLightbox } from '@/components/project-image-lightbox';
+import { ProjectVisualLightbox } from '@/components/project-visual-lightbox';
 import { SiteHeader } from '@/components/site-header';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import {
   legacyProjectBySlug,
   type LegacyMedia,
@@ -598,7 +606,10 @@ const nutritionDesignFlowSteps = [
 
 function NutritionDesignApproachFlow() {
   return (
-    <figure className="legacy-media nutrition-visual nutrition-design-flow">
+    <ProjectVisualLightbox
+      className="nutrition-design-flow"
+      caption="Design Approach Flowchart"
+    >
       <div className="nutrition-visual-frame">
         <p className="nutrition-visual-eyebrow">Research-informed design</p>
         <ol>
@@ -623,51 +634,88 @@ function NutritionDesignApproachFlow() {
           </span>
         </div>
       </div>
-      <figcaption>Design Approach Flowchart</figcaption>
-    </figure>
+    </ProjectVisualLightbox>
   );
 }
 
 function NutritionDesignAlignment() {
   return (
-    <figure className="legacy-media nutrition-visual nutrition-alignment-map">
+    <ProjectVisualLightbox
+      className="nutrition-alignment-map"
+      caption="Design Alignment Figure"
+    >
       <div className="nutrition-visual-frame">
         <p className="nutrition-visual-eyebrow">Backward design alignment</p>
-        <div className="nutrition-alignment-top-row">
+        <div className="nutrition-alignment-canvas">
+          <svg
+            className="nutrition-alignment-lines"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <defs>
+              <marker
+                id="nutrition-alignment-arrow"
+                markerWidth="7"
+                markerHeight="7"
+                refX="5.8"
+                refY="3.5"
+                orient="auto"
+              >
+                <path d="M0,0 L7,3.5 L0,7" fill="none" />
+              </marker>
+            </defs>
+            <path
+              className="is-cycle"
+              d="M34 19 H66"
+              markerEnd="url(#nutrition-alignment-arrow)"
+            />
+            <path
+              className="is-cycle"
+              d="M84 31 V72 Q84 82 73 82 H65"
+              markerEnd="url(#nutrition-alignment-arrow)"
+            />
+            <path
+              className="is-cycle"
+              d="M35 82 H25 Q16 82 16 72 V31"
+              markerEnd="url(#nutrition-alignment-arrow)"
+            />
+            <path className="is-learning" d="M31 31 L45 49" />
+            <path className="is-learning" d="M69 31 L55 49" />
+            <path className="is-learning" d="M50 59 V68" />
+          </svg>
           <article className="is-objective">
             <span>01</span>
             <strong>Learning Objectives</strong>
             <p>Define what learners should know and do.</p>
           </article>
-          <div className="nutrition-alignment-connector">
-            <small>Goals define evidence</small>
-            <ArrowRight size={24} strokeWidth={1.6} aria-hidden="true" />
-          </div>
           <article className="is-assessment">
             <span>02</span>
             <strong>Assessment</strong>
             <p>Measure whether learners can demonstrate those outcomes.</p>
           </article>
-        </div>
-        <div className="nutrition-learning-hub">
-          <BrainCircuit size={21} strokeWidth={1.8} aria-hidden="true" />
-          <strong>Student Learning</strong>
-        </div>
-        <article className="nutrition-instruction-card">
-          <span>03</span>
-          <strong>Instruction &amp; Practice</strong>
-          <p>
-            Prepare learners through content, practice, feedback, and
-            reflection.
-          </p>
-        </article>
-        <div className="nutrition-alignment-notes">
-          <span>Instruction supports goals</span>
-          <span>Assessment guides instruction</span>
+          <div className="nutrition-learning-hub">
+            <BrainCircuit size={21} strokeWidth={1.8} aria-hidden="true" />
+            <strong>Student Learning</strong>
+          </div>
+          <article className="nutrition-instruction-card">
+            <span>03</span>
+            <strong>Instruction &amp; Practice</strong>
+            <p>
+              Prepare learners through content, practice, feedback, and
+              reflection.
+            </p>
+          </article>
+          <small className="is-goals-label">Goals define evidence</small>
+          <small className="is-instruction-label">
+            Instruction supports goals
+          </small>
+          <small className="is-assessment-label">
+            Assessment guides instruction
+          </small>
         </div>
       </div>
-      <figcaption>Design Alignment Figure</figcaption>
-    </figure>
+    </ProjectVisualLightbox>
   );
 }
 
@@ -722,11 +770,24 @@ function NutritionCTAFindings() {
 
 function NutritionCTAModelGallery({ items }: { items: LegacyMedia[] }) {
   return (
-    <div className="nutrition-cta-model-grid">
-      {items.slice(0, 2).map((item, itemIndex) => (
-        <ProjectMedia media={item} key={`${item.url}-${itemIndex}`} />
-      ))}
-    </div>
+    <Carousel
+      className="nutrition-cta-carousel"
+      opts={{ align: 'start', loop: true }}
+      aria-label="Cognitive task analysis diagrams"
+    >
+      <CarouselContent>
+        <CarouselItem>
+          <NutritionCTAFindings />
+        </CarouselItem>
+        {items.slice(0, 2).map((item, itemIndex) => (
+          <CarouselItem key={`${item.url}-${itemIndex}`}>
+            <ProjectMedia media={item} />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious className="nutrition-cta-carousel-previous" />
+      <CarouselNext className="nutrition-cta-carousel-next" />
+    </Carousel>
   );
 }
 
@@ -1555,6 +1616,18 @@ function LegacySectionView({
       );
     }
 
+    if (usesNutritionCtaFindings) {
+      return (
+        <section
+          className="legacy-section legacy-section-text nutrition-cta-intro"
+          data-source-index={sourceIndex}
+          id={id}
+        >
+          <RichText html={section.html} />
+        </section>
+      );
+    }
+
     return (
       <section
         className={`legacy-section legacy-split${section.flipped ? ' is-flipped' : ''}`}
@@ -1588,8 +1661,6 @@ function LegacySectionView({
           <NutritionDesignApproachFlow />
         ) : usesNutritionDesignAlignment ? (
           <NutritionDesignAlignment />
-        ) : usesNutritionCtaFindings ? (
-          <NutritionCTAFindings />
         ) : (
           <ProjectMedia media={section.media} />
         )}
