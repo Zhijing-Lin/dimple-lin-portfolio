@@ -3157,6 +3157,160 @@ a {
   text-align: center;
 }
 
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='3'] {
+  width: 100%;
+  max-width: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+  text-align: center;
+}
+
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='3']
+  .legacy-rich-text
+  h3 {
+  margin: 0;
+}
+
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='3']
+  .legacy-section-kicker {
+  display: none;
+}
+
+.case-study[data-project-slug='survival-play']
+  .case-study-body-before-progress {
+  padding-bottom: clamp(1.4rem, 2.5vw, 2.2rem);
+}
+
+.case-study[data-project-slug='survival-play'] .project-progress-shell {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.case-study[data-project-slug='survival-play']
+  .case-study-content
+  > .legacy-section[data-source-index='5'],
+.case-study[data-project-slug='survival-play']
+  .case-study-content
+  > .legacy-section[data-source-index='6'],
+.case-study[data-project-slug='survival-play']
+  .case-study-content
+  > .legacy-section[data-source-index='8'],
+.case-study[data-project-slug='survival-play']
+  .case-study-content
+  > .legacy-section[data-source-index='9'],
+.case-study[data-project-slug='survival-play']
+  .case-study-content
+  > .legacy-section[data-source-index='10'],
+.case-study[data-project-slug='survival-play']
+  .case-study-content
+  > .legacy-section[data-source-index='11'],
+.case-study[data-project-slug='survival-play']
+  .case-study-content
+  > .legacy-section[data-source-index='12'],
+.case-study[data-project-slug='survival-play']
+  .case-study-content
+  > .legacy-section[data-source-index='14'],
+.case-study[data-project-slug='survival-play']
+  .case-study-content
+  > .legacy-section[data-source-index='15'] {
+  border-bottom: 0;
+}
+
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='9']
+  .legacy-rich-text
+  h4,
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='10']
+  .legacy-rich-text
+  h4,
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='11']
+  .legacy-rich-text
+  h4,
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='12']
+  .legacy-rich-text
+  h4 {
+  font-size: 1.0625rem;
+  font-weight: 720;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.case-study[data-project-slug='survival-play'] .legacy-media-frame {
+  overflow: hidden;
+  border-radius: 0.65rem;
+}
+
+.case-study[data-project-slug='survival-play'] .legacy-media-frame img,
+.case-study[data-project-slug='survival-play']
+  .legacy-media-frame
+  .project-image-trigger {
+  border-radius: 0.65rem;
+  box-shadow: none;
+}
+
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='15']
+  .legacy-media-frame {
+  display: grid;
+  aspect-ratio: 16 / 10;
+  place-items: center;
+  border: 1px solid #ded8cf;
+  background: #f3efe7;
+}
+
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='15']
+  .project-image-trigger,
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='15']
+  .legacy-media-frame
+  img {
+  width: 100%;
+  height: 100%;
+}
+
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='15']
+  .legacy-media-frame
+  img {
+  border: 0;
+  object-fit: contain;
+}
+
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='15']
+  .legacy-rich-text
+  > p:first-child {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.case-study[data-project-slug='survival-play']
+  .legacy-section[data-source-index='6']
+  .legacy-rich-text
+  > p:first-child {
+  margin-top: 1.25rem;
+  font-weight: 720;
+  text-align: center;
+}
+
+.case-study[data-project-slug='survival-play'] .legacy-media figcaption {
+  margin-top: 1.25rem;
+  color: #2f2a26;
+  font-size: 1.0625rem;
+  font-weight: 720;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  text-align: center;
+}
+
 .legacy-media {
   min-width: 0;
   margin: 0;
@@ -3462,6 +3616,147 @@ a {
   font-weight: 680;
 }
 
+.survival-diagram-frame {
+  padding: clamp(1.1rem, 2.3vw, 1.65rem);
+  border: 1px solid #ded8cf;
+  border-radius: 0.7rem;
+  background: #fbfaf6;
+}
+
+.survival-diagram-eyebrow {
+  margin: 0 0 0.45rem;
+  color: #6675a9;
+  font-size: 0.68rem;
+  font-weight: 760;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.survival-diagram-frame > h3 {
+  margin: 0 0 1.15rem;
+  color: #2f2a26;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 720;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.survival-reasoning-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.survival-reasoning-grid > section {
+  overflow: hidden;
+  border: 1px solid #ddd7ce;
+  border-radius: 0.6rem;
+  background: #fff;
+}
+
+.survival-reasoning-grid header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.72rem 0.8rem;
+  border-bottom: 1px solid #e1dbd1;
+  background: #eef1ea;
+}
+
+.survival-reasoning-grid > section:nth-child(2) header {
+  background: #f6ebe3;
+}
+
+.survival-reasoning-grid header strong {
+  font-size: 1.0625rem;
+  line-height: 1.25;
+}
+
+.survival-reasoning-grid ul {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.85rem 0.9rem 0.95rem 1.9rem;
+}
+
+.survival-reasoning-grid li {
+  color: #4f4944;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.survival-reasoning-grid li::marker {
+  color: #6675a9;
+}
+
+.survival-goals-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 0.8rem;
+}
+
+.survival-goals-grid > section {
+  padding: 0.9rem;
+  border: 1px solid #ddd7ce;
+  border-radius: 0.6rem;
+}
+
+.survival-learning-goals {
+  background: #eef4f4;
+}
+
+.survival-experience-goals {
+  background: #f5efe4;
+}
+
+.survival-goals-grid h4 {
+  margin: 0 0 0.75rem;
+  color: #2f2a26;
+  font-size: 1.0625rem;
+  font-weight: 720;
+  letter-spacing: -0.01em;
+}
+
+.survival-learning-goals article {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: start;
+  padding: 0.72rem 0;
+  border-top: 1px solid rgb(97 111 119 / 18%);
+}
+
+.survival-learning-goals article strong {
+  display: block;
+  margin-bottom: 0.22rem;
+  font-size: 1.0625rem;
+}
+
+.survival-learning-goals article p {
+  margin: 0;
+  color: #514c47;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.survival-experience-goals ul {
+  display: grid;
+  gap: 0.72rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.survival-experience-goals li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+  color: #4f4944;
+  font-size: 1.0625rem;
+  line-height: 1.45;
+}
+
 .reviewer-gap-table {
   display: block;
   padding: 0;
@@ -3561,6 +3856,7 @@ a {
 
 .case-study[data-project-slug='ai-architecture'] .project-image-trigger-badge,
 .case-study[data-project-slug='help-center'] .project-image-trigger-badge,
+.case-study[data-project-slug='survival-play'] .project-image-trigger-badge,
 .case-study[data-project-slug='reviewer-judgment']
   .project-image-trigger-badge {
   width: 2.15rem;
@@ -3577,6 +3873,7 @@ a {
 
 .case-study[data-project-slug='ai-architecture'] .project-image-trigger-label,
 .case-study[data-project-slug='help-center'] .project-image-trigger-label,
+.case-study[data-project-slug='survival-play'] .project-image-trigger-label,
 .case-study[data-project-slug='reviewer-judgment']
   .project-image-trigger-label {
   display: none;
@@ -3778,6 +4075,11 @@ a {
   .legacy-split.is-flipped .legacy-media,
   .legacy-split.is-flipped .legacy-media-placeholder {
     order: initial;
+  }
+
+  .survival-reasoning-grid,
+  .survival-goals-grid {
+    grid-template-columns: 1fr;
   }
 }
 

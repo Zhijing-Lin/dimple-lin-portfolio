@@ -690,7 +690,7 @@
               "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/clipboard-image-11f3d29b-884c-4894-870d-7b155cb7ba25.webp",
               "unavailable": false,
               "caption": null,
-              "alt": null,
+              "alt": "Comparison of novice and expert reasoning in campsite selection",
               "width": "11776",
               "height": "1664"
             }
@@ -702,7 +702,7 @@
               "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/clipboard-image-295e707c-bb41-418f-98cf-a681ae28a710.webp",
               "unavailable": false,
               "caption": null,
-              "alt": null,
+              "alt": "Comparison of novice and expert reasoning in firemaking",
               "width": "15186",
               "height": "2464"
             }
@@ -736,10 +736,10 @@
         "html": "<h4>Learning by Doing</h4><p>Players learn survival skills by directly performing tasks such as inspecting campsites, sorting materials, building fires, and keeping them alive, so knowledge is practiced in context rather than memorized as isolated rules.</p>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_7.54.00_PM-98df6b0b-390b-4487-9efb-514716ffd47d.webp",
+          "url": "/projects/survival-learning-by-doing.jpg",
           "unavailable": false,
           "caption": "<p>Example 1: Clear the camp before making a fire</p>",
-          "alt": null,
+          "alt": "Interactive fire-building activity in The Last Outbreak",
           "width": "1510",
           "height": "912"
         },
@@ -751,10 +751,10 @@
         "html": "<h4>Scaffolding → Fading</h4><p>Early gameplay provides support through NPC guidance and environmental cues. As players progress, this support is gradually reduced, requiring them to prioritize information and make more independent decisions.</p>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_7.50.14_PM-b4b28536-1763-43dd-b7ad-4f8849fe5a00.webp",
+          "url": "/projects/survival-scaffolding.jpg",
           "unavailable": false,
           "caption": "<p>Example 2: Chatting with villagers as a form of scaffolding</p>",
-          "alt": null,
+          "alt": "Villager dialogue providing early-game scaffolding",
           "width": "2670",
           "height": "1442"
         },
@@ -766,10 +766,10 @@
         "html": "<h4>Contrasting Cases + Variability</h4><p>Players compare campsite options under changing conditions, such as rain and wind. This helps<strong> </strong>them learn to weigh trade-offs and adapt their reasoning instead of relying on one fixed rule.</p>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_7.51.08_PM-8c178757-37bc-4be4-90ea-a754a95ad452.webp",
+          "url": "/projects/survival-contrasting-cases.jpg",
           "unavailable": false,
           "caption": "<p>Example 3: Contasting cases between two campsites</p>",
-          "alt": null,
+          "alt": "Two contrasting campsite options under different environmental conditions",
           "width": "2574",
           "height": "1422"
         },
@@ -781,10 +781,10 @@
         "html": "<h4>Consequence-Based Feedback</h4><p>Mistakes lead to gameplay consequences rather than simple “correct” or “incorrect” messages. A poor campsite choice can reduce stamina, affect materials, and make later firemaking more difficult.</p>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_8.04.39_PM-3c724d8a-68d0-41d6-9653-84f23f69ccb6.webp",
+          "url": "/projects/survival-consequence-feedback.jpg",
           "unavailable": false,
           "caption": "<p>Example 4: Poor Campsite Selection Reduces Stamina</p>",
-          "alt": null,
+          "alt": "Reduced stamina after a poor campsite decision",
           "width": "1268",
           "height": "238"
         },
@@ -796,10 +796,10 @@
         "html": "<h3>Game Loop</h3><p>The game is structured around a connected survival loop in which each decision affects what happens next. At the <strong>macro level</strong>, players have five days to collect two herbs and return to save the village. At the <strong>daily level</strong>, each survival day follows a repeated sequence: <strong>Campsite Selection → Material Collection → Fire Building → Herb Search</strong>. Supporting systems such as stamina, weather progression, buffer days, and cross-minigame consequences add pressure and make earlier choices matter later in the journey.</p>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/game_loop-aac58069-9888-45ad-ad3f-42c76a5f0e33.webp",
+          "url": "/projects/survival-game-loop.png",
           "unavailable": false,
           "caption": null,
-          "alt": null,
+          "alt": "The Last Outbreak macro, daily, and minigame loops",
           "width": "1376",
           "height": "768"
         },
@@ -819,10 +819,10 @@
             "html": "<p><strong>Prototype 1 — Low-Fidelity Story Prototype</strong></p><p>We first used <strong>Google Forms</strong> to test the narrative flow, branching logic, and whether players understood Aiden’s mission and the story stakes before investing in development.</p>",
             "media": {
               "type": "image",
-              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_8.28.33_PM-acbe32f3-0ed8-4dd0-a5de-80edeecc15b8.webp",
+              "url": "/projects/survival-prototype-1.jpg",
               "unavailable": false,
               "caption": null,
-              "alt": null,
+              "alt": "Low-fidelity Google Forms story prototype",
               "width": "1478",
               "height": "1426"
             }
@@ -831,10 +831,10 @@
             "html": "<p><strong>Prototype 2 — Interactive Digital Prototype</strong></p><p>We then moved into a digital prototype. As the design evolved, we realized the experience relied too heavily on dialogue and multiple-choice interactions, so we introduced more <strong>hands-on activities </strong>such as material sorting and fire-building. The second playtest showed that firemaking was more memorable, while campsite selection still felt passive and text-heavy.</p>",
             "media": {
               "type": "image",
-              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_8.33.53_PM-37685b97-7f87-4285-89df-1da2c16bb304.webp",
+              "url": "/projects/survival-prototype-2.jpg",
               "unavailable": false,
               "caption": null,
-              "alt": null,
+              "alt": "Interactive digital prototype with narrative and game interface",
               "width": "2428",
               "height": "1358"
             }
@@ -843,10 +843,10 @@
             "html": "<p><strong>Prototype 3 — Revised Gameplay Prototype</strong></p><p>Based on those findings, we strengthened <strong>player agency</strong> and <strong>consequences </strong>by adding systems such as stamina, weather-based decisions, reduced scaffolding, and stronger connections between survival tasks and herb collection. The third playtest focused on whether players felt genuine agency, and whether the activities felt like gameplay rather than instruction.</p>",
             "media": {
               "type": "image",
-              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_8.36.29_PM-64352885-43b0-4264-9c9a-318f90c190d8.webp",
+              "url": "/projects/survival-prototype-3.jpg",
               "unavailable": false,
               "caption": null,
-              "alt": null,
+              "alt": "Revised gameplay prototype with map and mission systems",
               "width": "2520",
               "height": "1386"
             }
@@ -859,10 +859,10 @@
         "html": "<h3>What Playtesting Changed</h3><p></p>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/Screenshot_2026-09-04_at_8.47.18_PM-f88aaaf1-fe54-4dc3-9fc9-bbb4a6e580dd.webp",
+          "url": "/projects/survival-playtesting-changes.jpg",
           "unavailable": false,
           "caption": null,
-          "alt": null,
+          "alt": "Before and after summary of the changes made through playtesting",
           "width": "2542",
           "height": "1282"
         },

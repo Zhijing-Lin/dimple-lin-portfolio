@@ -4,15 +4,20 @@ import {
   ArrowRight,
   BadgeCheck,
   BookOpen,
+  BrainCircuit,
+  Flame,
   ExternalLink,
   Handshake,
   LayoutGrid,
   ListChecks,
+  Mountain,
   MessagesSquare,
   RefreshCw,
   RotateCcw,
   ScanSearch,
+  Scale,
   Target,
+  TentTree,
   UsersRound,
   Waypoints,
 } from 'lucide-react';
@@ -123,7 +128,18 @@ const zoomableProjectImages = new Set([
   '/projects/help-center-procedural-job-aid.png',
   '/projects/help-center-operational-decision-guide.png',
   '/projects/reviewer-performance-gaps.png',
+  '/projects/survival-consequence-feedback.jpg',
+  '/projects/survival-contrasting-cases.jpg',
+  '/projects/survival-game-loop.png',
+  '/projects/survival-learning-by-doing.jpg',
+  '/projects/survival-playtesting-changes.jpg',
+  '/projects/survival-prototype-1.jpg',
+  '/projects/survival-prototype-2.jpg',
+  '/projects/survival-prototype-3.jpg',
+  '/projects/survival-scaffolding.jpg',
   '/projects/tutor-problem-space-mapping.png',
+  'https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/clipboard-image-11f3d29b-884c-4894-870d-7b155cb7ba25.webp',
+  'https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/clipboard-image-295e707c-bb41-418f-98cf-a681ae28a710.webp',
 ]);
 
 function ProjectMedia({ media }: { media: LegacyMedia | null }) {
@@ -340,6 +356,135 @@ function ReviewerProjectWorkflow() {
   );
 }
 
+const survivalReasoningGroups = [
+  {
+    title: 'Campsite Selection',
+    icon: TentTree,
+    items: [
+      'Focused on one obvious feature',
+      'Relied on general impressions',
+      'Struggled to weigh trade-offs',
+      'Overlooked hazards without prompts',
+    ],
+  },
+  {
+    title: 'Firemaking',
+    icon: Flame,
+    items: [
+      'Knew individual steps, but not the full sequence',
+      'Confused the roles of tinder, kindling, and fuel',
+      'Paid limited attention to airflow and structure',
+      'Reacted to failure instead of diagnosing the cause',
+    ],
+  },
+];
+
+function SurvivalReasoningGaps() {
+  return (
+    <figure className="legacy-media survival-reasoning-gaps">
+      <div className="survival-diagram-frame">
+        <p className="survival-diagram-eyebrow">Research synthesis</p>
+        <h3>What we found: novice reasoning gaps</h3>
+        <div className="survival-reasoning-grid">
+          {survivalReasoningGroups.map((group) => {
+            const Icon = group.icon;
+            return (
+              <section key={group.title}>
+                <header>
+                  <strong>{group.title}</strong>
+                  <Icon size={22} strokeWidth={1.7} aria-hidden="true" />
+                </header>
+                <ul>
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </section>
+            );
+          })}
+        </div>
+      </div>
+      <figcaption>Novice Reasoning Gaps Identified Through CTA</figcaption>
+    </figure>
+  );
+}
+
+const survivalExperienceGoals = [
+  {
+    title: 'Decisions feel weighted, not graded',
+    icon: Scale,
+  },
+  {
+    title: 'Players think in trade-offs rather than recall',
+    icon: BrainCircuit,
+  },
+  {
+    title: 'Knowledge grows through consequence and surprise',
+    icon: Flame,
+  },
+  {
+    title: 'Support gradually shifts into independent judgment',
+    icon: Target,
+  },
+  {
+    title: 'Learning stays connected to a meaningful mission',
+    icon: Mountain,
+  },
+];
+
+function SurvivalGoalsMap() {
+  return (
+    <figure className="legacy-media survival-goals-map">
+      <div className="survival-diagram-frame">
+        <p className="survival-diagram-eyebrow">
+          Instructional design strategy
+        </p>
+        <h3>Aligned learning and experience goals</h3>
+        <div className="survival-goals-grid">
+          <section className="survival-learning-goals">
+            <h4>Learning goals</h4>
+            <article>
+              <TentTree size={25} strokeWidth={1.7} aria-hidden="true" />
+              <div>
+                <strong>Campsite Selection</strong>
+                <p>
+                  Evaluate environmental cues and trade-offs to choose a safe
+                  campsite as conditions change.
+                </p>
+              </div>
+            </article>
+            <article>
+              <Flame size={25} strokeWidth={1.7} aria-hidden="true" />
+              <div>
+                <strong>Firemaking</strong>
+                <p>
+                  Select materials, sequence actions, support airflow, and
+                  diagnose failure.
+                </p>
+              </div>
+            </article>
+          </section>
+          <section className="survival-experience-goals">
+            <h4>Experience goals</h4>
+            <ul>
+              {survivalExperienceGoals.map((goal) => {
+                const Icon = goal.icon;
+                return (
+                  <li key={goal.title}>
+                    <Icon size={20} strokeWidth={1.7} aria-hidden="true" />
+                    <span>{goal.title}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        </div>
+      </div>
+      <figcaption>Learning &amp; Experience Goals</figcaption>
+    </figure>
+  );
+}
+
 function LegacySectionView({
   section,
   index,
@@ -424,6 +569,10 @@ function LegacySectionView({
       projectSlug === 'reviewer-judgment' && sourceIndex === 11;
     const usesReviewerGapTable =
       projectSlug === 'reviewer-judgment' && sourceIndex === 10;
+    const usesSurvivalReasoningGaps =
+      projectSlug === 'survival-play' && sourceIndex === 5;
+    const usesSurvivalGoalsMap =
+      projectSlug === 'survival-play' && sourceIndex === 7;
 
     if (usesReviewerGapTable) {
       return (
@@ -452,6 +601,10 @@ function LegacySectionView({
           <ReviewerKnowledgeMap />
         ) : usesReviewerWorkflow ? (
           <ReviewerProjectWorkflow />
+        ) : usesSurvivalReasoningGaps ? (
+          <SurvivalReasoningGaps />
+        ) : usesSurvivalGoalsMap ? (
+          <SurvivalGoalsMap />
         ) : (
           <ProjectMedia media={section.media} />
         )}
@@ -593,7 +746,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       ? 6
       : project.slug === 'ai-architecture'
         ? 4
-        : null;
+        : project.slug === 'survival-play'
+          ? 3
+          : null;
   const delaysProgressNav = progressNavAfterSourceIndex !== null;
   const introductionSections = delaysProgressNav
     ? renderedSections.filter(
