@@ -56,28 +56,39 @@ export default function AboutPage() {
       <SiteHeader active="about" />
 
       <section className="about-intro" aria-labelledby="about-title">
-        <p className="about-eyebrow">The story behind the work</p>
-        <h1 id="about-title">About Me<span>.</span></h1>
-        <div className="about-intro-copy">
-          <p className="about-intro-lead">
-            I’m an instructional designer who combines a foundation in
-            education, learning science, and product thinking to build
-            practical learning experiences that help people perform better.
-          </p>
-          <p>
+        <div className="about-intro-grid">
+          <div className="about-intro-copy">
+            <h1 id="about-title">About Me<span>.</span></h1>
+            <p className="about-intro-lead">
+              I’m an instructional designer who combines a <strong>foundation
+              in education, learning science, and product thinking</strong> to
+              build <strong>practical learning experiences</strong> that help
+              people <strong>perform better</strong>.
+            </p>
+          </div>
+
+          <figure className="about-intro-photo">
+            <Image
+              src="/about/dimple-coast.jpg"
+              alt="Dimple standing beside a coastal landscape"
+              fill
+              sizes="(max-width: 900px) 100vw, 42vw"
+              priority
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section className="about-journey" id="journey" aria-labelledby="journey-title">
+        <div className="about-section-heading">
+          <h2 id="journey-title">My Journey<span>.</span></h2>
+          <p className="about-journey-intro">
             My journey has taken me from <strong>teaching in real classrooms</strong>{' '}
             to studying <strong>learning science and AI-enabled learning at
             Carnegie Mellon</strong>, and then into client-facing instructional
             design work across <strong>performance support, e-learning,
             learning analytics, and learning technology</strong>.
           </p>
-        </div>
-      </section>
-
-      <section className="about-journey" id="journey" aria-labelledby="journey-title">
-        <div className="about-section-heading">
-          <p className="about-eyebrow">From education to impact</p>
-          <h2 id="journey-title">My Journey<span>.</span></h2>
         </div>
 
         <div className="about-journey-grid">
@@ -173,7 +184,6 @@ export default function AboutPage() {
 
       <section className="about-outside" aria-labelledby="outside-title">
         <div className="about-section-heading about-outside-heading">
-          <p className="about-eyebrow">A little more personal</p>
           <h2 id="outside-title">Life Beyond Work<span>.</span></h2>
         </div>
 
@@ -189,12 +199,6 @@ export default function AboutPage() {
               whether that means a new city, a mountain trail, or simply getting
               outside for the day.
             </p>
-            <ul aria-label="Interests">
-              <li>Travel</li>
-              <li>Hiking</li>
-              <li>Fitness</li>
-              <li>Nature</li>
-            </ul>
           </div>
 
           <figure className="about-outside-photo">

@@ -189,7 +189,6 @@ function PortfolioIntro() {
   return (
     <section className="portfolio-intro" id="top">
       <div className="intro-copy">
-        <p className="eyebrow">Selected work</p>
         <h1>
           Projects<span className="accent-dot">.</span>
         </h1>
