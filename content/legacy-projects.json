@@ -1174,10 +1174,10 @@
         "html": "<h3>Branching Scenario Flow Map</h3><p>Before developing the module in Storyline, I mapped the <strong>employee dialogue, manager choices, feedback, recovery paths, and final outcomes</strong> to ensure each branch reflected a meaningful workplace behavior.</p><p>Learners move through the scenario by choosing how to respond during a feedback conversation. <strong>Effective choices</strong> move the conversation toward greater trust and clarity, while <strong>ineffective choices</strong> trigger consequence-based feedback explaining why the response may create confusion, defensiveness, or reduce trust. Some branches also allow learners to <strong>recover from mistakes</strong>, reflecting how real feedback conversations can be repaired.</p><p><strong>Flow Map Legend</strong></p><ul><li><p><strong>Black rectangle</strong> — Employee dialogue</p></li><li><p><strong>Orange diamond</strong> — Manager decision</p></li><li><p><strong>Green rectangle</strong> — Effective response / feedback</p></li><li><p><strong>Pink rectangle</strong> — Ineffective response / feedback</p></li><li><p><strong>Red circle</strong> — Final outcome</p></li></ul>",
         "media": {
           "type": "image",
-          "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f3f56ffcb32372da6053e0/UuZxsuMd8Ms3Lw18.png",
+        "url": "/projects/interactive-coaching-branching-flow-map.png",
           "unavailable": false,
-          "caption": "<p class=\"p2\">Branching Scenerio Flow Map</p>",
-          "alt": null,
+        "caption": "<p class=\"p2\">Branching Scenario Flow Map</p>",
+        "alt": "Detailed branching scenario flow map showing manager choices, feedback, recovery paths, and conversation outcomes",
           "width": "2302",
           "height": "1736"
         },

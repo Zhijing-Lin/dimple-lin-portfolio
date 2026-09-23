@@ -9,13 +9,6 @@ export function PersonalFooter() {
           <p>Designing learning that moves from insight to action.</p>
         </div>
 
-        <nav className="personal-footer-column" aria-label="Footer navigation">
-          <p>Explore</p>
-          <a href="/">Home</a>
-          <a href="/projects">Projects</a>
-          <a href="/about">About</a>
-        </nav>
-
         <div className="personal-footer-column">
           <p>Connect</p>
           <a href="mailto:linzhijing168@gmail.com">linzhijing168@gmail.com</a>
@@ -28,6 +21,10 @@ export function PersonalFooter() {
             LinkedIn
           </a>
         </div>
+
+        <figure className="personal-footer-flower" aria-hidden="true">
+          <img src="/about/footer-bouquet-v2.png" alt="" />
+        </figure>
 
         <p className="personal-footer-copyright">
           © 2026 Dimple Lin. All rights reserved.

@@ -19,7 +19,7 @@ export function ProjectProgressNav({
 
     const update = () => {
       frame = 0;
-      const threshold = Math.min(260, window.innerHeight * 0.32);
+      const threshold = Math.min(380, window.innerHeight * 0.5);
       let nextIndex = 0;
 
       items.forEach((item, index) => {

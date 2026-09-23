@@ -57,7 +57,12 @@ export default function AboutPage() {
       <section className="about-intro" aria-labelledby="about-title">
         <div className="about-intro-grid">
           <div className="about-intro-copy">
-            <h1 id="about-title">About Me<span>.</span></h1>
+            <h1 id="about-title" className="about-title-with-flower">
+              <span className="about-title-text">About Me<span>.</span></span>
+              <span className="about-title-flower" aria-hidden="true">
+                <img src="/about/portrait-bouquet-v4.png" alt="" />
+              </span>
+            </h1>
             <p className="about-intro-lead">
               I’m an instructional designer who combines a <span
               className="about-highlight">foundation in education, learning
@@ -78,12 +83,6 @@ export default function AboutPage() {
                 priority
               />
             </figure>
-            <img
-              className="about-intro-flowers"
-              src="/decor/wildflower-bouquet.png"
-              alt=""
-              aria-hidden="true"
-            />
           </div>
         </div>
       </section>
@@ -154,8 +153,8 @@ export default function AboutPage() {
                 <p>
                   At Carnegie Mellon, I began studying{' '}
                   <strong>learning science, instructional design, educational
-                  technology, and AI-supported learning</strong> more deeply—
-                  giving me a stronger evidence-based foundation for
+                  technology, and AI-supported learning</strong> more deeply.
+                  This gave me a stronger evidence-based foundation for
                   understanding not just what to teach, but{' '}
                   <strong>how people learn and practice effectively</strong>.
                 </p>
@@ -168,7 +167,7 @@ export default function AboutPage() {
                 <h3>Connecting learning with performance and product</h3>
                 <p>
                   Through internships and client projects, I moved further into{' '}
-                  <strong>performance-focused instructional design</strong>—
+                  <strong>performance-focused instructional design</strong>,
                   working across e-learning, performance support, learning
                   analytics, AI-enabled learning, and learning technology.
                 </p>
@@ -176,17 +175,12 @@ export default function AboutPage() {
                   These experiences also pushed me beyond course design. I
                   learned to <strong>work cross-functionally, manage projects,
                   collaborate with product and technical teams, and use data to
-                  guide decisions</strong>—including determining when training
+                  guide decisions</strong>, including determining when training
                   is, and is not, the right solution.
                 </p>
               </div>
             </article>
 
-            <blockquote>
-              Today, I bring together learner empathy, learning science, and
-              product thinking to design solutions that improve performance—
-              <strong>not just deliver content.</strong>
-            </blockquote>
           </div>
         </div>
       </section>
@@ -212,9 +206,10 @@ export default function AboutPage() {
 
           <figure className="about-outside-photo">
             <Image
-              src="/about/dimple-outdoors.jpg"
-              alt="Dimple standing beside a forest stream surrounded by trees and moss"
-              fill
+              src="/about/dimple-forest-full.jpg"
+              alt="Dimple standing full-length beside a forest stream"
+              width={1918}
+              height={1734}
               sizes="(max-width: 900px) 100vw, 50vw"
               priority
             />

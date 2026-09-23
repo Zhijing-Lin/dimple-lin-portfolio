@@ -3576,6 +3576,10 @@ a {
 
 .case-study-summary-rich p {
   margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
 }
 
 .case-study-body {
@@ -4260,7 +4264,9 @@ a {
 .legacy-media figcaption {
   margin-top: 0.8rem;
   color: #8c857e;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.45;
   letter-spacing: 0.035em;
   text-align: center;
 }
@@ -5784,12 +5790,60 @@ a {
 .case-study[data-project-slug='learner-data'] .legacy-media figcaption,
 .learner-data-visual figcaption {
   margin-top: 0.8rem;
-  color: #302b27;
-  font-size: 1.0625rem;
-  font-weight: 720;
-  letter-spacing: -0.01em;
-  line-height: 1.4;
+  color: #8c857e;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.035em;
+  line-height: 1.45;
   text-align: center;
+}
+
+.case-study[data-project-slug='learner-data']
+  .legacy-columns.is-metadata {
+  gap: 0.875rem;
+}
+
+.case-study[data-project-slug='learner-data']
+  .legacy-columns.is-metadata
+  .legacy-column {
+  border: 1px solid #ded6ca;
+  border-radius: 1.25rem;
+  box-shadow: none;
+}
+
+.case-study[data-project-slug='learner-data']
+  .legacy-columns.is-metadata
+  .legacy-rich-text
+  h3,
+.case-study[data-project-slug='learner-data']
+  .legacy-columns.is-metadata
+  .legacy-rich-text
+  h4 {
+  font-size: 0.75rem;
+  font-weight: 760;
+  letter-spacing: 0.13em;
+  line-height: 1.3;
+}
+
+.case-study[data-project-slug='learner-data']
+  .legacy-columns.is-metadata
+  .legacy-rich-text
+  p,
+.case-study[data-project-slug='learner-data']
+  .legacy-columns.is-metadata
+  .legacy-rich-text
+  li {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.case-study[data-project-slug='learner-data']
+  .legacy-columns.is-metadata
+  .legacy-rich-text
+  strong {
+  font-size: inherit;
+  font-weight: 720;
 }
 
 .learner-client-quote {
@@ -7602,15 +7656,78 @@ a {
   object-position: 52% center;
 }
 
-.about-intro-flowers {
+.about-title-with-flower {
+  position: relative;
+  display: block;
+  width: fit-content;
+}
+
+.about-title-text {
+  display: block;
+}
+
+.about-intro h1 .about-title-text {
+  color: #1f1b19;
+}
+
+.about-intro h1 .about-title-text > span {
+  color: var(--accent);
+}
+
+.about-title-flower {
   position: absolute;
-  z-index: 2;
-  right: -0.5rem;
-  bottom: -1.8rem;
-  width: clamp(7rem, 12vw, 10.5rem);
-  height: auto;
+  top: 50%;
+  left: 100%;
+  display: block;
+  width: 9rem;
+  height: 10rem;
+  overflow: visible;
   pointer-events: none;
-  transform: rotate(8deg);
+  transform: translateY(-50%);
+}
+
+.about-title-flower img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 10.5rem;
+  height: auto;
+  transform: translate(0.5rem, -50%) rotate(-4deg);
+}
+
+.portfolio-title-with-flower {
+  position: relative;
+  display: block;
+  width: fit-content;
+}
+
+.portfolio-title-text {
+  display: block;
+}
+
+.portfolio-title-flower {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: block;
+  width: 9rem;
+  height: 10rem;
+  overflow: visible;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.portfolio-title-flower img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: auto;
+  height: 11.75rem;
+  opacity: 0.62;
+  filter: saturate(0.72);
+  transform: translate(1.35rem, -60%);
 }
 
 .about-section-heading h2,
@@ -7657,8 +7774,16 @@ a {
   justify-self: end;
   width: 100%;
   max-width: 480px;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: auto;
   margin: 0;
+}
+
+.about-outside-photo img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .about-outside-photo::after {
@@ -7667,17 +7792,19 @@ a {
 
 .personal-footer {
   width: 100%;
-  background: #24211b;
-  color: #eee9df;
+  border-top: 1px solid var(--line);
+  background: var(--page);
+  color: var(--ink);
 }
 
 .personal-footer-inner {
   display: grid;
-  grid-template-columns: minmax(280px, 1.5fr) minmax(120px, 0.5fr) minmax(240px, 0.85fr);
-  gap: clamp(2.5rem, 6vw, 6rem);
+  grid-template-columns: minmax(280px, 1.35fr) minmax(230px, 0.8fr) minmax(180px, 0.65fr);
+  gap: clamp(2.5rem, 6vw, 5.5rem);
+  align-items: start;
   width: min(100%, 1280px);
   margin: 0 auto;
-  padding: clamp(4rem, 7vw, 6rem) clamp(1.5rem, 4vw, 4rem) 2rem;
+  padding: clamp(3.75rem, 6vw, 5.25rem) clamp(1.5rem, 4vw, 4rem) 2rem;
 }
 
 .personal-footer-intro {
@@ -7686,19 +7813,19 @@ a {
 
 .personal-footer-name {
   margin: 0 0 1.1rem;
-  color: #fff;
+  color: var(--brand-pink);
   font-size: 1.35rem;
   font-weight: 720;
   letter-spacing: -0.025em;
 }
 
 .personal-footer-name span {
-  color: #e2b95d;
+  color: inherit;
 }
 
 .personal-footer-intro > p:last-child {
   margin: 0;
-  color: #bdb3a0;
+  color: #655f5a;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -7711,7 +7838,7 @@ a {
 
 .personal-footer-column > p {
   margin: 0 0 0.25rem;
-  color: #fff;
+  color: var(--accent-dark);
   font-size: 0.72rem;
   font-weight: 760;
   letter-spacing: 0.13em;
@@ -7720,7 +7847,7 @@ a {
 
 .personal-footer-column a {
   width: fit-content;
-  color: #bdb3a0;
+  color: #6f6964;
   font-size: 0.9rem;
   line-height: 1.5;
   transition: color 160ms ease;
@@ -7728,15 +7855,28 @@ a {
 
 .personal-footer-column a:hover,
 .personal-footer-column a:focus-visible {
-  color: #fff;
+  color: var(--ink);
+}
+
+.personal-footer-flower {
+  width: min(100%, 220px);
+  margin: -1rem 0 0;
+  justify-self: end;
+  align-self: center;
+}
+
+.personal-footer-flower img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .personal-footer-copyright {
   grid-column: 1 / -1;
   margin: 1.25rem 0 0;
   padding-top: 1.65rem;
-  border-top: 1px solid rgb(255 255 255 / 13%);
-  color: #9e9585;
+  border-top: 1px solid var(--line);
+  color: #8a8580;
   font-size: 0.78rem;
 }
 
@@ -7757,7 +7897,7 @@ a {
   }
 
   .personal-footer-inner {
-    grid-template-columns: minmax(240px, 1.25fr) minmax(120px, 0.55fr) minmax(220px, 0.9fr);
+    grid-template-columns: minmax(240px, 1.25fr) minmax(220px, 0.85fr) minmax(170px, 0.65fr);
     gap: 2rem;
   }
 }
@@ -7767,16 +7907,31 @@ a {
     justify-self: center;
   }
 
-  .about-intro-flowers {
-    right: 0;
+  .about-title-flower {
+    width: 7.5rem;
+    height: 9rem;
+  }
+
+  .about-title-flower img {
+    width: 9rem;
+  }
+
+  .portfolio-title-flower {
+    width: 7.5rem;
+    height: 9rem;
+  }
+
+  .portfolio-title-flower img {
+    height: 10.2rem;
   }
 
   .personal-footer-inner {
     grid-template-columns: 1fr 1fr;
   }
 
-  .personal-footer-intro {
-    grid-column: 1 / -1;
+  .personal-footer-flower {
+    width: min(100%, 180px);
+    margin-top: -0.5rem;
   }
 }
 
@@ -7786,9 +7941,22 @@ a {
     font-size: 2.1rem;
   }
 
-  .about-intro-flowers {
-    bottom: -1.25rem;
+  .about-title-flower {
+    width: 6.5rem;
+    height: 7.5rem;
+  }
+
+  .about-title-flower img {
     width: 7rem;
+  }
+
+  .portfolio-title-flower {
+    width: 6.5rem;
+    height: 7.5rem;
+  }
+
+  .portfolio-title-flower img {
+    height: 8rem;
   }
 
   .personal-footer-inner {
@@ -7798,5 +7966,365 @@ a {
   .personal-footer-intro,
   .personal-footer-copyright {
     grid-column: 1;
+  }
+
+  .personal-footer-flower {
+    width: 150px;
+    margin: 0;
+    justify-self: start;
+  }
+}
+
+/* Interactive Coaching Through Feedback */
+
+.case-study .case-study-hero .case-study-summary-rich p {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.case-study[data-project-slug='interactive-coaching'] {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.case-study[data-project-slug='interactive-coaching'] .case-study-content {
+  gap: 0;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  > .legacy-section {
+  padding: 3.5rem 0;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  > .legacy-section:first-child {
+  padding-top: 0;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  > .legacy-section:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  h1,
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  h2,
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  h3 {
+  margin-bottom: 1.25rem;
+  font-size: 2rem;
+  font-weight: 620;
+  line-height: 1.08;
+  text-align: left;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  h4 {
+  margin-bottom: 1.25rem;
+  font-size: 1.0625rem;
+  font-weight: 720;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  p,
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  li {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.68;
+  text-align: left;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  p {
+  margin-bottom: 1.125rem;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  strong {
+  font-size: inherit;
+  font-weight: 720;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  a {
+  color: #65739f;
+  font-size: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  ul,
+.case-study[data-project-slug='interactive-coaching']
+  .case-study-content
+  .legacy-rich-text
+  ol {
+  gap: 0.5625rem;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .legacy-columns-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(3rem, 4.5vw, 4rem);
+}
+
+.case-study[data-project-slug='interactive-coaching'] .legacy-column {
+  padding: 0;
+  border: 0;
+}
+
+.case-study[data-project-slug='interactive-coaching'] .legacy-split {
+  grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(3rem, 4.5vw, 4rem);
+  align-items: start;
+  border-radius: 0;
+  background: transparent;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .legacy-section[data-source-index='3'] {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .legacy-section[data-source-index='3']
+  .legacy-split-copy {
+  max-width: 900px;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .legacy-section[data-source-index='3']
+  .legacy-media {
+  order: initial;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .legacy-section[data-source-index='15'] {
+  max-width: 900px;
+}
+
+.case-study[data-project-slug='interactive-coaching'] .legacy-media img,
+.case-study[data-project-slug='interactive-coaching']
+  .project-image-trigger,
+.case-study[data-project-slug='interactive-coaching'] .legacy-media-frame {
+  border-radius: 0.625rem;
+}
+
+.case-study[data-project-slug='interactive-coaching'] .legacy-media img {
+  border: 1px solid #ded8cf;
+  box-shadow: none;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .legacy-media
+  figcaption {
+  margin-top: 0.8125rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .project-image-trigger-badge {
+  right: 0.7rem;
+  bottom: 0.7rem;
+  display: grid;
+  place-items: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  border-color: rgb(255 255 255 / 70%);
+  background: rgb(255 255 255 / 84%);
+  box-shadow: 0 5px 16px rgb(46 42 38 / 10%);
+  color: #59678f;
+  opacity: 1;
+  transform: none;
+}
+
+.case-study[data-project-slug='interactive-coaching']
+  .project-image-trigger-label {
+  display: none;
+}
+
+.coaching-design-flow-frame {
+  padding: clamp(1rem, 2vw, 1.45rem);
+  border: 1px solid #ded8cf;
+  border-radius: 0.625rem;
+  background: #fbfaf7;
+}
+
+.coaching-design-flow ol {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.coaching-design-flow li {
+  position: relative;
+  min-width: 0;
+}
+
+.coaching-design-card {
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  min-height: 132px;
+  padding: 0.72rem 0.55rem;
+  border: 1px solid currentcolor;
+  border-radius: 0.625rem;
+  background: #f7f9fc;
+  color: #567aad;
+  text-align: center;
+}
+
+.coaching-design-card span {
+  justify-self: start;
+  color: currentcolor;
+  font-size: 0.625rem;
+  font-weight: 750;
+  letter-spacing: 0.09em;
+}
+
+.coaching-design-card svg {
+  margin: 0.48rem 0 0.42rem;
+}
+
+.coaching-design-card strong {
+  color: #24211f;
+  font-size: clamp(0.76rem, 0.9vw, 0.875rem);
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.coaching-design-flow li > p {
+  margin: 0.65rem 0 0;
+  color: #625d58;
+  font-size: clamp(0.66rem, 0.75vw, 0.75rem);
+  line-height: 1.42;
+  text-align: center;
+}
+
+.coaching-design-flow .is-navy .coaching-design-card {
+  background: #f2f4f8;
+  color: #324e70;
+}
+
+.coaching-design-flow .is-rose .coaching-design-card {
+  background: #fbf1f5;
+  color: #a64c78;
+}
+
+.coaching-design-flow .is-gold .coaching-design-card {
+  background: #fbf7df;
+  color: #b89b3c;
+}
+
+.coaching-design-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 55px;
+  right: -17px;
+  padding: 2px;
+  border-radius: 50%;
+  background: #fbfaf7;
+  color: #425b7d;
+}
+
+@media (max-width: 1050px) {
+  .case-study[data-project-slug='interactive-coaching'] .legacy-split,
+  .case-study[data-project-slug='interactive-coaching']
+    .legacy-section[data-source-index='3'] {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study[data-project-slug='interactive-coaching']
+    .legacy-split.is-flipped
+    .legacy-media {
+    order: initial;
+  }
+}
+
+@media (max-width: 800px) {
+  .case-study[data-project-slug='interactive-coaching']
+    .legacy-columns-2 {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .case-study[data-project-slug='interactive-coaching']
+    .legacy-columns
+    .legacy-column {
+    border: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .case-study[data-project-slug='interactive-coaching']
+    .case-study-content
+    > .legacy-section {
+    padding: 3rem 0;
+  }
+
+  .case-study[data-project-slug='interactive-coaching']
+    .case-study-content
+    > .legacy-section:first-child {
+    padding-top: 0;
+  }
+
+  .coaching-design-flow ol {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .coaching-design-card {
+    min-height: 0;
+  }
+
+  .coaching-design-flow li > p {
+    max-width: 28rem;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 0.75rem;
+  }
+
+  .coaching-design-arrow {
+    top: auto;
+    right: 50%;
+    bottom: -1.5rem;
+    transform: translateX(50%) rotate(90deg);
   }
 }

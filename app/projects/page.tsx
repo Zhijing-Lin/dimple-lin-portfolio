@@ -190,8 +190,13 @@ function PortfolioIntro() {
   return (
     <section className="portfolio-intro" id="top">
       <div className="intro-copy">
-        <h1>
-          Projects<span className="accent-dot">.</span>
+        <h1 className="portfolio-title-with-flower">
+          <span className="portfolio-title-text">
+            Projects<span className="accent-dot">.</span>
+          </span>
+          <span className="portfolio-title-flower" aria-hidden="true">
+            <img src="/decor/wildflower-bouquet.png" alt="" />
+          </span>
         </h1>
         <p className="intro-text">
           I design evidence-driven learning experiences, performance support,
@@ -218,12 +223,6 @@ function PortfolioIntro() {
       </div>
 
       <nav className="category-nav" aria-label="Project categories">
-        <img
-          className="category-nav-flower"
-          src="/decor/wildflower-bouquet.png"
-          alt=""
-          aria-hidden="true"
-        />
         <a href="#category-01">
           <span>01</span>
           <strong>Strategy &amp; Performance</strong>

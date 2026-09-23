@@ -111,30 +111,13 @@ const learnerDataProject: LegacyProject = {
       type: 'split',
       html: `<h3>From Evidence to Design Decisions</h3><p>I analyzed each evaluation layer from multiple angles to identify meaningful patterns, then used a consistent <strong>evidence-to-design process</strong> to determine what those patterns actually meant for the course.</p>`,
       media: null,
-      flipped: true,
+      flipped: false,
     },
     {
       sourceIndex: 7,
       type: 'text',
       html: `<h3>Outcome</h3><p>The evaluation went beyond identifying problems. I translated learner data into <strong>29 specific, practical redesign recommendations</strong> across <strong>course engagement, learning support, implementation, and future evaluation</strong>, giving the client a concrete roadmap for improving the next version of the course.</p><h4>Exceeded Client Expectations</h4><p>The client praised the <strong>clarity and rigor of the analysis</strong> and was especially impressed by how specific and actionable the recommendations were. They had expected an evaluation of the existing course, but the final report also provided a practical roadmap for redesign.</p><blockquote class="learner-client-quote"><p>“Wow, this is amazing. I expected an evaluation, but I didn’t expect the recommendations to be this specific and practical. This gives us a really clear direction for what to improve next.”</p><cite>— Client, American College Health Association (ACHA)</cite></blockquote><h4>Informed the Next Redesign Cycle</h4><p>The recommendations were <strong>accepted by the client and are being used to guide the next iteration of the course</strong>, turning the evaluation report into a practical roadmap for continued redesign.</p>`,
       cta: null,
-    },
-    {
-      sourceIndex: 8,
-      type: 'gallery',
-      layout: 'single',
-      items: [
-        {
-          type: 'image',
-          url: '/projects/course-evaluation.png',
-          unavailable: false,
-          caption:
-            'Evaluation Report: From Evidence to Actionable Recommendations',
-          alt: 'Evaluation report page with a chart, evidence, interpretation, and course-design recommendations',
-          width: '960',
-          height: '1280',
-        },
-      ],
     },
     {
       sourceIndex: 9,

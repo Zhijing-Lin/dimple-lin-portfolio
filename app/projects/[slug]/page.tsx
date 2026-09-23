@@ -149,6 +149,7 @@ const zoomableProjectImages = new Set([
   '/projects/ai-architecture-storyboard.png',
   '/projects/help-center-procedural-job-aid.png',
   '/projects/help-center-operational-decision-guide.png',
+  '/projects/interactive-coaching-branching-flow-map.png',
   '/projects/reviewer-performance-gaps.png',
   '/projects/course-evaluation.png',
   '/projects/survival-consequence-feedback.jpg',
@@ -1498,6 +1499,74 @@ function LearnerHumanLoopWorkflow() {
   );
 }
 
+const coachingDesignSteps = [
+  {
+    title: 'Task Analysis',
+    detail: 'Identify the real workplace behavior learners need to perform.',
+    icon: ClipboardCheck,
+    tone: 'blue',
+  },
+  {
+    title: 'Decision Points',
+    detail: 'Map the key moments where the learner must choose how to respond.',
+    icon: MousePointerClick,
+    tone: 'navy',
+  },
+  {
+    title: 'Common Mistakes',
+    detail: 'Identify likely ineffective responses and their consequences.',
+    icon: RotateCcw,
+    tone: 'rose',
+  },
+  {
+    title: 'Branching Paths',
+    detail: 'Show how different choices lead to different conversation outcomes.',
+    icon: Waypoints,
+    tone: 'navy',
+  },
+  {
+    title: 'Feedback & Reflection',
+    detail: 'Provide immediate feedback and prompt learner reflection.',
+    icon: MessagesSquare,
+    tone: 'gold',
+  },
+];
+
+function CoachingDesignFlow() {
+  return (
+    <figure
+      className="legacy-media coaching-design-flow"
+      aria-label="Design approach from task analysis to feedback and reflection"
+    >
+      <div className="coaching-design-flow-frame">
+        <ol>
+          {coachingDesignSteps.map((step, stepIndex) => {
+            const Icon = step.icon;
+            return (
+              <li className={`is-${step.tone}`} key={step.title}>
+                <div className="coaching-design-card">
+                  <span>{String(stepIndex + 1).padStart(2, '0')}</span>
+                  <Icon size={24} strokeWidth={1.7} aria-hidden="true" />
+                  <strong>{step.title}</strong>
+                </div>
+                <p>{step.detail}</p>
+                {stepIndex < coachingDesignSteps.length - 1 ? (
+                  <ArrowRight
+                    className="coaching-design-arrow"
+                    size={22}
+                    strokeWidth={1.8}
+                    aria-hidden="true"
+                  />
+                ) : null}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+    </figure>
+  );
+}
+
 function LegacySectionView({
   section,
   index,
@@ -1603,6 +1672,8 @@ function LegacySectionView({
       projectSlug === 'nutrition-literacy' && sourceIndex === 8;
     const usesNutritionCtaFindings =
       projectSlug === 'nutrition-literacy' && sourceIndex === 10;
+    const usesCoachingDesignFlow =
+      projectSlug === 'interactive-coaching' && sourceIndex === 3;
 
     if (usesReviewerGapTable) {
       return (
@@ -1637,7 +1708,9 @@ function LegacySectionView({
         <div className="legacy-split-copy">
           <RichText html={section.html} />
         </div>
-        {usesHumanLoopWorkflow ? (
+        {usesCoachingDesignFlow ? (
+          <CoachingDesignFlow />
+        ) : usesHumanLoopWorkflow ? (
           <HumanLoopWorkflow />
         ) : usesReviewerKnowledgeMap ? (
           <ReviewerKnowledgeMap />
@@ -1754,7 +1827,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   if (!project || !legacyProject) notFound();
 
   const sections = legacyProject.sections.filter(
-    (section) => section.type !== 'hero' && section.type !== 'process',
+    (section) =>
+      section.type !== 'hero' &&
+      section.type !== 'process' &&
+      !(project.slug === 'interactive-coaching' && section.sourceIndex === 1),
   );
   const processSection = legacyProject.sections.find(
     (section) => section.type === 'process',
@@ -1780,8 +1856,23 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     'Project details',
     'Project gallery',
   ]);
+  const coachingProgressItems: ProjectProgressItem[] = [
+    { label: 'Problem & Solution', sourceIndex: 2 },
+    { label: 'Design Approach', sourceIndex: 3 },
+    { label: 'Branching Flow Map', sourceIndex: 4 },
+    { label: 'Next Steps & Reflection', sourceIndex: 15 },
+  ]
+    .map((item) => {
+      const target = renderedSections.find(
+        ({ section }) => section.sourceIndex === item.sourceIndex,
+      );
+      return target ? { label: item.label, targetId: target.id } : undefined;
+    })
+    .filter((item): item is ProjectProgressItem => Boolean(item));
   const progressItems: ProjectProgressItem[] =
-    processSection?.type === 'process' && processSection.items.length
+    project.slug === 'interactive-coaching'
+      ? coachingProgressItems
+      : processSection?.type === 'process' && processSection.items.length
       ? processSection.items
           .map((item) => {
             const target =
