@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import {
-  ArrowRight,
   BookOpen,
   BrainCircuit,
   BriefcaseBusiness,
-  Mail,
 } from 'lucide-react';
+import { PersonalFooter } from '@/components/personal-footer';
 import { SiteHeader } from '@/components/site-header';
 
 export const metadata: Metadata = {
@@ -60,22 +59,32 @@ export default function AboutPage() {
           <div className="about-intro-copy">
             <h1 id="about-title">About Me<span>.</span></h1>
             <p className="about-intro-lead">
-              I’m an instructional designer who combines a <strong>foundation
-              in education, learning science, and product thinking</strong> to
-              build <strong>practical learning experiences</strong> that help
-              people <strong>perform better</strong>.
+              I’m an instructional designer who combines a <span
+              className="about-highlight">foundation in education, learning
+              science, and product thinking</span> to build <span
+              className="about-highlight">practical learning experiences</span>{' '}
+              that help people <span className="about-highlight">perform
+              better</span>.
             </p>
           </div>
 
-          <figure className="about-intro-photo">
-            <Image
-              src="/about/dimple-coast.jpg"
-              alt="Dimple standing beside a coastal landscape"
-              fill
-              sizes="(max-width: 900px) 100vw, 42vw"
-              priority
+          <div className="about-intro-portrait">
+            <figure className="about-intro-photo">
+              <Image
+                src="/about/dimple-coast.jpg"
+                alt="Dimple standing beside a coastal landscape"
+                fill
+                sizes="(max-width: 900px) 86vw, 390px"
+                priority
+              />
+            </figure>
+            <img
+              className="about-intro-flowers"
+              src="/decor/wildflower-bouquet.png"
+              alt=""
+              aria-hidden="true"
             />
-          </figure>
+          </div>
         </div>
       </section>
 
@@ -209,22 +218,11 @@ export default function AboutPage() {
               sizes="(max-width: 900px) 100vw, 50vw"
               priority
             />
-            <figcaption>Exploring the Pacific Northwest</figcaption>
           </figure>
         </div>
       </section>
 
-      <footer className="about-contact" id="contact">
-        <div>
-          <p className="about-eyebrow">Let’s connect</p>
-          <h2>Interested in thoughtful learning design?</h2>
-        </div>
-        <a href="mailto:zhijing3@andrew.cmu.edu">
-          <Mail size={18} strokeWidth={1.8} aria-hidden="true" />
-          Get in touch
-          <ArrowRight size={18} strokeWidth={1.8} aria-hidden="true" />
-        </a>
-      </footer>
+      <PersonalFooter />
     </main>
   );
 }

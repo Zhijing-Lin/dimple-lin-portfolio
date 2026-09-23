@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import type { Metadata } from 'next';
+import { PersonalFooter } from '@/components/personal-footer';
 import { SiteHeader } from '@/components/site-header';
 
 export const metadata: Metadata = {
@@ -353,11 +354,8 @@ export default function Home() {
         {categories.map((category) => (
           <CategorySection key={category.number} category={category} />
         ))}
-        <footer className="site-footer">
-          <p>Designing learning that moves from insight to action.</p>
-          <span>© 2026 Dimple Lin</span>
-        </footer>
       </div>
+      <PersonalFooter />
     </main>
   );
 }

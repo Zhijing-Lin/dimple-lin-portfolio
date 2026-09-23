@@ -30,9 +30,6 @@ export function SiteHeader({ active }: SiteHeaderProps) {
         >
           About
         </a>
-        <a href="/about#contact">
-          Contact
-        </a>
       </nav>
     </header>
   );
