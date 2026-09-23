@@ -153,6 +153,8 @@ const zoomableProjectImages = new Set([
   '/projects/survival-scaffolding.jpg',
   '/projects/survival-campsite-cta-hd.jpg',
   '/projects/survival-firemaking-cta-hd.jpg',
+  '/projects/nutrition-theoretical-cta-model.png',
+  '/projects/nutrition-empirical-expert-novice-cta.png',
   '/projects/tutor-problem-space-mapping.png',
   '/projects/tutorial-search-original.webp',
   '/projects/tutorial-search-redesigned.webp',
@@ -556,6 +558,175 @@ function SurvivalPlaytestingChanges() {
         </div>
       </div>
     </figure>
+  );
+}
+
+const nutritionDesignFlowSteps = [
+  {
+    title: 'Learner Need',
+    icon: UsersRound,
+  },
+  {
+    title: 'Learning Goals',
+    icon: Target,
+  },
+  {
+    title: 'Assessment Tasks',
+    icon: ClipboardCheck,
+  },
+  {
+    title: 'CTA / Think-Aloud',
+    icon: MessagesSquare,
+  },
+  {
+    title: 'Refine Instruction & Scaffolding',
+    icon: Lightbulb,
+  },
+  {
+    title: 'Storyline Development',
+    icon: BookOpen,
+  },
+  {
+    title: 'Learner Testing',
+    icon: ScanSearch,
+  },
+  {
+    title: 'Iteration',
+    icon: RefreshCw,
+  },
+];
+
+function NutritionDesignApproachFlow() {
+  return (
+    <figure className="legacy-media nutrition-visual nutrition-design-flow">
+      <div className="nutrition-visual-frame">
+        <p className="nutrition-visual-eyebrow">Research-informed design</p>
+        <ol>
+          {nutritionDesignFlowSteps.map((step, stepIndex) => {
+            const Icon = step.icon;
+            return (
+              <li key={step.title}>
+                <span className="nutrition-flow-number">
+                  {String(stepIndex + 1).padStart(2, '0')}
+                </span>
+                <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
+                <strong>{step.title}</strong>
+              </li>
+            );
+          })}
+        </ol>
+        <div className="nutrition-feedback-loop">
+          <RefreshCw size={17} strokeWidth={1.8} aria-hidden="true" />
+          <span>
+            Learner testing and iteration feed back into instruction and
+            scaffolding.
+          </span>
+        </div>
+      </div>
+      <figcaption>Design Approach Flowchart</figcaption>
+    </figure>
+  );
+}
+
+function NutritionDesignAlignment() {
+  return (
+    <figure className="legacy-media nutrition-visual nutrition-alignment-map">
+      <div className="nutrition-visual-frame">
+        <p className="nutrition-visual-eyebrow">Backward design alignment</p>
+        <div className="nutrition-alignment-top-row">
+          <article className="is-objective">
+            <span>01</span>
+            <strong>Learning Objectives</strong>
+            <p>Define what learners should know and do.</p>
+          </article>
+          <div className="nutrition-alignment-connector">
+            <small>Goals define evidence</small>
+            <ArrowRight size={24} strokeWidth={1.6} aria-hidden="true" />
+          </div>
+          <article className="is-assessment">
+            <span>02</span>
+            <strong>Assessment</strong>
+            <p>Measure whether learners can demonstrate those outcomes.</p>
+          </article>
+        </div>
+        <div className="nutrition-learning-hub">
+          <BrainCircuit size={21} strokeWidth={1.8} aria-hidden="true" />
+          <strong>Student Learning</strong>
+        </div>
+        <article className="nutrition-instruction-card">
+          <span>03</span>
+          <strong>Instruction &amp; Practice</strong>
+          <p>
+            Prepare learners through content, practice, feedback, and
+            reflection.
+          </p>
+        </article>
+        <div className="nutrition-alignment-notes">
+          <span>Instruction supports goals</span>
+          <span>Assessment guides instruction</span>
+        </div>
+      </div>
+      <figcaption>Design Alignment Figure</figcaption>
+    </figure>
+  );
+}
+
+const nutritionCtaFindings = [
+  {
+    novice: 'Focuses on isolated cues, such as calories',
+    expert: 'Weighs multiple criteria cues together',
+    implication: 'Add guided comparison tasks',
+  },
+  {
+    novice: 'Uses nutrition numbers without knowing what they mean',
+    expert:
+      'Explains what calorie, protein, and sodium levels mean for this person',
+    implication: 'Add examples that connect nutrition data to persona needs',
+  },
+  {
+    novice: 'Gives descriptive explanations',
+    expert: 'Justifies choices with evidence',
+    implication: 'Add reflection and justification prompts',
+  },
+];
+
+function NutritionCTAFindings() {
+  return (
+    <figure className="legacy-media nutrition-visual nutrition-cta-findings">
+      <div className="nutrition-visual-frame">
+        <p className="nutrition-visual-eyebrow">Cognitive task analysis</p>
+        <h3>From reasoning gap to design response</h3>
+        <div className="nutrition-findings-table" role="table">
+          <div className="nutrition-findings-header" role="row">
+            <span role="columnheader">Novice Reasoning</span>
+            <span role="columnheader">Expert Reasoning</span>
+            <span role="columnheader">Design Implication</span>
+          </div>
+          {nutritionCtaFindings.map((finding) => (
+            <div
+              className="nutrition-findings-row"
+              role="row"
+              key={finding.novice}
+            >
+              <span role="cell">{finding.novice}</span>
+              <span role="cell">{finding.expert}</span>
+              <span role="cell">{finding.implication}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <figcaption>CTA Findings</figcaption>
+    </figure>
+  );
+}
+
+function NutritionCTAModelGallery({ items }: { items: LegacyMedia[] }) {
+  return (
+    <div className="nutrition-cta-model-grid">
+      {items.slice(0, 2).map((item, itemIndex) => (
+        <ProjectMedia media={item} key={`${item.url}-${itemIndex}`} />
+      ))}
+    </div>
   );
 }
 
@@ -1365,6 +1536,12 @@ function LegacySectionView({
       projectSlug === 'learner-data' && sourceIndex === 6;
     const usesLearnerHumanLoopWorkflow =
       projectSlug === 'learner-data' && sourceIndex === 9;
+    const usesNutritionDesignFlow =
+      projectSlug === 'nutrition-literacy' && sourceIndex === 6;
+    const usesNutritionDesignAlignment =
+      projectSlug === 'nutrition-literacy' && sourceIndex === 8;
+    const usesNutritionCtaFindings =
+      projectSlug === 'nutrition-literacy' && sourceIndex === 10;
 
     if (usesReviewerGapTable) {
       return (
@@ -1407,6 +1584,12 @@ function LegacySectionView({
           <LearnerEvidenceProcess />
         ) : usesLearnerHumanLoopWorkflow ? (
           <LearnerHumanLoopWorkflow />
+        ) : usesNutritionDesignFlow ? (
+          <NutritionDesignApproachFlow />
+        ) : usesNutritionDesignAlignment ? (
+          <NutritionDesignAlignment />
+        ) : usesNutritionCtaFindings ? (
+          <NutritionCTAFindings />
         ) : (
           <ProjectMedia media={section.media} />
         )}
@@ -1430,6 +1613,22 @@ function LegacySectionView({
             </li>
           ))}
         </ol>
+      </section>
+    );
+  }
+
+  if (
+    section.type === 'gallery' &&
+    projectSlug === 'nutrition-literacy' &&
+    sourceIndex === 11
+  ) {
+    return (
+      <section
+        className="legacy-section legacy-gallery nutrition-cta-gallery"
+        data-source-index={sourceIndex}
+        id={id}
+      >
+        <NutritionCTAModelGallery items={section.items} />
       </section>
     );
   }
@@ -1554,7 +1753,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             ? 3
             : project.slug === 'learner-data'
               ? 3
-              : null;
+              : project.slug === 'nutrition-literacy'
+                ? 4
+                : null;
   const delaysProgressNav = progressNavAfterSourceIndex !== null;
   const introductionSections = delaysProgressNav
     ? renderedSections.filter(

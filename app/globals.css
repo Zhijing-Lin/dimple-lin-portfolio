@@ -5154,6 +5154,516 @@ a {
   text-align: center;
 }
 
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='4'] {
+  width: 100%;
+  max-width: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+  text-align: center;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='4']
+  .legacy-rich-text
+  h3 {
+  max-width: none;
+  margin: 0;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='4']
+  .legacy-section-kicker {
+  display: none;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .case-study-body-before-progress {
+  padding-bottom: clamp(1.4rem, 2.5vw, 2.2rem);
+}
+
+.case-study[data-project-slug='nutrition-literacy'] .project-progress-shell {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.case-study[data-project-slug='nutrition-literacy'] .legacy-rich-text p,
+.case-study[data-project-slug='nutrition-literacy'] .legacy-rich-text li {
+  font-size: 1.0625rem;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .case-study-content
+  .legacy-rich-text
+  h3,
+.case-study[data-project-slug='nutrition-literacy']
+  .case-study-content
+  .legacy-rich-text
+  h4 {
+  font-size: 2rem;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-columns.is-metadata
+  .legacy-rich-text
+  h3,
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-columns.is-metadata
+  .legacy-rich-text
+  h4 {
+  font-size: 0.75rem;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='6'],
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='8'],
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='10'] {
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='6']
+  .legacy-split-copy,
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='8']
+  .legacy-split-copy,
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='10']
+  .legacy-split-copy {
+  max-width: 900px;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='10'].is-flipped
+  .nutrition-visual {
+  order: initial;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .case-study-content
+  > .legacy-section[data-source-index='6'],
+.case-study[data-project-slug='nutrition-literacy']
+  .case-study-content
+  > .legacy-section[data-source-index='10'],
+.case-study[data-project-slug='nutrition-literacy']
+  .case-study-content
+  > .legacy-section[data-source-index='13'],
+.case-study[data-project-slug='nutrition-literacy']
+  .case-study-content
+  > .legacy-section[data-source-index='14'],
+.case-study[data-project-slug='nutrition-literacy']
+  .case-study-content
+  > .legacy-section[data-source-index='15'],
+.case-study[data-project-slug='nutrition-literacy']
+  .case-study-content
+  > .legacy-section[data-source-index='16'] {
+  border-bottom: 0;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='13'] {
+  gap: 1rem;
+  border-bottom: 0;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-section[data-source-index='13']
+  .legacy-column {
+  padding: clamp(1.35rem, 2.5vw, 1.9rem);
+  border: 1px solid #ded8cf;
+  border-radius: 0.85rem;
+  background: #fbfaf6;
+}
+
+.case-study[data-project-slug='nutrition-literacy'] .legacy-media-frame {
+  overflow: hidden;
+  border-radius: 0.65rem;
+}
+
+.case-study[data-project-slug='nutrition-literacy'] .legacy-media-frame img,
+.case-study[data-project-slug='nutrition-literacy'] .legacy-media-frame iframe,
+.case-study[data-project-slug='nutrition-literacy']
+  .legacy-media-frame
+  .project-image-trigger {
+  border-radius: 0.65rem;
+  box-shadow: none;
+}
+
+.case-study[data-project-slug='nutrition-literacy'] .legacy-media figcaption,
+.nutrition-visual figcaption {
+  margin-top: 0.8rem;
+  color: #302b27;
+  font-size: 1.0625rem;
+  font-weight: 720;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .project-image-trigger-badge {
+  width: 2.15rem;
+  height: 2.15rem;
+  padding: 0;
+  justify-content: center;
+  border-color: rgb(255 255 255 / 68%);
+  background: rgb(255 255 255 / 82%);
+  box-shadow: 0 5px 16px rgb(46 42 38 / 10%);
+  color: #59678f;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.case-study[data-project-slug='nutrition-literacy']
+  .project-image-trigger-label {
+  display: none;
+}
+
+.nutrition-visual-frame {
+  padding: clamp(1.15rem, 2.5vw, 1.85rem);
+  border: 1px solid #ddd8cf;
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, #f7f8f1, #eef3eb);
+}
+
+.nutrition-visual-eyebrow {
+  margin: 0 0 1rem;
+  color: #587061;
+  font-size: 0.7rem;
+  font-weight: 760;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.nutrition-design-flow ol {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nutrition-design-flow li {
+  position: relative;
+  display: grid;
+  gap: 0.7rem;
+  align-content: start;
+  min-height: 130px;
+  padding: 0.9rem 0.75rem;
+  border: 1px solid #d9ddd4;
+  border-radius: 0.65rem;
+  background: rgb(255 255 255 / 88%);
+  color: #30483a;
+}
+
+.nutrition-design-flow li:not(:last-child)::after {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: -0.55rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-top: 1.5px solid #789080;
+  border-right: 1.5px solid #789080;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.nutrition-flow-number {
+  color: #6b7f72;
+  font-size: 0.65rem;
+  font-weight: 760;
+  letter-spacing: 0.09em;
+}
+
+.nutrition-design-flow li strong {
+  color: #2f3f35;
+  font-size: 0.82rem;
+  font-weight: 720;
+  line-height: 1.35;
+}
+
+.nutrition-feedback-loop {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.55rem;
+  background: #e1eadf;
+  color: #4d6655;
+  font-size: 0.75rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.nutrition-alignment-top-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(130px, 0.42fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.nutrition-alignment-top-row article,
+.nutrition-instruction-card {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid #d7d5cd;
+  border-radius: 0.8rem;
+  background: rgb(255 255 255 / 88%);
+}
+
+.nutrition-alignment-top-row article span,
+.nutrition-instruction-card > span {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #6577a9;
+  font-size: 0.68rem;
+  font-weight: 760;
+  letter-spacing: 0.1em;
+}
+
+.nutrition-alignment-top-row article strong,
+.nutrition-instruction-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #2f2a26;
+  font-size: 1rem;
+  font-weight: 740;
+}
+
+.nutrition-alignment-top-row article p,
+.nutrition-instruction-card p {
+  margin: 0;
+  color: #5f5954;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.nutrition-alignment-top-row .is-objective {
+  border-color: #d2c9d4;
+  background: #f7f4f7;
+}
+
+.nutrition-alignment-top-row .is-assessment {
+  border-color: #ddd1b8;
+  background: #faf7ed;
+}
+
+.nutrition-alignment-connector {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: center;
+  color: #5d665f;
+  text-align: center;
+}
+
+.nutrition-alignment-connector small {
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.nutrition-learning-hub {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 0.68rem 1rem;
+  border: 1px solid #cbd7ce;
+  border-radius: 999px;
+  background: #e6eee7;
+  color: #314c3b;
+  font-size: 0.88rem;
+}
+
+.nutrition-instruction-card {
+  max-width: 620px;
+  margin: 0 auto;
+  border-color: #bfcfc4;
+  background: #f0f6f1;
+}
+
+.nutrition-alignment-notes {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  max-width: 760px;
+  margin: 0.85rem auto 0;
+  color: #65736a;
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.nutrition-cta-findings .nutrition-visual-frame > h3 {
+  margin: 0 0 1rem;
+  color: #2f3f35;
+  font-size: 1.35rem;
+  font-weight: 720;
+  letter-spacing: -0.025em;
+}
+
+.nutrition-findings-table {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.nutrition-findings-header,
+.nutrition-findings-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.nutrition-findings-header span {
+  padding: 0.15rem 0.75rem 0.3rem;
+  color: #30483a;
+  font-size: 0.8rem;
+  font-weight: 760;
+}
+
+.nutrition-findings-row span {
+  min-height: 80px;
+  padding: 0.82rem;
+  border: 1px solid #d5ddd5;
+  border-radius: 0.55rem;
+  background: rgb(255 255 255 / 86%);
+  color: #49443f;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.nutrition-findings-row span:nth-child(2) {
+  background: #f4f7f1;
+}
+
+.nutrition-findings-row span:nth-child(3) {
+  background: #eef3ed;
+  color: #334c3a;
+  font-weight: 650;
+}
+
+.nutrition-cta-gallery {
+  display: block;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.nutrition-cta-model-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.nutrition-cta-model-grid .legacy-media-frame {
+  display: grid;
+  place-items: start center;
+  border: 1px solid #ded8cf;
+  background: #fff;
+}
+
+.nutrition-cta-model-grid .legacy-media-frame img {
+  border: 0;
+  border-radius: 0;
+}
+
+@media (max-width: 1100px) {
+  .nutrition-design-flow ol {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .nutrition-design-flow li:nth-child(4)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .nutrition-design-flow ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nutrition-design-flow li:nth-child(even)::after {
+    display: none;
+  }
+
+  .nutrition-alignment-top-row {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrition-alignment-connector svg {
+    transform: rotate(90deg);
+  }
+
+  .nutrition-alignment-notes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nutrition-findings-header {
+    display: none;
+  }
+
+  .nutrition-findings-row {
+    grid-template-columns: 1fr;
+    padding: 0.6rem;
+    border: 1px solid #d5ddd5;
+    border-radius: 0.65rem;
+    background: rgb(255 255 255 / 65%);
+  }
+
+  .nutrition-findings-row span {
+    min-height: 0;
+  }
+
+  .nutrition-findings-row span::before {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #617467;
+    font-size: 0.66rem;
+    font-weight: 760;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nutrition-findings-row span:nth-child(1)::before {
+    content: 'Novice Reasoning';
+  }
+
+  .nutrition-findings-row span:nth-child(2)::before {
+    content: 'Expert Reasoning';
+  }
+
+  .nutrition-findings-row span:nth-child(3)::before {
+    content: 'Design Implication';
+  }
+
+  .nutrition-cta-model-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .nutrition-design-flow ol {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrition-design-flow li::after {
+    display: none;
+  }
+
+  .nutrition-visual-frame {
+    padding: 1rem;
+  }
+}
+
 .reviewer-gap-table {
   display: block;
   padding: 0;

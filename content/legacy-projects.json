@@ -1019,19 +1019,19 @@
         "items": [
           {
             "type": "image",
-            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f0e2ad37a77450ae5df7e7/UgD6wGNitOdqsJXr.png",
+            "url": "/projects/nutrition-theoretical-cta-model.png",
             "unavailable": false,
             "caption": "<p><span>Theoretical CTA Model</span></p>",
-            "alt": null,
+            "alt": "Theoretical cognitive task analysis model mapping the nutrition decision-making task",
             "width": "1816",
             "height": "2202"
           },
           {
             "type": "image",
-            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f0e2ad37a77450ae5df7e7/lqHBy50cpyPKW8K9.png",
+            "url": "/projects/nutrition-empirical-expert-novice-cta.png",
             "unavailable": false,
-            "caption": "<p>Empirical CTA: Identifying Expert–Novice Gaps</p>",
-            "alt": null,
+            "caption": "<p>Empirical CTA: Expert–Novice Reasoning Gaps</p>",
+            "alt": "Empirical cognitive task analysis comparing expert and novice approaches to nutrition decisions",
             "width": "1926",
             "height": "2075"
           },
