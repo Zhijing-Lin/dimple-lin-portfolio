@@ -132,14 +132,13 @@ const zoomableProjectImages = new Set([
   '/projects/survival-contrasting-cases.jpg',
   '/projects/survival-game-loop.png',
   '/projects/survival-learning-by-doing.jpg',
-  '/projects/survival-playtesting-changes.jpg',
   '/projects/survival-prototype-1.jpg',
-  '/projects/survival-prototype-2.jpg',
-  '/projects/survival-prototype-3.jpg',
+  '/projects/survival-prototype-2-hd.png',
+  '/projects/survival-prototype-3-hd.png',
   '/projects/survival-scaffolding.jpg',
+  '/projects/survival-campsite-cta-hd.jpg',
+  '/projects/survival-firemaking-cta-hd.jpg',
   '/projects/tutor-problem-space-mapping.png',
-  'https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/clipboard-image-11f3d29b-884c-4894-870d-7b155cb7ba25.webp',
-  'https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/clipboard-image-295e707c-bb41-418f-98cf-a681ae28a710.webp',
 ]);
 
 function ProjectMedia({ media }: { media: LegacyMedia | null }) {
@@ -485,6 +484,64 @@ function SurvivalGoalsMap() {
   );
 }
 
+const survivalPlaytestingChanges = [
+  {
+    title: 'From Passive Inspection to Active Decision-Making',
+    before:
+      'Players clicked through environmental hotspots, read explanations, and then selected a campsite.',
+    after:
+      'Players compare campsite options, prioritize environmental evidence, make a decision, and then receive feedback.',
+  },
+  {
+    title: 'From “Click Everything” to Selective Judgment',
+    before:
+      'Players could inspect every hotspot, allowing progress without deciding which clues actually mattered.',
+    after:
+      'Players can inspect only 3 of 7 clues, including distractors, and must prioritize information based on changing weather conditions.',
+  },
+  {
+    title: 'From Separate Activities to a Connected Survival Loop',
+    before:
+      'Campsite selection, firemaking, and herb collection felt like separate learning activities.',
+    after:
+      'The activities are connected into one survival loop: Campsite Selection → Material Collection → Fire Building → Herb Search. Earlier decisions can affect the difficulty of later tasks.',
+  },
+];
+
+function SurvivalPlaytestingChanges() {
+  return (
+    <figure className="legacy-media survival-playtesting-map">
+      <div className="survival-change-board">
+        {survivalPlaytestingChanges.map((change, changeIndex) => (
+          <section className="survival-change-row" key={change.title}>
+            <h4>
+              <span>{changeIndex + 1}</span>
+              {change.title}
+            </h4>
+            <div className="survival-change-comparison">
+              <article className="is-before">
+                <strong>Before</strong>
+                <p>{change.before}</p>
+              </article>
+              <ArrowRight aria-hidden="true" size={20} strokeWidth={1.7} />
+              <article className="is-after">
+                <strong>After</strong>
+                <p>{change.after}</p>
+              </article>
+            </div>
+          </section>
+        ))}
+        <div className="survival-change-evolution">
+          <strong>Design Evolution</strong>
+          <span>Explain → Click → Continue</span>
+          <ArrowRight aria-hidden="true" size={20} strokeWidth={1.7} />
+          <span>Observe → Decide → Experience Consequences → Adapt</span>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
 function LegacySectionView({
   section,
   index,
@@ -573,6 +630,8 @@ function LegacySectionView({
       projectSlug === 'survival-play' && sourceIndex === 5;
     const usesSurvivalGoalsMap =
       projectSlug === 'survival-play' && sourceIndex === 7;
+    const usesSurvivalPlaytestingChanges =
+      projectSlug === 'survival-play' && sourceIndex === 16;
 
     if (usesReviewerGapTable) {
       return (
@@ -605,6 +664,8 @@ function LegacySectionView({
           <SurvivalReasoningGaps />
         ) : usesSurvivalGoalsMap ? (
           <SurvivalGoalsMap />
+        ) : usesSurvivalPlaytestingChanges ? (
+          <SurvivalPlaytestingChanges />
         ) : (
           <ProjectMedia media={section.media} />
         )}

@@ -687,7 +687,7 @@
             "html": "<p>Novice vs. Expert Reasoning in Campsite Selection</p>",
             "media": {
               "type": "image",
-              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/clipboard-image-11f3d29b-884c-4894-870d-7b155cb7ba25.webp",
+              "url": "/projects/survival-campsite-cta-hd.jpg",
               "unavailable": false,
               "caption": null,
               "alt": "Comparison of novice and expert reasoning in campsite selection",
@@ -699,7 +699,7 @@
             "html": "<p>Novice vs. Expert Reasoning in Firemaking</p>",
             "media": {
               "type": "image",
-              "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/uploads/processed/69e416f0f81832258a16737c/project/6a9b0aaed19af1682dbba5ae/section-media/clipboard-image-295e707c-bb41-418f-98cf-a681ae28a710.webp",
+              "url": "/projects/survival-firemaking-cta-hd.jpg",
               "unavailable": false,
               "caption": null,
               "alt": "Comparison of novice and expert reasoning in firemaking",
@@ -831,7 +831,7 @@
             "html": "<p><strong>Prototype 2 — Interactive Digital Prototype</strong></p><p>We then moved into a digital prototype. As the design evolved, we realized the experience relied too heavily on dialogue and multiple-choice interactions, so we introduced more <strong>hands-on activities </strong>such as material sorting and fire-building. The second playtest showed that firemaking was more memorable, while campsite selection still felt passive and text-heavy.</p>",
             "media": {
               "type": "image",
-              "url": "/projects/survival-prototype-2.jpg",
+              "url": "/projects/survival-prototype-2-hd.png",
               "unavailable": false,
               "caption": null,
               "alt": "Interactive digital prototype with narrative and game interface",
@@ -843,7 +843,7 @@
             "html": "<p><strong>Prototype 3 — Revised Gameplay Prototype</strong></p><p>Based on those findings, we strengthened <strong>player agency</strong> and <strong>consequences </strong>by adding systems such as stamina, weather-based decisions, reduced scaffolding, and stronger connections between survival tasks and herb collection. The third playtest focused on whether players felt genuine agency, and whether the activities felt like gameplay rather than instruction.</p>",
             "media": {
               "type": "image",
-              "url": "/projects/survival-prototype-3.jpg",
+              "url": "/projects/survival-prototype-3-hd.png",
               "unavailable": false,
               "caption": null,
               "alt": "Revised gameplay prototype with map and mission systems",
