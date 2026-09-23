@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import {
-  ArrowDown,
   ArrowRight,
   BookOpen,
   BrainCircuit,
@@ -51,44 +50,14 @@ const journeyStops = [
   },
 ];
 
-const journeyStories = [
-  {
-    number: '01',
-    title: 'Building a foundation in how people learn',
-    paragraphs: [
-      'I began my path in education, studying and gaining classroom experience in both China and the United States. After graduating from UW–Madison, I spent a year leading my own second-grade classroom.',
-      'Teaching strengthened my leadership and communication skills, but more importantly, it taught me to pay attention to how differently people interpret information, respond to feedback, and make sense of something new.',
-    ],
-  },
-  {
-    number: '02',
-    title: 'Moving from teaching to designing learning',
-    paragraphs: [
-      'I became increasingly interested in how learning could be designed beyond a single classroom and supported through technology.',
-      'At Carnegie Mellon, I began studying learning science, instructional design, educational technology, and AI-supported learning more deeply—giving me a stronger evidence-based foundation for understanding not just what to teach, but how people learn and practice effectively.',
-    ],
-  },
-  {
-    number: '03',
-    title: 'Connecting learning with performance and product',
-    paragraphs: [
-      'Through internships and client projects, I moved further into performance-focused instructional design—working across e-learning, performance support, learning analytics, AI-enabled learning, and learning technology.',
-      'These experiences also pushed me beyond course design. I learned to work cross-functionally, manage projects, collaborate with product and technical teams, use data to guide decisions, and determine when training is—and is not—the right solution.',
-    ],
-  },
-];
-
 export default function AboutPage() {
   return (
     <main className="about-page" id="top">
       <SiteHeader active="about" />
 
       <section className="about-intro" aria-labelledby="about-title">
-        <p className="about-eyebrow">About me</p>
-        <h1 id="about-title">
-          I design learning that connects{' '}
-          <span>people, performance, and technology.</span>
-        </h1>
+        <p className="about-eyebrow">The story behind the work</p>
+        <h1 id="about-title">About Me<span>.</span></h1>
         <div className="about-intro-copy">
           <p className="about-intro-lead">
             I’m an instructional designer who combines a foundation in
@@ -96,37 +65,24 @@ export default function AboutPage() {
             practical learning experiences that help people perform better.
           </p>
           <p>
-            My journey has taken me from teaching in real classrooms to
-            studying learning science and AI-enabled learning at Carnegie
-            Mellon, and then into client-facing instructional design work
-            across performance support, e-learning, learning analytics, and
-            learning technology.
+            My journey has taken me from <strong>teaching in real classrooms</strong>{' '}
+            to studying <strong>learning science and AI-enabled learning at
+            Carnegie Mellon</strong>, and then into client-facing instructional
+            design work across <strong>performance support, e-learning,
+            learning analytics, and learning technology</strong>.
           </p>
         </div>
-        <a className="about-scroll-cue" href="#journey">
-          My journey <ArrowDown size={16} aria-hidden="true" />
-        </a>
       </section>
 
       <section className="about-journey" id="journey" aria-labelledby="journey-title">
         <div className="about-section-heading">
-          <p className="about-eyebrow">My journey</p>
-          <h2 id="journey-title">
-            Three chapters that shaped how I design.
-          </h2>
+          <p className="about-eyebrow">From education to impact</p>
+          <h2 id="journey-title">My Journey<span>.</span></h2>
         </div>
 
         <div className="about-journey-grid">
           <aside className="about-route" aria-label="Dimple Lin’s learning design journey">
-            <span className="about-route-origin">Education to impact</span>
-            <svg
-              className="about-route-line"
-              viewBox="0 0 80 620"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <path d="M40 16 C16 92 66 150 39 225 C18 292 62 363 39 430 C22 482 51 552 40 606" />
-            </svg>
+            <p className="about-visual-label">Learning design journey</p>
             <ol>
               {journeyStops.map((stop) => {
                 const Icon = stop.icon;
@@ -147,17 +103,64 @@ export default function AboutPage() {
           </aside>
 
           <div className="about-journey-stories">
-            {journeyStories.map((story) => (
-              <article key={story.number}>
-                <p className="about-story-number">{story.number}</p>
-                <div>
-                  <h3>{story.title}</h3>
-                  {story.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-              </article>
-            ))}
+            <article>
+              <p className="about-story-number">01</p>
+              <div>
+                <h3>Building a foundation in how people learn</h3>
+                <p>
+                  I began my path in education, studying and gaining{' '}
+                  <strong>classroom experience in both China and the United
+                  States</strong>. After graduating from UW–Madison, I spent a
+                  year <strong>leading my own second-grade classroom</strong>.
+                </p>
+                <p>
+                  Teaching strengthened my leadership and communication skills,
+                  but more importantly, it taught me to pay attention to{' '}
+                  <strong>how differently people interpret information, respond
+                  to feedback, and make sense of something new</strong>.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <p className="about-story-number">02</p>
+              <div>
+                <h3>Moving from teaching to designing learning</h3>
+                <p>
+                  I became increasingly interested in how learning could be{' '}
+                  <strong>designed beyond a single classroom and supported
+                  through technology</strong>.
+                </p>
+                <p>
+                  At Carnegie Mellon, I began studying{' '}
+                  <strong>learning science, instructional design, educational
+                  technology, and AI-supported learning</strong> more deeply—
+                  giving me a stronger evidence-based foundation for
+                  understanding not just what to teach, but{' '}
+                  <strong>how people learn and practice effectively</strong>.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <p className="about-story-number">03</p>
+              <div>
+                <h3>Connecting learning with performance and product</h3>
+                <p>
+                  Through internships and client projects, I moved further into{' '}
+                  <strong>performance-focused instructional design</strong>—
+                  working across e-learning, performance support, learning
+                  analytics, AI-enabled learning, and learning technology.
+                </p>
+                <p>
+                  These experiences also pushed me beyond course design. I
+                  learned to <strong>work cross-functionally, manage projects,
+                  collaborate with product and technical teams, and use data to
+                  guide decisions</strong>—including determining when training
+                  is, and is not, the right solution.
+                </p>
+              </div>
+            </article>
 
             <blockquote>
               Today, I bring together learner empathy, learning science, and
@@ -169,36 +172,42 @@ export default function AboutPage() {
       </section>
 
       <section className="about-outside" aria-labelledby="outside-title">
-        <div className="about-outside-copy">
-          <p className="about-eyebrow">Outside of work</p>
-          <h2 id="outside-title">Usually moving—or somewhere outdoors.</h2>
-          <p>
-            When I’m not designing learning experiences, I’m usually moving or
-            somewhere outdoors.
-          </p>
-          <p>
-            I love traveling, hiking, working out, and spending time in nature.
-            I’m always excited to explore somewhere new—whether that means a new
-            city, a mountain trail, or simply getting outside for the day.
-          </p>
-          <ul aria-label="Interests">
-            <li>Travel</li>
-            <li>Hiking</li>
-            <li>Fitness</li>
-            <li>Nature</li>
-          </ul>
+        <div className="about-section-heading about-outside-heading">
+          <p className="about-eyebrow">A little more personal</p>
+          <h2 id="outside-title">Life Beyond Work<span>.</span></h2>
         </div>
 
-        <figure className="about-outside-photo">
-          <Image
-            src="/about/dimple-outdoors.jpg"
-            alt="Dimple standing beside a forest stream surrounded by trees and moss"
-            fill
-            sizes="(max-width: 900px) 100vw, 50vw"
-            priority
-          />
-          <figcaption>Exploring the Pacific Northwest</figcaption>
-        </figure>
+        <div className="about-outside-grid">
+          <div className="about-outside-copy">
+            <p>
+              When I’m not designing learning experiences, I’m usually{' '}
+              <strong>moving or somewhere outdoors</strong>.
+            </p>
+            <p>
+              I love <strong>traveling, hiking, working out, and spending time
+              in nature</strong>. I’m always excited to explore somewhere new—
+              whether that means a new city, a mountain trail, or simply getting
+              outside for the day.
+            </p>
+            <ul aria-label="Interests">
+              <li>Travel</li>
+              <li>Hiking</li>
+              <li>Fitness</li>
+              <li>Nature</li>
+            </ul>
+          </div>
+
+          <figure className="about-outside-photo">
+            <Image
+              src="/about/dimple-outdoors.jpg"
+              alt="Dimple standing beside a forest stream surrounded by trees and moss"
+              fill
+              sizes="(max-width: 900px) 100vw, 50vw"
+              priority
+            />
+            <figcaption>Exploring the Pacific Northwest</figcaption>
+          </figure>
+        </div>
       </section>
 
       <footer className="about-contact" id="contact">
