@@ -126,8 +126,8 @@ const toolGroups: Record<ToolKey, ToolGroup> = {
   },
   analysis: {
     label: 'AI Analysis Tools',
-    secondary: 'ChatGPT · Claude Code',
-    projects: [project('learner-data')],
+    secondary: 'ChatGPT · Claude · Claude Code',
+    projects: [project('learner-data'), tutorialSupport],
   },
 };
 
