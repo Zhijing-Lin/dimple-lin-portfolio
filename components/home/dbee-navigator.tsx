@@ -52,11 +52,7 @@ const dotAI: ProjectLink = {
   image: '/projects/covers-refined/dot-ai.webp',
 };
 
-const tutorialSupport: ProjectLink = {
-  title: 'From Tutorial Videos to Continuous Performance Support',
-  href: '/projects#oli-support',
-  image: '/projects/covers-refined/continuous-support-search-redesign.webp',
-};
+const tutorialSupport = project('tutorial-search-redesign');
 
 const projectAreas = {
   strategy: {

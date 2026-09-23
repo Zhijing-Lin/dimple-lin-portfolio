@@ -182,6 +182,21 @@ export const projectDetails: ProjectDetail[] = [
       },
     ],
   },
+  {
+    slug: 'tutorial-search-redesign',
+    title: 'Improving Tutorial Discovery with AI-Augmented Design',
+    summary:
+      'Using synthetic user research, AI-assisted development, and iterative evaluation to make OLI Torus tutorials easier to find.',
+    category: 'Evaluation & Continuous Improvement',
+    tools: ['Claude', 'ChatGPT', 'Cursor', 'Camtasia', 'HTML/CSS/JavaScript'],
+    cover: '/projects/covers-refined/continuous-support-search-redesign.webp',
+    productImage: '/projects/tutorial-search-redesigned.webp',
+    productImageAlt:
+      'Redesigned OLI Torus tutorial search showing contextual ranked results',
+    originalUrl: '',
+    sourceText: 'Improving Tutorial Discovery with AI-Augmented Design',
+    launchLinks: [],
+  },
 ];
 
 export const projectDetailBySlug = Object.fromEntries(

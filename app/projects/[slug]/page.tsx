@@ -4,21 +4,35 @@ import {
   ArrowRight,
   BadgeCheck,
   BookOpen,
+  Bot,
   BrainCircuit,
+  Captions,
+  CheckCircle2,
+  ClipboardCheck,
+  Code2,
+  Database,
+  FileSearch,
+  FileText,
   Flame,
   ExternalLink,
   Handshake,
   LayoutGrid,
+  Lightbulb,
   ListChecks,
+  MousePointerClick,
   Mountain,
   MessagesSquare,
   RefreshCw,
   RotateCcw,
   ScanSearch,
+  Search,
   Scale,
+  Sparkles,
   Target,
   TentTree,
+  Timer,
   UsersRound,
+  Video,
   Waypoints,
 } from 'lucide-react';
 import { notFound } from 'next/navigation';
@@ -139,6 +153,8 @@ const zoomableProjectImages = new Set([
   '/projects/survival-campsite-cta-hd.jpg',
   '/projects/survival-firemaking-cta-hd.jpg',
   '/projects/tutor-problem-space-mapping.png',
+  '/projects/tutorial-search-original.webp',
+  '/projects/tutorial-search-redesigned.webp',
 ]);
 
 function ProjectMedia({ media }: { media: LegacyMedia | null }) {
@@ -542,6 +558,509 @@ function SurvivalPlaytestingChanges() {
   );
 }
 
+const tutorialDiscoverySteps = [
+  {
+    title: 'Define realistic tasks',
+    detail: 'Create a project · Find publishing settings · Re-find support',
+    icon: ClipboardCheck,
+  },
+  {
+    title: 'Prompt a synthetic user',
+    detail: 'Complete the task as a first-time or returning course author',
+    icon: Bot,
+  },
+  {
+    title: 'Observe behavior',
+    detail: 'Search path · Hesitation · Backtracking · Attempts · Success',
+    icon: FileSearch,
+  },
+  {
+    title: 'Set the right scope',
+    detail: 'Redesign search. Keep the working sidebar.',
+    icon: Target,
+  },
+];
+
+function TutorialSyntheticUserPath() {
+  return (
+    <figure className="legacy-media tutorial-visual tutorial-discovery-map">
+      <div className="tutorial-visual-frame">
+        <p className="tutorial-visual-eyebrow">Synthetic user task testing</p>
+        <h3>How I identified search friction before redesigning</h3>
+        <ol className="tutorial-step-flow">
+          {tutorialDiscoverySteps.map((step, stepIndex) => {
+            const Icon = step.icon;
+            return (
+              <li key={step.title}>
+                <span className="tutorial-step-icon" aria-hidden="true">
+                  <Icon size={19} strokeWidth={1.8} />
+                </span>
+                <span className="tutorial-step-number">
+                  {String(stepIndex + 1).padStart(2, '0')}
+                </span>
+                <strong>{step.title}</strong>
+                <p>{step.detail}</p>
+              </li>
+            );
+          })}
+        </ol>
+        <div className="tutorial-query-finding">
+          <div>
+            <span>publish</span>
+            <small>wrong result</small>
+          </div>
+          <ArrowRight size={17} aria-hidden="true" />
+          <div>
+            <span>publishing</span>
+            <small>no result</small>
+          </div>
+          <ArrowRight size={17} aria-hidden="true" />
+          <div className="is-success">
+            <span>visibility</span>
+            <small>correct tutorial</small>
+          </div>
+        </div>
+        <p className="tutorial-visual-note">
+          Key finding: search failed when user language differed from site
+          terminology.
+        </p>
+      </div>
+      <figcaption>
+        Evidence narrowed the redesign to search—not navigation.
+      </figcaption>
+    </figure>
+  );
+}
+
+const tutorialRootCauses = [
+  {
+    title: 'Search Index Misalignment',
+    detail: 'Visible title ≠ indexed title · “Publishing” missing',
+    icon: Database,
+  },
+  {
+    title: 'Unused Caption Content',
+    detail: 'Helpful video language existed but was not searchable',
+    icon: Captions,
+  },
+  {
+    title: 'Literal Matching',
+    detail: 'publish ≠ publishing · quiz ≠ MCQ',
+    icon: Search,
+  },
+  {
+    title: 'Weak Result Context',
+    detail: 'Sparse result cards made relevance hard to judge',
+    icon: FileText,
+  },
+];
+
+function TutorialRootCauseDiagram() {
+  return (
+    <figure className="legacy-media tutorial-visual tutorial-root-causes">
+      <div className="tutorial-visual-frame">
+        <p className="tutorial-visual-eyebrow">Root cause analysis</p>
+        <h3>Why was search failing?</h3>
+        <div className="tutorial-problem-core">
+          Users could not reliably find the right tutorial through search
+        </div>
+        <div className="tutorial-cause-grid">
+          {tutorialRootCauses.map((cause) => {
+            const Icon = cause.icon;
+            return (
+              <article key={cause.title}>
+                <Icon size={21} strokeWidth={1.7} aria-hidden="true" />
+                <strong>{cause.title}</strong>
+                <p>{cause.detail}</p>
+              </article>
+            );
+          })}
+        </div>
+        <div className="tutorial-insight-bar">
+          <Lightbulb size={18} aria-hidden="true" />
+          <span>
+            Not a missing-keyword problem: content structure + search logic +
+            result design
+          </span>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+function TutorialContentAuditFlow() {
+  return (
+    <figure className="legacy-media tutorial-visual tutorial-audit-flow">
+      <div className="tutorial-visual-frame">
+        <p className="tutorial-visual-eyebrow">Content audit before redesign</p>
+        <div className="tutorial-audit-steps">
+          <article>
+            <Database size={23} strokeWidth={1.7} aria-hidden="true" />
+            <strong>Existing content</strong>
+            <p>Sidebar · Search index · Tutorial pages · Captions</p>
+          </article>
+          <ArrowRight size={20} aria-hidden="true" />
+          <article>
+            <FileSearch size={23} strokeWidth={1.7} aria-hidden="true" />
+            <strong>Validate what exists</strong>
+            <p>Resolve gaps, duplicates, and incomplete pages</p>
+          </article>
+          <ArrowRight size={20} aria-hidden="true" />
+          <article className="is-audit-result">
+            <CheckCircle2 size={23} strokeWidth={1.7} aria-hidden="true" />
+            <strong>Reliable searchable corpus</strong>
+            <p>Generate metadata only for verified tutorials</p>
+          </article>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+const tutorialRedesignMoves = [
+  {
+    title: 'Smarter Matching',
+    detail: 'Richer metadata, synonyms, and word variations',
+    example: 'quiz · MCQ · multiple choice',
+    icon: Search,
+  },
+  {
+    title: 'Intent-Based Ranking',
+    detail: 'Weight the strongest signals of intent first',
+    example: 'Title → Keywords → Description → Category → Transcript',
+    icon: Waypoints,
+  },
+  {
+    title: 'Clearer Results',
+    detail: 'Add category, description, excerpt, and action',
+    example: 'Faster relevance judgment before opening',
+    icon: FileText,
+  },
+];
+
+function TutorialSearchRedesignOverview() {
+  return (
+    <figure className="legacy-media tutorial-visual tutorial-redesign-overview">
+      <div className="tutorial-visual-frame">
+        <p className="tutorial-visual-eyebrow">Search redesign overview</p>
+        <h3>Redesigning the search experience</h3>
+        <div className="tutorial-redesign-grid">
+          {tutorialRedesignMoves.map((move, moveIndex) => {
+            const Icon = move.icon;
+            return (
+              <article key={move.title}>
+                <div className="tutorial-redesign-card-heading">
+                  <span>{String(moveIndex + 1).padStart(2, '0')}</span>
+                  <Icon size={22} strokeWidth={1.7} aria-hidden="true" />
+                </div>
+                <strong>{move.title}</strong>
+                <p>{move.detail}</p>
+                <small>{move.example}</small>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+function TutorialSearchComparison() {
+  return (
+    <figure className="tutorial-search-comparison">
+      <div>
+        <ProjectImageLightbox
+          src="/projects/tutorial-search-original.webp"
+          alt="Original tutorial search showing one sparse result for publish"
+          caption="Original Search Experience"
+        />
+        <ul>
+          <li>Literal matching</li>
+          <li>Limited result context</li>
+        </ul>
+      </div>
+      <div>
+        <ProjectImageLightbox
+          src="/projects/tutorial-search-redesigned.webp"
+          alt="Redesigned tutorial search showing ranked contextual results for publish"
+          caption="Redesigned Search Experience"
+        />
+        <ul>
+          <li>Supports word variations</li>
+          <li>Clearer ranking and relevance cues</li>
+        </ul>
+      </div>
+    </figure>
+  );
+}
+
+function TutorialAIWorkflow() {
+  return (
+    <figure className="legacy-media tutorial-visual tutorial-ai-workflow">
+      <div className="tutorial-visual-frame">
+        <p className="tutorial-visual-eyebrow">AI-augmented workflow</p>
+        <div className="tutorial-ai-top">
+          <Bot size={23} strokeWidth={1.7} aria-hidden="true" />
+          <div>
+            <strong>Claude — Synthetic User</strong>
+            <p>Simulate behavior · Complete tasks · Surface friction</p>
+          </div>
+        </div>
+        <div className="tutorial-ai-center">
+          <span>Me</span>
+          <strong>Frame · Review · Decide</strong>
+          <p>
+            Define tasks · Interpret evidence · Set scope · Make decisions ·
+            Evaluate results
+          </p>
+        </div>
+        <div className="tutorial-ai-partners">
+          <article>
+            <Sparkles size={21} strokeWidth={1.7} aria-hidden="true" />
+            <strong>ChatGPT</strong>
+            <span>Design &amp; Reasoning Partner</span>
+            <p>Structure research · Challenge assumptions · Plan evaluation</p>
+          </article>
+          <article>
+            <Code2 size={21} strokeWidth={1.7} aria-hidden="true" />
+            <strong>Cursor</strong>
+            <span>Coding Agent</span>
+            <p>Inspect code · Diagnose causes · Implement · Support QA</p>
+          </article>
+        </div>
+        <div className="tutorial-human-summary">
+          AI supports the process. Human judgment guides the decisions.
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+function TutorialVideoProduction() {
+  return (
+    <figure className="legacy-media tutorial-visual tutorial-video-production">
+      <div className="tutorial-visual-frame">
+        <div className="tutorial-video-stage">
+          <div className="tutorial-video-browser">
+            <div className="tutorial-window-dots" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
+            <div className="tutorial-video-screen">
+              <span className="tutorial-video-step">Step 2</span>
+              <strong>Configure visibility</strong>
+              <button type="button" tabIndex={-1}>
+                Save changes
+              </button>
+              <MousePointerClick size={24} aria-hidden="true" />
+            </div>
+          </div>
+          <div className="tutorial-video-timeline" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <i />
+          </div>
+        </div>
+        <div className="tutorial-video-copy">
+          <Video size={25} strokeWidth={1.7} aria-hidden="true" />
+          <h3>Tutorial Video Production in Camtasia</h3>
+          <ul>
+            <li>Planned workflow demonstrations</li>
+            <li>Recorded narration and screen capture</li>
+            <li>Edited pacing, transitions, zoom, and visual focus</li>
+          </ul>
+          <div className="tutorial-skill-tags">
+            <span>Screen Recording</span>
+            <span>Video Editing</span>
+            <span>Visual Attention</span>
+          </div>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+const tutorialMetrics = [
+  { before: '2/3', after: '3/3', label: 'Search Task Success' },
+  { before: '1/3', after: '3/3', label: 'First-Query Success' },
+  { before: '1/3', after: '3/3', label: 'Correct Tutorial Ranked #1' },
+];
+
+function TutorialOutcomeMetrics() {
+  return (
+    <figure className="legacy-media tutorial-visual tutorial-outcome-metrics">
+      <div className="tutorial-visual-frame">
+        <p className="tutorial-visual-eyebrow">Before-and-after pilot</p>
+        <div className="tutorial-metric-grid">
+          {tutorialMetrics.map((metric) => (
+            <article key={metric.label}>
+              <div>
+                <span>{metric.before}</span>
+                <ArrowRight size={18} aria-hidden="true" />
+                <strong>{metric.after}</strong>
+              </div>
+              <p>{metric.label}</p>
+            </article>
+          ))}
+        </div>
+        <p className="tutorial-visual-note">
+          Pilot findings from before-and-after synthetic-user evaluation
+        </p>
+      </div>
+    </figure>
+  );
+}
+
+function TutorialQuizCallout() {
+  return (
+    <figure className="legacy-media tutorial-visual tutorial-quiz-callout">
+      <div className="tutorial-visual-frame">
+        <p className="tutorial-visual-eyebrow">
+          Strongest improvement: Quiz / MCQ task
+        </p>
+        <div className="tutorial-quiz-grid">
+          <article className="is-original">
+            <strong>Original</strong>
+            <p>quiz → no correct result</p>
+            <p>MCQ → no correct result</p>
+            <p>multiple choice → no correct result</p>
+            <small>User had to browse manually</small>
+          </article>
+          <ArrowRight size={22} aria-hidden="true" />
+          <article className="is-redesigned">
+            <strong>Redesigned</strong>
+            <p>quiz</p>
+            <ArrowRight size={18} aria-hidden="true" />
+            <p>Add Multiple-Choice Questions (MCQ)</p>
+            <span>Rank #1</span>
+          </article>
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+const tutorialValidationSteps = [
+  {
+    title: 'Recruit Users',
+    detail: '5–8 Torus course authors or instructors',
+    icon: UsersRound,
+  },
+  {
+    title: 'Run Search Tasks',
+    detail: 'Publishing · Quiz / MCQ · Learning objectives',
+    icon: Search,
+  },
+  {
+    title: 'Measure Outcomes',
+    detail: 'Success · Time · Attempts · Confidence · Friction',
+    icon: Timer,
+  },
+];
+
+function TutorialValidationPlan() {
+  return (
+    <figure className="legacy-media tutorial-visual tutorial-validation-plan">
+      <div className="tutorial-visual-frame">
+        <p className="tutorial-visual-eyebrow">Next step</p>
+        <h3>Real-user validation</h3>
+        <ol className="tutorial-validation-steps">
+          {tutorialValidationSteps.map((step, stepIndex) => {
+            const Icon = step.icon;
+            return (
+              <li key={step.title}>
+                <span>{stepIndex + 1}</span>
+                <Icon size={22} strokeWidth={1.7} aria-hidden="true" />
+                <strong>{step.title}</strong>
+                <p>{step.detail}</p>
+              </li>
+            );
+          })}
+        </ol>
+        <div className="tutorial-human-summary">
+          Move from directional pilot evidence to stronger real-user validation
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+function TutorialReflectionQuote() {
+  return (
+    <figure className="legacy-media tutorial-reflection-quote">
+      <blockquote>
+        “AI can accelerate research and development, but the designer remains
+        responsible for framing the problem, evaluating evidence, controlling
+        scope, and deciding what should actually be built.”
+      </blockquote>
+    </figure>
+  );
+}
+
+const tutorialImprovementSteps = [
+  'Evaluate',
+  'Identify Remaining Friction',
+  'Refine',
+  'Retest',
+];
+
+function TutorialImprovementLoop() {
+  return (
+    <figure className="legacy-media tutorial-visual tutorial-improvement-loop">
+      <div className="tutorial-visual-frame">
+        <p className="tutorial-visual-eyebrow">Continuous improvement</p>
+        <div className="tutorial-loop-steps">
+          {tutorialImprovementSteps.map((step, stepIndex) => (
+            <div key={step}>
+              <article className={stepIndex === 1 ? 'is-friction' : ''}>
+                <span>{String(stepIndex + 1).padStart(2, '0')}</span>
+                <strong>{step}</strong>
+                {stepIndex === 1 ? (
+                  <small>Search field retains previous query</small>
+                ) : null}
+              </article>
+              <RefreshCw size={18} aria-hidden="true" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
+function TutorialVisual({ sourceIndex }: { sourceIndex: number }) {
+  switch (sourceIndex) {
+    case 5:
+      return <TutorialSyntheticUserPath />;
+    case 7:
+      return <TutorialRootCauseDiagram />;
+    case 8:
+      return <TutorialContentAuditFlow />;
+    case 10:
+      return <TutorialSearchRedesignOverview />;
+    case 11:
+      return <TutorialSearchComparison />;
+    case 12:
+      return <TutorialAIWorkflow />;
+    case 13:
+      return <TutorialVideoProduction />;
+    case 14:
+      return <TutorialOutcomeMetrics />;
+    case 15:
+      return <TutorialQuizCallout />;
+    case 17:
+      return <TutorialValidationPlan />;
+    case 18:
+      return <TutorialReflectionQuote />;
+    case 19:
+      return <TutorialImprovementLoop />;
+    default:
+      return null;
+  }
+}
+
 function LegacySectionView({
   section,
   index,
@@ -632,6 +1151,9 @@ function LegacySectionView({
       projectSlug === 'survival-play' && sourceIndex === 7;
     const usesSurvivalPlaytestingChanges =
       projectSlug === 'survival-play' && sourceIndex === 16;
+    const usesTutorialVisual =
+      projectSlug === 'tutorial-search-redesign' &&
+      [5, 7, 8, 10, 11, 12, 13, 14, 15, 17, 18, 19].includes(sourceIndex);
 
     if (usesReviewerGapTable) {
       return (
@@ -666,6 +1188,8 @@ function LegacySectionView({
           <SurvivalGoalsMap />
         ) : usesSurvivalPlaytestingChanges ? (
           <SurvivalPlaytestingChanges />
+        ) : usesTutorialVisual ? (
+          <TutorialVisual sourceIndex={sourceIndex} />
         ) : (
           <ProjectMedia media={section.media} />
         )}
@@ -809,7 +1333,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         ? 4
         : project.slug === 'survival-play'
           ? 3
-          : null;
+          : project.slug === 'tutorial-search-redesign'
+            ? 3
+            : null;
   const delaysProgressNav = progressNavAfterSourceIndex !== null;
   const introductionSections = delaysProgressNav
     ? renderedSections.filter(

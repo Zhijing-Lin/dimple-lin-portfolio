@@ -169,19 +169,16 @@ const categories: Category[] = [
         href: '/projects/learner-data',
       },
       {
-        title: 'From Tutorial Videos to Continuous Performance Support',
+        title: 'Improving Tutorial Discovery with AI-Augmented Design',
         description:
-          'Evaluated existing tutorials and redesigned them into a more searchable, AI-assisted support system built for continuous improvement.',
-        highlights: [
-          'searchable, AI-assisted support system',
-          'continuous improvement',
-        ],
-        tools: ['Camtasia', 'HTML/CSS'],
+          'Using synthetic user research, AI-assisted development, and iterative evaluation to make OLI Torus tutorials easier to find.',
+        highlights: ['synthetic user research'],
+        tools: ['Claude', 'Cursor', 'Camtasia'],
         image:
           '/projects/covers-refined/continuous-support-search-redesign.webp',
         imageAlt:
-          'Tutorial videos redesigned as continuous performance support',
-        href: '#oli-support',
+          'Before-and-after comparison of the redesigned OLI Torus tutorial search',
+        href: '/projects/tutorial-search-redesign',
         anchorId: 'oli-support',
       },
     ],

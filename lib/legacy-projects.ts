@@ -48,7 +48,168 @@ export type LegacyProject = {
   sections: LegacySection[];
 };
 
-export const legacyProjects = legacyProjectsJson as LegacyProject[];
+const tutorialSearchProject: LegacyProject = {
+  slug: 'tutorial-search-redesign',
+  shortId: 'launchpad-search',
+  originalUrl: '',
+  sections: [
+    {
+      sourceIndex: 0,
+      type: 'hero',
+      titleHtml:
+        '<h2>Improving Tutorial Discovery with AI-Augmented Design</h2>',
+      subtitleHtml:
+        '<p>Using synthetic user research, AI-assisted development, and iterative evaluation to make OLI Torus tutorials easier to find.</p>',
+    },
+    {
+      sourceIndex: 1,
+      type: 'text',
+      html: `<h3>Project Overview</h3><p>The OLI Torus Tutorial Hub is a self-service support site that helps course authors and instructors find step-by-step tutorials for completing tasks in Torus.</p><p>I inherited an existing version of the site and used the project as an opportunity to explore continuous improvement through an AI-augmented design process. Rather than beginning with a feature idea, I first investigated how users might actually navigate the existing experience.</p><p>Task-based synthetic user testing revealed a clear problem: sidebar navigation worked well when users knew the site’s terminology, but search became unreliable when their wording differed from the search index.</p><p>I focused the redesign on improving tutorial discovery so users could find the right support without needing to know the exact terminology used by the site.</p>`,
+      cta: null,
+    },
+    {
+      sourceIndex: 2,
+      type: 'columns',
+      columns: [
+        {
+          html: `<h3>My Role</h3><p><strong>Learning Experience Designer &amp; AI-Augmented Product Designer</strong></p><p>I independently led the redesign process, including:</p><ul><li><p>Synthetic user research and problem definition</p></li><li><p>Content and system analysis</p></li><li><p>Search requirements and information design</p></li><li><p>AI-assisted implementation and QA</p></li><li><p>Before-and-after pilot evaluation</p></li><li><p>Iteration planning</p></li></ul><p>I also contributed to the broader Tutorial Hub by producing instructional tutorial videos in Camtasia.</p>`,
+          media: null,
+        },
+        {
+          html: `<h3>Team</h3><p><strong>Individual redesign project</strong></p><p>The project built on an existing Tutorial Hub created before I took over the work. My contribution focused on identifying improvement opportunities, redesigning the tutorial-discovery experience, and producing additional tutorial content.</p>`,
+          media: null,
+        },
+        {
+          html: `<h3>Tools</h3><p>Claude · ChatGPT · Cursor · Camtasia · HTML/CSS/JavaScript · Git/GitHub</p>`,
+          media: null,
+        },
+      ],
+    },
+    {
+      sourceIndex: 3,
+      type: 'text',
+      html: '<h3>My Design Process</h3><p></p>',
+      cta: null,
+    },
+    {
+      sourceIndex: 4,
+      type: 'process',
+      items: [
+        { name: 'Discover', sectionIndex: 5 },
+        { name: 'Diagnose', sectionIndex: 7 },
+        { name: 'Design & Build', sectionIndex: 9 },
+        { name: 'Evaluate & Iterate', sectionIndex: 14 },
+      ],
+    },
+    {
+      sourceIndex: 5,
+      type: 'split',
+      html: `<h3>Discover — Finding the Problem with Synthetic Users</h3><p>I did not begin by asking AI to critique the website or generate redesign ideas.</p><p>Instead, I used Claude as a synthetic user and gave it realistic tasks to complete as a first-time or returning Torus course author.</p><p><strong>Tasks included:</strong></p><ul><li><p>Finding how to create a new project</p></li><li><p>Finding collaborator and publishing settings</p></li><li><p>Returning later to locate a tutorial while remembering the task, but not the exact tutorial name</p></li></ul><p><strong>During each task, I observed:</strong></p><p>Search path · Hesitation · Backtracking · Search attempts · Task success</p>`,
+      media: null,
+      flipped: false,
+    },
+    {
+      sourceIndex: 6,
+      type: 'text',
+      html: `<h4>What I Found</h4><p>The sidebar worked well when the language of the user’s task closely matched the site's terminology.</p><p>Search was where the friction appeared.</p><p>For example, a returning user trying to find publishing-related support experienced:</p><p><strong>publish → wrong result<br>publishing → no result<br>visibility → correct tutorial</strong></p><p>This helped me narrow the problem from a broad navigation issue to a much more specific search problem:</p><p><strong>Users know what they want to do, but search may fail when their language differs from the site’s exact terminology.</strong></p><p>It also led to an important scope decision: I did not redesign the sidebar because the research did not show that it needed to be redesigned.</p>`,
+      cta: null,
+    },
+    {
+      sourceIndex: 7,
+      type: 'split',
+      html: `<h3>Diagnose — From User Friction to Root Cause</h3><p>Finding that search was difficult was only the first step.</p><p>Before changing the site, I used Cursor to inspect the existing codebase without modifying it and understand how the search system actually worked.</p><p>The investigation revealed four underlying issues: search-index misalignment, unused tutorial content, literal matching, and limited result context.</p><p>The problem therefore became more than adding a few missing keywords. It was a combination of:</p><p><strong>Content structure + Search logic + Result design</strong></p>`,
+      media: null,
+      flipped: true,
+    },
+    {
+      sourceIndex: 8,
+      type: 'split',
+      html: `<h4>Content Audit</h4><p>Before rebuilding the search index, I audited the existing Tutorial Hub to determine what content actually existed.</p><p>The audit revealed inconsistencies between:</p><ul><li><p>Sidebar entries</p></li><li><p>Search-indexed tutorials</p></li><li><p>Tutorial titles</p></li><li><p>Existing HTML pages</p></li><li><p>Video caption files</p></li></ul><p>Rather than allowing AI to generate metadata across everything it encountered, I first established a reliable corpus of valid tutorial pages.</p><p>This step was especially important in an AI-assisted workflow because it prevented the system from generating descriptions or keywords for missing or incomplete content.</p>`,
+      media: null,
+      flipped: false,
+    },
+    {
+      sourceIndex: 9,
+      type: 'text',
+      html: '<h3>Design &amp; Build — Redesigning the Search Experience</h3><p>Based on the research and technical investigation, I focused the redesign on three areas.</p>',
+      cta: null,
+    },
+    {
+      sourceIndex: 10,
+      type: 'split',
+      html: `<h4>Smarter Matching, Ranking, and Results</h4><p><strong>Smarter Matching</strong></p><p>I expanded each tutorial into richer structured metadata, including: Title · Category · Section · Description · Keywords · Transcript · Page Path.</p><p>This gave the system more information about what each tutorial was actually designed to help users accomplish. It also allowed different ways of describing the same task to lead toward the same content—for example, quiz, MCQ, and multiple choice could all surface <em>Add Multiple-Choice Questions (MCQ)</em>.</p><p><strong>Intent-Based Ranking</strong></p><p>I redesigned the ranking logic so that stronger signals of user intent received more weight: Title → Keywords → Description → Category / Section → Transcript.</p><p>The goal was not simply to return more results. It was to make the most relevant result easier to find first.</p><p><strong>Clearer Search Results</strong></p><p>Improving retrieval was only part of the problem. Users also needed to quickly decide: “Is this actually the tutorial I need?” I redesigned result cards to provide category, section, description, a relevant transcript excerpt, and a clear call to action.</p>`,
+      media: null,
+      flipped: false,
+    },
+    {
+      sourceIndex: 11,
+      type: 'split',
+      html: `<h4>Before / After Search UI</h4><p>The original search result offered limited context, making it harder to judge whether a result matched the user’s task.</p><p>The redesigned experience presents clearer result hierarchy, richer contextual information, highlighted query matches, and a direct path to the tutorial.</p>`,
+      media: null,
+      flipped: true,
+    },
+    {
+      sourceIndex: 12,
+      type: 'split',
+      html: `<h3>AI-Augmented Design Workflow</h3><p>A major part of this project was not simply using AI, but deciding which AI should perform which type of work.</p><p><strong>Claude — Synthetic User</strong><br>I used Claude to simulate realistic user behavior and surface usability friction through task completion.</p><p><strong>ChatGPT — Design &amp; Reasoning Partner</strong><br>I used ChatGPT to help structure the research process, interpret findings, challenge assumptions, refine requirements, and plan evaluation.</p><p><strong>Cursor — Coding Agent</strong><br>I used Cursor to inspect the existing codebase, identify technical root causes, plan implementation, modify the search experience, and support QA.</p><p><strong>My Role — Orchestration &amp; Judgment</strong><br>I remained responsible for research framing, evidence quality, scope, requirements, design priorities, evaluation criteria, and final decisions.</p><p>AI accelerated the process; I remained responsible for deciding what evidence to trust and what changes were actually worth building.</p>`,
+      media: null,
+      flipped: false,
+    },
+    {
+      sourceIndex: 13,
+      type: 'split',
+      html: `<h3>Additional Contribution — Tutorial Video Production</h3><p>Alongside the search redesign, I also produced step-by-step Torus tutorial videos in Camtasia to help course authors complete common workflows independently.</p><p>My production process included:</p><ul><li><p>Planning the tutorial workflow and screen states</p></li><li><p>Recording narration and interface demonstrations</p></li><li><p>Synchronizing voiceover with cursor movement and on-screen actions</p></li><li><p>Editing pacing and transitions</p></li><li><p>Using zoom and visual focus to direct attention toward important interface elements</p></li></ul><p>Through this work, I learned to treat video editing as part of the instructional design—not simply as visual polish.</p><p>A strong tutorial should help the learner always understand: <strong>Where should I look? What should I do? What happens next?</strong></p>`,
+      media: null,
+      flipped: true,
+    },
+    {
+      sourceIndex: 14,
+      type: 'split',
+      html: `<h3>Evaluation — Pilot Validation</h3><p>To determine whether the redesign addressed the specific problems identified during discovery, I conducted a before-and-after synthetic-user pilot.</p><p>I used fresh Claude sessions to reduce carryover from previous testing and ran the same three task-based scenarios on both versions:</p><ul><li><p>Collaboration / Publishing</p></li><li><p>Quiz / Multiple-Choice Questions</p></li><li><p>Learning Objectives</p></li></ul><p>For each task, I compared task success, first-query success, number of search attempts, correct-result ranking, hesitation and backtracking, and result clarity.</p>`,
+      media: null,
+      flipped: false,
+    },
+    {
+      sourceIndex: 15,
+      type: 'split',
+      html: `<h4>Pilot Findings</h4><p>The strongest improvement appeared in the Quiz / MCQ task.</p><p>In the original version, quiz, MCQ, and multiple choice did not surface the intended tutorial, forcing the synthetic user to browse manually.</p><p>In the redesigned version: <strong>quiz → Add Multiple-Choice Questions (MCQ) → Rank #1</strong>.</p><p>The redesigned descriptions also helped distinguish between similar results during the Learning Objectives task, suggesting that the redesign improved not only retrieval but also relevance judgment.</p>`,
+      media: null,
+      flipped: true,
+    },
+    {
+      sourceIndex: 16,
+      type: 'text',
+      html: `<h4>How I Interpret the Results</h4><p>Because this was a small synthetic-user pilot, I treat these findings as directional evidence rather than statistically conclusive validation.</p><p>The pilot does not prove that all Torus users would perform better with the redesign.</p><p>Instead, it provides early evidence that the new search experience addressed the specific findability problems identified during discovery and gives me a stronger basis for moving into real-user validation.</p><p>This distinction is important to me as a designer: evaluation should reflect the strength of the evidence rather than overstate what the data can support.</p>`,
+      cta: null,
+    },
+    {
+      sourceIndex: 17,
+      type: 'split',
+      html: `<h3>Next Step — Real-User Validation</h3><p>The next evaluation round would test the redesigned search with representative Torus course authors or instructors.</p><p>For a formative usability study, I would recruit approximately 5–8 users and ask them to complete the same core search tasks using the original and redesigned experiences.</p><p>I would measure task success, first-query success, time to find, search attempts, result confidence, and behavioral friction.</p><p>This evaluation would help determine whether the patterns observed in the synthetic-user pilot consistently appear with real users and would provide stronger evidence for the effectiveness of the redesign.</p>`,
+      media: null,
+      flipped: false,
+    },
+    {
+      sourceIndex: 18,
+      type: 'split',
+      html: `<h3>Reflection</h3><p>This project changed how I think about AI-assisted design.</p><p>The most effective use of AI was not asking a model to generate a finished solution. Instead, I used AI across different stages of a structured design process: Explore → Diagnose → Specify → Build → Evaluate.</p><p>AI helped me investigate user behavior, understand an unfamiliar technical system, accelerate implementation, and run an initial pilot.</p><p>But the most important decisions still required human judgment: What problem actually matters? What evidence is strong enough to act on? What should remain unchanged? How much complexity is justified? How strong is the evidence that the redesign worked?</p>`,
+      media: null,
+      flipped: true,
+    },
+    {
+      sourceIndex: 19,
+      type: 'split',
+      html: `<h3>Future Iteration</h3><p>The pilot also surfaced one remaining interaction issue: reopening the search interface could preserve the previous query, requiring users to manually clear the text before beginning another search.</p><p>Rather than adding a new feature simply to make the project appear larger, my next iteration would address this observed friction by improving the search-input reset behavior.</p><p>This reflects the continuous-improvement approach behind the project.</p>`,
+      media: null,
+      flipped: false,
+    },
+  ],
+};
+
+export const legacyProjects = [
+  ...(legacyProjectsJson as LegacyProject[]),
+  tutorialSearchProject,
+];
 
 export const legacyProjectBySlug = Object.fromEntries(
   legacyProjects.map((project) => [project.slug, project]),
