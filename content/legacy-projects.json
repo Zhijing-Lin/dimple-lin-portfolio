@@ -33,7 +33,7 @@
             "media": null
           },
           {
-            "html": "<h3>Timeline</h3><ul><li><p>Desgin + Development: Jan 2026 - Aug 2026</p></li><li><p>Evaluation: Sep 2026 - Now</p></li></ul>",
+            "html": "<h3>Timeline</h3><ul><li><p>Design + Development: Jan 2026 - Aug 2026</p></li><li><p>Evaluation: Sep 2026 - Now</p></li></ul>",
             "media": null
           }
         ]
@@ -47,7 +47,7 @@
             "sectionIndex": 5
           },
           {
-            "name": "Need Analysis",
+            "name": "Needs Analysis",
             "sectionIndex": 7
           },
           {
@@ -55,7 +55,7 @@
             "sectionIndex": 8
           },
           {
-            "name": "Desgin & Develop",
+            "name": "Design & Development",
             "sectionIndex": 9
           },
           {
@@ -230,7 +230,7 @@
         "type": "process",
         "items": [
           {
-            "name": "Need Analysis",
+            "name": "Needs Analysis",
             "sectionIndex": 8
           },
           {
@@ -238,7 +238,7 @@
             "sectionIndex": 11
           },
           {
-            "name": "Learning Design & Develop",
+            "name": "Learning Design & Development",
             "sectionIndex": 12
           },
           {

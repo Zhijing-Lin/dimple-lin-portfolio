@@ -1013,7 +1013,7 @@ a {
   }
 
   .category-section {
-    grid-template-columns: minmax(180px, 0.55fr) minmax(0, 1.45fr);
+    grid-template-columns: minmax(190px, 0.58fr) minmax(0, 1.42fr);
   }
 
   .case-study-hero {
@@ -7786,11 +7786,12 @@ a {
   }
 
   .project-progress-nav a {
-    padding: 0 0.5rem;
+    padding: 0 0.3rem;
   }
 
   .project-progress-nav a strong {
-    font-size: 0.64rem;
+    font-size: 0.68rem;
+    line-height: 1.25;
   }
 
   .legacy-section {
@@ -8359,6 +8360,18 @@ a {
     width: 150px;
     margin: 0;
     justify-self: start;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-title-flower {
+    width: 5.5rem;
+    height: 6.5rem;
+  }
+
+  .about-title-flower img {
+    width: 5.75rem;
+    transform: translate(-0.2rem, -50%) rotate(-4deg);
   }
 }
 
