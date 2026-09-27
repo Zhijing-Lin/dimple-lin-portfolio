@@ -16,6 +16,22 @@ export const metadata: Metadata = {
   title: 'Dimple Lin — Learning Experience Designer',
   description:
     'Dimple Lin turns real learning and performance gaps into evidence-driven experiences using research, learning science, AI, and data.',
+  icons: {
+    icon: [
+      {
+        url: '/favicon-flower-64.png',
+        type: 'image/png',
+        sizes: '64x64',
+      },
+    ],
+    apple: [
+      {
+        url: '/apple-touch-icon.png',
+        type: 'image/png',
+        sizes: '180x180',
+      },
+    ],
+  },
   openGraph: {
     title: 'Dimple Lin — Learning Experience Designer',
     description:
