@@ -49,11 +49,8 @@ export function FeaturedWork() {
         {featured.map(({ project, label, description, image }) => (
           <article className="featured-card" key={project.slug}>
             <a href={`/projects/${project.slug}`}>
-              <div className="featured-image-wrap">
-                <img
-                  src={image}
-                  alt={project.productImageAlt}
-                />
+              <div className="featured-image-wrap" data-scroll-reveal-candidate>
+                <img src={image} alt={project.productImageAlt} />
               </div>
               <div className="featured-copy">
                 <span>{label}</span>
@@ -68,7 +65,10 @@ export function FeaturedWork() {
         ))}
       </div>
 
-      <a className="featured-all-link featured-all-link-mobile" href="/projects">
+      <a
+        className="featured-all-link featured-all-link-mobile"
+        href="/projects"
+      >
         Explore all projects <ArrowRight size={17} aria-hidden="true" />
       </a>
     </section>

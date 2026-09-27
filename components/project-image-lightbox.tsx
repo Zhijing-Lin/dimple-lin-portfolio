@@ -15,7 +15,10 @@ export function ProjectImageLightbox({
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   return (
-    <figure className="legacy-media legacy-media-image is-zoomable">
+    <figure
+      className="legacy-media legacy-media-image is-zoomable"
+      data-scroll-reveal-candidate
+    >
       <div className="legacy-media-frame">
         <button
           className="project-image-trigger"

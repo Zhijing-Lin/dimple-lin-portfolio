@@ -164,6 +164,21 @@ export const projectDetails: ProjectDetail[] = [
     ],
   },
   {
+    slug: 'dot-ai',
+    title: 'Designing Just-in-Time AI Support with DOT AI',
+    summary:
+      'Translated learner pain points into targeted AI support, designing prompts and activation points around moments of learner need.',
+    category: 'AI-Enabled Learning & Product Innovation',
+    tools: ['DOT AI', 'OLI Torus'],
+    cover: '/projects/covers-refined/dot-ai.webp',
+    productImage: '/projects/covers-refined/dot-ai.webp',
+    productImageAlt: 'Just-in-time DOT AI support embedded in a learning task',
+    originalUrl: '',
+    sourceText:
+      'Designing Just-in-Time AI Support with DOT AI — project in progress',
+    launchLinks: [],
+  },
+  {
     slug: 'learner-data',
     title: 'Turning Learner Data into Course Design Decisions',
     summary:

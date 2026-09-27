@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import { DBeeNavigator } from '@/components/home/dbee-navigator';
+import { ScrollRevealController } from '@/components/scroll-reveal-controller';
 import './globals.css';
 
 const geistSans = Geist({
@@ -46,9 +47,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-reveal-enabled">
       <body className={`${geistSans.variable} antialiased`}>
         {children}
+        <ScrollRevealController />
         <DBeeNavigator />
       </body>
     </html>

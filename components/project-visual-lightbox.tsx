@@ -2,7 +2,7 @@
 
 import { Maximize2, X } from 'lucide-react';
 import type { ReactNode } from 'react';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 export function ProjectVisualLightbox({
   children,
@@ -14,6 +14,18 @@ export function ProjectVisualLightbox({
   className?: string;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const closeFromBackdrop = (event: MouseEvent) => {
+      if (event.target === dialog) dialog.close();
+    };
+
+    dialog.addEventListener('click', closeFromBackdrop);
+    return () => dialog.removeEventListener('click', closeFromBackdrop);
+  }, []);
 
   return (
     <figure

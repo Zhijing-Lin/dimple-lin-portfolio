@@ -147,8 +147,7 @@ const categories: Category[] = [
         tools: ['DOT AI', 'OLI Torus'],
         image: '/projects/covers-refined/dot-ai.webp',
         imageAlt: 'Just-in-time DOT AI support embedded in a learning task',
-        href: '#dot-ai',
-        anchorId: 'dot-ai',
+        href: '/projects/dot-ai',
       },
     ],
   },
@@ -163,7 +162,10 @@ const categories: Category[] = [
         title: 'Turning Learner Data into Course Design Decisions',
         description:
           'Used learning analytics to turn learner behavior, performance, and survey data into evidence-based redesign priorities.',
-        highlights: ['learning analytics', 'evidence-based redesign priorities'],
+        highlights: [
+          'learning analytics',
+          'evidence-based redesign priorities',
+        ],
         tools: ['Claude Code', 'ChatGPT', 'Google Slides'],
         image: '/projects/covers-refined/learner-data.webp',
         imageAlt: 'Course evaluation findings and redesign priorities',
@@ -194,7 +196,11 @@ function PortfolioIntro() {
           <span className="portfolio-title-text">
             Projects<span className="accent-dot">.</span>
           </span>
-          <span className="portfolio-title-flower" aria-hidden="true">
+          <span
+            className="portfolio-title-flower"
+            data-scroll-reveal-candidate
+            aria-hidden="true"
+          >
             <img src="/decor/wildflower-bouquet.png" alt="" />
           </span>
         </h1>
@@ -204,7 +210,11 @@ function PortfolioIntro() {
         </p>
       </div>
 
-      <div className="intro-note" aria-label="Portfolio approach">
+      <div
+        className="intro-note"
+        data-scroll-reveal-candidate
+        aria-label="Portfolio approach"
+      >
         <div className="intro-note-content">
           <span>How I work</span>
           <p>
@@ -287,7 +297,7 @@ function ProjectCard({ project }: { project: Project }) {
         target={project.external ? '_blank' : undefined}
         rel={project.external ? 'noreferrer' : undefined}
       >
-        <div className="project-image-wrap">
+        <div className="project-image-wrap" data-scroll-reveal-candidate>
           <img
             src={project.image}
             alt={project.imageAlt}

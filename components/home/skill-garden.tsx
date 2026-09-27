@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, type CSSProperties } from 'react';
-import { X } from 'lucide-react';
 
 type Skill = {
   name: string;
@@ -64,7 +63,7 @@ export function SkillGarden() {
         <p className="home-eyebrow" id="skill-garden-title">
           How I work
         </p>
-        <p className="garden-hint">(Click each flower to learn more)</p>
+        <p className="garden-hint">(Hover over each flower to learn more)</p>
       </div>
       <div className="garden-stage">
         <div className="garden-ground" aria-hidden="true" />
@@ -81,6 +80,14 @@ export function SkillGarden() {
                 isActive ? ' is-active' : ''
               }`}
               key={skill.name}
+              onMouseEnter={() => setActiveSkill(index)}
+              onMouseLeave={() => setActiveSkill(null)}
+              onFocus={() => setActiveSkill(index)}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  setActiveSkill(null);
+                }
+              }}
             >
               <button
                 className="skill-flower-button"
@@ -104,13 +111,6 @@ export function SkillGarden() {
                   id={`skill-description-${index}`}
                   aria-live="polite"
                 >
-                  <button
-                    type="button"
-                    aria-label={`Close ${skill.name} description`}
-                    onClick={() => setActiveSkill(null)}
-                  >
-                    <X size={14} aria-hidden="true" />
-                  </button>
                   <strong>{skill.name}</strong>
                   <p>{skill.description}</p>
                 </div>

@@ -287,8 +287,30 @@ const tutorialSearchProject: LegacyProject = {
   ],
 };
 
+const dotAIProject: LegacyProject = {
+  slug: 'dot-ai',
+  shortId: 'dot-ai',
+  originalUrl: '',
+  sections: [
+    {
+      sourceIndex: 0,
+      type: 'hero',
+      titleHtml: '<h2>Designing Just-in-Time AI Support with DOT AI</h2>',
+      subtitleHtml:
+        '<p>Translated learner pain points into targeted AI support, designing prompts and activation points around moments of learner need.</p>',
+    },
+    {
+      sourceIndex: 1,
+      type: 'text',
+      html: `<h3>Overview</h3><p>My client, <strong>Carnegie Mellon University’s Open Learning Initiative (OLI)</strong>, offers <strong>AI for Learning</strong>, an online course that helps educators build practical skills for using AI in teaching and learning. Prior analysis of learner data identified several challenges in the existing course, including <strong>differences in learners’ prior AI experience, limited challenge for more advanced learners, and limited differentiated support for learners with varying levels of AI experience</strong>.</p><p>As the <strong>Instructional Designer</strong>, I am using these findings to redesign targeted parts of the learning experience with <strong>DOT AI</strong>, an embedded AI learning assistant. My work focuses on identifying where learners need additional support and designing <strong>adaptive, just-in-time interventions</strong> that can scaffold learners when they struggle and provide deeper challenges when they demonstrate stronger understanding.</p><p><strong>This project is currently in progress — stay tuned for the full redesign process, prototypes, and evaluation results.</strong></p>`,
+      cta: null,
+    },
+  ],
+};
+
 export const legacyProjects = [
   ...(legacyProjectsJson as LegacyProject[]),
+  dotAIProject,
   learnerDataProject,
   tutorialSearchProject,
 ];

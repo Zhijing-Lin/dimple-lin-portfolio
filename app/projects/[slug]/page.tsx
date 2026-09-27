@@ -195,7 +195,10 @@ function ProjectMedia({ media }: { media: LegacyMedia | null }) {
   }
 
   return (
-    <figure className={`legacy-media legacy-media-${media.type}`}>
+    <figure
+      className={`legacy-media legacy-media-${media.type}`}
+      data-scroll-reveal-candidate
+    >
       <div className="legacy-media-frame">
         {media.type === 'video' ? (
           <iframe
@@ -247,6 +250,143 @@ function HumanLoopWorkflow() {
       </div>
       <figcaption>AI-assisted workflow with human review built in</figcaption>
     </figure>
+  );
+}
+
+const helpCenterEvaluationLevels = [
+  {
+    level: 'Level 1',
+    title: 'Reaction',
+    method:
+      'I embedded a short survey at the end of each article to understand how helpful, clear, easy to use, and complete tutors found the guidance.',
+    measures: ['Helpfulness', 'Clarity', 'Ease of use', 'Missing information'],
+    icon: MessagesSquare,
+    tone: 'rose',
+  },
+  {
+    level: 'Level 2',
+    title: 'Learning',
+    method:
+      'I ran scenario-based tests around common live-session challenges to see whether tutors could find and choose the right next step accurately and confidently.',
+    measures: [
+      'Task success',
+      'Action accuracy',
+      'Time to answer',
+      'Confidence',
+    ],
+    icon: ClipboardCheck,
+    tone: 'blue',
+  },
+  {
+    level: 'Level 3',
+    title: 'Behavior',
+    method:
+      'I interviewed supervisors and lead tutors and reviewed Slack patterns to assess whether tutors handled common issues more independently with fewer repeated questions.',
+    measures: [
+      'Independent handling',
+      'Routine questions',
+      'Repeated questions',
+    ],
+    icon: UsersRound,
+    tone: 'green',
+  },
+  {
+    level: 'Level 4',
+    title: 'Results',
+    method:
+      'I compared pre- and post-launch operational data to evaluate changes in support workload, intervention frequency, message back-and-forth, and resolution time.',
+    measures: [
+      'Support workload',
+      'Intervention frequency',
+      'Message volume',
+      'Resolution time',
+    ],
+    icon: Timer,
+    tone: 'gold',
+  },
+];
+
+function HelpCenterEvaluation() {
+  return (
+    <div className="help-center-evaluation">
+      <ol
+        className="help-center-evaluation-path"
+        aria-label="Adapted Kirkpatrick four-level evaluation model"
+      >
+        {helpCenterEvaluationLevels.map((item, itemIndex) => {
+          const Icon = item.icon;
+
+          return (
+            <li className={`is-${item.tone}`} key={item.title}>
+              <div className="help-center-evaluation-card-heading">
+                <span>{String(itemIndex + 1).padStart(2, '0')}</span>
+                <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
+              </div>
+              <small>{item.level}</small>
+              <strong>{item.title}</strong>
+              <p>{item.method}</p>
+              <div className="help-center-evaluation-measures">
+                {item.measures.map((measure) => (
+                  <span key={measure}>{measure}</span>
+                ))}
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+
+      <section className="help-center-results" aria-labelledby="results-title">
+        <div className="help-center-results-heading">
+          <p className="help-center-results-kicker">Measured impact</p>
+          <h4 id="results-title">Results</h4>
+          <p>
+            The evaluation showed measurable improvements in tutor self-service
+            and support efficiency.
+          </p>
+        </div>
+
+        <div className="help-center-impact-grid">
+          <article>
+            <p className="help-center-impact-value">
+              <span aria-hidden="true">↓</span> 65%
+            </p>
+            <h5>Recurring Support Questions</h5>
+            <p>
+              Tutors asked substantially fewer routine questions that were
+              already addressed in the Help Center.
+            </p>
+          </article>
+          <article>
+            <p className="help-center-impact-value">
+              <span aria-hidden="true">↓</span> 30%
+            </p>
+            <h5>Issue-Resolution Time</h5>
+            <p>
+              Common tutoring issues were resolved more quickly, with less
+              back-and-forth support required.
+            </p>
+          </article>
+        </div>
+
+        <p className="help-center-impact-summary">
+          Together, these results suggest that the Help Center helped tutors{' '}
+          <strong>
+            find answers independently, respond more efficiently during live
+            sessions, and reduce the operational support burden on supervisors
+            and lead tutors.
+          </strong>
+        </p>
+
+        <blockquote className="help-center-feedback-card">
+          <span aria-hidden="true">“</span>
+          <p>
+            This is really helpful. I can quickly find what I need to do without
+            having to ask someone in Slack.
+          </p>
+          <cite>— PLUS Tutor</cite>
+        </blockquote>
+      </section>
+    </div>
   );
 }
 
@@ -789,6 +929,91 @@ function NutritionCTAModelGallery({ items }: { items: LegacyMedia[] }) {
       <CarouselPrevious className="nutrition-cta-carousel-previous" />
       <CarouselNext className="nutrition-cta-carousel-next" />
     </Carousel>
+  );
+}
+
+function AdaptiveFeedbackGallery({ items }: { items: LegacyMedia[] }) {
+  return (
+    <Carousel
+      className="adaptive-feedback-carousel"
+      opts={{ align: 'start', loop: true }}
+      aria-label="Examples of AI-powered feedback at three response-quality levels"
+    >
+      <CarouselContent>
+        {items.map((item, itemIndex) => (
+          <CarouselItem key={`${item.url}-${itemIndex}`}>
+            <ProjectMedia media={item} />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious className="adaptive-feedback-carousel-previous" />
+      <CarouselNext className="adaptive-feedback-carousel-next" />
+    </Carousel>
+  );
+}
+
+const adaptivePracticeSteps = [
+  {
+    title: 'Analyze Examples',
+    detail: 'Identify vague language, missing impact, and unclear next steps.',
+    icon: FileSearch,
+  },
+  {
+    title: 'Scenario Assessment',
+    detail: 'Apply the criteria to realistic workplace feedback.',
+    icon: ClipboardCheck,
+  },
+  {
+    title: 'Track Mastery',
+    detail: 'Captivate variables determine the learner’s next pathway.',
+    icon: BadgeCheck,
+  },
+  {
+    title: 'Remediate & Retry',
+    detail: 'Learners receive targeted support before trying again.',
+    icon: RefreshCw,
+  },
+  {
+    title: 'Write Independently',
+    detail: 'Learners revise performance feedback in their own words.',
+    icon: FileText,
+  },
+  {
+    title: 'Receive AI Feedback',
+    detail: 'Criterion-based guidance identifies strengths and next steps.',
+    icon: Bot,
+  },
+];
+
+function AdaptivePracticePath() {
+  return (
+    <figure
+      className="adaptive-practice-path"
+      aria-label="Adaptive learning pathway"
+    >
+      <div className="adaptive-practice-path-heading">
+        <span>Adaptive learning path</span>
+        <strong>From guided analysis to independent writing</strong>
+      </div>
+      <ol>
+        {adaptivePracticeSteps.map((step, stepIndex) => {
+          const Icon = step.icon;
+          return (
+            <li key={step.title}>
+              <div>
+                <span>{String(stepIndex + 1).padStart(2, '0')}</span>
+                <Icon size={20} strokeWidth={1.75} aria-hidden="true" />
+              </div>
+              <strong>{step.title}</strong>
+              <p>{step.detail}</p>
+              {stepIndex < adaptivePracticeSteps.length - 1 ? (
+                <ArrowRight size={18} strokeWidth={1.75} aria-hidden="true" />
+              ) : null}
+            </li>
+          );
+        })}
+      </ol>
+    </figure>
   );
 }
 
@@ -1520,7 +1745,8 @@ const coachingDesignSteps = [
   },
   {
     title: 'Branching Paths',
-    detail: 'Show how different choices lead to different conversation outcomes.',
+    detail:
+      'Show how different choices lead to different conversation outcomes.',
     icon: Waypoints,
     tone: 'navy',
   },
@@ -1534,9 +1760,9 @@ const coachingDesignSteps = [
 
 function CoachingDesignFlow() {
   return (
-    <figure
-      className="legacy-media coaching-design-flow"
-      aria-label="Design approach from task analysis to feedback and reflection"
+    <ProjectVisualLightbox
+      className="coaching-design-flow"
+      caption="Design Approach Flowchart"
     >
       <div className="coaching-design-flow-frame">
         <ol>
@@ -1563,7 +1789,7 @@ function CoachingDesignFlow() {
           })}
         </ol>
       </div>
-    </figure>
+    </ProjectVisualLightbox>
   );
 }
 
@@ -1598,13 +1824,20 @@ function LegacySectionView({
   }
 
   if (section.type === 'text') {
+    const usesAdaptivePracticePath =
+      projectSlug === 'adaptive-ai-feedback' && sourceIndex === 4;
+    const usesHelpCenterEvaluation =
+      projectSlug === 'help-center' && sourceIndex === 13;
+
     return (
       <section
-        className="legacy-section legacy-section-text"
+        className={`legacy-section legacy-section-text${usesAdaptivePracticePath ? ' adaptive-practice-section' : ''}${usesHelpCenterEvaluation ? ' help-center-evaluation-section' : ''}`}
         data-source-index={sourceIndex}
         id={id}
       >
         <RichText html={section.html} />
+        {usesAdaptivePracticePath ? <AdaptivePracticePath /> : null}
+        {usesHelpCenterEvaluation ? <HelpCenterEvaluation /> : null}
       </section>
     );
   }
@@ -1777,6 +2010,22 @@ function LegacySectionView({
     );
   }
 
+  if (
+    section.type === 'gallery' &&
+    projectSlug === 'adaptive-ai-feedback' &&
+    sourceIndex === 6
+  ) {
+    return (
+      <section
+        className="legacy-section legacy-gallery adaptive-feedback-gallery"
+        data-source-index={sourceIndex}
+        id={id}
+      >
+        <AdaptiveFeedbackGallery items={section.items} />
+      </section>
+    );
+  }
+
   return (
     <section
       className="legacy-section legacy-gallery"
@@ -1830,7 +2079,11 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     (section) =>
       section.type !== 'hero' &&
       section.type !== 'process' &&
-      !(project.slug === 'interactive-coaching' && section.sourceIndex === 1),
+      !(
+        ['interactive-coaching', 'adaptive-ai-feedback'].includes(
+          project.slug,
+        ) && section.sourceIndex === 1
+      ),
   );
   const processSection = legacyProject.sections.find(
     (section) => section.type === 'process',
@@ -1873,34 +2126,34 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     project.slug === 'interactive-coaching'
       ? coachingProgressItems
       : processSection?.type === 'process' && processSection.items.length
-      ? processSection.items
-          .map((item) => {
-            const target =
-              renderedSections.find(
-                ({ section }) => section.sourceIndex === item.sectionIndex,
-              ) ||
-              renderedSections.find(
-                ({ section }) =>
-                  section.sourceIndex !== null &&
-                  section.sourceIndex >= item.sectionIndex,
-              ) ||
-              renderedSections.at(-1);
-            return target
-              ? { label: item.name, targetId: target.id }
-              : undefined;
-          })
-          .filter((item): item is ProjectProgressItem => Boolean(item))
-      : renderedSections
-          .filter(
-            ({ section, title }) =>
-              !fallbackExcludedTitles.has(title) &&
-              !title.startsWith('Section ') &&
-              (section.type === 'heading' ||
-                section.type === 'text' ||
-                section.type === 'split' ||
-                section.type === 'columns'),
-          )
-          .map(({ title, id }) => ({ label: title, targetId: id }));
+        ? processSection.items
+            .map((item) => {
+              const target =
+                renderedSections.find(
+                  ({ section }) => section.sourceIndex === item.sectionIndex,
+                ) ||
+                renderedSections.find(
+                  ({ section }) =>
+                    section.sourceIndex !== null &&
+                    section.sourceIndex >= item.sectionIndex,
+                ) ||
+                renderedSections.at(-1);
+              return target
+                ? { label: item.name, targetId: target.id }
+                : undefined;
+            })
+            .filter((item): item is ProjectProgressItem => Boolean(item))
+        : renderedSections
+            .filter(
+              ({ section, title }) =>
+                !fallbackExcludedTitles.has(title) &&
+                !title.startsWith('Section ') &&
+                (section.type === 'heading' ||
+                  section.type === 'text' ||
+                  section.type === 'split' ||
+                  section.type === 'columns'),
+            )
+            .map(({ title, id }) => ({ label: title, targetId: id }));
   const currentIndex = projectDetails.findIndex((item) => item.slug === slug);
   const nextProject =
     projectDetails[(currentIndex + 1) % projectDetails.length];
@@ -1980,7 +2233,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </div>
           </div>
           <div className="case-study-visual">
-            <figure className="case-study-cover">
+            <figure className="case-study-cover" data-scroll-reveal-candidate>
               <img src={project.cover} alt="" />
             </figure>
             <div className="case-study-launches" aria-label="Project links">
@@ -2018,7 +2271,9 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           </>
         ) : (
           <>
-            <ProjectProgressNav items={progressItems} />
+            {project.slug !== 'dot-ai' ? (
+              <ProjectProgressNav items={progressItems} />
+            ) : null}
             <div className="case-study-body">
               <div className="case-study-content">
                 {mainSections.map(renderSection)}

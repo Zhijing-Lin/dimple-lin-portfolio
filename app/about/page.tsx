@@ -1,10 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import {
-  BookOpen,
-  BrainCircuit,
-  BriefcaseBusiness,
-} from 'lucide-react';
+import { BookOpen, BrainCircuit, BriefcaseBusiness } from 'lucide-react';
 import { PersonalFooter } from '@/components/personal-footer';
 import { SiteHeader } from '@/components/site-header';
 
@@ -58,23 +54,33 @@ export default function AboutPage() {
         <div className="about-intro-grid">
           <div className="about-intro-copy">
             <h1 id="about-title" className="about-title-with-flower">
-              <span className="about-title-text">About Me<span>.</span></span>
-              <span className="about-title-flower" aria-hidden="true">
+              <span className="about-title-text">
+                About Me<span>.</span>
+              </span>
+              <span
+                className="about-title-flower"
+                data-scroll-reveal-candidate
+                aria-hidden="true"
+              >
                 <img src="/about/portrait-bouquet-v4.png" alt="" />
               </span>
             </h1>
             <p className="about-intro-lead">
-              I’m an instructional designer who combines a <span
-              className="about-highlight">foundation in education, learning
-              science, and product thinking</span> to build <span
-              className="about-highlight">practical learning experiences</span>{' '}
-              that help people <span className="about-highlight">perform
-              better</span>.
+              I’m an instructional designer who combines a{' '}
+              <span className="about-highlight">
+                foundation in education, learning science, and product thinking
+              </span>{' '}
+              to build{' '}
+              <span className="about-highlight">
+                practical learning experiences
+              </span>{' '}
+              that help people{' '}
+              <span className="about-highlight">perform better</span>.
             </p>
           </div>
 
           <div className="about-intro-portrait">
-            <figure className="about-intro-photo">
+            <figure className="about-intro-photo" data-scroll-reveal-candidate>
               <Image
                 src="/about/dimple-coast.jpg"
                 alt="Dimple standing beside a coastal landscape"
@@ -87,20 +93,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="about-journey" id="journey" aria-labelledby="journey-title">
+      <section
+        className="about-journey"
+        id="journey"
+        aria-labelledby="journey-title"
+      >
         <div className="about-section-heading">
-          <h2 id="journey-title">My Journey<span>.</span></h2>
+          <h2 id="journey-title">
+            My Journey<span>.</span>
+          </h2>
           <p className="about-journey-intro">
-            My journey has taken me from <strong>teaching in real classrooms</strong>{' '}
-            to studying <strong>learning science and AI-enabled learning at
-            Carnegie Mellon</strong>, and then into client-facing instructional
-            design work across <strong>performance support, e-learning,
-            learning analytics, and learning technology</strong>.
+            My journey has taken me from{' '}
+            <strong>teaching in real classrooms</strong> to studying{' '}
+            <strong>
+              learning science and AI-enabled learning at Carnegie Mellon
+            </strong>
+            , and then into client-facing instructional design work across{' '}
+            <strong>
+              performance support, e-learning, learning analytics, and learning
+              technology
+            </strong>
+            .
           </p>
         </div>
 
         <div className="about-journey-grid">
-          <aside className="about-route" aria-label="Dimple Lin’s learning design journey">
+          <aside
+            className="about-route"
+            aria-label="Dimple Lin’s learning design journey"
+          >
             <p className="about-visual-label">Learning design journey</p>
             <ol>
               {journeyStops.map((stop) => {
@@ -128,15 +149,20 @@ export default function AboutPage() {
                 <h3>Building a foundation in how people learn</h3>
                 <p>
                   I began my path in education, studying and gaining{' '}
-                  <strong>classroom experience in both China and the United
-                  States</strong>. After graduating from UW–Madison, I spent a
-                  year <strong>leading my own second-grade classroom</strong>.
+                  <strong>
+                    classroom experience in both China and the United States
+                  </strong>
+                  . After graduating from UW–Madison, I spent a year{' '}
+                  <strong>leading my own second-grade classroom</strong>.
                 </p>
                 <p>
                   Teaching strengthened my leadership and communication skills,
                   but more importantly, it taught me to pay attention to{' '}
-                  <strong>how differently people interpret information, respond
-                  to feedback, and make sense of something new</strong>.
+                  <strong>
+                    how differently people interpret information, respond to
+                    feedback, and make sense of something new
+                  </strong>
+                  .
                 </p>
               </div>
             </article>
@@ -147,15 +173,20 @@ export default function AboutPage() {
                 <h3>Moving from teaching to designing learning</h3>
                 <p>
                   I became increasingly interested in how learning could be{' '}
-                  <strong>designed beyond a single classroom and supported
-                  through technology</strong>.
+                  <strong>
+                    designed beyond a single classroom and supported through
+                    technology
+                  </strong>
+                  .
                 </p>
                 <p>
                   At Carnegie Mellon, I began studying{' '}
-                  <strong>learning science, instructional design, educational
-                  technology, and AI-supported learning</strong> more deeply.
-                  This gave me a stronger evidence-based foundation for
-                  understanding not just what to teach, but{' '}
+                  <strong>
+                    learning science, instructional design, educational
+                    technology, and AI-supported learning
+                  </strong>{' '}
+                  more deeply. This gave me a stronger evidence-based foundation
+                  for understanding not just what to teach, but{' '}
                   <strong>how people learn and practice effectively</strong>.
                 </p>
               </div>
@@ -173,21 +204,25 @@ export default function AboutPage() {
                 </p>
                 <p>
                   These experiences also pushed me beyond course design. I
-                  learned to <strong>work cross-functionally, manage projects,
-                  collaborate with product and technical teams, and use data to
-                  guide decisions</strong>, including determining when training
-                  is, and is not, the right solution.
+                  learned to{' '}
+                  <strong>
+                    work cross-functionally, manage projects, collaborate with
+                    product and technical teams, and use data to guide decisions
+                  </strong>
+                  , including determining when training is, and is not, the
+                  right solution.
                 </p>
               </div>
             </article>
-
           </div>
         </div>
       </section>
 
       <section className="about-outside" aria-labelledby="outside-title">
         <div className="about-section-heading about-outside-heading">
-          <h2 id="outside-title">Life Beyond Work<span>.</span></h2>
+          <h2 id="outside-title">
+            Life Beyond Work<span>.</span>
+          </h2>
         </div>
 
         <div className="about-outside-grid">
@@ -197,14 +232,17 @@ export default function AboutPage() {
               <strong>moving or somewhere outdoors</strong>.
             </p>
             <p>
-              I love <strong>traveling, hiking, working out, and spending time
-              in nature</strong>. I’m always excited to explore somewhere new—
-              whether that means a new city, a mountain trail, or simply getting
-              outside for the day.
+              I love{' '}
+              <strong>
+                traveling, hiking, working out, and spending time in nature
+              </strong>
+              . I’m always excited to explore somewhere new— whether that means
+              a new city, a mountain trail, or simply getting outside for the
+              day.
             </p>
           </div>
 
-          <figure className="about-outside-photo">
+          <figure className="about-outside-photo" data-scroll-reveal-candidate>
             <Image
               src="/about/dimple-forest-full.jpg"
               alt="Dimple standing full-length beside a forest stream"

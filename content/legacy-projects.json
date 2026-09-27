@@ -158,7 +158,7 @@
       {
         "sourceIndex": 13,
         "type": "text",
-        "html": "<h3>Evaluation</h3><p>Evaluation is currently in progress as tutors begin using the Help Center in practice. I’m gathering feedback and usage insights now—stay tuned for findings and the next round of improvements.</p>",
+        "html": "<h3>Evaluation</h3><h4>Measuring Impact from User Experience to Operational Results</h4><p>I used an <strong>adapted Kirkpatrick Four-Level Model</strong> to evaluate whether the Help Center was not only useful to tutors, but also improved how they handled problems during live sessions and reduced operational support needs.</p>",
         "cta": null
       }
     ]
@@ -1174,10 +1174,10 @@
         "html": "<h3>Branching Scenario Flow Map</h3><p>Before developing the module in Storyline, I mapped the <strong>employee dialogue, manager choices, feedback, recovery paths, and final outcomes</strong> to ensure each branch reflected a meaningful workplace behavior.</p><p>Learners move through the scenario by choosing how to respond during a feedback conversation. <strong>Effective choices</strong> move the conversation toward greater trust and clarity, while <strong>ineffective choices</strong> trigger consequence-based feedback explaining why the response may create confusion, defensiveness, or reduce trust. Some branches also allow learners to <strong>recover from mistakes</strong>, reflecting how real feedback conversations can be repaired.</p><p><strong>Flow Map Legend</strong></p><ul><li><p><strong>Black rectangle</strong> — Employee dialogue</p></li><li><p><strong>Orange diamond</strong> — Manager decision</p></li><li><p><strong>Green rectangle</strong> — Effective response / feedback</p></li><li><p><strong>Pink rectangle</strong> — Ineffective response / feedback</p></li><li><p><strong>Red circle</strong> — Final outcome</p></li></ul>",
         "media": {
           "type": "image",
-        "url": "/projects/interactive-coaching-branching-flow-map.png",
+          "url": "/projects/interactive-coaching-branching-flow-map.png",
           "unavailable": false,
-        "caption": "<p class=\"p2\">Branching Scenario Flow Map</p>",
-        "alt": "Detailed branching scenario flow map showing manager choices, feedback, recovery paths, and conversation outcomes",
+          "caption": "<p class=\"p2\">Branching Scenario Flow Map</p>",
+          "alt": "Detailed branching scenario flow map showing manager choices, feedback, recovery paths, and conversation outcomes",
           "width": "2302",
           "height": "1736"
         },
@@ -1266,7 +1266,7 @@
         "items": [
           {
             "type": "image",
-            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f7873a103f294d7a2dba18/df5x8kakJzJKjYGe.png",
+            "url": "/projects/adaptive-feedback/strong-response.png",
             "unavailable": false,
             "caption": "<p>The learner submits a strong revision that includes specific observable behaviors, explains the impact on team alignment, and provides a clear next step. The AI feedback confirms that the response meets the learning objective and reinforces why each part of the feedback is effective.</p><h3></h3>",
             "alt": null,
@@ -1275,7 +1275,7 @@
           },
           {
             "type": "image",
-            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f7873a103f294d7a2dba18/E9KEqrdpnNQ4do3O.png",
+            "url": "/projects/adaptive-feedback/developing-response.png",
             "unavailable": false,
             "caption": "<p>The learner provides some specific behaviors, but the response is still incomplete. The AI feedback identifies what is working, such as professional language and observable examples, while pointing out what is missing: impact and actionable next steps.</p>",
             "alt": null,
@@ -1284,7 +1284,7 @@
           },
           {
             "type": "image",
-            "url": "https://uxfolio-prod.s3.us-east-1.amazonaws.com/69e416f0f81832258a16737c/69f7873a103f294d7a2dba18/BsB6zLvTthoKQFVx.png",
+            "url": "/projects/adaptive-feedback/minimal-response.png",
             "unavailable": false,
             "caption": "<p>The learner submits a minimal response that does not address the feedback criteria. Instead of only marking it incorrect, the system explains why the response is ineffective and prompts the learner to revise with a specific behavior, impact statement, and next step.</p>",
             "alt": null,
