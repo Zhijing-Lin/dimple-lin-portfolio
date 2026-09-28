@@ -668,6 +668,17 @@ a {
   padding: 0 0.2rem;
 }
 
+.case-study[data-project-slug='tutorial-search-redesign'] .case-study-launches {
+  flex-wrap: nowrap;
+}
+
+.case-study[data-project-slug='tutorial-search-redesign'] .case-study-launch {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-left: 0.85rem;
+  white-space: nowrap;
+}
+
 .case-study-launch {
   display: inline-flex;
   gap: 0.65rem;
@@ -1155,6 +1166,25 @@ a {
 
   .case-study-launch {
     width: 100%;
+  }
+
+  .case-study[data-project-slug='tutorial-search-redesign']
+    .case-study-launches {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .case-study[data-project-slug='tutorial-search-redesign'] .case-study-launch {
+    gap: 0.4rem;
+    min-height: 44px;
+    padding: 0.44rem 0.42rem 0.44rem 0.68rem;
+    font-size: 0.7rem;
+  }
+
+  .case-study[data-project-slug='tutorial-search-redesign']
+    .case-study-launch-icon {
+    width: 28px;
+    height: 28px;
   }
 
   .case-study-index nav {

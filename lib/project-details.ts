@@ -212,11 +212,11 @@ export const projectDetails: ProjectDetail[] = [
     sourceText: 'Improving Tutorial Discovery with AI-Augmented Design',
     launchLinks: [
       {
-        label: 'View the Original Tutorial Hub',
+        label: 'Original Hub',
         url: 'https://simon-initiative.github.io/torus_tutorial/?page=pages%2Fset-up-your-course%2Fcourse-author-page-overview.html',
       },
       {
-        label: 'View the Redesigned Tutorial Hub',
+        label: 'Redesigned Hub',
         url: 'https://zhijing-lin.github.io/torus-tutorial-redesign/',
       },
     ],
