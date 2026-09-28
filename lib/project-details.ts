@@ -210,7 +210,16 @@ export const projectDetails: ProjectDetail[] = [
       'Redesigned OLI Torus tutorial search showing contextual ranked results',
     originalUrl: '',
     sourceText: 'Improving Tutorial Discovery with AI-Augmented Design',
-    launchLinks: [],
+    launchLinks: [
+      {
+        label: 'View the Original Tutorial Hub',
+        url: 'https://simon-initiative.github.io/torus_tutorial/?page=pages%2Fset-up-your-course%2Fcourse-author-page-overview.html',
+      },
+      {
+        label: 'View the Redesigned Tutorial Hub',
+        url: 'https://zhijing-lin.github.io/torus-tutorial-redesign/',
+      },
+    ],
   },
 ];
 

@@ -32,7 +32,6 @@ import {
   TentTree,
   Timer,
   UsersRound,
-  Video,
   Waypoints,
 } from 'lucide-react';
 import { notFound } from 'next/navigation';
@@ -1297,47 +1296,18 @@ function TutorialAIWorkflow() {
 
 function TutorialVideoProduction() {
   return (
-    <figure className="legacy-media tutorial-visual tutorial-video-production">
-      <div className="tutorial-visual-frame">
-        <div className="tutorial-video-stage">
-          <div className="tutorial-video-browser">
-            <div className="tutorial-window-dots" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </div>
-            <div className="tutorial-video-screen">
-              <span className="tutorial-video-step">Step 2</span>
-              <strong>Configure visibility</strong>
-              <button type="button" tabIndex={-1}>
-                Save changes
-              </button>
-              <MousePointerClick size={24} aria-hidden="true" />
-            </div>
-          </div>
-          <div className="tutorial-video-timeline" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-            <i />
-          </div>
-        </div>
-        <div className="tutorial-video-copy">
-          <Video size={25} strokeWidth={1.7} aria-hidden="true" />
-          <h3>Tutorial Video Production in Camtasia</h3>
-          <ul>
-            <li>Planned workflow demonstrations</li>
-            <li>Recorded narration and screen capture</li>
-            <li>Edited pacing, transitions, zoom, and visual focus</li>
-          </ul>
-          <div className="tutorial-skill-tags">
-            <span>Screen Recording</span>
-            <span>Video Editing</span>
-            <span>Visual Attention</span>
-          </div>
-        </div>
-      </div>
-    </figure>
+    <ProjectMedia
+      media={{
+        type: 'video',
+        url: 'https://www.youtube-nocookie.com/embed/Z1Irm0ZKQVM?rel=0',
+        unavailable: false,
+        caption:
+          '<p>OLI Torus Tutorial Example: Paragraph Toolbar · Created with Camtasia</p>',
+        alt: null,
+        width: null,
+        height: null,
+      }}
+    />
   );
 }
 
@@ -1826,8 +1796,34 @@ function LegacySectionView({
   if (section.type === 'text') {
     const usesAdaptivePracticePath =
       projectSlug === 'adaptive-ai-feedback' && sourceIndex === 4;
+    const usesHelpCenterOverview =
+      projectSlug === 'help-center' && sourceIndex === 1;
     const usesHelpCenterEvaluation =
       projectSlug === 'help-center' && sourceIndex === 13;
+
+    if (usesHelpCenterOverview) {
+      return (
+        <section
+          className="legacy-section help-center-overview"
+          data-source-index={sourceIndex}
+          id={id}
+        >
+          <RichText html={section.html} />
+          <ProjectMedia
+            media={{
+              type: 'video',
+              url: 'https://www.youtube-nocookie.com/embed/d57rAFpVI6Q?rel=0',
+              unavailable: false,
+              caption:
+                '<p>PLUS Tutor Help Center Quick Walkthrough · Created with Camtasia</p>',
+              alt: null,
+              width: null,
+              height: null,
+            }}
+          />
+        </section>
+      );
+    }
 
     return (
       <section

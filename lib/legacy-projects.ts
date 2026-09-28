@@ -145,7 +145,7 @@ const tutorialSearchProject: LegacyProject = {
     {
       sourceIndex: 1,
       type: 'text',
-      html: `<h3>Project Overview</h3><p>The OLI Torus Tutorial Hub is a self-service support site that helps course authors and instructors find step-by-step tutorials for completing tasks in Torus.</p><p>I inherited an existing version of the site and used the project as an opportunity to explore continuous improvement through an AI-augmented design process. Rather than beginning with a feature idea, I first investigated how users might actually navigate the existing experience.</p><p>Task-based synthetic user testing revealed a clear problem: sidebar navigation worked well when users knew the site’s terminology, but search became unreliable when their wording differed from the search index.</p><p>I focused the redesign on improving tutorial discovery so users could find the right support without needing to know the exact terminology used by the site.</p>`,
+      html: `<h3>Project Overview</h3><p>For my client, <strong>Carnegie Mellon University’s Open Learning Initiative (OLI)</strong>, I worked on the <strong>OLI Torus Tutorial Hub</strong>, a self-service support site that helps course authors and instructors find step-by-step tutorials for completing tasks in Torus.</p><p>I inherited an existing version of the site and used an <strong>AI-augmented design process</strong> to evaluate and improve the tutorial discovery experience.</p><p>Task-based synthetic user testing revealed a clear problem: <strong>sidebar navigation worked well when users knew the site’s terminology, but search became unreliable when their wording differed from the search index.</strong></p><p>I focused the redesign on improving search so users could find the right support <strong>without needing to know the exact terminology used by the site.</strong></p>`,
       cta: null,
     },
     {
@@ -153,11 +153,11 @@ const tutorialSearchProject: LegacyProject = {
       type: 'columns',
       columns: [
         {
-          html: `<h3>My Role</h3><p><strong>Learning Experience Designer &amp; AI-Augmented Product Designer</strong></p><p>I independently led the redesign process, including:</p><ul><li><p>Synthetic user research and problem definition</p></li><li><p>Content and system analysis</p></li><li><p>Search requirements and information design</p></li><li><p>AI-assisted implementation and QA</p></li><li><p>Before-and-after pilot evaluation</p></li><li><p>Iteration planning</p></li></ul><p>I also contributed to the broader Tutorial Hub by producing instructional tutorial videos in Camtasia.</p>`,
+          html: `<h3>My Role</h3><p>Learning Experience Designer &amp; AI-Augmented Product Designer</p><p>I independently led the redesign process, including:</p><ul><li><p>Synthetic user research and problem definition</p></li><li><p>Content and system analysis</p></li><li><p>Search requirements and information design</p></li><li><p>AI-assisted implementation and QA</p></li><li><p>Before-and-after pilot evaluation</p></li><li><p>Iteration planning</p></li></ul><p>I also contributed to the broader Tutorial Hub by producing instructional tutorial videos in Camtasia.</p>`,
           media: null,
         },
         {
-          html: `<h3>Team</h3><p><strong>Individual redesign project</strong></p><p>The project built on an existing Tutorial Hub created before I took over the work. My contribution focused on identifying improvement opportunities, redesigning the tutorial-discovery experience, and producing additional tutorial content.</p>`,
+          html: `<h3>Team</h3><p>Individual redesign project</p><p>The project built on an existing Tutorial Hub created before I took over the work. My contribution focused on identifying improvement opportunities, redesigning the tutorial-discovery experience, and producing additional tutorial content.</p>`,
           media: null,
         },
         {
