@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import { DBeeNavigator } from '@/components/home/dbee-navigator';
 import { ScrollRevealController } from '@/components/scroll-reveal-controller';
+import { PortfolioAnalytics } from '@/components/portfolio-analytics';
 import './globals.css';
 
 const geistSans = Geist({
@@ -68,6 +69,7 @@ export default function RootLayout({
         {children}
         <ScrollRevealController />
         <DBeeNavigator />
+        <PortfolioAnalytics />
       </body>
     </html>
   );

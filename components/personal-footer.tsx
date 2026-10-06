@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export function PersonalFooter() {
   return (
     <footer className="personal-footer" id="contact">
@@ -27,7 +29,8 @@ export function PersonalFooter() {
         </figure>
 
         <p className="personal-footer-copyright">
-          © 2026 Dimple Lin. All rights reserved.
+          © 2026 Dimple Lin. All rights reserved.{' '}
+          <Link href="/privacy">Privacy notice</Link>
         </p>
       </div>
     </footer>
