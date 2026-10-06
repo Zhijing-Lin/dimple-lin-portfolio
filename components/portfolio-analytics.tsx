@@ -1,6 +1,5 @@
 'use client';
 
-/* oxlint-disable nextjs/no-html-link-for-pages -- Match the portfolio's static-export document navigation. */
 /* oxlint-disable prefer-rest-params -- Google tag commands use the documented IArguments queue format. */
 
 import { useEffect, useState } from 'react';
@@ -9,19 +8,75 @@ const measurementId = 'G-X3QR11005X';
 const preferenceKey = 'portfolio-analytics-consent';
 type Choice = 'accepted' | 'declined';
 
+const restrictedRegions = [
+  'AT',
+  'BE',
+  'BG',
+  'HR',
+  'CY',
+  'CZ',
+  'DK',
+  'EE',
+  'FI',
+  'FR',
+  'DE',
+  'GR',
+  'HU',
+  'IE',
+  'IT',
+  'LV',
+  'LT',
+  'LU',
+  'MT',
+  'NL',
+  'PL',
+  'PT',
+  'RO',
+  'SK',
+  'SI',
+  'ES',
+  'SE',
+  'IS',
+  'LI',
+  'NO',
+  'GB',
+  'CH',
+];
+
 type AnalyticsWindow = Window & {
   dataLayer?: IArguments[];
   gtag?: (...args: unknown[]) => void;
   'ga-disable-G-X3QR11005X'?: boolean;
 };
 
-function startAnalytics() {
+function clearAnalyticsCookies() {
+  document.cookie.split(';').forEach((cookie) => {
+    const name = cookie.trim().split('=')[0];
+    if (name !== '_ga' && !name.startsWith('_ga_')) return;
+    const expired = `${name}=; Max-Age=0; path=/; SameSite=Lax`;
+    document.cookie = expired;
+    document.cookie = `${expired}; domain=${window.location.hostname}`;
+  });
+}
+
+function readPreference(): Choice | null {
+  try {
+    const choice = window.localStorage.getItem(preferenceKey);
+    if (choice === 'declined' || choice === 'accepted') return choice;
+  } catch {
+    // Use regional defaults if browser storage is unavailable.
+  }
+  return null;
+}
+
+function startAnalytics(hasExplicitConsent: boolean) {
   const analyticsWindow = window as AnalyticsWindow;
   analyticsWindow['ga-disable-G-X3QR11005X'] = false;
   if (document.getElementById('portfolio-google-tag')) {
-    analyticsWindow.gtag?.('consent', 'update', {
-      analytics_storage: 'granted',
-    });
+    if (hasExplicitConsent)
+      analyticsWindow.gtag?.('consent', 'update', {
+        analytics_storage: 'granted',
+      });
     return;
   }
 
@@ -35,6 +90,14 @@ function startAnalytics() {
     ad_user_data: 'denied',
     ad_personalization: 'denied',
   });
+  if (!hasExplicitConsent) {
+    analyticsWindow.gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      region: restrictedRegions,
+    });
+  }
+  analyticsWindow.gtag('set', 'ads_data_redaction', true);
+  analyticsWindow.gtag('set', 'url_passthrough', false);
   analyticsWindow.gtag('js', new Date());
   analyticsWindow.gtag('config', measurementId, {
     allow_google_signals: false,
@@ -48,87 +111,71 @@ function startAnalytics() {
   document.head.appendChild(script);
 }
 
-export function PortfolioAnalytics() {
-  const [visible, setVisible] = useState(false);
-  const [enabled, setEnabled] = useState(false);
+function applyPreference(choice: Choice | null) {
+  if (window.location.hostname !== 'dimple-lin.vercel.app') return;
+  if (choice === 'declined') {
+    const analyticsWindow = window as AnalyticsWindow;
+    analyticsWindow['ga-disable-G-X3QR11005X'] = true;
+    analyticsWindow.gtag?.('consent', 'update', {
+      analytics_storage: 'denied',
+    });
+    clearAnalyticsCookies();
+  } else {
+    startAnalytics(choice === 'accepted');
+  }
+}
 
+export function PortfolioAnalytics() {
   useEffect(() => {
     // Keep local development and deployment previews out of the reports.
-    if (window.location.hostname !== 'dimple-lin.vercel.app') return;
-    let choice: string | null = null;
-    try {
-      choice = window.localStorage.getItem(preferenceKey);
-    } catch {
-      // Visitors can still choose when browser storage is unavailable.
-    }
-    if (choice === 'accepted') startAnalytics();
-    const frame = window.requestAnimationFrame(() => {
-      setEnabled(true);
-      if (choice !== 'accepted' && choice !== 'declined') setVisible(true);
-    });
+    applyPreference(readPreference());
+  }, []);
+
+  return null;
+}
+
+export function AnalyticsPreferences() {
+  const [choice, setChoice] = useState<Choice | null | undefined>(undefined);
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() =>
+      setChoice(readPreference()),
+    );
     return () => window.cancelAnimationFrame(frame);
   }, []);
 
-  function choose(choice: Choice) {
+  function choose(nextChoice: Choice) {
     try {
-      window.localStorage.setItem(preferenceKey, choice);
+      window.localStorage.setItem(preferenceKey, nextChoice);
     } catch {
       // The choice still applies to this page visit.
     }
-    if (choice === 'accepted') {
-      startAnalytics();
-    } else {
-      const analyticsWindow = window as AnalyticsWindow;
-      analyticsWindow['ga-disable-G-X3QR11005X'] = true;
-      analyticsWindow.gtag?.('consent', 'update', {
-        analytics_storage: 'denied',
-      });
-      // Clear this site's Analytics cookies when a visitor opts out.
-      document.cookie.split(';').forEach((cookie) => {
-        const name = cookie.trim().split('=')[0];
-        if (name !== '_ga' && !name.startsWith('_ga_')) return;
-        const expired = `${name}=; Max-Age=0; path=/; SameSite=Lax`;
-        document.cookie = expired;
-        document.cookie = `${expired}; domain=${window.location.hostname}`;
-      });
-    }
-    setVisible(false);
+    applyPreference(nextChoice);
+    setChoice(nextChoice);
   }
 
-  if (!enabled) return null;
-
   return (
-    <>
-      <button
-        className="analytics-settings"
-        type="button"
-        onClick={() => setVisible(true)}
-      >
-        Cookie settings
-      </button>
-      {visible && (
-        <section
-          className="analytics-notice"
-          aria-label="Analytics cookie preferences"
-        >
-          <p className="analytics-notice-title">
-            A little insight, with your permission.
-          </p>
-          <p>
-            I use Google Analytics cookies to understand visits and improve this
-            portfolio. You can accept or decline, and change your choice
-            anytime. <a href="/privacy">Privacy notice</a>
-          </p>
-          <div className="analytics-notice-actions">
-            <button type="button" onClick={() => choose('declined')}>
-              Decline
-            </button>
-            <button type="button" onClick={() => choose('accepted')}>
-              Accept analytics
-            </button>
-          </div>
-        </section>
-      )}
-    </>
+    <section
+      className="analytics-preferences"
+      aria-label="Website analytics preference"
+    >
+      <p aria-live="polite">
+        {choice === undefined
+          ? 'Your analytics preference'
+          : choice === 'declined'
+            ? 'Analytics is disabled in this browser.'
+            : choice === 'accepted'
+              ? 'Analytics cookies are enabled in this browser.'
+              : 'Default regional analytics settings are in use.'}
+      </p>
+      <div>
+        <button type="button" onClick={() => choose('declined')}>
+          Disable analytics
+        </button>
+        <button type="button" onClick={() => choose('accepted')}>
+          Allow analytics cookies
+        </button>
+      </div>
+    </section>
   );
 }

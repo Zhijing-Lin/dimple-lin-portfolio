@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { SiteHeader } from '@/components/site-header';
 import { PersonalFooter } from '@/components/personal-footer';
+import { AnalyticsPreferences } from '@/components/portfolio-analytics';
 
 export const metadata: Metadata = { title: 'Privacy notice — Dimple Lin' };
 
@@ -13,13 +14,16 @@ export default function PrivacyPage() {
         <p>Updated October 6, 2026</p>
         <h2>Website analytics</h2>
         <p>
-          This portfolio uses Google Analytics only after you accept analytics
-          cookies. It helps Dimple Lin understand which pages visitors explore,
-          how they find the website, approximate geographic regions, device and
-          browser types, and engagement such as scrolling and outbound link
-          clicks. Google processes the collected data to provide these reports.
-          Analytics cookies distinguish visits and returning browsers; the
-          reports do not reveal visitors&apos; names or email addresses.
+          This portfolio uses Google Analytics to understand which pages
+          visitors explore, how they find the website, approximate geographic
+          regions, device and browser types, and engagement such as scrolling
+          and outbound link clicks. Google processes the collected data to
+          provide reports. Analytics may use first-party cookies to distinguish
+          visits and returning browsers. For visitors in the European Economic
+          Area, the United Kingdom, and Switzerland, Analytics cookie storage is
+          disabled by default until they choose to allow it here; limited
+          measurements without Analytics cookies may still be sent. The reports
+          do not reveal visitors&apos; names or email addresses.
         </p>
         <p>
           This site does not intentionally send names, email addresses, phone
@@ -29,14 +33,14 @@ export default function PrivacyPage() {
         </p>
         <h2>Your choice</h2>
         <p>
-          Choose Accept analytics or Decline in the cookie notice. You can
-          reopen Cookie settings at the bottom left of any page to change your
-          choice. Your preference is stored in your browser. Declining prevents
-          this site&apos;s analytics collection; you can still browse all
-          content. Withdrawing permission stops future collection and removes
-          this site&apos;s Google Analytics cookies, but does not erase data
-          previously processed by Google.
+          You can disable analytics or allow Analytics cookies using the buttons
+          below. Your preference is stored in your browser. Disabling analytics
+          stops this site&apos;s future measurement in that browser and removes
+          this site&apos;s Analytics cookies; it does not erase data previously
+          processed by Google. Choices to decline analytics made before this
+          update are still respected.
         </p>
+        <AnalyticsPreferences />
         <p>
           Learn more about{' '}
           <a
