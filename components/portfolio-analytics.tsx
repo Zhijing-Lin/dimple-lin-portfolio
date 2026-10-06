@@ -1,14 +1,16 @@
 'use client';
 
+/* oxlint-disable nextjs/no-html-link-for-pages -- Match the portfolio's static-export document navigation. */
+/* oxlint-disable prefer-rest-params -- Google tag commands use the documented IArguments queue format. */
+
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 
 const measurementId = 'G-X3QR11005X';
 const preferenceKey = 'portfolio-analytics-consent';
 type Choice = 'accepted' | 'declined';
 
 type AnalyticsWindow = Window & {
-  dataLayer?: unknown[][];
+  dataLayer?: IArguments[];
   gtag?: (...args: unknown[]) => void;
   'ga-disable-G-X3QR11005X'?: boolean;
 };
@@ -24,8 +26,8 @@ function startAnalytics() {
   }
 
   analyticsWindow.dataLayer ??= [];
-  analyticsWindow.gtag = (...args: unknown[]) => {
-    analyticsWindow.dataLayer?.push(args);
+  analyticsWindow.gtag = function () {
+    analyticsWindow.dataLayer?.push(arguments);
   };
   analyticsWindow.gtag('consent', 'default', {
     analytics_storage: 'granted',
@@ -115,7 +117,7 @@ export function PortfolioAnalytics() {
           <p>
             I use Google Analytics cookies to understand visits and improve this
             portfolio. You can accept or decline, and change your choice
-            anytime. <Link href="/privacy">Privacy notice</Link>
+            anytime. <a href="/privacy">Privacy notice</a>
           </p>
           <div className="analytics-notice-actions">
             <button type="button" onClick={() => choose('declined')}>

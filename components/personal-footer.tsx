@@ -1,4 +1,4 @@
-import Link from 'next/link';
+/* oxlint-disable nextjs/no-html-link-for-pages -- Match the portfolio's static-export document navigation. */
 
 export function PersonalFooter() {
   return (
@@ -30,7 +30,7 @@ export function PersonalFooter() {
 
         <p className="personal-footer-copyright">
           © 2026 Dimple Lin. All rights reserved.{' '}
-          <Link href="/privacy">Privacy notice</Link>
+          <a href="/privacy">Privacy notice</a>
         </p>
       </div>
     </footer>
